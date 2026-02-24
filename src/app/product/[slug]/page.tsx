@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import {
   ChevronRight,
@@ -103,11 +104,18 @@ export default function ProductPage() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
-            <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              <span className="text-[150px]">🔥</span>
+            <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl relative overflow-hidden">
+              <Image
+                src={product.images[0]}
+                alt={product.name}
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
 
               {/* Badges */}
-              <div className="absolute top-4 left-4 flex flex-col gap-2">
+              <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
                 {product.salePrice && (
                   <span className="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded">
                     {discount}% OFF
@@ -128,14 +136,20 @@ export default function ProductPage() {
 
             {/* Thumbnail Gallery */}
             <div className="flex gap-3 mt-4">
-              {[1, 2, 3, 4].map((i) => (
+              {product.images.map((img, i) => (
                 <button
                   key={i}
-                  className={`w-20 h-20 rounded-lg border-2 flex items-center justify-center bg-gray-100 ${
-                    i === 1 ? "border-orange-600" : "border-gray-200"
+                  className={`relative w-20 h-20 rounded-lg border-2 overflow-hidden bg-gray-100 ${
+                    i === 0 ? "border-orange-600" : "border-gray-200"
                   }`}
                 >
-                  <span className="text-2xl">🔥</span>
+                  <Image
+                    src={img}
+                    alt={`${product.name} view ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
                 </button>
               ))}
             </div>

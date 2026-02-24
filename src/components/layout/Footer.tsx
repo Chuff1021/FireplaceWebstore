@@ -46,13 +46,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">🔥</span>
-              </div>
-              <span className="font-bold text-xl text-white">
-                {defaultStoreConfig.storeName}
-              </span>
+            <div className="mb-4">
+              <Image
+                src={defaultStoreConfig.logo}
+                alt={defaultStoreConfig.storeName}
+                width={180}
+                height={44}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-gray-400 mb-4">{defaultStoreConfig.tagline}</p>
             

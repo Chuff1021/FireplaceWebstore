@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" fill="none">
+  <!-- Flame icon -->
+  <g transform="translate(4, 4)">
+    <path d="M22 48C12 48 4 40 4 30C4 20 10 12 16 6C16 14 20 18 24 18C22 12 24 4 30 0C28 8 32 16 36 20C40 16 42 12 42 8C46 14 48 20 48 28C48 40 38 48 28 48C28 48 32 42 32 36C32 30 28 26 24 26C24 32 22 38 22 48Z" fill="#DC2626"/>
+    <path d="M22 48C22 38 24 32 24 26C28 26 32 30 32 36C32 42 28 48 28 48C24 48 22 48 22 48Z" fill="#F59E0B"/>
+  </g>
+  <!-- Company name -->
+  <text x="58" y="28" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="bold" fill="#1F2937">Aaron's</text>
+  <text x="58" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#DC2626" letter-spacing="3">FIREPLACE CO</text>
+</svg>

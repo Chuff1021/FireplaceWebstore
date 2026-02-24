@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Search,
   ShoppingCart,
@@ -68,18 +69,15 @@ export function Header() {
             </button>
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">🔥</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="font-bold text-xl text-gray-900">
-                  {defaultStoreConfig.storeName.split(" ")[0]}
-                </span>
-                <span className="text-orange-600 font-bold text-xl">
-                  {defaultStoreConfig.storeName.split(" ").slice(1).join(" ")}
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src={defaultStoreConfig.logo}
+                alt={defaultStoreConfig.storeName}
+                width={200}
+                height={48}
+                className="h-10 lg:h-12 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}

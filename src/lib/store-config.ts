@@ -59,32 +59,31 @@ export interface StoreConfig {
   };
 }
 
-// Default configuration (demo store)
+// Default configuration — Aaron's Fireplace Co
 export const defaultStoreConfig: StoreConfig = {
-  storeName: "Elite Fireplace Store",
-  tagline: "Your Premier Destination for Fireplaces & Heating Solutions",
+  storeName: "Aaron's Fireplace Co",
+  tagline: "Republic, Missouri's Trusted Fireplace & Heating Experts",
   logo: "/logo.svg",
   favicon: "/favicon.ico",
   
-  phone: "(555) 123-4567",
-  email: "info@elitefireplace.com",
+  phone: "(417) 555-0199",
+  email: "info@aaronsfireplace.com",
   address: {
-    street: "123 Main Street",
-    city: "Anytown",
-    state: "ST",
-    zip: "12345",
+    street: "100 E Hines St",
+    city: "Republic",
+    state: "MO",
+    zip: "65738",
   },
   
   social: {
-    facebook: "https://facebook.com/elitefireplace",
-    instagram: "https://instagram.com/elitefireplace",
-    youtube: "https://youtube.com/elitefireplace",
-    pinterest: "https://pinterest.com/elitefireplace",
+    facebook: "https://facebook.com/aaronsfireplaceco",
+    instagram: "https://instagram.com/aaronsfireplaceco",
+    youtube: "https://youtube.com/aaronsfireplaceco",
   },
   
   theme: {
-    primaryColor: "#1e40af", // Blue
-    secondaryColor: "#dc2626", // Red
+    primaryColor: "#b91c1c", // Deep Red
+    secondaryColor: "#1e3a5f", // Navy Blue
     accentColor: "#f59e0b", // Amber
     headerBg: "#1f2937", // Gray-800
     footerBg: "#111827", // Gray-900
@@ -92,8 +91,8 @@ export const defaultStoreConfig: StoreConfig = {
   
   business: {
     hours: {
-      weekdays: "8:00 AM - 6:00 PM",
-      saturday: "9:00 AM - 4:00 PM",
+      weekdays: "8:00 AM - 5:00 PM",
+      saturday: "9:00 AM - 3:00 PM",
       sunday: "Closed",
     },
     showrooms: true,
@@ -105,17 +104,19 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   seo: {
-    metaTitle: "Elite Fireplace Store | Fireplaces, Inserts & Stoves",
-    metaDescription: "Shop our wide selection of fireplaces, fireplace inserts, stoves, and accessories. Expert advice, professional installation, and free shipping on orders over $499.",
+    metaTitle: "Aaron's Fireplace Co | Fireplaces, Inserts & Stoves in Republic, MO",
+    metaDescription: "Aaron's Fireplace Co in Republic, Missouri — shop gas fireplaces, wood stoves, electric fireplaces, inserts, and accessories. Expert advice, professional installation, and free shipping on orders over $499.",
     keywords: [
       "fireplace",
-      "fireplace store",
+      "fireplace store Republic MO",
       "gas fireplace",
       "wood stove",
       "electric fireplace",
       "fireplace insert",
       "pellet stove",
       "fireplace accessories",
+      "Aaron's Fireplace",
+      "Republic Missouri fireplace",
     ],
   },
 };

@@ -1,14 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { productCategories } from "@/lib/store-config";
-
-const categoryIcons: Record<string, string> = {
-  fireplaces: "🏠",
-  inserts: "🔲",
-  stoves: "♨️",
-  outdoor: "🌿",
-  accessories: "🛠️",
-  parts: "⚙️",
-};
 
 export function CategoryGrid() {
   return (
@@ -29,19 +21,25 @@ export function CategoryGrid() {
             <Link
               key={category.id}
               href={`/category/${category.slug}`}
-              className="group bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-300"
+              className="group bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-300"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">
-                  {categoryIcons[category.id] || "🔥"}
-                </span>
+              <div className="relative h-32 w-full overflow-hidden">
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
-              <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
-                {category.name}
-              </h3>
-              <p className="text-xs text-gray-500 mt-1 line-clamp-2">
-                {category.description}
-              </p>
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
+                  {category.name}
+                </h3>
+                <p className="text-xs text-gray-500 mt-1 line-clamp-2">
+                  {category.description}
+                </p>
+              </div>
             </Link>
           ))}
         </div>
