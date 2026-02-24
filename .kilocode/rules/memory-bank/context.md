@@ -1,10 +1,10 @@
-# Active Context: Fireplace E-Commerce White-Label Template
+# Active Context: Aaron's Fireplace Co — E-Commerce Website
 
 ## Current State
 
-**Template Status**: 🔥 E-Commerce Template Built — Core pages complete
+**Template Status**: 🔥 Branded & Image-Ready — Aaron's Fireplace Co site with real stock photos
 
-The project has been transformed from a blank Next.js starter into a full white-label fireplace e-commerce template inspired by efireplacestore.com. It includes a complete shopping experience with product browsing, cart, and checkout.
+The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Fireplace Co** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
 
 ## Recently Completed
 
@@ -19,7 +19,16 @@ The project has been transformed from a blank Next.js starter into a full white-
 - [x] Full cart page with quantity controls and order summary (`/cart`)
 - [x] Multi-step checkout flow: shipping → payment → review (`/checkout`)
 - [x] ProductCard component with badges, ratings, quick-add-to-cart
-- [x] 6 sample products across categories (gas fireplaces, wood stoves, electric fireplaces, gas inserts, pellet stoves, fire pits)
+- [x] 6 sample products across categories
+- [x] **Rebranded to Aaron's Fireplace Co** (Republic, MO) — store name, tagline, contact info, SEO, theme colors
+- [x] **Created SVG logo** (`public/logo.svg`) — flame icon + "Aaron's FIREPLACE CO" text
+- [x] **Added Unsplash stock photos** — 7 product images, 25 category images, 2 hero images
+- [x] **Updated Header** to use SVG logo via `next/image` instead of emoji
+- [x] **Updated Footer** to use SVG logo with inverted colors
+- [x] **Updated Hero** with background image overlay and Republic, MO copy
+- [x] **Updated CategoryGrid** to show real category images instead of emojis
+- [x] **Updated ProductCard** to display product images instead of emoji placeholders
+- [x] **Updated product detail page** with real image gallery and thumbnails
 - [x] TypeScript strict mode — zero errors
 - [x] ESLint — zero errors/warnings
 
@@ -27,38 +36,43 @@ The project has been transformed from a blank Next.js starter into a full white-
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/lib/store-config.ts` | White-label config, categories, products | ✅ Ready |
+| `src/lib/store-config.ts` | White-label config for Aaron's Fireplace Co | ✅ Branded |
 | `src/lib/cart-store.ts` | Zustand cart store (persistent) | ✅ Ready |
-| `src/components/layout/Header.tsx` | Header with nav, search, cart | ✅ Ready |
-| `src/components/layout/Footer.tsx` | Footer with newsletter, links | ✅ Ready |
+| `src/components/layout/Header.tsx` | Header with SVG logo, nav, search, cart | ✅ Updated |
+| `src/components/layout/Footer.tsx` | Footer with SVG logo, newsletter, links | ✅ Updated |
 | `src/components/layout/CartSlideout.tsx` | Slide-out cart panel | ✅ Ready |
-| `src/components/ui/ProductCard.tsx` | Product card with badges | ✅ Ready |
-| `src/components/sections/Hero.tsx` | Homepage hero banner | ✅ Ready |
-| `src/components/sections/CategoryGrid.tsx` | Category browsing grid | ✅ Ready |
+| `src/components/ui/ProductCard.tsx` | Product card with real images | ✅ Updated |
+| `src/components/sections/Hero.tsx` | Homepage hero with background image | ✅ Updated |
+| `src/components/sections/CategoryGrid.tsx` | Category grid with real images | ✅ Updated |
 | `src/components/sections/FeaturedProducts.tsx` | Featured products section | ✅ Ready |
 | `src/components/sections/PromoBanner.tsx` | Promotional banners | ✅ Ready |
 | `src/components/sections/BrandsBar.tsx` | Brand logos bar | ✅ Ready |
 | `src/app/page.tsx` | Homepage | ✅ Ready |
 | `src/app/layout.tsx` | Root layout with Header/Footer | ✅ Ready |
 | `src/app/category/[slug]/page.tsx` | Category catalog page | ✅ Ready |
-| `src/app/product/[slug]/page.tsx` | Product detail page | ✅ Ready |
+| `src/app/product/[slug]/page.tsx` | Product detail page with image gallery | ✅ Updated |
 | `src/app/cart/page.tsx` | Shopping cart page | ✅ Ready |
 | `src/app/checkout/page.tsx` | Checkout flow | ✅ Ready |
+| `public/logo.svg` | Aaron's Fireplace Co SVG logo | ✅ New |
+| `public/products/` | 7 product stock photos (Unsplash) | ✅ New |
+| `public/categories/` | 25 category stock photos (Unsplash) | ✅ New |
+| `public/hero/` | 2 hero background images (Unsplash) | ✅ New |
 
 ## White-Label System
 
-The template is designed to be white-labeled by editing `src/lib/store-config.ts`:
-- **Store name, tagline, logo**
-- **Contact info** (phone, email, address)
-- **Social media links**
-- **Theme colors** (primary, secondary, accent, header/footer backgrounds)
-- **Business settings** (hours, showrooms, installation, free shipping threshold)
-- **SEO** (meta title, description, keywords)
-- **Product categories** with subcategories
-- **Sample products** with full details
+The template is branded for Aaron's Fireplace Co by editing `src/lib/store-config.ts`:
+- **Store name**: Aaron's Fireplace Co
+- **Tagline**: Republic, Missouri's Trusted Fireplace & Heating Experts
+- **Contact**: (417) 555-0199, info@aaronsfireplace.com
+- **Address**: 100 E Hines St, Republic, MO 65738
+- **Theme colors**: Deep Red primary (#b91c1c), Navy Blue secondary (#1e3a5f), Amber accent
+- **SEO**: Optimized for "Aaron's Fireplace Co" and "Republic Missouri fireplace"
+- **Logo**: SVG at `/logo.svg` with flame icon and company name
 
 ## Next Steps / Future Enhancements
 
+- [ ] Replace placeholder phone/email/address with real Aaron's Fireplace Co contact info
+- [ ] Add user's actual logo PNG (upload not working yet — using generated SVG)
 - [ ] Add database integration (Drizzle + SQLite) for real product data
 - [ ] Add user authentication (login/register)
 - [ ] Add search results page (`/search`)
@@ -72,7 +86,7 @@ The template is designed to be white-labeled by editing `src/lib/store-config.ts
 - [ ] Add recently viewed products
 - [ ] Add email notifications (order confirmation, shipping updates)
 
-## Dependencies Added
+## Dependencies
 
 - `zustand` — Client-side state management (cart)
 - `lucide-react` — Icon library
@@ -83,4 +97,5 @@ The template is designed to be white-labeled by editing `src/lib/store-config.ts
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
-| 2026-02-24 | Built complete fireplace e-commerce white-label template with homepage, catalog, product detail, cart, checkout, and white-label config system |
+| 2026-02-24 | Built complete fireplace e-commerce white-label template |
+| 2026-02-24 | Rebranded to Aaron's Fireplace Co (Republic, MO), added SVG logo, Unsplash stock photos for products/categories/hero, replaced all emoji placeholders with real images |
