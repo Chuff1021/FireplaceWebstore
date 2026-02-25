@@ -3,6 +3,7 @@ import { CategoryGrid } from "@/components/sections/CategoryGrid";
 import { FeaturedProducts } from "@/components/sections/FeaturedProducts";
 import { PromoBanner } from "@/components/sections/PromoBanner";
 import { BrandsBar } from "@/components/sections/BrandsBar";
+import { DesignToolBanner } from "@/components/sections/DesignToolBanner";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <BrandsBar />
       <CategoryGrid />
       <FeaturedProducts />
+      <DesignToolBanner />
       <PromoBanner />
     </>
   );
