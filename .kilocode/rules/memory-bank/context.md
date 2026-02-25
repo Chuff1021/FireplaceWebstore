@@ -122,6 +122,13 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [x] AI visualization flow: photo upload → simulated AI processing → overlay result (ready for real API integration)
 - [x] Zero TypeScript errors, zero ESLint errors
 
+## Recently Completed (Session 6)
+
+- [x] Created `DesignToolBanner` section component (`src/components/sections/DesignToolBanner.tsx`) — full-width dark banner with AI badge, feature list, CTA button linking to `/design-tool`, and a live wizard mockup card on the right
+- [x] Added `DesignToolBanner` to homepage (`src/app/page.tsx`) between `FeaturedProducts` and `PromoBanner`
+- [x] Zero TypeScript errors, zero ESLint errors
+- [x] Committed and pushed (commit `4b2731a`)
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
