@@ -73,9 +73,9 @@ export function Header() {
               <Image
                 src={defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
-                width={200}
-                height={48}
-                className="h-10 lg:h-12 w-auto"
+                width={240}
+                height={58}
+                className="h-11 lg:h-14 w-auto"
                 priority
               />
             </Link>
@@ -123,6 +123,12 @@ export function Header() {
                   )}
                 </div>
               ))}
+              <Link
+                href="/design-tool"
+                className="px-4 py-2 text-amber-700 font-semibold hover:text-amber-800 transition-colors flex items-center gap-1"
+              >
+                ✦ Design Tool
+              </Link>
               <Link
                 href="/sale"
                 className="px-4 py-2 text-red-600 font-bold hover:text-red-700 transition-colors"
@@ -218,6 +224,13 @@ export function Header() {
                   )}
                 </div>
               ))}
+              <Link
+                href="/design-tool"
+                className="block py-2 font-semibold text-amber-700"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                ✦ AI Design Tool
+              </Link>
               <Link
                 href="/sale"
                 className="block py-2 font-bold text-red-600"

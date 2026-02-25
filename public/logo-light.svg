@@ -1,42 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72" fill="none">
   <defs>
-    <linearGradient id="flameGold" x1="0%" y1="100%" x2="50%" y2="0%">
+    <linearGradient id="flameGoldLight" x1="0%" y1="100%" x2="50%" y2="0%">
       <stop offset="0%" stop-color="#92400E"/>
       <stop offset="40%" stop-color="#D97706"/>
       <stop offset="100%" stop-color="#FCD34D"/>
     </linearGradient>
-    <linearGradient id="flameInner" x1="0%" y1="100%" x2="30%" y2="0%">
+    <linearGradient id="flameInnerLight" x1="0%" y1="100%" x2="30%" y2="0%">
       <stop offset="0%" stop-color="#B45309"/>
       <stop offset="100%" stop-color="#FEF3C7"/>
     </linearGradient>
   </defs>
 
-  <!-- Flame mark — refined teardrop with inner glow -->
+  <!-- Flame mark -->
   <g transform="translate(6, 4)">
-    <!-- Outer flame -->
-    <path d="M28 62C14 62 4 52 4 38C4 26 11 16 18 8C17 18 22 24 27 24C24 15 27 5 34 0C31 11 36 20 41 25C46 20 48 14 47 9C53 17 56 26 56 36C56 52 44 62 32 62C32 62 37 54 37 46C37 38 32 33 27 33C27 41 28 52 28 62Z" fill="url(#flameGold)"/>
-    <!-- Inner flame highlight -->
-    <path d="M28 62C28 52 27 41 27 33C32 33 37 38 37 46C37 54 32 62 32 62C30.7 62 29.3 62 28 62Z" fill="url(#flameInner)" opacity="0.9"/>
-    <!-- Subtle ember dot -->
+    <path d="M28 62C14 62 4 52 4 38C4 26 11 16 18 8C17 18 22 24 27 24C24 15 27 5 34 0C31 11 36 20 41 25C46 20 48 14 47 9C53 17 56 26 56 36C56 52 44 62 32 62C32 62 37 54 37 46C37 38 32 33 27 33C27 41 28 52 28 62Z" fill="url(#flameGoldLight)"/>
+    <path d="M28 62C28 52 27 41 27 33C32 33 37 38 37 46C37 54 32 62 32 62C30.7 62 29.3 62 28 62Z" fill="url(#flameInnerLight)" opacity="0.9"/>
     <circle cx="31" cy="44" r="3" fill="#FEF3C7" opacity="0.6"/>
   </g>
 
   <!-- Thin gold divider line -->
   <line x1="76" y1="12" x2="76" y2="60" stroke="#D97706" stroke-width="0.75" opacity="0.6"/>
 
-  <!-- AARON'S — large elegant serif -->
+  <!-- AARON'S — white on dark -->
   <text x="90" y="34"
     font-family="'Didot', 'Bodoni MT', 'Playfair Display', 'Times New Roman', Georgia, serif"
     font-size="26"
     font-weight="700"
     letter-spacing="5"
-    fill="#111827">AARON&#x2019;S</text>
+    fill="#FFFFFF">AARON&#x2019;S</text>
 
-  <!-- FIREPLACE CO — spaced small caps in gold -->
+  <!-- FIREPLACE CO — gold on dark -->
   <text x="91" y="54"
     font-family="'Didot', 'Bodoni MT', 'Playfair Display', 'Times New Roman', Georgia, serif"
     font-size="13"
     font-weight="400"
     letter-spacing="8"
-    fill="#B45309">FIREPLACE&#x2003;CO</text>
+    fill="#D97706">FIREPLACE&#x2003;CO</text>
 </svg>

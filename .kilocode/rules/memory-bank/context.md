@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Template Status**: 🔥 Branded & Image-Ready — Aaron's Fireplace Co site with real stock photos
+**Template Status**: ✨ Luxury Rebrand + AI Design Tool — New premium logo, AI fireplace design wizard with photo upload & room visualization
 
 The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Fireplace Co** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
 
@@ -104,10 +104,29 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [x] Default admin credentials: username `admin`, password `admin123` (change via `ADMIN_PASSWORD` env var)
 - [x] Zero TypeScript errors, zero ESLint errors
 
+## Recently Completed (Session 5)
+
+- [x] Redesigned logo to luxury/high-end SVG (`public/logo.svg`) — gradient gold flame, elegant serif typography (Didot/Playfair Display), gold divider line
+- [x] Created light/inverted logo for footer (`public/logo-light.svg`) — white text + gold flame on dark backgrounds
+- [x] Updated Header to use new logo with larger sizing (h-11/h-14)
+- [x] Updated Footer to use `logo-light.svg` directly instead of CSS invert filter
+- [x] Added "✦ Design Tool" link to Header desktop nav and mobile menu
+- [x] Created AI Design Tool page (`/design-tool`) — 7-step wizard:
+  - Step 1: Fuel type (gas/wood/electric/pellet/unsure)
+  - Step 2: Room size with BTU guidance
+  - Step 3: Design style (traditional/modern/rustic/transitional)
+  - Step 4: Budget range
+  - Step 5: Installation type (new/replace/insert)
+  - Step 6: Photo upload with drag-and-drop + AI visualization generation
+  - Step 7: Results with product recommendations + room visualization + CTA
+- [x] AI visualization flow: photo upload → simulated AI processing → overlay result (ready for real API integration)
+- [x] Zero TypeScript errors, zero ESLint errors
+
 ## Next Steps / Future Enhancements
 
+- [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
 - [ ] Replace placeholder phone/email/address with real Aaron's Fireplace Co contact info
-- [ ] Add user's actual logo PNG (upload not working yet — using generated SVG)
+- [ ] Add user's actual logo PNG (luxury SVG now in place)
 - [ ] Add more products via admin dashboard (currently only 6 sample products in config)
 - [ ] Add user authentication (login/register)
 - [ ] Add wishlist functionality
