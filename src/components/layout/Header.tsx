@@ -17,7 +17,7 @@ import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig, productCategories } from "@/lib/store-config";
 import { CartSlideout } from "./CartSlideout";
 
-export function Header() {
+export function Header({ logoUrl }: { logoUrl?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -71,7 +71,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src={defaultStoreConfig.logo}
+                src={logoUrl ?? defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
                 width={240}
                 height={58}

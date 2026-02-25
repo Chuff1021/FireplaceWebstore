@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { defaultStoreConfig, productCategories } from "@/lib/store-config";
 
-export function Footer() {
+export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -48,7 +48,7 @@ export function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/logo-light.svg"
+                src={lightLogoUrl ?? "/logo-light.svg"}
                 alt={defaultStoreConfig.storeName}
                 width={220}
                 height={54}

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { defaultStoreConfig } from "@/lib/store-config";
+import { getLogoUrl, getLightLogoUrl } from "@/lib/logo-resolver";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,14 +27,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const logoUrl = getLogoUrl();
+  const lightLogoUrl = getLightLogoUrl();
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        <Header />
+        <Header logoUrl={logoUrl} />
         <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Footer lightLogoUrl={lightLogoUrl} />
       </body>
     </html>
   );
