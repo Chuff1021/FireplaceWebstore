@@ -84,16 +84,33 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [x] Zero TypeScript errors, zero ESLint errors
 - [x] Committed and pushed (commit `301d6e1`)
 
+## Recently Completed (Session 4)
+
+- [x] Added database integration (Drizzle ORM + SQLite via `@kilocode/app-builder-db`)
+- [x] Created DB schema: `products`, `categories`, `admin_users`, `admin_sessions` tables (`src/db/schema.ts`)
+- [x] Created DB client (`src/db/index.ts`), migration script (`src/db/migrate.ts`), Drizzle config (`drizzle.config.ts`)
+- [x] Generated SQL migrations (`src/db/migrations/`)
+- [x] Built password-protected admin dashboard at `/admin`
+- [x] Admin login page (`/admin/login`) with session cookie auth
+- [x] Admin products list page (`/admin/products`) — view all products
+- [x] Admin add product page (`/admin/products/new`) with image upload
+- [x] Admin edit product page (`/admin/products/[id]/edit`)
+- [x] Admin categories list page (`/admin/categories`)
+- [x] Admin add/edit category pages with image upload
+- [x] Image upload API (`/api/admin/upload`) — saves to `public/uploads/`
+- [x] Products CRUD API (`/api/admin/products`, `/api/admin/products/[id]`)
+- [x] Categories CRUD API (`/api/admin/categories`, `/api/admin/categories/[id]`)
+- [x] Public products API (`/api/products`) for storefront
+- [x] Default admin credentials: username `admin`, password `admin123` (change via `ADMIN_PASSWORD` env var)
+- [x] Zero TypeScript errors, zero ESLint errors
+
 ## Next Steps / Future Enhancements
 
 - [ ] Replace placeholder phone/email/address with real Aaron's Fireplace Co contact info
 - [ ] Add user's actual logo PNG (upload not working yet — using generated SVG)
-- [ ] Add database integration (Drizzle + SQLite) for real product data
-- [ ] Add more products (currently only 6 sample products)
+- [ ] Add more products via admin dashboard (currently only 6 sample products in config)
 - [ ] Add user authentication (login/register)
 - [ ] Add wishlist functionality
-- [ ] Add product image uploads/management
-- [ ] Add admin dashboard for product/order management
 - [ ] Add payment gateway integration (Stripe)
 - [ ] Add order confirmation/tracking pages
 - [ ] Add product comparison feature
