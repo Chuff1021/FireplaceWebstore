@@ -69,22 +69,37 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - **SEO**: Optimized for "Aaron's Fireplace Co" and "Republic Missouri fireplace"
 - **Logo**: SVG at `/logo.svg` with flame icon and company name
 
+## Recently Completed (Session 3)
+
+- [x] Fixed all product/category/hero images (re-downloaded proper fireplace photos from Unsplash)
+- [x] Created About Us page (`/about`) with story, services, contact info
+- [x] Created Contact page (`/contact`) with form (name, email, phone, subject, message)
+- [x] Created FAQ page (`/faq`) with accordion-style Q&A across 5 categories
+- [x] Created Shipping & Delivery page (`/shipping`)
+- [x] Created Privacy Policy page (`/privacy`)
+- [x] Created Terms of Service page (`/terms`)
+- [x] Created 404 Not Found page (`src/app/not-found.tsx`)
+- [x] Created Search page (`/search`) with live product/category search using `useMemo`
+- [x] Updated Footer to include About Us link
+- [x] Zero TypeScript errors, zero ESLint errors
+- [x] Committed and pushed (commit `301d6e1`)
+
 ## Next Steps / Future Enhancements
 
 - [ ] Replace placeholder phone/email/address with real Aaron's Fireplace Co contact info
 - [ ] Add user's actual logo PNG (upload not working yet — using generated SVG)
 - [ ] Add database integration (Drizzle + SQLite) for real product data
+- [ ] Add more products (currently only 6 sample products)
 - [ ] Add user authentication (login/register)
-- [ ] Add search results page (`/search`)
 - [ ] Add wishlist functionality
 - [ ] Add product image uploads/management
 - [ ] Add admin dashboard for product/order management
 - [ ] Add payment gateway integration (Stripe)
 - [ ] Add order confirmation/tracking pages
-- [ ] Add more static pages (About, Contact, FAQ, Shipping Policy)
 - [ ] Add product comparison feature
 - [ ] Add recently viewed products
 - [ ] Add email notifications (order confirmation, shipping updates)
+- [ ] Replace stock photos with actual Aaron's Fireplace Co product photos
 
 ## Dependencies
 
