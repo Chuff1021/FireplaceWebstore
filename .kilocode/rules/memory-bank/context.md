@@ -129,6 +129,18 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [x] Zero TypeScript errors, zero ESLint errors
 - [x] Committed and pushed (commit `4b2731a`)
 
+## Recently Completed (Session 7)
+
+- [x] Created logo upload API route (`src/app/api/admin/logo/route.ts`) — POST saves uploaded file as `public/logo-custom.{ext}` or `public/logo-custom-light.{ext}`; GET returns current custom logo URLs
+- [x] Created `src/lib/logo-resolver.ts` — server-side utility that checks for custom logo files and falls back to default SVGs
+- [x] Created admin Branding & Logo settings page (`src/app/admin/settings/page.tsx`) — drag-and-drop upload UI for main logo and footer logo, with live preview and status feedback
+- [x] Added "Branding & Logo" link to `AdminSidebar.tsx` (Settings icon)
+- [x] Updated `Header` component to accept optional `logoUrl` prop
+- [x] Updated `Footer` component to accept optional `lightLogoUrl` prop
+- [x] Updated root layout (`src/app/layout.tsx`) to resolve logo URLs server-side via `logo-resolver.ts` and pass to Header/Footer
+- [x] Zero TypeScript errors, zero ESLint errors
+- [x] Committed and pushed (commit `3b698b7`)
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
