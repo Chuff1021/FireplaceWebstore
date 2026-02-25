@@ -152,6 +152,11 @@ export function Footer() {
             <h4 className="font-bold text-white mb-4">Customer Service</h4>
             <ul className="space-y-2">
               <li>
+                <Link href="/about" className="hover:text-orange-400 transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-orange-400 transition-colors">
                   Contact Us
                 </Link>
