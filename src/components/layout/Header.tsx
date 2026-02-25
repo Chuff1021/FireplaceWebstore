@@ -58,7 +58,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
       {/* Main Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-20 lg:h-28">
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2 -ml-2"
@@ -73,9 +73,9 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               <Image
                 src={logoUrl ?? defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
-                width={240}
-                height={58}
-                className="h-11 lg:h-14 w-auto"
+                width={380}
+                height={72}
+                className="h-16 lg:h-20 w-auto"
                 priority
               />
             </Link>
