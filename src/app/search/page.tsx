@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { sampleProducts, productCategories, Product, ProductCategory } from "@/lib/store-config";
 import { Search, X } from "lucide-react";
+import { resolveProductImage } from "@/lib/product-images";
 
 function SearchResults() {
   const searchParams = useSearchParams();
@@ -146,7 +147,7 @@ function SearchResults() {
                   >
                     <div className="aspect-square relative bg-gray-100">
                       <Image
-                        src={product.images[0]}
+                        src={resolveProductImage(product.images[0], product.images)}
                         alt={product.name}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform"

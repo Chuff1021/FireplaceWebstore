@@ -67,6 +67,10 @@ export default function AdminImportsClient() {
   const [jobs, setJobs] = useState<ImportJobRow[]>([]);
   const [loading, setLoading] = useState(false);
   const [running, setRunning] = useState(false);
+  const [csvPath, setCsvPath] = useState("data/starter-fireplace-catalog.csv");
+  const [sku, setSku] = useState("");
+  const [skuImageFile, setSkuImageFile] = useState<File | null>(null);
+  const [assigningImage, setAssigningImage] = useState(false);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
 
@@ -112,9 +116,84 @@ export default function AdminImportsClient() {
     }
   }
 
+  async function runStarterCsvImport() {
+    setRunning(true);
+    setError("");
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/admin/imports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          importType: "csv",
+          csvPath,
+          sourceSlug: "starter-fireplace-catalog",
+          sourceName: "Starter Fireplace Catalog CSV",
+          sourceType: "dealer",
+          approvalRef: "LOCAL-CSV-STARTER",
+          usageScope: "Local starter catalog seeding",
+          ownerContact: "catalog-admin@local",
+          complianceStatus: "green",
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "CSV import failed");
+
+      setMessage(data.summary || "Starter CSV import completed");
+      await loadJobs();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "CSV import failed");
+    } finally {
+      setRunning(false);
+    }
+  }
+
+  async function assignImageBySku() {
+    if (!sku.trim() || !skuImageFile) {
+      setError("SKU and image file are required for image replacement.");
+      return;
+    }
+
+    setAssigningImage(true);
+    setError("");
+    setMessage("");
+
+    try {
+      const formData = new FormData();
+      formData.append("file", skuImageFile);
+
+      const uploadRes = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: formData,
+      });
+      const uploadData = await uploadRes.json();
+      if (!uploadRes.ok) throw new Error(uploadData.error || "Image upload failed");
+
+      const assignRes = await fetch("/api/admin/products/by-sku/image", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sku: sku.trim(),
+          image: uploadData.url,
+        }),
+      });
+      const assignData = await assignRes.json();
+      if (!assignRes.ok) throw new Error(assignData.error || "SKU image assignment failed");
+
+      setMessage(`Assigned photo to SKU ${assignData.sku}`);
+      setSkuImageFile(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to assign image by SKU");
+    } finally {
+      setAssigningImage(false);
+    }
+  }
+
   const totals = useMemo(() => {
     return jobs.reduce(
-      (acc, job) => {
+      (acc: { total: number; success: number; errors: number }, job: ImportJobRow) => {
         acc.total += job.totalCount;
         acc.success += job.successCount;
         acc.errors += job.errorCount;
@@ -133,7 +212,7 @@ export default function AdminImportsClient() {
           <div className="flex items-start justify-between gap-4 mb-8">
             <div>
               <h1 className="text-2xl font-bold text-white">Catalog Imports</h1>
-              <p className="text-gray-400 mt-1">Run and monitor licensed fireplace feed imports.</p>
+              <p className="text-gray-400 mt-1">Placeholder-first bulk workflow: seed now, replace photos later by SKU.</p>
             </div>
             <div className="flex items-center gap-2">
               <button
@@ -143,12 +222,56 @@ export default function AdminImportsClient() {
                 <RefreshCw className="w-4 h-4" /> Refresh
               </button>
               <button
-                onClick={() => void runDemoImport()}
+                onClick={() => void runStarterCsvImport()}
                 disabled={running}
                 className="inline-flex items-center gap-2 bg-red-700 hover:bg-red-600 disabled:bg-red-900 text-white px-3 py-2 rounded-lg text-sm"
               >
-                <PlayCircle className="w-4 h-4" /> {running ? "Running..." : "Run Import"}
+                <PlayCircle className="w-4 h-4" /> {running ? "Running..." : "Run Starter CSV Import"}
               </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-4">
+              <h2 className="text-white font-medium mb-3">1) Bulk seed from local CSV</h2>
+              <p className="text-gray-400 text-sm mb-3">
+                Required CSV columns: <code>brand,model,sku,name,category,price</code>. Optional: <code>description,image</code>.
+                Missing images are auto-filled with the default product placeholder.
+              </p>
+              <label className="block text-xs uppercase tracking-wide text-gray-500 mb-1">CSV Path (repo-relative)</label>
+              <input
+                value={csvPath}
+                onChange={(e) => setCsvPath(e.target.value)}
+                className="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100"
+              />
+            </div>
+
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-4">
+              <h2 className="text-white font-medium mb-3">2) Replace product photo by SKU</h2>
+              <p className="text-gray-400 text-sm mb-3">
+                Enter SKU, upload a real product photo, and it assigns the image to that product immediately.
+              </p>
+              <div className="space-y-2">
+                <input
+                  value={sku}
+                  onChange={(e) => setSku(e.target.value)}
+                  placeholder="SKU (example: NAP-ASCENTX-36)"
+                  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-100"
+                />
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => setSkuImageFile(e.target.files?.[0] ?? null)}
+                  className="w-full text-sm text-gray-300 file:mr-3 file:rounded file:border-0 file:bg-gray-700 file:px-3 file:py-2 file:text-gray-100"
+                />
+                <button
+                  onClick={() => void assignImageBySku()}
+                  disabled={assigningImage}
+                  className="inline-flex items-center gap-2 bg-gray-100 text-gray-900 px-3 py-2 rounded-lg text-sm hover:bg-white disabled:opacity-60"
+                >
+                  {assigningImage ? "Assigning..." : "Upload + Assign to SKU"}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -180,7 +303,7 @@ export default function AdminImportsClient() {
             {loading ? (
               <div className="p-8 text-gray-400 text-sm">Loading imports...</div>
             ) : jobs.length === 0 ? (
-              <div className="p-8 text-gray-400 text-sm">No import jobs yet. Run your first Phase 1 import.</div>
+              <div className="p-8 text-gray-400 text-sm">No import jobs yet. Run the starter CSV import.</div>
             ) : (
               <table className="w-full text-sm">
                 <thead>
@@ -212,6 +335,18 @@ export default function AdminImportsClient() {
               </table>
             )}
           </div>
+
+          <details className="mt-6 bg-gray-800 rounded-xl border border-gray-700 p-4">
+            <summary className="cursor-pointer text-white font-medium">JSON import still supported</summary>
+            <p className="text-gray-400 text-sm mt-3 mb-3">Use this only if you want to run the existing raw payload importer.</p>
+            <button
+              onClick={() => void runDemoImport()}
+              disabled={running}
+              className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 disabled:bg-gray-900 text-white px-3 py-2 rounded-lg text-sm"
+            >
+              <PlayCircle className="w-4 h-4" /> {running ? "Running..." : "Run Demo JSON Import"}
+            </button>
+          </details>
         </div>
       </main>
     </div>

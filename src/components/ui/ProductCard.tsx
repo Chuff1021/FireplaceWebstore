@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Star, ShoppingCart } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
 import type { Product } from "@/lib/store-config";
+import { resolveProductImage } from "@/lib/product-images";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -15,6 +16,7 @@ function formatPrice(price: number) {
 
 export function ProductCard({ product }: { product: Product }) {
   const { addItem, openCart } = useCartStore();
+  const productImage = resolveProductImage(product.images[0], product.images);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -34,7 +36,7 @@ export function ProductCard({ product }: { product: Product }) {
       {/* Image */}
       <div className="relative aspect-square bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
         <Image
-          src={product.images[0]}
+          src={productImage}
           alt={product.name}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-300"

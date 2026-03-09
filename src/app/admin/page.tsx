@@ -6,6 +6,7 @@ import { count } from "drizzle-orm";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 import Link from "next/link";
 import { Package, Tag, Plus, ArrowRight } from "lucide-react";
+import { resolveProductImage } from "@/lib/product-images";
 
 export default async function AdminDashboardPage() {
   await requireAdminAuth();
@@ -114,17 +115,11 @@ export default async function AdminDashboardPage() {
               <div className="divide-y divide-gray-700">
                 {recentProducts.map((product) => (
                   <div key={product.id} className="flex items-center gap-4 p-4">
-                    {product.image ? (
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-12 h-12 object-cover rounded-lg bg-gray-700"
-                      />
-                    ) : (
-                      <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                        <Package className="w-5 h-5 text-gray-500" />
-                      </div>
-                    )}
+                    <img
+                      src={resolveProductImage(product.image)}
+                      alt={product.name}
+                      className="w-12 h-12 object-cover rounded-lg bg-gray-700"
+                    />
                     <div className="flex-1 min-w-0">
                       <div className="text-white font-medium truncate">{product.name}</div>
                       <div className="text-gray-400 text-sm">${product.price.toFixed(2)}</div>

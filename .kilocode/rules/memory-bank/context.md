@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Template Status**: ✨ Luxury Rebrand + AI Design Tool — New premium logo, AI fireplace design wizard with photo upload & room visualization
+**Template Status**: ✨ Luxury Rebrand + AI Design Tool + Placeholder-First Bulk Catalog Workflow — fast CSV seeding and SKU-based photo replacement in admin
 
 The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Fireplace Co** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
 
@@ -141,6 +141,29 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [x] Zero TypeScript errors, zero ESLint errors
 - [x] Committed and pushed (commit `3b698b7`)
 
+## Recently Completed (Session 8)
+
+- [x] Added default product placeholder image asset (`public/products/placeholder-product.svg`)
+- [x] Added shared product image resolver utility (`src/lib/product-images.ts`) with fallback helpers
+- [x] Updated storefront/admin image render points to use placeholder fallback when product images are missing:
+  - `src/components/ui/ProductCard.tsx`
+  - `src/app/product/[slug]/page.tsx`
+  - `src/app/search/page.tsx`
+  - `src/app/design-tool/page.tsx`
+  - `src/app/admin/page.tsx`
+  - `src/app/admin/products/page.tsx`
+- [x] Extended existing import pipeline with local CSV import support (`src/lib/catalog-import.ts`) using required columns: `brand, model, sku, name, category, price` (optional `description`, `image`)
+- [x] Added CSV import path through existing imports API (`src/app/api/admin/imports/route.ts`) via `importType: "csv"` and repo-local `csvPath`
+- [x] Ensured imported rows without images are assigned placeholder image automatically
+- [x] Added starter seed CSV dataset with major fireplace brands/models/SKUs (`data/starter-fireplace-catalog.csv`)
+- [x] Added direct “replace photo by SKU” API (`src/app/api/admin/products/by-sku/image/route.ts`)
+- [x] Updated admin imports UI (`src/app/admin/imports/page-client.tsx`) with:
+  - Starter CSV import controls + instructions
+  - CSV path input
+  - SKU photo upload + assign workflow
+  - Clarified placeholder-first process and retained optional demo JSON import
+- [x] Ran `bun typecheck` and `bun lint` successfully
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
@@ -169,3 +192,4 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 | Initial | Template created with base setup |
 | 2026-02-24 | Built complete fireplace e-commerce white-label template |
 | 2026-02-24 | Rebranded to Aaron's Fireplace Co (Republic, MO), added SVG logo, Unsplash stock photos for products/categories/hero, replaced all emoji placeholders with real images |
+| 2026-03-09 | Added placeholder-first bulk catalog workflow: local CSV import seeding, default product image fallback, starter catalog CSV, and admin SKU photo replacement flow |

@@ -1,0 +1,43 @@
+brand,model,sku,name,category,price,description
+Napoleon,Ascent X 36,NAP-ASCENTX-36,Napoleon Ascent X 36 Gas Fireplace,fireplaces,3299,Direct vent gas fireplace with clean face design
+Napoleon,Ascent X 42,NAP-ASCENTX-42,Napoleon Ascent X 42 Gas Fireplace,fireplaces,3699,Large viewing area direct vent gas unit
+Napoleon,Vector 50,NAP-VECTOR-50,Napoleon Vector 50 Linear Gas Fireplace,fireplaces,5199,Premium linear fireplace for modern spaces
+Napoleon,Trivista 60,NAP-TRIVISTA-60,Napoleon Trivista 60 See-Through Fireplace,fireplaces,5899,Three-sided gas fireplace with panoramic flame
+Napoleon,Oakville X3,NAP-OAKVILLEX3,Napoleon Oakville X3 Gas Insert,inserts,4199,High efficiency gas insert for masonry fireplaces
+Napoleon,S20,NAP-S20,Napoleon S20 Wood Stove,stoves,2499,EPA-certified steel wood stove
+Napoleon,S25,NAP-S25,Napoleon S25 Wood Stove,stoves,2799,High output wood stove for larger homes
+Napoleon,Entice 42,NAP-ENTICE-42,Napoleon Entice 42 Electric Fireplace,electric-fireplaces,1899,Slim electric fireplace with customizable ember bed
+Dimplex,Ignite Evolve 50,DIM-IGNITE-50,Dimplex Ignite Evolve 50 Electric Fireplace,electric-fireplaces,2399,Linear electric fireplace with edge-to-edge glass
+Dimplex,Ignite Evolve 60,DIM-IGNITE-60,Dimplex Ignite Evolve 60 Electric Fireplace,electric-fireplaces,2699,Built-in electric fireplace with realistic flame effects
+Dimplex,Revillusion 36,DIM-REV-36,Dimplex Revillusion 36 Built-In Electric Firebox,electric-fireplaces,1599,Plug-in electric firebox with lifelike log media
+Dimplex,Opti-Myst Pro 500,DIM-OPTIMYST-500,Dimplex Opti-Myst Pro 500 Cassette,electric-fireplaces,2899,Water vapor flame cassette for custom installations
+Majestic,Ruby 30,MAJ-RUBY-30,Majestic Ruby 30 Gas Insert,inserts,3399,Compact direct vent gas insert
+Majestic,Jade 42,MAJ-JADE-42,Majestic Jade 42 Gas Fireplace,fireplaces,4099,Traditional gas fireplace with high flame presentation
+Majestic,Quartz 36,MAJ-QUARTZ-36,Majestic Quartz 36 Gas Fireplace,fireplaces,2999,Value-focused direct vent gas fireplace
+Monessen,Attribute 32,MON-ATTR-32,Monessen Attribute 32 Gas Fireplace,fireplaces,2699,Direct vent gas fireplace for remodel projects
+Monessen,Artisan 48,MON-ART-48,Monessen Artisan 48 Linear Fireplace,fireplaces,4899,Wide linear gas fireplace with clean face trim
+Monessen,Lo-Rider,MON-LORIDER,Monessen Lo-Rider Vent-Free Firebox,fireplaces,1399,Vent-free firebox for compact applications
+Superior,DRL4060,SUP-DRL4060,Superior DRL4060 Linear Gas Fireplace,fireplaces,4699,Contemporary linear direct vent gas fireplace
+Superior,DRT2035,SUP-DRT2035,Superior DRT2035 Traditional Gas Fireplace,fireplaces,3199,Traditional direct vent fireplace with realistic logs
+Superior,WRT4826,SUP-WRT4826,Superior WRT4826 Wood Fireplace,wood-fireplaces,2799,Wood-burning fireplace with circulating design
+Astria,Georgian 40,AST-GEORGIAN-40,Astria Georgian 40 Gas Fireplace,fireplaces,3599,Direct vent gas fireplace with large viewing area
+Astria,Montebello 45,AST-MONTEBELLO-45,Astria Montebello 45 Linear Fireplace,fireplaces,5299,Luxury linear fireplace for custom builds
+Empire,Tahoe Deluxe 36,EMP-TAHOE-36,Empire Tahoe Deluxe 36 Gas Fireplace,fireplaces,3399,Traditional gas fireplace with contour burner
+Empire,Boulevard 60,EMP-BOULEVARD-60,Empire Boulevard 60 Linear Fireplace,fireplaces,5799,Premium linear gas fireplace with tall flames
+Empire,Innsbrook 32,EMP-INNSBROOK-32,Empire Innsbrook 32 Gas Insert,inserts,3199,Gas insert for renovation and retrofit
+Hearthstone,Green Mountain 60,HST-GM60,Hearthstone Green Mountain 60 Wood Stove,wood-stoves,3099,Soapstone-lined wood stove with catalytic efficiency
+Hearthstone,Bari Plus,HST-BARI-PLUS,Hearthstone Bari Plus Gas Stove,gas-stoves,3999,Contemporary freestanding gas stove
+Harman,P43,HAR-P43,Harman P43 Pellet Stove,pellet-stoves,3899,Compact pellet stove with auto ignition
+Harman,P68,HAR-P68,Harman P68 Pellet Stove,pellet-stoves,4899,High-capacity pellet stove for large spaces
+Harman,Absolute63,HAR-ABS-63,Harman Absolute63 Pellet Stove,pellet-stoves,5699,Premium pellet stove with large hopper
+Quadra-Fire,4300 Step Top,QDF-4300ST,Quadra-Fire 4300 Step Top Wood Stove,wood-stoves,3199,Four-point burn system wood stove
+Quadra-Fire,Expedition II,QDF-EXP2,Quadra-Fire Expedition II Wood Insert,wood-inserts,3599,High efficiency wood insert for masonry fireplaces
+Vermont Castings,Dauntless,VC-DAUNTLESS,Vermont Castings Dauntless Wood Stove,wood-stoves,2999,Cast iron wood stove with classic styling
+Vermont Castings,Intrepid,VC-INTREPID,Vermont Castings Intrepid Wood Stove,wood-stoves,2699,Compact cast iron stove for small homes
+Regency,C34E,REG-C34E,Regency C34E Gas Fireplace,fireplaces,3499,Traditional direct vent gas fireplace
+Regency,Gi29LE,REG-GI29LE,Regency Gi29LE Gas Insert,inserts,3399,Gas insert with electronic ignition
+Regency,HZ54E,REG-HZ54E,Regency HZ54E See-Through Fireplace,fireplaces,6499,See-through gas fireplace for two rooms
+Amantii,Panorama 60,AMA-PAN-60,Amantii Panorama 60 Electric Fireplace,electric-fireplaces,2299,Indoor/outdoor rated linear electric fireplace
+Modern Flames,Landscape Pro 56,MFL-LP56,Modern Flames Landscape Pro 56 Electric Fireplace,electric-fireplaces,2799,Hybrid flame electric unit with media bed
+SimpliFire,Allusion Platinum 60,SF-ALLUSION-60,SimpliFire Allusion Platinum 60 Electric Fireplace,electric-fireplaces,2399,Wall-mount electric fireplace with slim profile
+True North,TN20,TN-TN20,True North TN20 Wood Stove,wood-stoves,2199,Entry-level EPA wood stove with robust heat output

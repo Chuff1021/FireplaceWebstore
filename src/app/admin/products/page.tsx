@@ -6,6 +6,7 @@ import { eq } from "drizzle-orm";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 import Link from "next/link";
 import { Plus, Package, Pencil, Trash2 } from "lucide-react";
+import { resolveProductImage } from "@/lib/product-images";
 
 export default async function AdminProductsPage() {
   await requireAdminAuth();
@@ -80,17 +81,11 @@ export default async function AdminProductsPage() {
                     <tr key={product.id} className="hover:bg-gray-750 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          {product.image ? (
-                            <img
-                              src={product.image}
-                              alt={product.name}
-                              className="w-10 h-10 object-cover rounded-lg bg-gray-700 flex-shrink-0"
-                            />
-                          ) : (
-                            <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                              <Package className="w-4 h-4 text-gray-500" />
-                            </div>
-                          )}
+                          <img
+                            src={resolveProductImage(product.image)}
+                            alt={product.name}
+                            className="w-10 h-10 object-cover rounded-lg bg-gray-700 flex-shrink-0"
+                          />
                           <div>
                             <div className="text-white font-medium text-sm">{product.name}</div>
                             <div className="text-gray-500 text-xs">{product.sku || product.slug}</div>

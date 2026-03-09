@@ -20,6 +20,7 @@ import {
 import { useCartStore } from "@/lib/cart-store";
 import { sampleProducts, defaultStoreConfig } from "@/lib/store-config";
 import { ProductCard } from "@/components/ui/ProductCard";
+import { resolveProductImage, resolveProductImages } from "@/lib/product-images";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -38,6 +39,8 @@ export default function ProductPage() {
   const { addItem, openCart } = useCartStore();
 
   const product = sampleProducts.find((p) => p.slug === slug);
+  const productImages = resolveProductImages(product?.images?.[0], product?.images);
+  const primaryProductImage = resolveProductImage(product?.images?.[0], product?.images);
 
   if (!product) {
     return (
@@ -106,7 +109,7 @@ export default function ProductPage() {
           <div>
             <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl relative overflow-hidden">
               <Image
-                src={product.images[0]}
+                src={primaryProductImage}
                 alt={product.name}
                 fill
                 className="object-cover"
@@ -136,7 +139,7 @@ export default function ProductPage() {
 
             {/* Thumbnail Gallery */}
             <div className="flex gap-3 mt-4">
-              {product.images.map((img, i) => (
+              {productImages.map((img, i) => (
                 <button
                   key={i}
                   className={`relative w-20 h-20 rounded-lg border-2 overflow-hidden bg-gray-100 ${

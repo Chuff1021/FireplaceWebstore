@@ -22,6 +22,7 @@ import {
   Star,
 } from "lucide-react";
 import { sampleProducts } from "@/lib/store-config";
+import { resolveProductImage } from "@/lib/product-images";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -523,7 +524,7 @@ export default function DesignToolPage() {
                     )}
                     <div className="relative h-48 bg-gray-100">
                       <Image
-                        src={product.images[0] || "/products/fireplace-1.jpg"}
+                        src={resolveProductImage(product.images[0], product.images)}
                         alt={product.name}
                         fill
                         className="object-cover"
