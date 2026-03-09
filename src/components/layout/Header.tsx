@@ -105,7 +105,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                       {category.subcategories.map((sub) => (
                         <Link
                           key={sub.id}
-                          href={`/category/${category.slug}/${sub.slug}`}
+                          href={`/category/${sub.slug}`}
                           className="block px-4 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors"
                         >
                           {sub.name}
@@ -213,7 +213,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                       {category.subcategories.map((sub) => (
                         <Link
                           key={sub.id}
-                          href={`/category/${category.slug}/${sub.slug}`}
+                          href={`/category/${sub.slug}`}
                           className="block py-1 text-gray-600 hover:text-orange-600"
                           onClick={() => setIsMenuOpen(false)}
                         >

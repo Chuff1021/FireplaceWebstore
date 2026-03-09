@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Template Status**: ✨ Luxury Rebrand + AI Design Tool + Placeholder-First Bulk Catalog Workflow — fast CSV seeding and SKU-based photo replacement in admin
+**Template Status**: ✨ Luxury Rebrand + AI Design Tool + Placeholder-First Bulk Catalog Workflow + Category Route Reliability / Dense Catalog Listing UX
 
 The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Fireplace Co** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
 
@@ -164,6 +164,17 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
   - Clarified placeholder-first process and retained optional demo JSON import
 - [x] Ran `bun typecheck` and `bun lint` successfully
 
+## Recently Completed (Session 9)
+
+- [x] Fixed category/subcategory navigation 404s caused by links targeting non-existent nested route pattern (`/category/[parent]/[child]`)
+- [x] Updated header desktop/mobile dropdown links to use supported single-slug route pattern (`/category/[slug]`) for subcategories
+- [x] Updated category page subcategory chips to link to `/category/[subcategory-slug]`
+- [x] Enhanced category page route resolution so a single slug can represent either top-level category or subcategory
+- [x] Ensured target routes resolve reliably: `/category/fireplaces`, `/category/gas-fireplaces`, `/category/wood-fireplaces`, plus all rendered category/subcategory links from nav/grid
+- [x] Reworked category product listing from sparse cards to denser catalog rows with Product / Make / Model / SKU / Price + inline add-to-cart
+- [x] Added Fireplaces quick-browse links (All/Gas/Wood) on homepage category section and dedicated fireplace fuel jump links on category pages
+- [x] Ran `bun typecheck` and `bun lint` successfully after route/catalog updates
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
@@ -193,3 +204,4 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 | 2026-02-24 | Built complete fireplace e-commerce white-label template |
 | 2026-02-24 | Rebranded to Aaron's Fireplace Co (Republic, MO), added SVG logo, Unsplash stock photos for products/categories/hero, replaced all emoji placeholders with real images |
 | 2026-03-09 | Added placeholder-first bulk catalog workflow: local CSV import seeding, default product image fallback, starter catalog CSV, and admin SKU photo replacement flow |
+| 2026-03-09 | Fixed category/subcategory route mismatches causing 404s and converted category listing UX to a denser make/model/price catalog layout with improved Fireplaces → Gas/Wood discoverability |

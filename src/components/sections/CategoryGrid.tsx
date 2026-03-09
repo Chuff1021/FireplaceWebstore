@@ -43,6 +43,30 @@ export function CategoryGrid() {
             </Link>
           ))}
         </div>
+
+        <div className="mt-8 bg-white border border-gray-200 rounded-xl p-4 md:p-5">
+          <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">Fireplaces Quick Browse</p>
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href="/category/fireplaces"
+              className="px-3 py-2 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-orange-300 hover:text-orange-600 transition-colors"
+            >
+              All Fireplaces
+            </Link>
+            <Link
+              href="/category/gas-fireplaces"
+              className="px-3 py-2 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-orange-300 hover:text-orange-600 transition-colors"
+            >
+              Gas Fireplaces
+            </Link>
+            <Link
+              href="/category/wood-fireplaces"
+              className="px-3 py-2 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-orange-300 hover:text-orange-600 transition-colors"
+            >
+              Wood Fireplaces
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
