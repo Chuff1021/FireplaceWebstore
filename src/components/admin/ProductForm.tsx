@@ -27,7 +27,14 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
   const [price, setPrice] = useState(product?.price?.toString() ?? "");
   const [salePrice, setSalePrice] = useState(product?.salePrice?.toString() ?? "");
   const [sku, setSku] = useState(product?.sku ?? "");
+  const [manufacturerSku, setManufacturerSku] = useState(product?.manufacturerSku ?? "");
   const [brand, setBrand] = useState(product?.brand ?? "");
+  const [fuelType, setFuelType] = useState(product?.fuelType ?? "");
+  const [ventType, setVentType] = useState(product?.ventType ?? "");
+  const [widthInches, setWidthInches] = useState(product?.widthInches?.toString() ?? "");
+  const [btuOutput, setBtuOutput] = useState(product?.btuOutput?.toString() ?? "");
+  const [lifecycleStatus, setLifecycleStatus] = useState(product?.lifecycleStatus ?? "draft");
+  const [complianceStatus, setComplianceStatus] = useState(product?.complianceStatus ?? "green");
   const [categoryId, setCategoryId] = useState(product?.categoryId?.toString() ?? "");
   const [image, setImage] = useState(product?.image ?? "");
   const [images, setImages] = useState<string[]>(() => {
@@ -102,7 +109,12 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
         price: parseFloat(price) || 0,
         salePrice: salePrice ? parseFloat(salePrice) : null,
         sku: sku || null,
+        manufacturerSku: manufacturerSku || "",
         brand,
+        fuelType,
+        ventType,
+        widthInches: widthInches ? parseFloat(widthInches) : null,
+        btuOutput: btuOutput ? parseInt(btuOutput, 10) : null,
         categoryId: categoryId ? parseInt(categoryId) : null,
         image,
         images: JSON.stringify(images),
@@ -110,6 +122,8 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
         isNew,
         isSale,
         inStock,
+        lifecycleStatus,
+        complianceStatus,
         isActive,
       };
 
@@ -252,6 +266,17 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
               </div>
 
               <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">Manufacturer SKU</label>
+                <input
+                  type="text"
+                  value={manufacturerSku}
+                  onChange={(e) => setManufacturerSku(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="e.g. MFG-ASCENT-36"
+                />
+              </div>
+
+              <div>
                 <label className="block text-sm font-medium text-gray-300 mb-1.5">Brand</label>
                 <input
                   type="text"
@@ -259,6 +284,54 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
                   onChange={(e) => setBrand(e.target.value)}
                   className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
                   placeholder="e.g. Napoleon"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">Fuel Type</label>
+                <input
+                  type="text"
+                  value={fuelType}
+                  onChange={(e) => setFuelType(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="Gas, Wood, Electric"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">Vent Type</label>
+                <input
+                  type="text"
+                  value={ventType}
+                  onChange={(e) => setVentType(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="Direct Vent, Vent-Free"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">Width (inches)</label>
+                <input
+                  type="number"
+                  value={widthInches}
+                  onChange={(e) => setWidthInches(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="36"
+                  step="0.1"
+                  min="0"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">BTU Output</label>
+                <input
+                  type="number"
+                  value={btuOutput}
+                  onChange={(e) => setBtuOutput(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                  placeholder="35000"
+                  step="1"
+                  min="0"
                 />
               </div>
             </div>
@@ -405,6 +478,38 @@ export default function ProductForm({ product, categories }: ProductFormProps) {
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className="bg-gray-800 rounded-xl border border-gray-700 p-6">
+            <h3 className="text-white font-semibold mb-5">Compliance & Lifecycle</h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">Lifecycle Status</label>
+                <select
+                  value={lifecycleStatus}
+                  onChange={(e) => setLifecycleStatus(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                >
+                  <option value="draft">Draft</option>
+                  <option value="approved">Approved</option>
+                  <option value="published">Published</option>
+                  <option value="archived">Archived</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">Compliance Status</label>
+                <select
+                  value={complianceStatus}
+                  onChange={(e) => setComplianceStatus(e.target.value)}
+                  className="w-full bg-gray-700 border border-gray-600 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500"
+                >
+                  <option value="green">Green (approved)</option>
+                  <option value="yellow">Yellow (review)</option>
+                  <option value="red">Red (blocked)</option>
+                </select>
+              </div>
+            </div>
           </div>
 
           {/* Save Button */}

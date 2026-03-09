@@ -20,8 +20,14 @@ export async function POST(request: NextRequest) {
         price: body.price ?? 0,
         salePrice: body.salePrice ?? null,
         sku: body.sku ?? null,
+        manufacturerSku: body.manufacturerSku ?? "",
         brand: body.brand ?? "",
+        fuelType: body.fuelType ?? "",
+        ventType: body.ventType ?? "",
+        widthInches: body.widthInches ?? null,
+        btuOutput: body.btuOutput ?? null,
         categoryId: body.categoryId ?? null,
+        sourceId: body.sourceId ?? null,
         image: body.image ?? "",
         images: body.images ?? "[]",
         specs: body.specs ?? "{}",
@@ -30,6 +36,8 @@ export async function POST(request: NextRequest) {
         isNew: body.isNew ?? false,
         isSale: body.isSale ?? false,
         inStock: body.inStock ?? true,
+        lifecycleStatus: body.lifecycleStatus ?? "draft",
+        complianceStatus: body.complianceStatus ?? "green",
         isActive: body.isActive ?? true,
       })
       .returning();
