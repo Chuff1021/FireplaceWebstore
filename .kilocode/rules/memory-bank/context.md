@@ -1,10 +1,10 @@
-# Active Context: Aaron's Fireplace Co — E-Commerce Website
+# Active Context: Aaron's Hearth and Home — E-Commerce Website
 
 ## Current State
 
 **Template Status**: ✨ Luxury Rebrand + AI Design Tool + Placeholder-First Bulk Catalog Workflow + Category Route Reliability / Dense Catalog Listing UX
 
-The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Fireplace Co** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
+The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Hearth and Home** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
 
 ## Recently Completed
 
@@ -36,7 +36,7 @@ The project has been rebranded from the generic "Elite Fireplace Store" template
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/lib/store-config.ts` | White-label config for Aaron's Fireplace Co | ✅ Branded |
+| `src/lib/store-config.ts` | White-label config for Aaron's Hearth and Home | ✅ Branded |
 | `src/lib/cart-store.ts` | Zustand cart store (persistent) | ✅ Ready |
 | `src/components/layout/Header.tsx` | Header with SVG logo, nav, search, cart | ✅ Updated |
 | `src/components/layout/Footer.tsx` | Footer with SVG logo, newsletter, links | ✅ Updated |
@@ -53,20 +53,20 @@ The project has been rebranded from the generic "Elite Fireplace Store" template
 | `src/app/product/[slug]/page.tsx` | Product detail page with image gallery | ✅ Updated |
 | `src/app/cart/page.tsx` | Shopping cart page | ✅ Ready |
 | `src/app/checkout/page.tsx` | Checkout flow | ✅ Ready |
-| `public/logo.svg` | Aaron's Fireplace Co SVG logo | ✅ New |
+| `public/logo.svg` | Aaron's Hearth and Home SVG logo | ✅ New |
 | `public/products/` | 7 product stock photos (Unsplash) | ✅ New |
 | `public/categories/` | 25 category stock photos (Unsplash) | ✅ New |
 | `public/hero/` | 2 hero background images (Unsplash) | ✅ New |
 
 ## White-Label System
 
-The template is branded for Aaron's Fireplace Co by editing `src/lib/store-config.ts`:
-- **Store name**: Aaron's Fireplace Co
+The template is branded for Aaron's Hearth and Home by editing `src/lib/store-config.ts`:
+- **Store name**: Aaron's Hearth and Home
 - **Tagline**: Republic, Missouri's Trusted Fireplace & Heating Experts
-- **Contact**: (417) 555-0199, info@aaronsfireplace.com
+- **Contact**: (417) 555-0199, info@aaronshearthandhome.com
 - **Address**: 100 E Hines St, Republic, MO 65738
 - **Theme colors**: Deep Red primary (#b91c1c), Navy Blue secondary (#1e3a5f), Amber accent
-- **SEO**: Optimized for "Aaron's Fireplace Co" and "Republic Missouri fireplace"
+- **SEO**: Optimized for "Aaron's Hearth and Home" and "Republic Missouri fireplace"
 - **Logo**: SVG at `/logo.svg` with flame icon and company name
 
 ## Recently Completed (Session 3)
@@ -175,10 +175,20 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [x] Added Fireplaces quick-browse links (All/Gas/Wood) on homepage category section and dedicated fireplace fuel jump links on category pages
 - [x] Ran `bun typecheck` and `bun lint` successfully after route/catalog updates
 
+## Recently Completed (Session 10)
+
+- [x] Rebranded storefront/admin visible brand naming to **Aaron's Hearth and Home**
+- [x] Replaced primary logo asset (`public/logo.svg`) with a modern premium mark (framed flame crest, refined serif + sans pairing, premium gold charcoal palette)
+- [x] Replaced footer/light logo asset (`public/logo-light.svg`) with matching premium dark-background variant (white headline text + warm gold accents)
+- [x] Updated white-label branding config (`src/lib/store-config.ts`) for store name + SEO title/description + keyword brand string + branded contact/social handles
+- [x] Updated admin metadata/title strings to new brand (`src/app/admin/layout.tsx`, `src/app/admin/login/page.tsx`)
+- [x] Preserved logo override compatibility by keeping existing resolver flow unchanged (`src/lib/logo-resolver.ts`, `src/app/layout.tsx`, `src/components/layout/Header.tsx`, `src/components/layout/Footer.tsx`)
+- [x] Ran `bun typecheck` and `bun lint` successfully
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
-- [ ] Replace placeholder phone/email/address with real Aaron's Fireplace Co contact info
+- [ ] Replace placeholder phone/email/address with real Aaron's Hearth and Home contact info
 - [ ] Add user's actual logo PNG (luxury SVG now in place)
 - [ ] Add more products via admin dashboard (currently only 6 sample products in config)
 - [ ] Add user authentication (login/register)
@@ -188,7 +198,7 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 - [ ] Add product comparison feature
 - [ ] Add recently viewed products
 - [ ] Add email notifications (order confirmation, shipping updates)
-- [ ] Replace stock photos with actual Aaron's Fireplace Co product photos
+- [ ] Replace stock photos with actual Aaron's Hearth and Home product photos
 
 ## Dependencies
 
@@ -205,3 +215,4 @@ The template is branded for Aaron's Fireplace Co by editing `src/lib/store-confi
 | 2026-02-24 | Rebranded to Aaron's Fireplace Co (Republic, MO), added SVG logo, Unsplash stock photos for products/categories/hero, replaced all emoji placeholders with real images |
 | 2026-03-09 | Added placeholder-first bulk catalog workflow: local CSV import seeding, default product image fallback, starter catalog CSV, and admin SKU photo replacement flow |
 | 2026-03-09 | Fixed category/subcategory route mismatches causing 404s and converted category listing UX to a denser make/model/price catalog layout with improved Fireplaces → Gas/Wood discoverability |
+| 2026-03-09 | Rebranded to Aaron's Hearth and Home with refreshed premium primary/footer SVG logos and updated site/admin branding text |

@@ -59,15 +59,15 @@ export interface StoreConfig {
   };
 }
 
-// Default configuration — Aaron's Fireplace Co
+// Default configuration — Aaron's Hearth and Home
 export const defaultStoreConfig: StoreConfig = {
-  storeName: "Aaron's Fireplace Co",
+  storeName: "Aaron's Hearth and Home",
   tagline: "Republic, Missouri's Trusted Fireplace & Heating Experts",
   logo: "/logo.svg",
   favicon: "/favicon.ico",
   
   phone: "(417) 555-0199",
-  email: "info@aaronsfireplace.com",
+  email: "info@aaronshearthandhome.com",
   address: {
     street: "100 E Hines St",
     city: "Republic",
@@ -76,9 +76,9 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   social: {
-    facebook: "https://facebook.com/aaronsfireplaceco",
-    instagram: "https://instagram.com/aaronsfireplaceco",
-    youtube: "https://youtube.com/aaronsfireplaceco",
+    facebook: "https://facebook.com/aaronshearthandhome",
+    instagram: "https://instagram.com/aaronshearthandhome",
+    youtube: "https://youtube.com/aaronshearthandhome",
   },
   
   theme: {
@@ -104,8 +104,8 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   seo: {
-    metaTitle: "Aaron's Fireplace Co | Fireplaces, Inserts & Stoves in Republic, MO",
-    metaDescription: "Aaron's Fireplace Co in Republic, Missouri — shop gas fireplaces, wood stoves, electric fireplaces, inserts, and accessories. Expert advice, professional installation, and free shipping on orders over $499.",
+    metaTitle: "Aaron's Hearth and Home | Fireplaces, Inserts & Stoves in Republic, MO",
+    metaDescription: "Aaron's Hearth and Home in Republic, Missouri — shop gas fireplaces, wood stoves, electric fireplaces, inserts, and accessories. Expert advice, professional installation, and free shipping on orders over $499.",
     keywords: [
       "fireplace",
       "fireplace store Republic MO",
@@ -115,7 +115,7 @@ export const defaultStoreConfig: StoreConfig = {
       "fireplace insert",
       "pellet stove",
       "fireplace accessories",
-      "Aaron's Fireplace",
+      "Aaron's Hearth and Home",
       "Republic Missouri fireplace",
     ],
   },

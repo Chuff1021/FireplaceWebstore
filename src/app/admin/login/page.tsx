@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-red-700 rounded-full mb-4">
             <Flame className="w-8 h-8 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-white">Aaron&apos;s Fireplace Co</h1>
+          <h1 className="text-2xl font-bold text-white">Aaron&apos;s Hearth and Home</h1>
           <p className="text-gray-400 mt-1">Admin Dashboard</p>
         </div>
 

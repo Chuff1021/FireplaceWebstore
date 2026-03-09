@@ -1,42 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" fill="none">
   <defs>
-    <linearGradient id="flameGold" x1="0%" y1="100%" x2="50%" y2="0%">
-      <stop offset="0%" stop-color="#92400E"/>
-      <stop offset="40%" stop-color="#D97706"/>
-      <stop offset="100%" stop-color="#FCD34D"/>
+    <linearGradient id="ahh-gold" x1="0" y1="84" x2="84" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8A5A12"/>
+      <stop offset="0.48" stop-color="#C4892E"/>
+      <stop offset="1" stop-color="#F3D38A"/>
     </linearGradient>
-    <linearGradient id="flameInner" x1="0%" y1="100%" x2="30%" y2="0%">
-      <stop offset="0%" stop-color="#B45309"/>
-      <stop offset="100%" stop-color="#FEF3C7"/>
+    <linearGradient id="ahh-ember" x1="26" y1="62" x2="52" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A04F17"/>
+      <stop offset="1" stop-color="#F8E6BF"/>
     </linearGradient>
   </defs>
 
-  <!-- Flame mark — refined teardrop with inner glow -->
-  <g transform="translate(6, 4)">
-    <!-- Outer flame -->
-    <path d="M28 62C14 62 4 52 4 38C4 26 11 16 18 8C17 18 22 24 27 24C24 15 27 5 34 0C31 11 36 20 41 25C46 20 48 14 47 9C53 17 56 26 56 36C56 52 44 62 32 62C32 62 37 54 37 46C37 38 32 33 27 33C27 41 28 52 28 62Z" fill="url(#flameGold)"/>
-    <!-- Inner flame highlight -->
-    <path d="M28 62C28 52 27 41 27 33C32 33 37 38 37 46C37 54 32 62 32 62C30.7 62 29.3 62 28 62Z" fill="url(#flameInner)" opacity="0.9"/>
-    <!-- Subtle ember dot -->
-    <circle cx="31" cy="44" r="3" fill="#FEF3C7" opacity="0.6"/>
+  <g transform="translate(8 6)">
+    <rect x="0.75" y="0.75" width="82.5" height="82.5" rx="20" stroke="#D7B06A" stroke-opacity="0.45" stroke-width="1.5"/>
+    <path d="M42 68c-11.6 0-19-8.8-19-18.8 0-8.4 4.9-15.4 10.8-20.9-.4 6.8 2.6 10.6 6.6 10.6-1.9-5.6-.1-12 5.3-16.9-1.1 6 1.6 11.2 5.2 14.8 3.7-3.5 5.5-8.1 5.1-12.4 5.7 5.5 9 12.6 9 20.6 0 11-8.4 23-23 23Z" fill="url(#ahh-gold)"/>
+    <path d="M42.1 68c0-6.7.2-13.3.2-19.9 5.8.2 9.1 4.4 9.1 9.6 0 5.6-3.3 10.3-8.4 10.3h-.9Z" fill="url(#ahh-ember)"/>
+    <path d="M24 69.5h36" stroke="#D7B06A" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
   </g>
 
-  <!-- Thin gold divider line -->
-  <line x1="76" y1="12" x2="76" y2="60" stroke="#D97706" stroke-width="0.75" opacity="0.6"/>
+  <line x1="106" y1="14" x2="106" y2="82" stroke="#C4892E" stroke-opacity="0.5"/>
 
-  <!-- AARON'S — large elegant serif -->
-  <text x="90" y="34"
-    font-family="'Didot', 'Bodoni MT', 'Playfair Display', 'Times New Roman', Georgia, serif"
-    font-size="26"
-    font-weight="700"
-    letter-spacing="5"
-    fill="#111827">AARON&#x2019;S</text>
-
-  <!-- FIREPLACE CO — spaced small caps in gold -->
-  <text x="91" y="54"
-    font-family="'Didot', 'Bodoni MT', 'Playfair Display', 'Times New Roman', Georgia, serif"
-    font-size="13"
-    font-weight="400"
-    letter-spacing="8"
-    fill="#B45309">FIREPLACE&#x2003;CO</text>
+  <text x="124" y="42" font-family="'Avenir Next', 'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="2.8" fill="#A86A20">AARON&#x2019;S</text>
+  <text x="124" y="72" font-family="'Didot', 'Bodoni MT', 'Playfair Display', Georgia, serif" font-size="36" font-weight="600" letter-spacing="1" fill="#111827">Hearth &amp; Home</text>
 </svg>
