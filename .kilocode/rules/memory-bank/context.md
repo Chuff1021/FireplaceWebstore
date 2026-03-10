@@ -203,6 +203,14 @@ The template is branded for Aaron's Hearth and Home by editing `src/lib/store-co
 - [x] Kept existing routing/data/filter logic intact and scoped styling emphasis to gas-fireplaces page state
 - [x] Ran `bun typecheck` and `bun lint` successfully
 
+## Recently Completed (Session 13)
+
+- [x] Updated gas fireplaces category listing layout in `src/app/category/[slug]/page.tsx` to a more marketplace-style horizontal product row format inspired by fireplaces.com
+- [x] Kept changes scoped to `/category/gas-fireplaces` rendering while preserving existing category behavior for non-gas pages
+- [x] Added right-side pricing/action panel for gas fireplace cards with stronger purchase CTAs and product detail link placement
+- [x] Added placeholder-style capability chips/metadata blocks for gas products so layout remains stable before full catalog import
+- [x] Ran `bun typecheck` and `bun lint` successfully
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization

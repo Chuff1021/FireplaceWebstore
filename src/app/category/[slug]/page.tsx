@@ -385,7 +385,7 @@ export default function CategoryPage() {
                 No products currently listed for these filters.
               </div>
             ) : (
-              <div className={isGasFireplacePage ? "grid sm:grid-cols-2 xl:grid-cols-3 gap-5" : "space-y-4"}>
+              <div className="space-y-4">
                 {displayProducts.map((product) => {
                   const livePrice = product.salePrice ?? product.price;
                   const model = splitModel(product.name, product.brand, product.sku);
@@ -396,26 +396,26 @@ export default function CategoryPage() {
                       key={product.id}
                       className={`bg-white rounded-2xl border overflow-hidden transition-all ${
                         isGasFireplacePage
-                          ? "border-amber-200 hover:shadow-[0_12px_35px_rgba(0,0,0,0.1)] hover:-translate-y-0.5"
+                          ? "border-gray-200 hover:border-amber-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]"
                           : "border-gray-200 hover:shadow-md"
                       }`}
                     >
-                      <div className={isGasFireplacePage ? "grid grid-cols-1" : "grid md:grid-cols-[220px_1fr] gap-0"}>
+                      <div className={isGasFireplacePage ? "grid md:grid-cols-[260px_1fr_220px]" : "grid md:grid-cols-[220px_1fr] gap-0"}>
                         <Link
                           href={`/product/${product.slug}`}
-                          className={`relative block bg-gray-100 ${isGasFireplacePage ? "h-56" : "h-56 md:h-full"}`}
+                          className={`relative block bg-gray-100 ${isGasFireplacePage ? "h-56 md:h-full" : "h-56 md:h-full"}`}
                         >
                           <Image
                             src={productImage}
                             alt={product.name}
                             fill
                             className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 220px"
+                            sizes={isGasFireplacePage ? "(max-width: 768px) 100vw, 260px" : "(max-width: 768px) 100vw, 220px"}
                           />
                         </Link>
 
-                        <div className="p-5 md:p-6">
-                          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <div className="p-5 md:p-6 border-t md:border-t-0 md:border-l border-gray-100">
+                          <div className="flex flex-col gap-4">
                             <div className="min-w-0">
                               <p className="text-xs uppercase tracking-wider text-amber-700 font-semibold inline-flex items-center gap-1.5">
                                 {isGasFireplacePage && <Flame className="w-3.5 h-3.5" />}
@@ -423,25 +423,15 @@ export default function CategoryPage() {
                               </p>
                               <Link
                                 href={`/product/${product.slug}`}
-                                className="mt-1 block text-xl font-semibold text-[#1f2937] hover:text-amber-700 leading-snug"
+                                className="mt-1 block text-lg md:text-xl font-semibold text-[#1f2937] hover:text-amber-700 leading-snug"
                               >
                                 {product.name}
                               </Link>
-                              <p className="mt-2 text-sm text-gray-600 line-clamp-2">{product.shortDescription}</p>
-                            </div>
-
-                            <div className="text-left md:text-right">
-                              <p className="text-2xl font-semibold text-[#1f2937]">{formatPrice(livePrice)}</p>
-                              {product.salePrice && (
-                                <p className="text-sm text-gray-400 line-through">{formatPrice(product.price)}</p>
-                              )}
-                              <p className="mt-1 text-xs text-emerald-700 font-semibold">
-                                {product.inStock ? "In stock" : "Out of stock"}
-                              </p>
+                              <p className="mt-2 text-sm text-gray-600 line-clamp-2">{product.shortDescription || "Premium gas fireplace with modern styling and efficient heating performance."}</p>
                             </div>
                           </div>
 
-                          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
                             <div className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-2">
                               <p className="text-[11px] uppercase tracking-wider text-gray-500">Model</p>
                               <p className="font-medium text-gray-800 truncate">{model}</p>
@@ -451,30 +441,72 @@ export default function CategoryPage() {
                               <p className="font-medium text-gray-800 font-mono truncate">{product.sku}</p>
                             </div>
                             <div className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-2">
-                              <p className="text-[11px] uppercase tracking-wider text-gray-500">Rating</p>
-                              <p className="font-medium text-gray-800">{product.rating.toFixed(1)} / 5</p>
+                              <p className="text-[11px] uppercase tracking-wider text-gray-500">Fuel</p>
+                              <p className="font-medium text-gray-800">Gas Fireplace</p>
                             </div>
                           </div>
 
-                          <div className="mt-5 flex items-center gap-3">
+                          {isGasFireplacePage && (
+                            <div className="flex flex-wrap gap-2 text-xs text-gray-600">
+                              <span className="px-2.5 py-1 rounded-full bg-[#f7f7f7] border border-gray-200">Direct Vent</span>
+                              <span className="px-2.5 py-1 rounded-full bg-[#f7f7f7] border border-gray-200">Linear Options</span>
+                              <span className="px-2.5 py-1 rounded-full bg-[#f7f7f7] border border-gray-200">Remote Ready</span>
+                            </div>
+                          )}
+
+                          {!isGasFireplacePage && (
+                            <div className="mt-5 flex items-center gap-3">
+                              <button
+                                onClick={() => {
+                                  addItem(product);
+                                  openCart();
+                                }}
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#1f2937] text-white text-sm font-semibold hover:bg-black transition-colors"
+                              >
+                                <ShoppingCart className="w-4 h-4" />
+                                Add to Cart
+                              </button>
+                              <Link
+                                href={`/product/${product.slug}`}
+                                className="inline-flex items-center px-4 py-2.5 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-amber-400 hover:text-amber-700 transition-colors"
+                              >
+                                View Details
+                              </Link>
+                            </div>
+                          )}
+                        </div>
+
+                        {isGasFireplacePage && (
+                          <div className="p-5 md:p-6 border-t md:border-t-0 md:border-l border-gray-100 bg-[#fcfcfb] flex flex-col justify-between gap-4">
+                            <div>
+                              <p className="text-xs uppercase tracking-wider text-gray-500">Starting At</p>
+                              <p className="text-3xl font-semibold text-[#1f2937] mt-1">{formatPrice(livePrice)}</p>
+                              {product.salePrice && (
+                                <p className="text-sm text-gray-400 line-through">{formatPrice(product.price)}</p>
+                              )}
+                              <p className={`mt-2 text-xs font-semibold ${product.inStock ? "text-emerald-700" : "text-red-600"}`}>
+                                {product.inStock ? "In stock • Ships fast" : "Currently unavailable"}
+                              </p>
+                            </div>
+
                             <button
                               onClick={() => {
                                 addItem(product);
                                 openCart();
                               }}
-                              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#1f2937] text-white text-sm font-semibold hover:bg-black transition-colors"
+                              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#1f2937] text-white text-sm font-semibold hover:bg-black transition-colors"
                             >
                               <ShoppingCart className="w-4 h-4" />
                               Add to Cart
                             </button>
                             <Link
                               href={`/product/${product.slug}`}
-                              className="inline-flex items-center px-4 py-2.5 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-amber-400 hover:text-amber-700 transition-colors"
+                              className="w-full inline-flex items-center justify-center px-4 py-3 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-amber-400 hover:text-amber-700 transition-colors"
                             >
-                              View Details
+                              View Product
                             </Link>
                           </div>
-                        </div>
+                        )}
                       </div>
                     </article>
                   );
