@@ -154,6 +154,7 @@ export const productCategories: ProductCategory[] = [
     subcategories: [
       { id: "gas-inserts", name: "Gas Inserts", slug: "gas-inserts", description: "Efficient gas fireplace inserts", image: "/categories/gas-inserts.jpg" },
       { id: "wood-inserts", name: "Wood Inserts", slug: "wood-inserts", description: "High-efficiency wood burning inserts", image: "/categories/wood-inserts.jpg" },
+      { id: "electric-inserts", name: "Electric Inserts", slug: "electric-inserts", description: "Easy-install electric fireplace inserts", image: "/categories/electric-inserts.jpg" },
       { id: "pellet-inserts", name: "Pellet Inserts", slug: "pellet-inserts", description: "Convenient pellet-burning inserts", image: "/categories/pellet-inserts.jpg" },
     ],
   },

@@ -1,0 +1,54 @@
+[
+  {
+    "sku": "TNS-TN40-INSA",
+    "name": "True North TN40 Series Pellet Fireplace Insert",
+    "slug": "tns-tn40-insa",
+    "price": 4319.99,
+    "salePrice": 3508.79,
+    "brand": "True",
+    "imageUrl": "/products/pellet-inserts/tns-tn40-insa-2329844c.webp",
+    "productUrl": "https://www.efireplacestore.com/tns-tn40-insa.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": true
+  },
+  {
+    "sku": "HRS-HRFPI",
+    "name": "Hudson River Stove Works 23 Inch Davenport Pellet Stove Fireplace Insert",
+    "slug": "hrs-hrfpi",
+    "price": 4059.99,
+    "salePrice": 3299.39,
+    "brand": "Hudson",
+    "imageUrl": "/products/pellet-inserts/hrs-hrfpi-427e15a6.webp",
+    "productUrl": "https://www.efireplacestore.com/hrs-hrfpi.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": true
+  },
+  {
+    "sku": "CPS-860574002660",
+    "name": "Comfortbilt Pellet Stoves 43 Inch HP22I Pellet Stove Fireplace Insert",
+    "slug": "cps-860574002660",
+    "price": 3589.99,
+    "salePrice": 2918.74,
+    "brand": "Comfortbilt",
+    "imageUrl": "/products/pellet-inserts/cps-860574002660-efb47561.webp",
+    "productUrl": "https://www.efireplacestore.com/cps-860574002660.html",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": true
+  },
+  {
+    "sku": "USS-6041I",
+    "name": "US Stove Corn and Pellet Burning Fireplace Insert",
+    "slug": "uss-6041i",
+    "price": 3159.99,
+    "salePrice": 2566.19,
+    "brand": "US",
+    "imageUrl": "/products/pellet-inserts/uss-6041i-59a87efe.webp",
+    "productUrl": "https://www.efireplacestore.com/uss-6041i.html",
+    "rating": 4.8,
+    "reviewCount": 4,
+    "isBestSeller": false
+  }
+]
