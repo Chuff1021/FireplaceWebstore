@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "cdn.jsdelivr.net",
       },
+      {
+        protocol: "https",
+        hostname: "www.efireplacestore.com",
+      },
+      {
+        protocol: "https",
+        hostname: "efireplacestore.com",
+      },
     ],
   },
 };

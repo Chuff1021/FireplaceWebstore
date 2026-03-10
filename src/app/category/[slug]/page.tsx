@@ -4,8 +4,8 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, SlidersHorizontal, ShoppingCart } from "lucide-react";
-import { productCategories, sampleProducts } from "@/lib/store-config";
-import { useState } from "react";
+import { productCategories, sampleProducts, type Product } from "@/lib/store-config";
+import { useEffect, useState } from "react";
 import { useCartStore } from "@/lib/cart-store";
 import { resolveProductImage } from "@/lib/product-images";
 
@@ -29,7 +29,31 @@ export default function CategoryPage() {
   const slug = params.slug as string;
   const [sortBy, setSortBy] = useState("featured");
   const [showFilters, setShowFilters] = useState(false);
+  const [catalogProducts, setCatalogProducts] = useState<Product[]>(sampleProducts);
   const { addItem, openCart } = useCartStore();
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadProducts() {
+      try {
+        const response = await fetch("/api/products?limit=1000", { cache: "no-store" });
+        if (!response.ok) return;
+        const data = (await response.json()) as Product[];
+        if (!cancelled && Array.isArray(data) && data.length > 0) {
+          setCatalogProducts(data);
+        }
+      } catch {
+        // Keep the local starter catalog if the API is unavailable.
+      }
+    }
+
+    void loadProducts();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const parentCategory = productCategories.find((c) => c.slug === slug);
   const flattenedSubcategories = productCategories.flatMap((category) =>
@@ -49,7 +73,7 @@ export default function CategoryPage() {
   const topLevelForPage = parentCategory ?? subcategoryMatch?.parent ?? null;
 
   // Filter products by category/subcategory
-  const products = sampleProducts.filter((product) => {
+  const products = catalogProducts.filter((product) => {
     if (parentCategory) {
       const subcategoryIds = new Set((parentCategory.subcategories ?? []).map((sub) => sub.id));
       return product.categoryId === parentCategory.id || Boolean(product.subcategoryId && subcategoryIds.has(product.subcategoryId));
@@ -240,13 +264,7 @@ export default function CategoryPage() {
               <div className="mb-6">
                 <h4 className="font-medium text-gray-700 mb-2">Brand</h4>
                 <div className="space-y-2">
-                  {[
-                    "Napoleon",
-                    "Superior",
-                    "Dimplex",
-                    "Harman",
-                    "Vogelzang",
-                  ].map((brand) => (
+                  {[...new Set(products.map((product) => product.brand))].sort().map((brand) => (
                     <label
                       key={brand}
                       className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer"

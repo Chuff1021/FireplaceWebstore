@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ChevronRight,
   Star,
@@ -18,7 +18,7 @@ import {
   Check,
 } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
-import { sampleProducts, defaultStoreConfig } from "@/lib/store-config";
+import { sampleProducts, defaultStoreConfig, type Product } from "@/lib/store-config";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { resolveProductImage, resolveProductImages } from "@/lib/product-images";
 
@@ -32,15 +32,61 @@ function formatPrice(price: number) {
 export default function ProductPage() {
   const params = useParams();
   const slug = params.slug as string;
+  const localProduct = sampleProducts.find((p) => p.slug === slug);
   const [quantity, setQuantity] = useState(1);
+  const [remoteProduct, setRemoteProduct] = useState<Product | null>(null);
+  const [isLoadingRemoteProduct, setIsLoadingRemoteProduct] = useState(!localProduct);
   const [activeTab, setActiveTab] = useState<"description" | "specs" | "reviews">(
     "description"
   );
   const { addItem, openCart } = useCartStore();
 
-  const product = sampleProducts.find((p) => p.slug === slug);
+  const product = localProduct ?? remoteProduct;
   const productImages = resolveProductImages(product?.images?.[0], product?.images);
   const primaryProductImage = resolveProductImage(product?.images?.[0], product?.images);
+
+  useEffect(() => {
+    if (localProduct) {
+      setIsLoadingRemoteProduct(false);
+      return;
+    }
+
+    let cancelled = false;
+
+    async function loadProduct() {
+      setIsLoadingRemoteProduct(true);
+      try {
+        const response = await fetch(`/api/products?slug=${encodeURIComponent(slug)}&limit=1`, {
+          cache: "no-store",
+        });
+        if (!response.ok) return;
+        const data = (await response.json()) as Product[];
+        if (!cancelled) {
+          setRemoteProduct(data[0] ?? null);
+        }
+      } catch {
+        // Leave the not found state in place if the API request fails.
+      } finally {
+        if (!cancelled) {
+          setIsLoadingRemoteProduct(false);
+        }
+      }
+    }
+
+    void loadProduct();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [localProduct, slug]);
+
+  if (!product && isLoadingRemoteProduct) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-16 text-center text-gray-600">
+        Loading product...
+      </div>
+    );
+  }
 
   if (!product) {
     return (
@@ -63,7 +109,7 @@ export default function ProductPage() {
     ? Math.round(((product.price - product.salePrice) / product.price) * 100)
     : 0;
 
-  const relatedProducts = sampleProducts
+  const relatedProducts = [...sampleProducts, ...(remoteProduct ? [remoteProduct] : [])]
     .filter((p) => p.id !== product.id && p.categoryId === product.categoryId)
     .slice(0, 4);
 
