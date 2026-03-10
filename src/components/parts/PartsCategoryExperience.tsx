@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ExternalLink, Search } from "lucide-react";
+import { ChevronRight, Search } from "lucide-react";
 import {
   featuredPartsBrands,
   getPartsDepartmentBySlug,
@@ -28,10 +29,24 @@ function toBrandBadge(name: string) {
 export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) {
   const department = getPartsDepartmentBySlug(slug);
   const isLandingPage = slug === "parts";
+  const [brandQuery, setBrandQuery] = useState("");
+  const [partsQuery, setPartsQuery] = useState("");
 
   if (!isLandingPage && !department) {
     return null;
   }
+
+  const visibleBrands = (isLandingPage
+    ? partsDepartments.flatMap((item) => item.brands)
+    : (department?.brands ?? [])
+  ).filter((brand, index, array) => {
+    const alreadySeen = array.findIndex((item) => item.name === brand.name) !== index;
+    const matchesQuery =
+      brandQuery.trim().length === 0 ||
+      brand.name.toLowerCase().includes(brandQuery.trim().toLowerCase());
+
+    return !alreadySeen && matchesQuery;
+  });
 
   return (
     <div className="min-h-screen bg-[#f4f1ea] text-[#2f2418]">
@@ -114,55 +129,109 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
           {isLandingPage ? (
             <>
               <section className="overflow-hidden border border-[#d7cab8] bg-[#fbf8f3]">
-                <div className="grid gap-0 lg:grid-cols-[minmax(0,1fr)_370px]">
-                  <div className="px-6 py-7 md:px-8 md:py-8">
+                <div className="px-6 py-7 md:px-8 md:py-8">
+                  <div className="mx-auto max-w-[920px] text-center">
                     <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#8b4513]">Replacement Parts</p>
-                    <h1 className="mt-4 max-w-[760px] text-[34px] font-semibold leading-tight tracking-[-0.03em] text-[#2f2418] md:text-[44px]">
+                    <h1 className="mt-4 text-[34px] font-semibold leading-tight tracking-[-0.03em] text-[#2f2418] md:text-[44px]">
                       Parts organized like a real service catalog, not a leftover accessories page.
                     </h1>
-                    <p className="mt-4 max-w-[760px] text-base leading-7 text-[#665544]">
+                    <p className="mt-4 text-base leading-7 text-[#665544]">
                       The new parts division is being built around department browsing, brand directories, and model-specific parts paths so customers can find the exact component they need faster.
                     </p>
 
-                    <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                      <div className="border border-[#dccfbe] bg-white px-4 py-4">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">Products Found</p>
-                        <p className="mt-3 text-3xl font-semibold text-[#2f2418]">
-                          {partsCatalogStats.indexedProducts.toLocaleString()}
-                        </p>
+                    <div className="mt-8 border border-[#d7cab8] bg-white p-5 text-left shadow-[0_18px_45px_rgba(82,52,23,0.08)]">
+                      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_220px]">
+                        <label className="block">
+                          <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">
+                            Search Part Number or SKU
+                          </span>
+                          <div className="mt-3 flex h-14 items-center gap-3 border border-[#ccbba6] bg-[#fcfaf7] px-4">
+                            <Search className="h-5 w-5 text-[#8b4513]" />
+                            <input
+                              value={partsQuery}
+                              onChange={(event) => setPartsQuery(event.target.value)}
+                              placeholder="Example: 99900405, SRV7000-462, blower kit"
+                              className="w-full bg-transparent text-base text-[#2f2418] outline-none placeholder:text-[#8f7a66]"
+                            />
+                          </div>
+                        </label>
+                        <div className="grid grid-cols-3 gap-3 lg:grid-cols-1">
+                          <div className="border border-[#dccfbe] bg-[#f8f3ed] px-4 py-3">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">Products</p>
+                            <p className="mt-2 text-2xl font-semibold text-[#2f2418]">
+                              {partsCatalogStats.indexedProducts.toLocaleString()}
+                            </p>
+                          </div>
+                          <div className="border border-[#dccfbe] bg-[#f8f3ed] px-4 py-3">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">Brands</p>
+                            <p className="mt-2 text-2xl font-semibold text-[#2f2418]">
+                              {partsCatalogStats.indexedBrands}
+                            </p>
+                          </div>
+                          <div className="border border-[#dccfbe] bg-[#f8f3ed] px-4 py-3">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">Departments</p>
+                            <p className="mt-2 text-2xl font-semibold text-[#2f2418]">
+                              {partsCatalogStats.indexedSitemapGroups}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <div className="border border-[#dccfbe] bg-white px-4 py-4">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">Brands Found</p>
-                        <p className="mt-3 text-3xl font-semibold text-[#2f2418]">
-                          {partsCatalogStats.indexedBrands}
-                        </p>
-                      </div>
-                      <div className="border border-[#dccfbe] bg-white px-4 py-4">
-                        <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#8b4513]">Core Departments</p>
-                        <p className="mt-3 text-3xl font-semibold text-[#2f2418]">
-                          {partsCatalogStats.indexedSitemapGroups}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div className="border-t border-[#d7cab8] bg-[#efe4d7] lg:border-l lg:border-t-0">
-                    <div className="flex h-full flex-col justify-between px-6 py-7 md:px-8 md:py-8">
-                      <div>
-                        <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#8b4513]">Search First</p>
-                        <h2 className="mt-4 text-2xl font-semibold text-[#2f2418]">Model, SKU, or brand based parts lookup</h2>
-                        <p className="mt-4 text-sm leading-6 text-[#665544]">
-                          The long-term goal is a full internal parts database. This first phase establishes the department and brand navigation so the rest of the import has the right structure to land on.
-                        </p>
-                      </div>
-
-                      <div className="mt-8 flex items-center gap-3 border border-[#d0bba3] bg-white px-4 py-3 text-sm text-[#6a5845]">
-                        <Search className="h-4 w-4 text-[#8b4513]" />
-                        Search by model number, part type, or exact SKU
-                      </div>
+                      {partsQuery.trim() && (
+                        <div className="mt-4 rounded-sm border border-[#e3d4c3] bg-[#fbf6f1] px-4 py-3 text-sm text-[#6a5845]">
+                          Search wiring is being moved into the live parts catalog next. This query is staged here now so the lookup stays front-and-center instead of buried on the side.
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
+              </section>
+
+              <section className="mt-8 border border-[#d7cab8] bg-[#fbf8f3] px-6 py-6 md:px-8">
+                <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#8b4513]">Shop by Brand</p>
+                    <h2 className="mt-2 text-3xl font-semibold text-[#2f2418]">Find the brand first</h2>
+                    <p className="mt-3 max-w-[760px] text-sm leading-6 text-[#665544]">
+                      Customers usually know the stove or fireplace brand before they know the exact part. This brand finder keeps that path obvious.
+                    </p>
+                  </div>
+                  <label className="block w-full max-w-[360px]">
+                    <span className="sr-only">Search brands</span>
+                    <div className="flex h-12 items-center gap-3 border border-[#ccbba6] bg-white px-4">
+                      <Search className="h-4 w-4 text-[#8b4513]" />
+                      <input
+                        value={brandQuery}
+                        onChange={(event) => setBrandQuery(event.target.value)}
+                        placeholder="Search brands like Harman, Napoleon, Lopi"
+                        className="w-full bg-transparent text-sm text-[#2f2418] outline-none placeholder:text-[#8f7a66]"
+                      />
+                    </div>
+                  </label>
+                </div>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {visibleBrands.map((brand) => (
+                    <div
+                      key={brand.name}
+                      className="flex min-h-[84px] items-center gap-4 border border-[#ddcfbf] bg-white px-4 py-4"
+                    >
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#efe4d7] text-sm font-bold text-[#8b4513]">
+                        {toBrandBadge(brand.name)}
+                      </div>
+                      <div>
+                        <p className="text-base font-semibold text-[#2f2418]">{brand.name}</p>
+                        <p className="text-xs uppercase tracking-[0.14em] text-[#8b4513]">Parts Directory</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {visibleBrands.length === 0 && (
+                  <div className="mt-4 border border-[#ddcfbf] bg-white px-4 py-4 text-sm text-[#665544]">
+                    No brands matched that search. Try a broader manufacturer name.
+                  </div>
+                )}
               </section>
 
               <section className="mt-8">
@@ -256,24 +325,27 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
                 </section>
 
                 <section className="mt-8 border border-[#d7cab8] bg-[#fbf8f3] px-6 py-6 md:px-8">
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                     <div>
                       <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#8b4513]">Shop by Brand</p>
                       <h2 className="mt-2 text-3xl font-semibold text-[#2f2418]">Brand directories under this department</h2>
                     </div>
-                    <a
-                      href={department.sourceUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hidden items-center gap-2 text-sm font-medium text-[#8b4513] hover:text-[#6f370f] md:flex"
-                    >
-                      Source reference
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
+                    <label className="block w-full max-w-[360px]">
+                      <span className="sr-only">Search brands</span>
+                      <div className="flex h-12 items-center gap-3 border border-[#ccbba6] bg-white px-4">
+                        <Search className="h-4 w-4 text-[#8b4513]" />
+                        <input
+                          value={brandQuery}
+                          onChange={(event) => setBrandQuery(event.target.value)}
+                          placeholder="Search brands in this department"
+                          className="w-full bg-transparent text-sm text-[#2f2418] outline-none placeholder:text-[#8f7a66]"
+                        />
+                      </div>
+                    </label>
                   </div>
 
                   <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    {department.brands.map((brand) => (
+                    {visibleBrands.map((brand) => (
                       <div key={brand.name} className="border border-[#ddcfbf] bg-white px-5 py-5">
                         <div className="flex items-start gap-4">
                           <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#efe4d7] text-sm font-bold text-[#8b4513]">
@@ -289,6 +361,12 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
                       </div>
                     ))}
                   </div>
+
+                  {visibleBrands.length === 0 && (
+                    <div className="mt-4 border border-[#ddcfbf] bg-white px-4 py-4 text-sm text-[#665544]">
+                      No brands matched that search in this department.
+                    </div>
+                  )}
                 </section>
 
                 <section className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
