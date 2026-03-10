@@ -8,12 +8,7 @@ const GAS_FIREPLACE_SCRAPED_JSON_CANDIDATES = [
   path.join(process.cwd(), "data", "gas-fireplaces-scraped.json"),
 ];
 
-const GAS_FIREPLACE_CLONE_CANDIDATES = [
-  "/Users/fireplace/efireplacestore-page-clone/www.efireplacestore.com/gas-fireplaces.html",
-];
-
 const GAS_FIREPLACE_CSV_CANDIDATES = [
-  "/Users/fireplace/Desktop/gas_fireplaces_full.csv",
   path.join(process.cwd(), "data", "efireplacestore-full-catalog.csv"),
 ];
 
@@ -125,18 +120,6 @@ function toSentenceExcerpt(value: string, maxLength = 140): string {
   return `${value.slice(0, maxLength - 1).trimEnd()}…`;
 }
 
-async function readGasFireplaceClone(): Promise<string | null> {
-  for (const candidate of GAS_FIREPLACE_CLONE_CANDIDATES) {
-    try {
-      return await readFile(candidate, "utf8");
-    } catch {
-      continue;
-    }
-  }
-
-  return null;
-}
-
 async function readGasFireplaceScrapedJson(): Promise<string | null> {
   for (const candidate of GAS_FIREPLACE_SCRAPED_JSON_CANDIDATES) {
     try {
@@ -159,75 +142,6 @@ async function readGasFireplaceCsv(): Promise<string> {
   }
 
   throw new Error("Gas fireplace CSV file not found");
-}
-
-function normalizeCloneAssetUrl(value: string): string {
-  if (value.startsWith("http://") || value.startsWith("https://")) return value;
-  return `https://www.efireplacestore.com/${value.replace(/^\/+/, "")}`;
-}
-
-function parseCloneCurrency(value: string | undefined): number | undefined {
-  if (!value) return undefined;
-  const normalized = value.replace(/[^0-9.-]+/g, "");
-  const parsed = Number(normalized);
-  return Number.isFinite(parsed) ? parsed : undefined;
-}
-
-function parseClonedGasFireplaceProducts(html: string): Product[] {
-  const chunks = html.split('<div class="product relative above-the-fold-product">').slice(1);
-  const products: Array<Product | null> = chunks.map((chunk, index) => {
-      const hrefMatch = chunk.match(/href="https:\/\/www\.efireplacestore\.com\/([^"]+)\.html"/);
-      const nameMatch = chunk.match(/<img[^>]+alt="([^"]+)"/);
-      const webpMatch = chunk.match(/<source srcset="([^"]+\.webp)" type='image\/webp'>/);
-      const salePriceMatch = chunk.match(/<span class="sale-price">\$(.*?)<\/span>/);
-      const originalPriceMatch = chunk.match(/<span class="price relative">\$(.*?)<\/span>/);
-      const reviewCountMatch = chunk.match(/<span class="rating-count">\((\d+)\)<\/span>/);
-      const ratingMatch = chunk.match(/rating:\s*([0-9.]+)/);
-      const skuMatch = chunk.match(/localSKU:\s*'([^']+)'/);
-      const bestSeller = chunk.includes('class="best-seller text-center"');
-
-      if (!hrefMatch || !nameMatch || !webpMatch || !salePriceMatch) {
-        return null;
-      }
-
-      const salePrice = parseCloneCurrency(salePriceMatch[1]);
-      if (!salePrice) return null;
-
-      const originalPrice = parseCloneCurrency(originalPriceMatch?.[1]);
-      const hrefSlug = hrefMatch[1];
-      const productUrl = `https://www.efireplacestore.com/${hrefSlug}.html`;
-
-      const product: Product = {
-        id: `cloned-gas-${index + 1}`,
-        sku: skuMatch?.[1] ?? hrefSlug.toUpperCase(),
-        name: stripHtml(nameMatch[1]),
-        slug: hrefSlug,
-        description: stripHtml(nameMatch[1]),
-        shortDescription: toSentenceExcerpt(stripHtml(nameMatch[1])),
-        price: originalPrice && originalPrice > salePrice ? originalPrice : salePrice,
-        salePrice: originalPrice && originalPrice > salePrice ? salePrice : undefined,
-        categoryId: "fireplaces",
-        subcategoryId: "gas-fireplaces",
-        brand: stripHtml(nameMatch[1]).split(" ")[0] ?? "Fireplace",
-        images: [normalizeCloneAssetUrl(webpMatch[1])],
-        features: [],
-        specifications: {
-          Model: skuMatch?.[1] ?? hrefSlug.toUpperCase(),
-          "Product URL": productUrl,
-        },
-        inStock: true,
-        stockQuantity: 25,
-        rating: Number(ratingMatch?.[1] ?? "0"),
-        reviewCount: Number(reviewCountMatch?.[1] ?? "0"),
-        isFeatured: index < 12,
-        isNew: false,
-        isBestSeller: bestSeller,
-      };
-
-      return product;
-    });
-
-  return products.filter((product): product is Product => product !== null);
 }
 
 function parseScrapedGasFireplaceProducts(jsonText: string): Product[] {
@@ -300,12 +214,13 @@ function buildCsvGasFireplaceProducts(csvText: string): Product[] {
   return records.map((record, index) => {
     const name = stripHtml(record.title || `${record.brand} ${record.model_sku}`.trim());
     const description = stripHtml(record.description || name);
-    const price = parseCurrencyNumber(record.current_price);
+    const currentPrice = parseCurrencyNumber(record.current_price);
     const originalPrice = parseCurrencyNumber(record.original_price);
     const sku = (record.model_sku || `${record.brand}-${index + 1}`).trim();
     const productUrl = (record.product_url || "").trim();
     const imageUrl = (record.image_url || "").trim();
     const slugBase = toSlug(`${record.brand}-${sku}-${name}`);
+    const hasDiscount = originalPrice > currentPrice && currentPrice > 0;
 
     return {
       id: `csv-gas-${index + 1}`,
@@ -314,8 +229,8 @@ function buildCsvGasFireplaceProducts(csvText: string): Product[] {
       slug: slugBase || `csv-gas-${index + 1}`,
       description,
       shortDescription: toSentenceExcerpt(description || name),
-      price,
-      salePrice: originalPrice > price && price > 0 ? price : undefined,
+      price: hasDiscount ? originalPrice : currentPrice,
+      salePrice: hasDiscount ? currentPrice : undefined,
       categoryId: "fireplaces",
       subcategoryId: "gas-fireplaces",
       brand: (record.brand || "Fireplace").trim(),
@@ -394,14 +309,6 @@ async function loadGasFireplaceProductsInternal(): Promise<Product[]> {
     const scrapedProducts = parseScrapedGasFireplaceProducts(scrapedJson);
     if (scrapedProducts.length > 0) {
       return mergeGasFireplaceProducts(csvProducts, scrapedProducts);
-    }
-  }
-
-  const cloneHtml = await readGasFireplaceClone();
-  if (cloneHtml) {
-    const clonedProducts = parseClonedGasFireplaceProducts(cloneHtml);
-    if (clonedProducts.length > 0) {
-      return mergeGasFireplaceProducts(csvProducts, clonedProducts);
     }
   }
 
