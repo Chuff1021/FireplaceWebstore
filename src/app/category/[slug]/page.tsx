@@ -5,6 +5,10 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, SlidersHorizontal, Star } from "lucide-react";
+import {
+  isPartsCategorySlug,
+  PartsCategoryExperience,
+} from "@/components/parts/PartsCategoryExperience";
 import { productCategories, type Product } from "@/lib/store-config";
 import { resolveProductImage } from "@/lib/product-images";
 
@@ -63,6 +67,7 @@ export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
   const isMirroredCategoryPage = MIRRORED_CATEGORY_SLUGS.has(slug);
+  const isPartsCategoryPage = isPartsCategorySlug(slug);
 
   const [catalogProducts, setCatalogProducts] = useState<Product[]>([]);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
@@ -73,6 +78,12 @@ export default function CategoryPage() {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
+    if (isPartsCategoryPage) {
+      setCatalogProducts([]);
+      setIsLoadingProducts(false);
+      return;
+    }
+
     let cancelled = false;
 
     async function loadProducts() {
@@ -99,7 +110,7 @@ export default function CategoryPage() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [isPartsCategoryPage]);
 
   useEffect(() => {
     setPage(1);
@@ -121,6 +132,10 @@ export default function CategoryPage() {
     "Browse our complete selection of fireplaces, stoves, inserts, and accessories.";
   const topLevelForPage = parentCategory ?? subcategoryMatch?.parent ?? null;
   const subcategoryLinks = topLevelForPage?.subcategories ?? [];
+
+  if (isPartsCategoryPage) {
+    return <PartsCategoryExperience slug={slug} />;
+  }
 
   const categoryProducts = catalogProducts.filter((product) => {
     if (parentCategory) {

@@ -196,14 +196,17 @@ export const productCategories: ProductCategory[] = [
   },
   {
     id: "parts",
-    name: "Parts & Venting",
+    name: "Parts Department",
     slug: "parts",
-    description: "Replacement parts and venting components",
+    description: "Dedicated replacement parts catalog organized by appliance type and brand",
     image: "/categories/parts.jpg",
     subcategories: [
-      { id: "venting", name: "Venting", slug: "venting", description: "Chimney and vent pipe systems", image: "/categories/venting.jpg" },
-      { id: "blowers", name: "Blowers & Fans", slug: "blowers", description: "Circulation blowers and fans", image: "/categories/blowers.jpg" },
-      { id: "remote-controls", name: "Remote Controls", slug: "remote-controls", description: "Remotes and thermostats", image: "/categories/remote-controls.jpg" },
+      { id: "wood-coal-stove-parts", name: "Wood & Coal Stove Parts", slug: "wood-coal-stove-parts", description: "Wood stove, insert, and furnace repair parts", image: "/categories/wood-stoves.jpg" },
+      { id: "gas-fireplace-parts", name: "Gas Fireplace Parts", slug: "gas-fireplace-parts", description: "Valves, pilots, burners, and gas fireplace service parts", image: "/categories/gas-fireplaces.jpg" },
+      { id: "gas-stove-parts", name: "Gas Stove Parts", slug: "gas-stove-parts", description: "Gas stove replacement components and controls", image: "/categories/gas-stoves.jpg" },
+      { id: "pellet-stove-parts", name: "Pellet Stove Parts", slug: "pellet-stove-parts", description: "Augers, blowers, igniters, and pellet stove wear parts", image: "/categories/pellet-stoves.jpg" },
+      { id: "electric-stove-parts", name: "Electric Stove Parts", slug: "electric-stove-parts", description: "Electric stove and fireplace service parts", image: "/categories/electric-fireplaces.jpg" },
+      { id: "outdoor-fireplace-parts", name: "Outdoor Fireplace Parts", slug: "outdoor-fireplace-parts", description: "Outdoor hearth burners, valves, and media components", image: "/categories/outdoor-fireplaces.jpg" },
     ],
   },
 ];
