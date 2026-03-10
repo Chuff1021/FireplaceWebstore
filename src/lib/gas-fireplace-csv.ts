@@ -104,6 +104,16 @@ function toSlug(input: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+function getSlugFromProductUrl(productUrl: string): string {
+  const trimmed = productUrl.trim();
+  const match = trimmed.match(/\/([^/?#]+)\.html(?:[?#].*)?$/i);
+  return match?.[1]?.toLowerCase() ?? "";
+}
+
+function normalizeSkuForLookup(sku: string): string {
+  return sku.trim().toLowerCase().replace(/^[a-z]{3}-/i, "");
+}
+
 function stripHtml(value: string): string {
   return value
     .replace(/<[^>]+>/g, " ")
@@ -219,7 +229,8 @@ function buildCsvGasFireplaceProducts(csvText: string): Product[] {
     const sku = (record.model_sku || `${record.brand}-${index + 1}`).trim();
     const productUrl = (record.product_url || "").trim();
     const imageUrl = (record.image_url || "").trim();
-    const slugBase = toSlug(`${record.brand}-${sku}-${name}`);
+    const slugFromUrl = getSlugFromProductUrl(productUrl);
+    const slugBase = slugFromUrl || toSlug(`${record.brand}-${sku}-${name}`);
     const hasDiscount = originalPrice > currentPrice && currentPrice > 0;
 
     return {
@@ -258,6 +269,7 @@ function buildProductLookup(products: Product[]): Map<string, Product> {
   products.forEach((product) => {
     lookup.set(product.slug.toLowerCase(), product);
     lookup.set(product.sku.toLowerCase(), product);
+    lookup.set(normalizeSkuForLookup(product.sku), product);
   });
 
   return lookup;
@@ -273,7 +285,8 @@ function mergeGasFireplaceProducts(baseProducts: Product[], overrideProducts: Pr
   return baseProducts.map((product) => {
     const override =
       overrideLookup.get(product.slug.toLowerCase()) ??
-      overrideLookup.get(product.sku.toLowerCase());
+      overrideLookup.get(product.sku.toLowerCase()) ??
+      overrideLookup.get(normalizeSkuForLookup(product.sku));
 
     if (!override) {
       return product;
