@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <BrandsBar />
       <CategoryGrid />
+      <BrandsBar />
       <DesignToolBanner />
       <FeaturedProducts />
       <PromoBanner />
