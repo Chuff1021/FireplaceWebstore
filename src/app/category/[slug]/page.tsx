@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, SlidersHorizontal, Star } from "lucide-react";
-import { productCategories, sampleProducts, type Product } from "@/lib/store-config";
+import { productCategories, type Product } from "@/lib/store-config";
 import { resolveProductImage } from "@/lib/product-images";
 
 const PRODUCTS_PER_PAGE = 24;
@@ -57,7 +57,8 @@ export default function CategoryPage() {
   const slug = params.slug as string;
   const isMirroredFireplacePage = MIRRORED_FIREPLACE_SLUGS.has(slug);
 
-  const [catalogProducts, setCatalogProducts] = useState<Product[]>(sampleProducts);
+  const [catalogProducts, setCatalogProducts] = useState<Product[]>([]);
+  const [isLoadingProducts, setIsLoadingProducts] = useState(true);
   const [sortBy, setSortBy] = useState("featured");
   const [showFilters, setShowFilters] = useState(false);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
@@ -68,6 +69,7 @@ export default function CategoryPage() {
     let cancelled = false;
 
     async function loadProducts() {
+      setIsLoadingProducts(true);
       try {
         const response = await fetch("/api/products?limit=2000", { cache: "no-store" });
         if (!response.ok) return;
@@ -77,7 +79,11 @@ export default function CategoryPage() {
           setCatalogProducts(data);
         }
       } catch {
-        // Fall back to the in-repo starter catalog if the API is unavailable.
+        // Keep the empty state if the API is unavailable.
+      } finally {
+        if (!cancelled) {
+          setIsLoadingProducts(false);
+        }
       }
     }
 
@@ -375,7 +381,11 @@ export default function CategoryPage() {
                 </div>
               )}
 
-              {pagedProducts.length === 0 ? (
+              {isLoadingProducts ? (
+                <div className="border border-[#e0e0e0] bg-white px-6 py-16 text-center text-[#5b5d5b]">
+                  Loading products...
+                </div>
+              ) : pagedProducts.length === 0 ? (
                 <div className="border border-[#e0e0e0] bg-white px-6 py-16 text-center text-[#5b5d5b]">
                   {`No ${categoryName.toLowerCase()} matched the selected filters.`}
                 </div>

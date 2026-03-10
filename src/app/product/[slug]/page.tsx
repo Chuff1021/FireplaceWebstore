@@ -18,7 +18,7 @@ import {
   Check,
 } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
-import { sampleProducts, defaultStoreConfig, type Product } from "@/lib/store-config";
+import { defaultStoreConfig, type Product } from "@/lib/store-config";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { resolveProductImage, resolveProductImages } from "@/lib/product-images";
 
@@ -32,25 +32,20 @@ function formatPrice(price: number) {
 export default function ProductPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const localProduct = sampleProducts.find((p) => p.slug === slug);
   const [quantity, setQuantity] = useState(1);
   const [remoteProduct, setRemoteProduct] = useState<Product | null>(null);
-  const [isLoadingRemoteProduct, setIsLoadingRemoteProduct] = useState(!localProduct);
+  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const [isLoadingRemoteProduct, setIsLoadingRemoteProduct] = useState(true);
   const [activeTab, setActiveTab] = useState<"description" | "specs" | "reviews">(
     "description"
   );
   const { addItem, openCart } = useCartStore();
 
-  const product = localProduct ?? remoteProduct;
+  const product = remoteProduct;
   const productImages = resolveProductImages(product?.images?.[0], product?.images);
   const primaryProductImage = resolveProductImage(product?.images?.[0], product?.images);
 
   useEffect(() => {
-    if (localProduct) {
-      setIsLoadingRemoteProduct(false);
-      return;
-    }
-
     let cancelled = false;
 
     async function loadProduct() {
@@ -62,7 +57,26 @@ export default function ProductPage() {
         if (!response.ok) return;
         const data = (await response.json()) as Product[];
         if (!cancelled) {
-          setRemoteProduct(data[0] ?? null);
+          const loadedProduct = data[0] ?? null;
+          setRemoteProduct(loadedProduct);
+
+          if (loadedProduct) {
+            const relatedResponse = await fetch(
+              `/api/products?category=${encodeURIComponent(
+                loadedProduct.subcategoryId ?? loadedProduct.categoryId
+              )}&limit=8`,
+              { cache: "no-store" }
+            );
+
+            if (relatedResponse.ok && !cancelled) {
+              const relatedData = (await relatedResponse.json()) as Product[];
+              setRelatedProducts(
+                relatedData.filter((item) => item.id !== loadedProduct.id).slice(0, 4)
+              );
+            }
+          } else {
+            setRelatedProducts([]);
+          }
         }
       } catch {
         // Leave the not found state in place if the API request fails.
@@ -78,7 +92,7 @@ export default function ProductPage() {
     return () => {
       cancelled = true;
     };
-  }, [localProduct, slug]);
+  }, [slug]);
 
   if (!product && isLoadingRemoteProduct) {
     return (
@@ -108,16 +122,6 @@ export default function ProductPage() {
   const discount = product.salePrice
     ? Math.round(((product.price - product.salePrice) / product.price) * 100)
     : 0;
-
-  const relatedProducts = [...sampleProducts, ...(remoteProduct ? [remoteProduct] : [])]
-    .filter((p) => p.id !== product.id && p.categoryId === product.categoryId)
-    .slice(0, 4);
-
-  // If not enough related products, fill with other products
-  const displayRelated =
-    relatedProducts.length >= 2
-      ? relatedProducts
-      : sampleProducts.filter((p) => p.id !== product.id).slice(0, 4);
 
   const handleAddToCart = () => {
     addItem(product, quantity);
@@ -510,13 +514,13 @@ export default function ProductPage() {
         </div>
 
         {/* Related Products */}
-        {displayRelated.length > 0 && (
+        {relatedProducts.length > 0 && (
           <div className="mt-16 pb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
               You May Also Like
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {displayRelated.map((p) => (
+              {relatedProducts.map((p) => (
                 <ProductCard key={p.id} product={p} />
               ))}
             </div>
