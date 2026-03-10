@@ -9,6 +9,13 @@ import { productCategories, sampleProducts, type Product } from "@/lib/store-con
 import { resolveProductImage } from "@/lib/product-images";
 
 const PRODUCTS_PER_PAGE = 24;
+const MIRRORED_FIREPLACE_SLUGS = new Set([
+  "gas-fireplaces",
+  "electric-fireplaces",
+  "wood-fireplaces",
+  "outdoor-fireplaces",
+]);
+const MIRRORED_PRODUCTS_PER_PAGE = 20;
 
 function formatPagePrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -48,7 +55,7 @@ function renderStars(rating: number) {
 export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const isGasFireplacePage = slug === "gas-fireplaces";
+  const isMirroredFireplacePage = MIRRORED_FIREPLACE_SLUGS.has(slug);
 
   const [catalogProducts, setCatalogProducts] = useState<Product[]>(sampleProducts);
   const [sortBy, setSortBy] = useState("featured");
@@ -143,10 +150,11 @@ export default function CategoryPage() {
     }
   });
 
-  const totalPages = Math.max(1, Math.ceil(sortedProducts.length / PRODUCTS_PER_PAGE));
+  const productsPerPage = isMirroredFireplacePage ? MIRRORED_PRODUCTS_PER_PAGE : PRODUCTS_PER_PAGE;
+  const totalPages = Math.max(1, Math.ceil(sortedProducts.length / productsPerPage));
   const currentPage = Math.min(page, totalPages);
-  const startIndex = sortedProducts.length === 0 ? 0 : (currentPage - 1) * PRODUCTS_PER_PAGE + 1;
-  const endIndex = Math.min(currentPage * PRODUCTS_PER_PAGE, sortedProducts.length);
+  const startIndex = sortedProducts.length === 0 ? 0 : (currentPage - 1) * productsPerPage + 1;
+  const endIndex = Math.min(currentPage * productsPerPage, sortedProducts.length);
   const pagedProducts = sortedProducts.slice(startIndex - 1, endIndex);
 
   function toggleBrand(brand: string, checked: boolean) {
@@ -161,9 +169,14 @@ export default function CategoryPage() {
     );
   }
 
-  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1).slice(0, 5);
+  const pageWindowStart = Math.max(1, currentPage - 2);
+  const pageWindowEnd = Math.min(totalPages, pageWindowStart + 4);
+  const pageNumbers = Array.from(
+    { length: pageWindowEnd - pageWindowStart + 1 },
+    (_, index) => pageWindowStart + index
+  );
 
-  if (!isGasFireplacePage) {
+  if (!isMirroredFireplacePage) {
     return (
       <div className="min-h-screen bg-[#f7f7f7]">
         <div className="border-b border-gray-200 bg-white">
@@ -242,7 +255,7 @@ export default function CategoryPage() {
             Home
           </Link>
           <span>/</span>
-          <span className="text-[#c4c4c4]">Gas Fireplaces</span>
+          <span className="text-[#c4c4c4]">{categoryName}</span>
         </nav>
       </div>
 
@@ -290,10 +303,10 @@ export default function CategoryPage() {
           <div className="min-w-0 flex-1">
             <div className="border-b border-[#e0e0e0] px-4 py-5 md:px-5 xl:px-5">
               <h1 className="text-[32px] font-normal leading-[1.25] tracking-[-0.2px] text-[#212121] md:text-[32px] xl:text-[40px] xl:tracking-[-0.33px]">
-                Gas Fireplaces
+                {categoryName}
               </h1>
               <p className="mt-3 max-w-[900px] text-sm leading-6 text-[#5b5d5b]">
-                Looking for a Gas Fireplace? Shop our catalog of direct vent, vent free, and contemporary gas fireplaces using the same clean category presentation as the mirrored source page, backed by your CSV product feed.
+                {`Shop our catalog of ${categoryName.toLowerCase()} using the same clean category presentation as the mirrored source page, backed by your storefront catalog.`}
               </p>
             </div>
 
@@ -364,7 +377,7 @@ export default function CategoryPage() {
 
               {pagedProducts.length === 0 ? (
                 <div className="border border-[#e0e0e0] bg-white px-6 py-16 text-center text-[#5b5d5b]">
-                  No gas fireplaces matched the selected filters.
+                  {`No ${categoryName.toLowerCase()} matched the selected filters.`}
                 </div>
               ) : (
                 <div className="grid gap-x-4 gap-y-[60px] sm:grid-cols-2 md:grid-cols-3 md:gap-x-5 xl:grid-cols-4 xl:gap-x-4">
