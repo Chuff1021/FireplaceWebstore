@@ -15,30 +15,20 @@ export function BrandsBar() {
   ];
 
   return (
-    <section className="border-b border-[#dfd8cd] bg-white py-12 md:py-14">
+    <section className="bg-white py-12 text-center md:py-[60px] xl:py-20" id="featured-brands">
       <div className="mx-auto max-w-[1640px] px-4 md:px-5">
-        <div className="mb-7 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#a54210]">
-              Featured Brands
-            </p>
-            <h2 className="mt-2 text-2xl font-normal text-[#1f1f1f] md:text-[32px]">
-              Shop the manufacturers behind the products on the site.
-            </h2>
-          </div>
-          <p className="max-w-xl text-sm leading-6 text-[#5f605c]">
-            These are shown as logo cards instead of plain text so the section feels closer to the marketplace-style homepage you referenced.
-          </p>
-        </div>
+        <h2 className="mb-8 text-[32px] font-normal leading-[1.13] tracking-[0.24px] text-[#212121] md:mb-10 xl:mb-12">
+          Featured Brands
+        </h2>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5">
+        <div className="flex flex-wrap justify-center gap-x-0 gap-y-0 border border-[#e0e0e0] border-b-0 border-r-0">
           {brands.map((brand) => (
             <Link
               key={brand.name}
               href={`/search?q=${encodeURIComponent(brand.name)}`}
-              className="group flex min-h-[110px] items-center justify-center border border-[#ded7cb] bg-[#fcfaf7] p-4 transition-all duration-300 hover:border-[#c46b33] hover:bg-white hover:shadow-[0_14px_34px_rgba(52,32,16,0.08)]"
+              className="group flex h-[123px] w-1/2 items-center justify-center border-b border-r border-[#e0e0e0] bg-white px-[9.5px] py-4 transition-colors duration-300 hover:bg-[#faf7f2] md:w-1/3 xl:w-[20%]"
             >
-              <div className="relative h-[64px] w-full">
+              <div className="relative h-full w-full">
                 <Image
                   src={brand.logo}
                   alt={`${brand.name} logo`}
@@ -50,6 +40,13 @@ export function BrandsBar() {
             </Link>
           ))}
         </div>
+
+        <Link
+          href="/search"
+          className="mt-7 inline-block text-sm leading-7 tracking-[0.44px] text-[#212121] underline underline-offset-4 md:mt-8"
+        >
+          View all
+        </Link>
       </div>
     </section>
   );
