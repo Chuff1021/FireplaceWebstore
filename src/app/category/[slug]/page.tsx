@@ -11,6 +11,9 @@ import {
   Truck,
   Star,
   Sparkles,
+  Flame,
+  BadgeCheck,
+  Filter,
 } from "lucide-react";
 import { productCategories, sampleProducts, type Product } from "@/lib/store-config";
 import { useEffect, useState } from "react";
@@ -137,7 +140,7 @@ export default function CategoryPage() {
   const displayProducts = sortedProducts;
 
   return (
-    <div className="bg-[#f6f6f4] min-h-screen">
+    <div className={`min-h-screen ${isGasFireplacePage ? "bg-white" : "bg-[#f6f6f4]"}`}>
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
@@ -161,17 +164,23 @@ export default function CategoryPage() {
         </div>
       </div>
 
-      <section className="bg-white border-b border-gray-200">
+      <section className={`border-b ${isGasFireplacePage ? "bg-gradient-to-b from-[#faf7f1] to-white border-amber-100" : "bg-white border-gray-200"}`}>
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-12 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
           <div>
             {isGasFireplacePage && (
-              <p className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200 mb-4">
+              <p className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white text-amber-900 border border-amber-300 mb-4 shadow-sm">
                 <Sparkles className="w-3.5 h-3.5" />
                 Premium Gas Fireplace Collection
               </p>
             )}
-            <h1 className="text-3xl md:text-5xl font-semibold text-[#1f2937] leading-tight">{categoryName}</h1>
-            <p className="mt-4 text-gray-600 max-w-2xl leading-relaxed">{categoryDescription}</p>
+            <h1 className="text-3xl md:text-5xl font-semibold text-[#1f2937] leading-tight">
+              {isGasFireplacePage ? "Gas Fireplaces" : categoryName}
+            </h1>
+            <p className="mt-4 text-gray-600 max-w-2xl leading-relaxed">
+              {isGasFireplacePage
+                ? "Shop direct vent, vent-free, and linear gas fireplaces from trusted brands. Compare ignition systems, dimensions, and style options with expert support from Aaron's Hearth and Home."
+                : categoryDescription}
+            </p>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-700">
               <span className="inline-flex items-center gap-2">
                 <Truck className="w-4 h-4 text-amber-700" />
@@ -186,20 +195,39 @@ export default function CategoryPage() {
                 Expert Support from Republic, MO
               </span>
             </div>
+
+            {isGasFireplacePage && (
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
+                <div className="rounded-xl border border-amber-200 bg-white px-3 py-2 text-sm text-gray-700">
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">Fuel Type</p>
+                  <p className="font-semibold text-gray-900">Natural Gas & LP</p>
+                </div>
+                <div className="rounded-xl border border-amber-200 bg-white px-3 py-2 text-sm text-gray-700">
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">Installation</p>
+                  <p className="font-semibold text-gray-900">Insert, Built-In, Linear</p>
+                </div>
+                <div className="rounded-xl border border-amber-200 bg-white px-3 py-2 text-sm text-gray-700">
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">Support</p>
+                  <p className="font-semibold text-gray-900">Sizing & Venting Help</p>
+                </div>
+              </div>
+            )}
           </div>
 
-          <div className="rounded-2xl overflow-hidden border border-gray-200 bg-[#1f2937] relative h-56 md:h-64 lg:h-72">
+          <div className={`rounded-2xl overflow-hidden border relative h-56 md:h-64 lg:h-72 ${isGasFireplacePage ? "border-amber-200 shadow-lg" : "border-gray-200 bg-[#1f2937]"}`}>
             <Image
               src={isGasFireplacePage ? "/categories/gas-fireplaces.jpg" : "/categories/fireplaces.jpg"}
               alt={categoryName}
               fill
-              className="object-cover opacity-80"
+              className={`object-cover ${isGasFireplacePage ? "opacity-95" : "opacity-80"}`}
               sizes="(max-width: 1024px) 100vw, 40vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
               <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Aaron&apos;s Hearth and Home</p>
-              <p className="mt-1 text-lg font-semibold">Shop by style, size, and installation type</p>
+              <p className="mt-1 text-lg font-semibold">
+                {isGasFireplacePage ? "Modern warmth with cleaner-burning convenience" : "Shop by style, size, and installation type"}
+              </p>
             </div>
           </div>
         </div>
@@ -234,11 +262,20 @@ export default function CategoryPage() {
           </div>
         )}
 
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
+        <div className={`flex flex-col lg:flex-row gap-8 items-start ${isGasFireplacePage ? "lg:gap-10" : ""}`}>
           <aside className={`lg:w-72 w-full ${showFilters ? "block" : "hidden lg:block"}`}>
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 sticky top-24 shadow-sm">
+            <div
+              className={`rounded-2xl p-6 sticky top-24 ${
+                isGasFireplacePage
+                  ? "bg-[#fcfbf8] border border-amber-200 shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
+                  : "bg-white border border-gray-200 shadow-sm"
+              }`}
+            >
               <div className="flex items-center justify-between mb-5">
-                <h3 className="text-base font-semibold text-gray-900">Filter Products</h3>
+                <h3 className="text-base font-semibold text-gray-900 inline-flex items-center gap-2">
+                  {isGasFireplacePage && <Filter className="w-4 h-4 text-amber-700" />}
+                  Filter Products
+                </h3>
                 <button
                   onClick={() => {
                     setSelectedBrands([]);
@@ -309,7 +346,13 @@ export default function CategoryPage() {
           </aside>
 
           <div className="flex-1 w-full">
-            <div className="bg-white rounded-2xl border border-gray-200 px-4 md:px-6 py-4 mb-4 flex items-center justify-between shadow-sm">
+            <div
+              className={`rounded-2xl px-4 md:px-6 py-4 mb-4 flex items-center justify-between ${
+                isGasFireplacePage
+                  ? "bg-[#fffdfa] border border-amber-200"
+                  : "bg-white border border-gray-200 shadow-sm"
+              }`}
+            >
               <div className="flex items-center gap-3">
                 <button
                   className="lg:hidden inline-flex items-center gap-2 text-sm font-medium text-gray-700"
@@ -318,7 +361,8 @@ export default function CategoryPage() {
                   <SlidersHorizontal className="w-4 h-4" />
                   Filters
                 </button>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 inline-flex items-center gap-2">
+                  {isGasFireplacePage && <BadgeCheck className="w-4 h-4 text-amber-700" />}
                   <span className="font-semibold text-gray-900">{displayProducts.length}</span> products
                 </p>
               </div>
@@ -341,7 +385,7 @@ export default function CategoryPage() {
                 No products currently listed for these filters.
               </div>
             ) : (
-              <div className="space-y-4">
+              <div className={isGasFireplacePage ? "grid sm:grid-cols-2 xl:grid-cols-3 gap-5" : "space-y-4"}>
                 {displayProducts.map((product) => {
                   const livePrice = product.salePrice ?? product.price;
                   const model = splitModel(product.name, product.brand, product.sku);
@@ -350,12 +394,16 @@ export default function CategoryPage() {
                   return (
                     <article
                       key={product.id}
-                      className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                      className={`bg-white rounded-2xl border overflow-hidden transition-all ${
+                        isGasFireplacePage
+                          ? "border-amber-200 hover:shadow-[0_12px_35px_rgba(0,0,0,0.1)] hover:-translate-y-0.5"
+                          : "border-gray-200 hover:shadow-md"
+                      }`}
                     >
-                      <div className="grid md:grid-cols-[220px_1fr] gap-0">
+                      <div className={isGasFireplacePage ? "grid grid-cols-1" : "grid md:grid-cols-[220px_1fr] gap-0"}>
                         <Link
                           href={`/product/${product.slug}`}
-                          className="relative block h-56 md:h-full bg-gray-100"
+                          className={`relative block bg-gray-100 ${isGasFireplacePage ? "h-56" : "h-56 md:h-full"}`}
                         >
                           <Image
                             src={productImage}
@@ -369,7 +417,10 @@ export default function CategoryPage() {
                         <div className="p-5 md:p-6">
                           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                             <div className="min-w-0">
-                              <p className="text-xs uppercase tracking-wider text-amber-700 font-semibold">{product.brand}</p>
+                              <p className="text-xs uppercase tracking-wider text-amber-700 font-semibold inline-flex items-center gap-1.5">
+                                {isGasFireplacePage && <Flame className="w-3.5 h-3.5" />}
+                                {product.brand}
+                              </p>
                               <Link
                                 href={`/product/${product.slug}`}
                                 className="mt-1 block text-xl font-semibold text-[#1f2937] hover:text-amber-700 leading-snug"
