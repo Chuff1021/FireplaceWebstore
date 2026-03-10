@@ -3,17 +3,17 @@ import Link from "next/link";
 
 export function BrandsBar() {
   const brands = [
-    { name: "Napoleon", logo: "/brands/napoleon.webp" },
-    { name: "Superior", logo: "/brands/superior.webp" },
-    { name: "Dimplex", logo: "/brands/dimplex.webp" },
-    { name: "Majestic", logo: "/brands/majestic.webp" },
-    { name: "Empire", logo: "/brands/empire.webp" },
-    { name: "Osburn", logo: "/brands/osburn.webp" },
-    { name: "Drolet", logo: "/brands/drolet.webp" },
-    { name: "Buck Stove", logo: "/brands/buck-stove.webp" },
-    { name: "Amantii", logo: "/brands/amantii.webp" },
-    { name: "FireplaceX", logo: "/brands/fireplacex.png" },
-    { name: "Lopi", logo: "/brands/lopi.png" },
+    { name: "Napoleon", logo: "/brands/napoleon.webp", featuredImage: true },
+    { name: "Superior", logo: "/brands/superior.webp", featuredImage: true },
+    { name: "Dimplex", logo: "/brands/dimplex.webp", featuredImage: true },
+    { name: "Majestic", logo: "/brands/majestic.webp", featuredImage: true },
+    { name: "Empire", logo: "/brands/empire.webp", featuredImage: true },
+    { name: "Osburn", logo: "/brands/osburn.webp", featuredImage: true },
+    { name: "Drolet", logo: "/brands/drolet.webp", featuredImage: true },
+    { name: "Buck Stove", logo: "/brands/buck-stove.webp", featuredImage: true },
+    { name: "Amantii", logo: "/brands/amantii.webp", featuredImage: true },
+    { name: "FireplaceX", logo: "/brands/fireplacex.png", featuredImage: false },
+    { name: "Lopi", logo: "/brands/lopi.png", featuredImage: false },
   ];
 
   return (
@@ -23,14 +23,14 @@ export function BrandsBar() {
           Featured Brands
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-x-0 gap-y-0 border border-[#e0e0e0] border-b-0 border-r-0">
+        <div className="mx-auto flex max-w-[1145px] flex-wrap justify-center">
           {brands.map((brand) => (
             <Link
               key={brand.name}
               href={`/search?q=${encodeURIComponent(brand.name)}`}
-              className="group flex h-[123px] w-1/2 items-center justify-center border-b border-r border-[#e0e0e0] bg-white px-[9.5px] py-4 transition-colors duration-300 hover:bg-[#faf7f2] md:w-1/3 xl:w-[20%]"
+              className="group -ml-px -mt-px flex h-[123px] w-1/2 items-center justify-center border border-[#e0e0e0] bg-white px-[9.5px] py-4 transition-colors duration-300 hover:bg-[#faf7f2] md:w-1/3 xl:w-[209px]"
             >
-              <div className="relative h-full w-full">
+              <div className={`relative w-full ${brand.featuredImage ? "h-full" : "h-[76px]"}`}>
                 <Image
                   src={brand.logo}
                   alt={`${brand.name} logo`}
