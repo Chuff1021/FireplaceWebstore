@@ -3,7 +3,15 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, SlidersHorizontal, ShoppingCart } from "lucide-react";
+import {
+  ChevronRight,
+  SlidersHorizontal,
+  ShoppingCart,
+  ShieldCheck,
+  Truck,
+  Star,
+  Sparkles,
+} from "lucide-react";
 import { productCategories, sampleProducts, type Product } from "@/lib/store-config";
 import { useEffect, useState } from "react";
 import { useCartStore } from "@/lib/cart-store";
@@ -13,6 +21,7 @@ function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
+    maximumFractionDigits: 0,
   }).format(price);
 }
 
@@ -24,12 +33,24 @@ function splitModel(name: string, brand: string, sku: string) {
   return sku;
 }
 
+function getPriceBucket(price: number) {
+  if (price < 1500) return "Under $1,500";
+  if (price < 3000) return "$1,500 - $2,999";
+  if (price < 5000) return "$3,000 - $4,999";
+  return "$5,000+";
+}
+
 export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
+  const isGasFireplacePage = slug === "gas-fireplaces";
+
   const [sortBy, setSortBy] = useState("featured");
   const [showFilters, setShowFilters] = useState(false);
   const [catalogProducts, setCatalogProducts] = useState<Product[]>(sampleProducts);
+  const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+  const [selectedPrices, setSelectedPrices] = useState<string[]>([]);
+  const [inStockOnly, setInStockOnly] = useState(false);
   const { addItem, openCart } = useCartStore();
 
   useEffect(() => {
@@ -37,14 +58,14 @@ export default function CategoryPage() {
 
     async function loadProducts() {
       try {
-        const response = await fetch("/api/products?limit=1000", { cache: "no-store" });
+        const response = await fetch("/api/products?limit=2000", { cache: "no-store" });
         if (!response.ok) return;
         const data = (await response.json()) as Product[];
         if (!cancelled && Array.isArray(data) && data.length > 0) {
           setCatalogProducts(data);
         }
       } catch {
-        // Keep the local starter catalog if the API is unavailable.
+        // Keep local starter catalog if API unavailable
       }
     }
 
@@ -69,25 +90,36 @@ export default function CategoryPage() {
   const categoryDescription =
     category?.description ??
     "Browse our complete selection of fireplaces, stoves, inserts, and accessories.";
-
   const topLevelForPage = parentCategory ?? subcategoryMatch?.parent ?? null;
+  const subcategoryLinks = topLevelForPage?.subcategories ?? [];
 
-  // Filter products by category/subcategory
-  const products = catalogProducts.filter((product) => {
+  const baseProducts = catalogProducts.filter((product) => {
     if (parentCategory) {
       const subcategoryIds = new Set((parentCategory.subcategories ?? []).map((sub) => sub.id));
-      return product.categoryId === parentCategory.id || Boolean(product.subcategoryId && subcategoryIds.has(product.subcategoryId));
+      return (
+        product.categoryId === parentCategory.id ||
+        Boolean(product.subcategoryId && subcategoryIds.has(product.subcategoryId))
+      );
     }
 
-    if (subcategoryMatch) {
-      return product.subcategoryId === subcategoryMatch.id;
-    }
-
+    if (subcategoryMatch) return product.subcategoryId === subcategoryMatch.id;
     return true;
   });
 
-  // Sort products
-  const sortedProducts = [...products].sort((a, b) => {
+  const availableBrands: string[] = [...new Set(baseProducts.map((product) => product.brand).filter(Boolean))].sort();
+
+  const filteredProducts = baseProducts.filter((product) => {
+    const livePrice = product.salePrice ?? product.price;
+    const priceBucket = getPriceBucket(livePrice);
+
+    const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
+    const matchesPrice = selectedPrices.length === 0 || selectedPrices.includes(priceBucket);
+    const matchesStock = !inStockOnly || product.inStock;
+
+    return matchesBrand && matchesPrice && matchesStock;
+  });
+
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
       case "price-low":
         return (a.salePrice ?? a.price) - (b.salePrice ?? b.price);
@@ -104,19 +136,12 @@ export default function CategoryPage() {
 
   const displayProducts = sortedProducts;
 
-  const subcategoryLinks = topLevelForPage?.subcategories ?? [];
-
-  const fireplaceFlowLinks = ["gas-fireplaces", "wood-fireplaces"]
-    .map((subcategorySlug) => flattenedSubcategories.find((sub) => sub.slug === subcategorySlug))
-    .filter(Boolean) as Array<(typeof flattenedSubcategories)[number]>;
-
   return (
-    <div className="bg-gray-50 min-h-screen">
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
+    <div className="bg-[#f6f6f4] min-h-screen">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-orange-600">
+            <Link href="/" className="hover:text-amber-700 transition-colors">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -124,135 +149,135 @@ export default function CategoryPage() {
               <>
                 <Link
                   href={`/category/${subcategoryMatch.parent.slug}`}
-                  className="hover:text-orange-600"
+                  className="hover:text-amber-700 transition-colors"
                 >
                   {subcategoryMatch.parent.name}
                 </Link>
                 <ChevronRight className="w-4 h-4" />
               </>
             )}
-            <span className="text-gray-900 font-medium">
-              {categoryName}
-            </span>
+            <span className="text-gray-900 font-medium">{categoryName}</span>
           </nav>
         </div>
       </div>
 
-      {/* Category Header */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">
-            {categoryName}
-          </h1>
-          <p className="text-gray-300 max-w-2xl">
-            {categoryDescription}
-          </p>
+      <section className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-12 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
+          <div>
+            {isGasFireplacePage && (
+              <p className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-50 text-amber-900 border border-amber-200 mb-4">
+                <Sparkles className="w-3.5 h-3.5" />
+                Premium Gas Fireplace Collection
+              </p>
+            )}
+            <h1 className="text-3xl md:text-5xl font-semibold text-[#1f2937] leading-tight">{categoryName}</h1>
+            <p className="mt-4 text-gray-600 max-w-2xl leading-relaxed">{categoryDescription}</p>
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-700">
+              <span className="inline-flex items-center gap-2">
+                <Truck className="w-4 h-4 text-amber-700" />
+                Fast Nationwide Shipping
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-amber-700" />
+                Trusted Manufacturer Warranties
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Star className="w-4 h-4 text-amber-700" />
+                Expert Support from Republic, MO
+              </span>
+            </div>
+          </div>
 
-          {/* Subcategory Links */}
-          {subcategoryLinks.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-6">
-              {subcategoryLinks.map((sub) => (
-                <Link
-                  key={sub.id}
-                  href={`/category/${sub.slug}`}
-                  className="px-4 py-2 bg-white/10 rounded-lg text-sm hover:bg-white/20 transition-colors border border-white/20"
-                >
-                  {sub.name}
-                </Link>
-              ))}
+          <div className="rounded-2xl overflow-hidden border border-gray-200 bg-[#1f2937] relative h-56 md:h-64 lg:h-72">
+            <Image
+              src={isGasFireplacePage ? "/categories/gas-fireplaces.jpg" : "/categories/fireplaces.jpg"}
+              alt={categoryName}
+              fill
+              className="object-cover opacity-80"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <p className="text-xs uppercase tracking-[0.2em] text-amber-200">Aaron&apos;s Hearth and Home</p>
+              <p className="mt-1 text-lg font-semibold">Shop by style, size, and installation type</p>
             </div>
-          )}
-          {topLevelForPage?.slug === "fireplaces" && fireplaceFlowLinks.length > 0 && (
-            <div className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="text-xs uppercase tracking-wider text-gray-300">Shop fireplace fuel:</span>
-              {fireplaceFlowLinks.map((sub) => (
-                <Link
-                  key={sub.id}
-                  href={`/category/${sub.slug}`}
-                  className="px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-300/30 text-amber-200 text-xs font-semibold hover:bg-amber-500/30 transition-colors"
-                >
-                  {sub.name}
-                </Link>
-              ))}
-            </div>
-          )}
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Sidebar Filters */}
-          <aside
-            className={`lg:w-64 flex-shrink-0 ${
-              showFilters ? "block" : "hidden lg:block"
-            }`}
-          >
-            <div className="bg-white rounded-xl p-6 border sticky top-24">
-              <h3 className="font-bold text-gray-900 mb-4">Filters</h3>
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
+        {subcategoryLinks.length > 0 && (
+          <div className="mb-6 flex flex-wrap gap-2">
+            <Link
+              href={`/category/${topLevelForPage?.slug}`}
+              className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                slug === topLevelForPage?.slug
+                  ? "bg-[#1f2937] text-white border-[#1f2937]"
+                  : "bg-white text-gray-700 border-gray-300 hover:border-amber-400 hover:text-amber-700"
+              }`}
+            >
+              All {topLevelForPage?.name}
+            </Link>
+            {subcategoryLinks.map((sub) => (
+              <Link
+                key={sub.id}
+                href={`/category/${sub.slug}`}
+                className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                  slug === sub.slug
+                    ? "bg-[#1f2937] text-white border-[#1f2937]"
+                    : "bg-white text-gray-700 border-gray-300 hover:border-amber-400 hover:text-amber-700"
+                }`}
+              >
+                {sub.name}
+              </Link>
+            ))}
+          </div>
+        )}
 
-              {/* Fuel Type */}
-              {subcategoryLinks.length > 0 && (
-                <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-2">Browse This Family</h4>
-                  <div className="space-y-1">
-                    <Link
-                      href={`/category/${topLevelForPage?.slug}`}
-                      className="block text-sm text-gray-700 hover:text-orange-600"
-                    >
-                      All {topLevelForPage?.name}
-                    </Link>
-                    {subcategoryLinks.map((sub) => (
-                      <Link
-                        key={sub.id}
-                        href={`/category/${sub.slug}`}
-                        className={`block text-sm hover:text-orange-600 ${slug === sub.slug ? "text-orange-600 font-semibold" : "text-gray-600"}`}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Fuel Type */}
-              <div className="mb-6">
-                <h4 className="font-medium text-gray-700 mb-2">Fuel Type</h4>
-                <div className="space-y-2">
-                  {["Gas", "Wood", "Electric", "Pellet", "Propane"].map(
-                    (fuel) => (
-                      <label
-                        key={fuel}
-                        className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer"
-                      >
-                        <input
-                          type="checkbox"
-                          className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
-                        />
-                        {fuel}
-                      </label>
-                    )
-                  )}
-                </div>
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          <aside className={`lg:w-72 w-full ${showFilters ? "block" : "hidden lg:block"}`}>
+            <div className="bg-white rounded-2xl border border-gray-200 p-6 sticky top-24 shadow-sm">
+              <div className="flex items-center justify-between mb-5">
+                <h3 className="text-base font-semibold text-gray-900">Filter Products</h3>
+                <button
+                  onClick={() => {
+                    setSelectedBrands([]);
+                    setSelectedPrices([]);
+                    setInStockOnly(false);
+                  }}
+                  className="text-xs font-medium text-amber-700 hover:text-amber-800"
+                >
+                  Reset
+                </button>
               </div>
 
-              {/* Price Range */}
               <div className="mb-6">
-                <h4 className="font-medium text-gray-700 mb-2">Price Range</h4>
+                <h4 className="text-sm font-semibold text-gray-800 mb-3">Availability</h4>
+                <label className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={inStockOnly}
+                    onChange={(e) => setInStockOnly(e.target.checked)}
+                    className="rounded border-gray-300 text-amber-700 focus:ring-amber-600"
+                  />
+                  In stock only
+                </label>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-gray-800 mb-3">Price Range</h4>
                 <div className="space-y-2">
-                  {[
-                    "Under $500",
-                    "$500 - $1,000",
-                    "$1,000 - $2,000",
-                    "$2,000 - $3,000",
-                    "Over $3,000",
-                  ].map((range) => (
-                    <label
-                      key={range}
-                      className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer"
-                    >
+                  {["Under $1,500", "$1,500 - $2,999", "$3,000 - $4,999", "$5,000+"].map((range) => (
+                    <label key={range} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
                       <input
                         type="checkbox"
-                        className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                        checked={selectedPrices.includes(range)}
+                        onChange={(e) => {
+                          setSelectedPrices((current) =>
+                            e.target.checked ? [...current, range] : current.filter((item) => item !== range)
+                          );
+                        }}
+                        className="rounded border-gray-300 text-amber-700 focus:ring-amber-600"
                       />
                       {range}
                     </label>
@@ -260,40 +285,22 @@ export default function CategoryPage() {
                 </div>
               </div>
 
-              {/* Brand */}
-              <div className="mb-6">
-                <h4 className="font-medium text-gray-700 mb-2">Brand</h4>
-                <div className="space-y-2">
-                  {[...new Set(products.map((product) => product.brand))].sort().map((brand) => (
-                    <label
-                      key={brand}
-                      className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer"
-                    >
+              <div>
+                <h4 className="text-sm font-semibold text-gray-800 mb-3">Brand</h4>
+                <div className="space-y-2 max-h-56 overflow-auto pr-1">
+                  {availableBrands.map((brand) => (
+                    <label key={brand} className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
                       <input
                         type="checkbox"
-                        className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
+                        checked={selectedBrands.includes(brand)}
+                        onChange={(e) => {
+                          setSelectedBrands((current) =>
+                            e.target.checked ? [...current, brand] : current.filter((item) => item !== brand)
+                          );
+                        }}
+                        className="rounded border-gray-300 text-amber-700 focus:ring-amber-600"
                       />
                       {brand}
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Rating */}
-              <div>
-                <h4 className="font-medium text-gray-700 mb-2">Rating</h4>
-                <div className="space-y-2">
-                  {[4, 3, 2].map((rating) => (
-                    <label
-                      key={rating}
-                      className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer"
-                    >
-                      <input
-                        type="checkbox"
-                        className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
-                      />
-                      {"★".repeat(rating)}
-                      {"☆".repeat(5 - rating)} & Up
                     </label>
                   ))}
                 </div>
@@ -301,27 +308,25 @@ export default function CategoryPage() {
             </div>
           </aside>
 
-            {/* Product Catalog */}
-            <div className="flex-1">
-              {/* Toolbar */}
-              <div className="flex items-center justify-between mb-6 bg-white rounded-xl p-4 border">
-              <div className="flex items-center gap-4">
+          <div className="flex-1 w-full">
+            <div className="bg-white rounded-2xl border border-gray-200 px-4 md:px-6 py-4 mb-4 flex items-center justify-between shadow-sm">
+              <div className="flex items-center gap-3">
                 <button
-                  className="lg:hidden flex items-center gap-2 text-sm font-medium text-gray-700"
-                  onClick={() => setShowFilters(!showFilters)}
+                  className="lg:hidden inline-flex items-center gap-2 text-sm font-medium text-gray-700"
+                  onClick={() => setShowFilters((current) => !current)}
                 >
                   <SlidersHorizontal className="w-4 h-4" />
                   Filters
                 </button>
-                <span className="text-sm text-gray-500">
-                  {displayProducts.length} products
-                </span>
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold text-gray-900">{displayProducts.length}</span> products
+                </p>
               </div>
 
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
@@ -331,91 +336,103 @@ export default function CategoryPage() {
               </select>
             </div>
 
-              {/* Products */}
-              {displayProducts.length === 0 ? (
-                <div className="bg-white rounded-xl border p-8 text-center text-gray-600">
-                  No products currently listed in this category.
-                </div>
-              ) : (
-                <div className="bg-white rounded-xl border overflow-hidden">
-                  <div className="hidden md:grid grid-cols-12 gap-3 px-4 py-3 border-b bg-gray-50 text-xs font-semibold uppercase tracking-wider text-gray-500">
-                    <div className="col-span-5">Product</div>
-                    <div className="col-span-2">Make</div>
-                    <div className="col-span-2">Model</div>
-                    <div className="col-span-1">SKU</div>
-                    <div className="col-span-2 text-right">Price</div>
-                  </div>
+            {displayProducts.length === 0 ? (
+              <div className="bg-white rounded-2xl border border-gray-200 p-10 text-center text-gray-600">
+                No products currently listed for these filters.
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {displayProducts.map((product) => {
+                  const livePrice = product.salePrice ?? product.price;
+                  const model = splitModel(product.name, product.brand, product.sku);
+                  const productImage = resolveProductImage(product.images[0], product.images);
 
-                  <ul className="divide-y">
-                    {displayProducts.map((product) => {
-                      const livePrice = product.salePrice ?? product.price;
-                      const model = splitModel(product.name, product.brand, product.sku);
-                      const productImage = resolveProductImage(product.images[0], product.images);
+                  return (
+                    <article
+                      key={product.id}
+                      className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
+                    >
+                      <div className="grid md:grid-cols-[220px_1fr] gap-0">
+                        <Link
+                          href={`/product/${product.slug}`}
+                          className="relative block h-56 md:h-full bg-gray-100"
+                        >
+                          <Image
+                            src={productImage}
+                            alt={product.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 220px"
+                          />
+                        </Link>
 
-                      return (
-                        <li key={product.id} className="px-4 py-4 hover:bg-gray-50 transition-colors">
-                          <div className="md:grid md:grid-cols-12 md:gap-3 items-center">
-                            <div className="col-span-5 flex items-center gap-3">
+                        <div className="p-5 md:p-6">
+                          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                            <div className="min-w-0">
+                              <p className="text-xs uppercase tracking-wider text-amber-700 font-semibold">{product.brand}</p>
                               <Link
                                 href={`/product/${product.slug}`}
-                                className="relative h-16 w-16 rounded-md overflow-hidden border bg-gray-100 flex-shrink-0"
+                                className="mt-1 block text-xl font-semibold text-[#1f2937] hover:text-amber-700 leading-snug"
                               >
-                                <Image src={productImage} alt={product.name} fill className="object-cover" sizes="64px" />
+                                {product.name}
                               </Link>
-                              <div className="min-w-0">
-                                <Link
-                                  href={`/product/${product.slug}`}
-                                  className="font-semibold text-gray-900 hover:text-orange-600 line-clamp-2"
-                                >
-                                  {product.name}
-                                </Link>
-                                <p className="text-xs text-gray-500 mt-1 line-clamp-1">{product.shortDescription}</p>
-                              </div>
+                              <p className="mt-2 text-sm text-gray-600 line-clamp-2">{product.shortDescription}</p>
                             </div>
 
-                            <div className="col-span-2 mt-3 md:mt-0 text-sm text-gray-700">
-                              <span className="md:hidden font-semibold text-gray-500 mr-1">Make:</span>
-                              {product.brand}
-                            </div>
-
-                            <div className="col-span-2 mt-1 md:mt-0 text-sm text-gray-700">
-                              <span className="md:hidden font-semibold text-gray-500 mr-1">Model:</span>
-                              {model}
-                            </div>
-
-                            <div className="col-span-1 mt-1 md:mt-0 text-xs font-mono text-gray-500">
-                              <span className="md:hidden font-semibold text-gray-500 mr-1">SKU:</span>
-                              {product.sku}
-                            </div>
-
-                            <div className="col-span-2 mt-3 md:mt-0 text-right flex md:block items-center justify-between">
-                              <div>
-                                <p className="text-base font-bold text-gray-900">{formatPrice(livePrice)}</p>
-                                {product.salePrice && (
-                                  <p className="text-xs text-gray-400 line-through">{formatPrice(product.price)}</p>
-                                )}
-                              </div>
-                              <button
-                                onClick={() => {
-                                  addItem(product);
-                                  openCart();
-                                }}
-                                className="inline-flex items-center gap-1 px-3 py-1.5 bg-orange-600 text-white text-xs font-semibold rounded-md hover:bg-orange-700 transition-colors"
-                              >
-                                <ShoppingCart className="w-3.5 h-3.5" />
-                                Add
-                              </button>
+                            <div className="text-left md:text-right">
+                              <p className="text-2xl font-semibold text-[#1f2937]">{formatPrice(livePrice)}</p>
+                              {product.salePrice && (
+                                <p className="text-sm text-gray-400 line-through">{formatPrice(product.price)}</p>
+                              )}
+                              <p className="mt-1 text-xs text-emerald-700 font-semibold">
+                                {product.inStock ? "In stock" : "Out of stock"}
+                              </p>
                             </div>
                           </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
-            </div>
+
+                          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                            <div className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-2">
+                              <p className="text-[11px] uppercase tracking-wider text-gray-500">Model</p>
+                              <p className="font-medium text-gray-800 truncate">{model}</p>
+                            </div>
+                            <div className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-2">
+                              <p className="text-[11px] uppercase tracking-wider text-gray-500">SKU</p>
+                              <p className="font-medium text-gray-800 font-mono truncate">{product.sku}</p>
+                            </div>
+                            <div className="rounded-lg bg-gray-50 border border-gray-200 px-3 py-2">
+                              <p className="text-[11px] uppercase tracking-wider text-gray-500">Rating</p>
+                              <p className="font-medium text-gray-800">{product.rating.toFixed(1)} / 5</p>
+                            </div>
+                          </div>
+
+                          <div className="mt-5 flex items-center gap-3">
+                            <button
+                              onClick={() => {
+                                addItem(product);
+                                openCart();
+                              }}
+                              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#1f2937] text-white text-sm font-semibold hover:bg-black transition-colors"
+                            >
+                              <ShoppingCart className="w-4 h-4" />
+                              Add to Cart
+                            </button>
+                            <Link
+                              href={`/product/${product.slug}`}
+                              className="inline-flex items-center px-4 py-2.5 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:border-amber-400 hover:text-amber-700 transition-colors"
+                            >
+                              View Details
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
+      </div>
     </div>
   );
 }
