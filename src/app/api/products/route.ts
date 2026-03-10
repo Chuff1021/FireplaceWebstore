@@ -8,6 +8,7 @@ import { loadGasStoveProducts } from "@/lib/gas-stoves-scraped";
 import { loadOutdoorFireplaceProducts } from "@/lib/outdoor-fireplace-scraped";
 import { loadPelletInsertProducts } from "@/lib/pellet-inserts-scraped";
 import { loadPelletStoveProducts } from "@/lib/pellet-stoves-scraped";
+import { loadImportedPartsProducts } from "@/lib/parts-products";
 import { loadWoodFireplaceProducts } from "@/lib/wood-fireplace-scraped";
 import { loadWoodInsertProducts } from "@/lib/wood-inserts-scraped";
 import { loadWoodStoveProducts } from "@/lib/wood-stoves-scraped";
@@ -25,6 +26,7 @@ export async function GET(request: NextRequest) {
     const gasInsertProducts = await loadGasInsertProducts();
     const gasStoveProducts = await loadGasStoveProducts();
     const outdoorProducts = await loadOutdoorFireplaceProducts();
+    const partsProducts = await loadImportedPartsProducts();
     const pelletInsertProducts = await loadPelletInsertProducts();
     const pelletStoveProducts = await loadPelletStoveProducts();
     const woodProducts = await loadWoodFireplaceProducts();
@@ -42,7 +44,8 @@ export async function GET(request: NextRequest) {
         product.subcategoryId !== "electric-inserts" &&
         product.subcategoryId !== "wood-stoves" &&
         product.subcategoryId !== "pellet-stoves" &&
-        product.subcategoryId !== "gas-stoves"
+        product.subcategoryId !== "gas-stoves" &&
+        product.categoryId !== "parts"
     );
     const allProducts = [
       ...nonGasSampleProducts,
@@ -52,6 +55,7 @@ export async function GET(request: NextRequest) {
       ...gasInsertProducts,
       ...gasStoveProducts,
       ...outdoorProducts,
+      ...partsProducts,
       ...pelletInsertProducts,
       ...pelletStoveProducts,
       ...woodProducts,
