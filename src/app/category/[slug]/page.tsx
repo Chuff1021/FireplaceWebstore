@@ -18,6 +18,9 @@ const MIRRORED_CATEGORY_SLUGS = new Set([
   "wood-inserts",
   "pellet-inserts",
   "electric-inserts",
+  "wood-stoves",
+  "pellet-stoves",
+  "gas-stoves",
 ]);
 const MIRRORED_PRODUCTS_PER_PAGE = 20;
 

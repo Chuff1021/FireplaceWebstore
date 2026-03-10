@@ -4,10 +4,13 @@ import { loadElectricFireplaceProducts } from "@/lib/electric-fireplace-scraped"
 import { loadElectricInsertProducts } from "@/lib/electric-inserts-scraped";
 import { loadGasFireplaceProducts } from "@/lib/gas-fireplace-csv";
 import { loadGasInsertProducts } from "@/lib/gas-inserts-scraped";
+import { loadGasStoveProducts } from "@/lib/gas-stoves-scraped";
 import { loadOutdoorFireplaceProducts } from "@/lib/outdoor-fireplace-scraped";
 import { loadPelletInsertProducts } from "@/lib/pellet-inserts-scraped";
+import { loadPelletStoveProducts } from "@/lib/pellet-stoves-scraped";
 import { loadWoodFireplaceProducts } from "@/lib/wood-fireplace-scraped";
 import { loadWoodInsertProducts } from "@/lib/wood-inserts-scraped";
+import { loadWoodStoveProducts } from "@/lib/wood-stoves-scraped";
 
 export async function GET(request: NextRequest) {
   try {
@@ -20,10 +23,13 @@ export async function GET(request: NextRequest) {
     const electricInsertProducts = await loadElectricInsertProducts();
     const gasProducts = await loadGasFireplaceProducts();
     const gasInsertProducts = await loadGasInsertProducts();
+    const gasStoveProducts = await loadGasStoveProducts();
     const outdoorProducts = await loadOutdoorFireplaceProducts();
     const pelletInsertProducts = await loadPelletInsertProducts();
+    const pelletStoveProducts = await loadPelletStoveProducts();
     const woodProducts = await loadWoodFireplaceProducts();
     const woodInsertProducts = await loadWoodInsertProducts();
+    const woodStoveProducts = await loadWoodStoveProducts();
     const nonGasSampleProducts = sampleProducts.filter(
       (product) =>
         product.subcategoryId !== "gas-fireplaces" &&
@@ -33,7 +39,10 @@ export async function GET(request: NextRequest) {
         product.subcategoryId !== "gas-inserts" &&
         product.subcategoryId !== "wood-inserts" &&
         product.subcategoryId !== "pellet-inserts" &&
-        product.subcategoryId !== "electric-inserts"
+        product.subcategoryId !== "electric-inserts" &&
+        product.subcategoryId !== "wood-stoves" &&
+        product.subcategoryId !== "pellet-stoves" &&
+        product.subcategoryId !== "gas-stoves"
     );
     const allProducts = [
       ...nonGasSampleProducts,
@@ -41,10 +50,13 @@ export async function GET(request: NextRequest) {
       ...electricInsertProducts,
       ...gasProducts,
       ...gasInsertProducts,
+      ...gasStoveProducts,
       ...outdoorProducts,
       ...pelletInsertProducts,
+      ...pelletStoveProducts,
       ...woodProducts,
       ...woodInsertProducts,
+      ...woodStoveProducts,
     ];
 
     let filtered = allProducts;
