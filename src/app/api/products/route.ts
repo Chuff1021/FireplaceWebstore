@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sampleProducts } from "@/lib/store-config";
+import { loadElectricFireplaceProducts } from "@/lib/electric-fireplace-scraped";
 import { loadGasFireplaceProducts } from "@/lib/gas-fireplace-csv";
 
 export async function GET(request: NextRequest) {
@@ -9,11 +10,14 @@ export async function GET(request: NextRequest) {
     const featured = searchParams.get("featured");
     const slug = searchParams.get("slug");
     const limit = parseInt(searchParams.get("limit") ?? "100");
+    const electricProducts = await loadElectricFireplaceProducts();
     const gasProducts = await loadGasFireplaceProducts();
     const nonGasSampleProducts = sampleProducts.filter(
-      (product) => product.subcategoryId !== "gas-fireplaces"
+      (product) =>
+        product.subcategoryId !== "gas-fireplaces" &&
+        product.subcategoryId !== "electric-fireplaces"
     );
-    const allProducts = [...nonGasSampleProducts, ...gasProducts];
+    const allProducts = [...nonGasSampleProducts, ...electricProducts, ...gasProducts];
 
     let filtered = allProducts;
     if (categorySlug) {
