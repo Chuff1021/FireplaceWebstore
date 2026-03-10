@@ -27,25 +27,11 @@ function getPriceBucket(price: number) {
 }
 
 function getProductLink(product: Product) {
-  const externalUrl = product.specifications?.["Product URL"];
-  if (typeof externalUrl === "string" && externalUrl.startsWith("http")) {
-    return externalUrl;
-  }
-
   return `/product/${product.slug}`;
 }
 
 function getProductLinkProps(product: Product) {
-  const href = getProductLink(product);
-  if (href.startsWith("http")) {
-    return {
-      href,
-      target: "_blank" as const,
-      rel: "noreferrer",
-    };
-  }
-
-  return { href };
+  return { href: getProductLink(product) };
 }
 
 function renderStars(rating: number) {
@@ -227,8 +213,6 @@ export default function CategoryPage() {
                 <Link
                   key={product.id}
                   href={href.href}
-                  target={href.target}
-                  rel={href.rel}
                   className="overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md"
                 >
                   <div className="relative aspect-square bg-white">
@@ -400,8 +384,6 @@ export default function CategoryPage() {
 
                         <Link
                           href={href.href}
-                          target={href.target}
-                          rel={href.rel}
                           className="group block"
                         >
                           <div className="mb-5 flex h-[136px] items-center justify-center border border-[#e0e0e0] bg-white md:h-[213px] xl:h-[246px]">
@@ -439,8 +421,6 @@ export default function CategoryPage() {
                         <div className="mt-3">
                           <Link
                             href={href.href}
-                            target={href.target}
-                            rel={href.rel}
                             className="inline-flex items-center gap-2 text-sm leading-5 text-[#003b4d] hover:underline"
                           >
                             View Details
