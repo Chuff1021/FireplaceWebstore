@@ -9,11 +9,15 @@ import { productCategories, type Product } from "@/lib/store-config";
 import { resolveProductImage } from "@/lib/product-images";
 
 const PRODUCTS_PER_PAGE = 24;
-const MIRRORED_FIREPLACE_SLUGS = new Set([
+const MIRRORED_CATEGORY_SLUGS = new Set([
   "gas-fireplaces",
   "electric-fireplaces",
   "wood-fireplaces",
   "outdoor-fireplaces",
+  "gas-inserts",
+  "wood-inserts",
+  "pellet-inserts",
+  "electric-inserts",
 ]);
 const MIRRORED_PRODUCTS_PER_PAGE = 20;
 
@@ -55,7 +59,7 @@ function renderStars(rating: number) {
 export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const isMirroredFireplacePage = MIRRORED_FIREPLACE_SLUGS.has(slug);
+  const isMirroredCategoryPage = MIRRORED_CATEGORY_SLUGS.has(slug);
 
   const [catalogProducts, setCatalogProducts] = useState<Product[]>([]);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
@@ -156,7 +160,7 @@ export default function CategoryPage() {
     }
   });
 
-  const productsPerPage = isMirroredFireplacePage ? MIRRORED_PRODUCTS_PER_PAGE : PRODUCTS_PER_PAGE;
+  const productsPerPage = isMirroredCategoryPage ? MIRRORED_PRODUCTS_PER_PAGE : PRODUCTS_PER_PAGE;
   const totalPages = Math.max(1, Math.ceil(sortedProducts.length / productsPerPage));
   const currentPage = Math.min(page, totalPages);
   const startIndex = sortedProducts.length === 0 ? 0 : (currentPage - 1) * productsPerPage + 1;
@@ -182,7 +186,7 @@ export default function CategoryPage() {
     (_, index) => pageWindowStart + index
   );
 
-  if (!isMirroredFireplacePage) {
+  if (!isMirroredCategoryPage) {
     return (
       <div className="min-h-screen bg-[#f7f7f7]">
         <div className="border-b border-gray-200 bg-white">
