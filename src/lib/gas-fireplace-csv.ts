@@ -294,24 +294,7 @@ function parseScrapedGasFireplaceProducts(jsonText: string): Product[] {
   return products.filter((product): product is Product => product !== null);
 }
 
-async function loadGasFireplaceProductsInternal(): Promise<Product[]> {
-  const scrapedJson = await readGasFireplaceScrapedJson();
-  if (scrapedJson) {
-    const scrapedProducts = parseScrapedGasFireplaceProducts(scrapedJson);
-    if (scrapedProducts.length > 0) {
-      return scrapedProducts;
-    }
-  }
-
-  const cloneHtml = await readGasFireplaceClone();
-  if (cloneHtml) {
-    const clonedProducts = parseClonedGasFireplaceProducts(cloneHtml);
-    if (clonedProducts.length > 0) {
-      return clonedProducts;
-    }
-  }
-
-  const csvText = await readGasFireplaceCsv();
+function buildCsvGasFireplaceProducts(csvText: string): Product[] {
   const records = parseCsvRows(csvText);
 
   return records.map((record, index) => {
@@ -352,6 +335,77 @@ async function loadGasFireplaceProductsInternal(): Promise<Product[]> {
       isBestSeller: index < 8,
       };
     });
+}
+
+function buildProductLookup(products: Product[]): Map<string, Product> {
+  const lookup = new Map<string, Product>();
+
+  products.forEach((product) => {
+    lookup.set(product.slug.toLowerCase(), product);
+    lookup.set(product.sku.toLowerCase(), product);
+  });
+
+  return lookup;
+}
+
+function mergeGasFireplaceProducts(baseProducts: Product[], overrideProducts: Product[]): Product[] {
+  if (overrideProducts.length === 0) {
+    return baseProducts;
+  }
+
+  const overrideLookup = buildProductLookup(overrideProducts);
+
+  return baseProducts.map((product) => {
+    const override =
+      overrideLookup.get(product.slug.toLowerCase()) ??
+      overrideLookup.get(product.sku.toLowerCase());
+
+    if (!override) {
+      return product;
+    }
+
+    return {
+      ...product,
+      name: override.name || product.name,
+      description: override.description || product.description,
+      shortDescription: override.shortDescription || product.shortDescription,
+      price: override.price || product.price,
+      salePrice: override.salePrice,
+      brand: override.brand || product.brand,
+      images: override.images.length > 0 ? override.images : product.images,
+      features: override.features.length > 0 ? override.features : product.features,
+      specifications: {
+        ...product.specifications,
+        ...override.specifications,
+      },
+      rating: override.rating || product.rating,
+      reviewCount: override.reviewCount || product.reviewCount,
+      isBestSeller: override.isBestSeller,
+    };
+  });
+}
+
+async function loadGasFireplaceProductsInternal(): Promise<Product[]> {
+  const csvText = await readGasFireplaceCsv();
+  const csvProducts = buildCsvGasFireplaceProducts(csvText);
+
+  const scrapedJson = await readGasFireplaceScrapedJson();
+  if (scrapedJson) {
+    const scrapedProducts = parseScrapedGasFireplaceProducts(scrapedJson);
+    if (scrapedProducts.length > 0) {
+      return mergeGasFireplaceProducts(csvProducts, scrapedProducts);
+    }
+  }
+
+  const cloneHtml = await readGasFireplaceClone();
+  if (cloneHtml) {
+    const clonedProducts = parseClonedGasFireplaceProducts(cloneHtml);
+    if (clonedProducts.length > 0) {
+      return mergeGasFireplaceProducts(csvProducts, clonedProducts);
+    }
+  }
+
+  return csvProducts;
 }
 
 export async function loadGasFireplaceProducts(): Promise<Product[]> {
