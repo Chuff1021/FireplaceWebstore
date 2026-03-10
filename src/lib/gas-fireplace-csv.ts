@@ -4,6 +4,10 @@ import { readFile } from "fs/promises";
 import path from "path";
 import { sampleProducts, type Product } from "@/lib/store-config";
 
+const GAS_FIREPLACE_SCRAPED_JSON_CANDIDATES = [
+  path.join(process.cwd(), "data", "gas-fireplaces-scraped.json"),
+];
+
 const GAS_FIREPLACE_CLONE_CANDIDATES = [
   "/Users/fireplace/efireplacestore-page-clone/www.efireplacestore.com/gas-fireplaces.html",
 ];
@@ -14,6 +18,19 @@ const GAS_FIREPLACE_CSV_CANDIDATES = [
 ];
 
 type CsvRecord = Record<string, string>;
+type ScrapedRecord = {
+  sku?: string;
+  name?: string;
+  slug?: string;
+  price?: number;
+  salePrice?: number;
+  brand?: string;
+  imageUrl?: string;
+  productUrl?: string;
+  rating?: number;
+  reviewCount?: number;
+  isBestSeller?: boolean;
+};
 
 let cachedProductsPromise: Promise<Product[]> | null = null;
 
@@ -120,6 +137,18 @@ async function readGasFireplaceClone(): Promise<string | null> {
   return null;
 }
 
+async function readGasFireplaceScrapedJson(): Promise<string | null> {
+  for (const candidate of GAS_FIREPLACE_SCRAPED_JSON_CANDIDATES) {
+    try {
+      return await readFile(candidate, "utf8");
+    } catch {
+      continue;
+    }
+  }
+
+  return null;
+}
+
 async function readGasFireplaceCsv(): Promise<string> {
   for (const candidate of GAS_FIREPLACE_CSV_CANDIDATES) {
     try {
@@ -201,7 +230,79 @@ function parseClonedGasFireplaceProducts(html: string): Product[] {
   return products.filter((product): product is Product => product !== null);
 }
 
+function parseScrapedGasFireplaceProducts(jsonText: string): Product[] {
+  let records: ScrapedRecord[] = [];
+
+  try {
+    const parsed = JSON.parse(jsonText);
+    if (Array.isArray(parsed)) {
+      records = parsed;
+    }
+  } catch {
+    return [];
+  }
+
+  const products: Array<Product | null> = records.map((record, index) => {
+      const name = stripHtml(record.name || `${record.brand || "Fireplace"} ${record.sku || ""}`.trim());
+      const slug = toSlug(record.slug || record.sku || name);
+      const primaryPrice =
+        typeof record.price === "number" && Number.isFinite(record.price) ? record.price : 0;
+      const promoPrice =
+        typeof record.salePrice === "number" && Number.isFinite(record.salePrice)
+          ? record.salePrice
+          : undefined;
+
+      if (!name || !slug || primaryPrice <= 0) {
+        return null;
+      }
+
+      const product: Product = {
+        id: `scraped-gas-${index + 1}`,
+        sku: (record.sku || slug).trim(),
+        name,
+        slug,
+        description: name,
+        shortDescription: toSentenceExcerpt(name),
+        price: primaryPrice,
+        salePrice: promoPrice && primaryPrice > promoPrice ? promoPrice : undefined,
+        categoryId: "fireplaces",
+        subcategoryId: "gas-fireplaces",
+        brand: (record.brand || name.split(" ")[0] || "Fireplace").trim(),
+        images: record.imageUrl ? [record.imageUrl] : sampleProducts[0]?.images ?? [],
+        features: record.productUrl ? [`Product page: ${record.productUrl}`] : [],
+        specifications: {
+          Model: (record.sku || slug).trim(),
+          Brand: (record.brand || name.split(" ")[0] || "Fireplace").trim(),
+          "Product URL": record.productUrl || "N/A",
+        },
+        inStock: true,
+        stockQuantity: 25,
+        rating:
+          typeof record.rating === "number" && Number.isFinite(record.rating) ? record.rating : 0,
+        reviewCount:
+          typeof record.reviewCount === "number" && Number.isFinite(record.reviewCount)
+            ? record.reviewCount
+            : 0,
+        isFeatured: index < 12,
+        isNew: false,
+        isBestSeller: Boolean(record.isBestSeller),
+      };
+
+      return product;
+    });
+
+  return products.filter((product): product is Product => product !== null);
+}
+
 async function loadGasFireplaceProductsInternal(): Promise<Product[]> {
+  const scrapedJson = await readGasFireplaceScrapedJson();
+  if (scrapedJson) {
+    const scrapedProducts = parseScrapedGasFireplaceProducts(scrapedJson);
+    if (scrapedProducts.length > 0) {
+      return scrapedProducts;
+    }
+  }
+
   const cloneHtml = await readGasFireplaceClone();
   if (cloneHtml) {
     const clonedProducts = parseClonedGasFireplaceProducts(cloneHtml);
