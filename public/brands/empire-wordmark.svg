@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title">
+  <title>Empire</title>
+  <rect width="320" height="96" rx="12" fill="#ffffff"/>
+  <path d="M42 66V30h14l9 12 9-12h14v36H76V48l-10 12h-3L53 48v18Z" fill="#111111"/>
+  <text x="108" y="60" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="2">EMPIRE</text>
+</svg>

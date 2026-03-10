@@ -11,6 +11,15 @@ const featuredCategoryLinks = [
   { label: "Pellet Stoves", href: "/category/pellet-stoves" },
 ];
 
+const categoryVisuals: Record<string, string> = {
+  fireplaces: "/products/electric-fireplaces/ama-60-tru-view-xl-eba8bac5.webp",
+  inserts: "/products/gas-inserts/maj-ruby35in-9a1628a9.webp",
+  stoves: "/products/wood-stoves/osb-ob03500-bba28a5a.webp",
+  outdoor: "/categories/home-outdoor.webp",
+  accessories: "/categories/home-accessories.webp",
+  parts: "/categories/home-parts.webp",
+};
+
 export function CategoryGrid() {
   return (
     <section className="border-t border-[#e5e0d8] bg-[#f7f3ec] py-14 md:py-16">
@@ -38,7 +47,7 @@ export function CategoryGrid() {
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#efe6da]">
                 <Image
-                  src={category.image}
+                  src={categoryVisuals[category.id] ?? category.image}
                   alt={category.name}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

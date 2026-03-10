@@ -4,14 +4,14 @@ import Link from "next/link";
 export function BrandsBar() {
   const brands = [
     { name: "Napoleon", logo: "/brands/napoleon.webp" },
-    { name: "Superior", logo: "/brands/superior.webp" },
+    { name: "Superior", logo: "/brands/superior-wordmark.svg" },
     { name: "Dimplex", logo: "/brands/dimplex.webp" },
-    { name: "Majestic", logo: "/brands/majestic.webp" },
-    { name: "Empire", logo: "/brands/empire.webp" },
-    { name: "Osburn", logo: "/brands/osburn.webp" },
+    { name: "Majestic", logo: "/brands/majestic-wordmark.svg" },
+    { name: "Empire", logo: "/brands/empire-wordmark.svg" },
+    { name: "Osburn", logo: "/brands/osburn-wordmark.svg" },
     { name: "Drolet", logo: "/brands/drolet.webp" },
-    { name: "Buck Stove", logo: "/brands/buck-stove.webp" },
-    { name: "Amantii", logo: "/brands/amantii.webp" },
+    { name: "Buck Stove", logo: "/brands/buck-stove-wordmark.svg" },
+    { name: "Amantii", logo: "/brands/amantii-wordmark.svg" },
   ];
 
   return (

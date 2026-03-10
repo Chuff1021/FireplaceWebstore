@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title">
+  <title>Superior</title>
+  <rect width="320" height="96" rx="12" fill="#ffffff"/>
+  <path d="M34 63V33h44v10H47v6h26v9H47v5h31v10Z" fill="#111111"/>
+  <text x="94" y="61" fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="1.2">SUPERIOR</text>
+</svg>
