@@ -97,7 +97,7 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
 
       try {
         const category = isLandingPage ? "parts" : slug;
-        const response = await fetch(`/api/products?category=${category}&limit=5000`, {
+        const response = await fetch(`/api/products?category=${category}&limit=50000`, {
           cache: "no-store",
         });
 
