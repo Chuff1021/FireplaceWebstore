@@ -12,6 +12,8 @@ const MANIFEST_PATH = path.join(DATA_DIR, "stove-parts-unlimited-import-manifest
 const PRODUCT_SITEMAPS = [1, 2, 3, 4].map(
   (page) => `https://www.stove-parts-unlimited.com/xmlsitemap.php?type=products&page=${page}`
 );
+const RETRYABLE_ERROR_CODES = new Set(["ECONNRESET", "ECONNREFUSED", "ETIMEDOUT", "EAI_AGAIN"]);
+const RETRYABLE_STATUS_CODES = [408, 425, 429, 500, 502, 503, 504];
 
 function parseArgs(argv) {
   const args = {
@@ -81,7 +83,41 @@ function matchFirst(text, pattern) {
   return match ? match[1] : "";
 }
 
-function fetchUrl(url) {
+function isRetryableError(error) {
+  const message = String(error?.message || "");
+  const code = String(error?.code || "");
+
+  return (
+    RETRYABLE_ERROR_CODES.has(code) ||
+    RETRYABLE_STATUS_CODES.some((status) => message.includes(`HTTP ${status}`))
+  );
+}
+
+function wait(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function withRetries(action, maxAttempts = 4) {
+  let attempt = 0;
+
+  while (attempt < maxAttempts) {
+    attempt += 1;
+
+    try {
+      return await action();
+    } catch (error) {
+      if (attempt >= maxAttempts || !isRetryableError(error)) {
+        throw error;
+      }
+
+      await wait(500 * 2 ** (attempt - 1));
+    }
+  }
+}
+
+function fetchUrlOnce(url) {
   return new Promise((resolve, reject) => {
     const request = https.get(
       url,
@@ -121,11 +157,18 @@ function fetchUrl(url) {
       }
     );
 
+    request.setTimeout(15000, () => {
+      request.destroy(Object.assign(new Error(`ETIMEDOUT for ${url}`), { code: "ETIMEDOUT" }));
+    });
     request.on("error", reject);
   });
 }
 
-function downloadBinary(url, destination) {
+function fetchUrl(url) {
+  return withRetries(() => fetchUrlOnce(url));
+}
+
+function downloadBinaryOnce(url, destination) {
   return new Promise((resolve, reject) => {
     const request = https.get(
       url,
@@ -163,8 +206,15 @@ function downloadBinary(url, destination) {
       }
     );
 
+    request.setTimeout(20000, () => {
+      request.destroy(Object.assign(new Error(`ETIMEDOUT for ${url}`), { code: "ETIMEDOUT" }));
+    });
     request.on("error", reject);
   });
+}
+
+function downloadBinary(url, destination) {
+  return withRetries(() => downloadBinaryOnce(url, destination));
 }
 
 async function fetchProductUrls() {
