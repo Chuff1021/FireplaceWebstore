@@ -2,8 +2,8 @@
   "source": "https://www.stove-parts-unlimited.com/",
   "sitemap": "https://www.stove-parts-unlimited.com/xmlsitemap.php",
   "totalProductUrls": 32016,
-  "importedCount": 27447,
-  "lastImportedIndex": 27989,
+  "importedCount": 28947,
+  "lastImportedIndex": 29489,
   "batches": [
     {
       "name": "stove-parts-unlimited-batch-0001",
@@ -580,7 +580,34 @@
       "count": 500,
       "createdAt": "2026-03-16T21:32:59.709Z",
       "downloadImages": false
+    },
+    {
+      "name": "stove-parts-unlimited-batch-27991",
+      "file": "parts/stove-parts-unlimited-batch-27991.json",
+      "start": 27990,
+      "end": 28489,
+      "count": 500,
+      "createdAt": "2026-03-16T21:39:45.202Z",
+      "downloadImages": false
+    },
+    {
+      "name": "stove-parts-unlimited-batch-28491",
+      "file": "parts/stove-parts-unlimited-batch-28491.json",
+      "start": 28490,
+      "end": 28989,
+      "count": 500,
+      "createdAt": "2026-03-16T21:40:29.418Z",
+      "downloadImages": false
+    },
+    {
+      "name": "stove-parts-unlimited-batch-28991",
+      "file": "parts/stove-parts-unlimited-batch-28991.json",
+      "start": 28990,
+      "end": 29489,
+      "count": 500,
+      "createdAt": "2026-03-16T21:41:12.840Z",
+      "downloadImages": false
     }
   ],
-  "updatedAt": "2026-03-16T21:32:59.712Z"
+  "updatedAt": "2026-03-16T21:41:12.841Z"
 }
