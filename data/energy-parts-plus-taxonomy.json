@@ -1,0 +1,436 @@
+{
+  "departments": [
+    {
+      "name": "Pellet Stove Parts",
+      "slug": "pellet-stove-parts",
+      "url": "https://www.energypartsplus.com/pellet-stove-parts/"
+    },
+    {
+      "name": "Gas Stove Parts",
+      "slug": "gas-stove-parts",
+      "url": "https://www.energypartsplus.com/gas-stove-parts/"
+    },
+    {
+      "name": "Wood Stove Parts",
+      "slug": "wood-stove-parts",
+      "url": "https://www.energypartsplus.com/wood-stove-parts/"
+    },
+    {
+      "name": "Electric Stove Parts",
+      "slug": "electric-stove-parts",
+      "url": "https://www.energypartsplus.com/electric-stove-parts/"
+    }
+  ],
+  "partTypes": [
+    {
+      "name": "part type",
+      "slug": "part-type",
+      "url": "https://www.energypartsplus.com/part-type/"
+    },
+    {
+      "name": "auger motors",
+      "slug": "auger-motors",
+      "url": "https://www.energypartsplus.com/auger-motors/"
+    },
+    {
+      "name": "combustion blowers",
+      "slug": "combustion-blowers",
+      "url": "https://www.energypartsplus.com/combustion-blowers/"
+    },
+    {
+      "name": "convection fans",
+      "slug": "convection-fans",
+      "url": "https://www.energypartsplus.com/convection-fans/"
+    },
+    {
+      "name": "electronics",
+      "slug": "electronics",
+      "url": "https://www.energypartsplus.com/electronics/"
+    },
+    {
+      "name": "gas products",
+      "slug": "gas-products",
+      "url": "https://www.energypartsplus.com/gas-products/"
+    },
+    {
+      "name": "gaskets and sealants",
+      "slug": "gaskets-and-sealants",
+      "url": "https://www.energypartsplus.com/gaskets-and-sealants/"
+    },
+    {
+      "name": "miscellaneous",
+      "slug": "miscellaneous",
+      "url": "https://www.energypartsplus.com/miscellaneous/"
+    }
+  ],
+  "brandPages": [
+    {
+      "name": "Austroflamm Pellet Parts",
+      "slug": "austroflamm-pellet-parts",
+      "url": "https://www.energypartsplus.com/austroflamm-pellet-parts/"
+    },
+    {
+      "name": "Avalon Pellet Parts",
+      "slug": "avalon-pellet-parts",
+      "url": "https://www.energypartsplus.com/avalon-pellet-parts/"
+    },
+    {
+      "name": "Bosca Pellet Parts",
+      "slug": "bosca-pellet-parts",
+      "url": "https://www.energypartsplus.com/bosca-pellet-parts/"
+    },
+    {
+      "name": "Breckwell Pellet Parts",
+      "slug": "breckwell-pellet-parts",
+      "url": "https://www.energypartsplus.com/breckwell-pellet-parts/"
+    },
+    {
+      "name": "Country Flame Pellet Parts",
+      "slug": "country-flame-pellet-parts",
+      "url": "https://www.energypartsplus.com/country-flame-pellet-parts/"
+    },
+    {
+      "name": "Englander Pellet Parts",
+      "slug": "englander-pellet-parts",
+      "url": "https://www.energypartsplus.com/englander-pellet-parts/"
+    },
+    {
+      "name": "Harman Pellet Parts",
+      "slug": "harman-pellet-parts",
+      "url": "https://www.energypartsplus.com/harman-pellet-parts/"
+    },
+    {
+      "name": "Heatilator Eco Choice Pellet Parts",
+      "slug": "heatilator-eco-choice-pellet-parts",
+      "url": "https://www.energypartsplus.com/heatilator-eco-choice-pellet-parts/"
+    },
+    {
+      "name": "Hudson River Pellet Parts",
+      "slug": "hudson-river-pellet-parts",
+      "url": "https://www.energypartsplus.com/hudson-river-pellet-parts/"
+    },
+    {
+      "name": "Kozi Pellet Parts",
+      "slug": "kozi-pellet-parts",
+      "url": "https://www.energypartsplus.com/kozi-pellet-parts/"
+    },
+    {
+      "name": "Lennox Pellet Parts",
+      "slug": "lennox-pellet-parts",
+      "url": "https://www.energypartsplus.com/lennox-pellet-parts/"
+    },
+    {
+      "name": "Lopi Pellet Parts",
+      "slug": "lopi-pellet-parts",
+      "url": "https://www.energypartsplus.com/lopi-pellet-parts/"
+    },
+    {
+      "name": "Magnum Pellet Parts",
+      "slug": "magnum-pellet-parts",
+      "url": "https://www.energypartsplus.com/magnum-pellet-parts/"
+    },
+    {
+      "name": "Napoleon Pellet Parts",
+      "slug": "napoleon-pellet-parts",
+      "url": "https://www.energypartsplus.com/napoleon-pellet-parts/"
+    },
+    {
+      "name": "Pellet Master Parts",
+      "slug": "pellet-master-parts",
+      "url": "https://www.energypartsplus.com/pellet-master-parts/"
+    },
+    {
+      "name": "Pelpro Pellet Parts",
+      "slug": "pelpro-pellet-parts",
+      "url": "https://www.energypartsplus.com/pelpro-pellet-parts/"
+    },
+    {
+      "name": "Quadra Fire Pellet Parts",
+      "slug": "quadra-fire-pellet-parts",
+      "url": "https://www.energypartsplus.com/quadra-fire-pellet-parts/"
+    },
+    {
+      "name": "Regency Pellet Parts",
+      "slug": "regency-pellet-parts",
+      "url": "https://www.energypartsplus.com/regency-pellet-parts/"
+    },
+    {
+      "name": "St Croix Pellet Parts",
+      "slug": "st-croix-pellet-parts",
+      "url": "https://www.energypartsplus.com/st-croix-pellet-parts/"
+    },
+    {
+      "name": "Timberwolf Pellet Parts",
+      "slug": "timberwolf-pellet-parts",
+      "url": "https://www.energypartsplus.com/timberwolf-pellet-parts/"
+    },
+    {
+      "name": "Travis Pellet Parts",
+      "slug": "travis-pellet-parts",
+      "url": "https://www.energypartsplus.com/travis-pellet-parts/"
+    },
+    {
+      "name": "Us Stove Pellet Parts",
+      "slug": "us-stove-pellet-parts",
+      "url": "https://www.energypartsplus.com/us-stove-pellet-parts/"
+    },
+    {
+      "name": "Vistaflame Pellet Parts",
+      "slug": "vistaflame-pellet-parts",
+      "url": "https://www.energypartsplus.com/vistaflame-pellet-parts/"
+    },
+    {
+      "name": "Vogelzang Pellet Parts",
+      "slug": "vogelzang-pellet-parts",
+      "url": "https://www.energypartsplus.com/vogelzang-pellet-parts/"
+    },
+    {
+      "name": "Whitfield Pellet Parts",
+      "slug": "whitfield-pellet-parts",
+      "url": "https://www.energypartsplus.com/whitfield-pellet-parts/"
+    },
+    {
+      "name": "Enviro Pellet Parts",
+      "slug": "enviro-pellet-parts",
+      "url": "https://www.energypartsplus.com/enviro-pellet-parts/"
+    },
+    {
+      "name": "Austroflamm Gas Parts",
+      "slug": "austroflamm-gas-parts",
+      "url": "https://www.energypartsplus.com/austroflamm-gas-parts/"
+    },
+    {
+      "name": "Hht Gas Parts",
+      "slug": "hht-gas-parts",
+      "url": "https://www.energypartsplus.com/hht-gas-parts/"
+    },
+    {
+      "name": "Ihp Lennox Gas Parts",
+      "slug": "ihp-lennox-gas-parts",
+      "url": "https://www.energypartsplus.com/ihp-lennox-gas-parts/"
+    },
+    {
+      "name": "Robert Shaw Gas Parts",
+      "slug": "robert-shaw-gas-parts",
+      "url": "https://www.energypartsplus.com/robert-shaw-gas-parts/"
+    },
+    {
+      "name": "Sit Gas Parts",
+      "slug": "sit-gas-parts",
+      "url": "https://www.energypartsplus.com/sit-gas-parts/"
+    },
+    {
+      "name": "Misc Gas Parts",
+      "slug": "misc-gas-parts",
+      "url": "https://www.energypartsplus.com/misc-gas-parts/"
+    },
+    {
+      "name": "Country Flame Wood Parts",
+      "slug": "country-flame-wood-parts",
+      "url": "https://www.energypartsplus.com/country-flame-wood-parts/"
+    },
+    {
+      "name": "Magnum Wood Parts",
+      "slug": "magnum-wood-parts",
+      "url": "https://www.energypartsplus.com/magnum-wood-parts/"
+    },
+    {
+      "name": "Misc Woodstove Parts",
+      "slug": "misc-woodstove-parts",
+      "url": "https://www.energypartsplus.com/misc-woodstove-parts/"
+    },
+    {
+      "name": "Breckwell Gas Parts",
+      "slug": "breckwell-gas-parts",
+      "url": "https://www.energypartsplus.com/breckwell-gas-parts/"
+    },
+    {
+      "name": "Auger Motors",
+      "slug": "auger-motors",
+      "url": "https://www.energypartsplus.com/auger-motors/"
+    },
+    {
+      "name": "Combustion Blowers",
+      "slug": "combustion-blowers",
+      "url": "https://www.energypartsplus.com/combustion-blowers/"
+    },
+    {
+      "name": "Convection Fans",
+      "slug": "convection-fans",
+      "url": "https://www.energypartsplus.com/convection-fans/"
+    },
+    {
+      "name": "Electronics",
+      "slug": "electronics",
+      "url": "https://www.energypartsplus.com/electronics/"
+    },
+    {
+      "name": "Gas Products",
+      "slug": "gas-products",
+      "url": "https://www.energypartsplus.com/gas-products/"
+    },
+    {
+      "name": "Gaskets And Sealants",
+      "slug": "gaskets-and-sealants",
+      "url": "https://www.energypartsplus.com/gaskets-and-sealants/"
+    },
+    {
+      "name": "Miscellaneous",
+      "slug": "miscellaneous",
+      "url": "https://www.energypartsplus.com/miscellaneous/"
+    },
+    {
+      "name": "Quadrafire",
+      "slug": "quadrafire",
+      "url": "https://www.energypartsplus.com/brands/Quadrafire.html"
+    },
+    {
+      "name": "Country Flame",
+      "slug": "country-flame",
+      "url": "https://www.energypartsplus.com/brands/Country-Flame.html"
+    },
+    {
+      "name": "Magnum",
+      "slug": "magnum",
+      "url": "https://www.energypartsplus.com/magnum/"
+    },
+    {
+      "name": "Austroflamm",
+      "slug": "austroflamm",
+      "url": "https://www.energypartsplus.com/brands/Austroflamm.html"
+    },
+    {
+      "name": "Whitfield",
+      "slug": "whitfield",
+      "url": "https://www.energypartsplus.com/brands/Whitfield.html"
+    },
+    {
+      "name": "Harman",
+      "slug": "harman",
+      "url": "https://www.energypartsplus.com/brands/Harman.html"
+    },
+    {
+      "name": "Miscellaneous",
+      "slug": "miscellaneous",
+      "url": "https://www.energypartsplus.com/brands/Miscellaneous.html"
+    },
+    {
+      "name": "Hht",
+      "slug": "hht",
+      "url": "https://www.energypartsplus.com/hht/"
+    },
+    {
+      "name": "Sit",
+      "slug": "sit",
+      "url": "https://www.energypartsplus.com/brands/SIT.html"
+    },
+    {
+      "name": "Breckwell",
+      "slug": "breckwell",
+      "url": "https://www.energypartsplus.com/brands/Breckwell.html"
+    },
+    {
+      "name": "Fasco",
+      "slug": "fasco",
+      "url": "https://www.energypartsplus.com/brands/Fasco.html"
+    },
+    {
+      "name": "Enviro",
+      "slug": "enviro",
+      "url": "https://www.energypartsplus.com/brands/Enviro.html"
+    },
+    {
+      "name": "Kozi",
+      "slug": "kozi",
+      "url": "https://www.energypartsplus.com/brands/Kozi.html"
+    },
+    {
+      "name": "Bosca",
+      "slug": "bosca",
+      "url": "https://www.energypartsplus.com/brands/Bosca.html"
+    },
+    {
+      "name": "Brushtech",
+      "slug": "brushtech",
+      "url": "https://www.energypartsplus.com/brands/Brushtech.html"
+    },
+    {
+      "name": "Englander",
+      "slug": "englander",
+      "url": "https://www.energypartsplus.com/brands/Englander.html"
+    },
+    {
+      "name": "Lennox",
+      "slug": "lennox",
+      "url": "https://www.energypartsplus.com/brands/Lennox.html"
+    },
+    {
+      "name": "Lopi",
+      "slug": "lopi",
+      "url": "https://www.energypartsplus.com/brands/Lopi.html"
+    },
+    {
+      "name": "Mill Pac",
+      "slug": "mill-pac",
+      "url": "https://www.energypartsplus.com/brands/Mill%252dPac.html"
+    },
+    {
+      "name": "Napoleon",
+      "slug": "napoleon",
+      "url": "https://www.energypartsplus.com/brands/Napoleon.html"
+    },
+    {
+      "name": "Robertshaw",
+      "slug": "robertshaw",
+      "url": "https://www.energypartsplus.com/brands/Robertshaw.html"
+    },
+    {
+      "name": "St Croix",
+      "slug": "st-croix",
+      "url": "https://www.energypartsplus.com/brands/St-Croix.html"
+    },
+    {
+      "name": "Us Stove",
+      "slug": "us-stove",
+      "url": "https://www.energypartsplus.com/brands/US-Stove.html"
+    },
+    {
+      "name": "Energy Parts Plus",
+      "slug": "energy-parts-plus",
+      "url": "https://www.energypartsplus.com/energy-parts-plus/"
+    },
+    {
+      "name": "Ihp",
+      "slug": "ihp",
+      "url": "https://www.energypartsplus.com/ihp/"
+    },
+    {
+      "name": "Osburn",
+      "slug": "osburn",
+      "url": "https://www.energypartsplus.com/brands/Osburn.html"
+    },
+    {
+      "name": "Regency",
+      "slug": "regency",
+      "url": "https://www.energypartsplus.com/regency/"
+    },
+    {
+      "name": "Revcor",
+      "slug": "revcor",
+      "url": "https://www.energypartsplus.com/brands/Revcor.html"
+    },
+    {
+      "name": "Tri Delta",
+      "slug": "tri-delta",
+      "url": "https://www.energypartsplus.com/brands/Tri-Delta.html"
+    }
+  ],
+  "shopAllPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

@@ -2,7 +2,7 @@
 
 ## Current State
 
-**Template Status**: ✨ Luxury Rebrand + AI Design Tool + Placeholder-First Bulk Catalog Workflow + Category Route Reliability / Premium Gas Fireplaces Category UX
+**Template Status**: ✨ Luxury Rebrand + AI Design Tool + Placeholder-First Bulk Catalog Workflow + Category Route Reliability / Premium Gas Fireplaces Category UX + Stove Parts Unlimited Full Catalog Import with Localized Images
 
 The project has been rebranded from the generic "Elite Fireplace Store" template to **Aaron's Hearth and Home** in Republic, Missouri. All placeholder emojis and gradient backgrounds have been replaced with real stock photography from Unsplash. The SVG logo, product images, category images, and hero background are all in place.
 
@@ -211,6 +211,14 @@ The template is branded for Aaron's Hearth and Home by editing `src/lib/store-co
 - [x] Added placeholder-style capability chips/metadata blocks for gas products so layout remains stable before full catalog import
 - [x] Ran `bun typecheck` and `bun lint` successfully
 
+## Recently Completed (Session 14)
+
+- [x] Resumed Stove Parts Unlimited catalog import from the post-`83719e1` state using `scripts/import-stove-parts-unlimited.mjs`
+- [x] Preserved existing uncommitted batch files for `29490..30989` and generated a new batch file `data/parts/stove-parts-unlimited-batch-30991.json`
+- [x] Completed sitemap traversal through `lastImportedIndex: 32014` with final batch files `data/parts/stove-parts-unlimited-batch-31491.json` and `data/parts/stove-parts-unlimited-batch-31991.json`
+- [x] Current manifest state is `31472 / 32015` imported, indicating 543 product pages failed to parse/fetch in earlier batches and still need retry coverage
+- [x] Image localization has not yet been run for most parts batches; `public/products/parts/` currently contains 5,097 localized files
+
 ## Next Steps / Future Enhancements
 
 - [ ] Connect real AI image generation API (OpenAI DALL-E or Stability AI) for room visualization
@@ -242,3 +250,23 @@ The template is branded for Aaron's Hearth and Home by editing `src/lib/store-co
 | 2026-03-09 | Added placeholder-first bulk catalog workflow: local CSV import seeding, default product image fallback, starter catalog CSV, and admin SKU photo replacement flow |
 | 2026-03-09 | Fixed category/subcategory route mismatches causing 404s and converted category listing UX to a denser make/model/price catalog layout with improved Fireplaces → Gas/Wood discoverability |
 | 2026-03-09 | Rebranded to Aaron's Hearth and Home with refreshed premium primary/footer SVG logos and updated site/admin branding text |
+| 2026-03-17 | Completed Stove Parts Unlimited parts import repair and bulk image localization; catalog now has 32,015 saved parts with 32,010 local product images and 5 unresolved 404 source pages remaining without photos |
+
+## Recently Completed (Session 15)
+
+- [x] Added `scripts/localize-stove-parts-unlimited-images.mjs` to bulk-localize existing Stove Parts Unlimited batch image URLs without re-running the full import
+- [x] Ran full image localization across all `data/parts/stove-parts-unlimited-batch-*.json` files, rewriting batch records in place to `/products/parts/...` image paths
+- [x] Updated `data/stove-parts-unlimited-import-manifest.json` so all parts batches now report `downloadImages: true` and `lastImportedIndex: 32014`
+- [x] Localized 29,281 additional images and refetched 6,904 blank-image product pages during the bulk pass
+- [x] Recovered the final live remote-only image (`SKU 3-20-02679-4`) manually into `public/products/parts/3-20-02679-4.jpg` and updated its batch record
+- [x] Final Stove Parts Unlimited catalog image state:
+  - `32,015` total products
+  - `32,010` products now use local `/products/parts/...` image URLs
+  - `0` remaining remote image URLs
+  - `5` products still have blank `imageUrl` because their source product pages now return `404` with only the store default OG image
+- [x] Remaining unresolved no-image SKUs from current upstream site state:
+  - `674-168`
+  - `674-176A`
+  - `W565-0288-SER`
+  - `W565-0276-SER`
+  - `2159-007`
