@@ -21,6 +21,7 @@ import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig, type Product } from "@/lib/store-config";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { resolveProductImage, resolveProductImages } from "@/lib/product-images";
+import { AlternateVendors } from "@/components/parts/AlternateVendors";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -272,7 +273,11 @@ export default function ProductPage() {
             </div>
 
             {/* SKU */}
-            <p className="text-sm text-gray-500 mb-6">SKU: {product.sku}</p>
+            <p className="text-sm text-gray-500 mb-2">SKU: {product.sku}</p>
+
+            {product.categoryId === "parts" && product.sku ? (
+              <AlternateVendors sku={product.sku} currentVendor="stove-parts-unlimited" />
+            ) : null}
 
             {/* Quantity & Add to Cart */}
             <div className="flex flex-wrap gap-4 mb-8">
