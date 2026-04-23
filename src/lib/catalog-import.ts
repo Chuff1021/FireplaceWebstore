@@ -145,8 +145,26 @@ function ensureCsvHeaders(records: Record<string, string>[]) {
     throw new Error("CSV file is empty or missing rows");
   }
 
-  const requiredColumns = ["brand", "model", "sku", "name", "category", "price"];
   const available = Object.keys(records[0]);
+  const hasStarterSchema = ["brand", "model", "sku", "name", "category", "price"].every((column) =>
+    available.includes(column)
+  );
+  const hasEfireplaceSchema = [
+    "title",
+    "brand",
+    "model_sku",
+    "current_price",
+    "original_price",
+    "product_url",
+    "image_url",
+    "description",
+  ].every((column) => available.includes(column));
+
+  if (hasStarterSchema || hasEfireplaceSchema) {
+    return;
+  }
+
+  const requiredColumns = ["brand", "model", "sku", "name", "category", "price"];
   const missing = requiredColumns.filter((column) => !available.includes(column));
 
   if (missing.length > 0) {
@@ -175,13 +193,16 @@ export async function runFireplaceCatalogCsvImport(payload: FireplaceCsvImportPa
 
   const mappedRows: FireplaceImportRow[] = records.map((row) => {
     const brand = row.brand?.trim() ?? "";
-    const model = row.model?.trim() ?? "";
-    const name = row.name?.trim() || [brand, model].filter(Boolean).join(" ") || "Unnamed Product";
-    const sku = row.sku?.trim() || undefined;
-    const price = parseNumber(row.price, 0);
+    const model = row.model?.trim() || row.model_sku?.trim() || "";
+    const name = row.name?.trim() || row.title?.trim() || [brand, model].filter(Boolean).join(" ") || "Unnamed Product";
+    const sku = row.sku?.trim() || row.model_sku?.trim() || undefined;
+    const price = parseNumber(row.price ?? row.current_price, 0);
     const description = row.description?.trim() || `${brand} ${model}`.trim();
-    const category = row.category?.trim() || "fireplaces";
-    const image = normalizeImportImage(row.image);
+    const image = normalizeImportImage(row.image ?? row.image_url);
+    const productUrl = row.product_url?.trim();
+    const inferredCategory = row.category?.trim() || row.category_slug?.trim() || "gas-fireplaces";
+    const categorySlug = inferredCategory === "gas-fireplaces" ? "gas-fireplaces" : toSlug(inferredCategory);
+    const categoryName = categorySlug === "gas-fireplaces" ? "Gas Fireplaces" : inferredCategory;
     const normalizedSku = sku || `${brand}-${model}`.replace(/\s+/g, "-");
 
     return {
@@ -192,10 +213,13 @@ export async function runFireplaceCatalogCsvImport(payload: FireplaceCsvImportPa
       sku,
       manufacturerSku: model,
       brand,
-      categoryName: category,
+      categorySlug,
+      categoryName,
       price,
       image,
       images: [image],
+      features: productUrl ? [`Product page: ${productUrl}`] : [],
+      fuelType: "gas",
       inStock: true,
       isActive: true,
       lifecycleStatus: "approved",
