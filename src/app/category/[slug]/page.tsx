@@ -27,6 +27,7 @@ const MIRRORED_CATEGORY_SLUGS = new Set([
   "gas-stoves",
 ]);
 const MIRRORED_PRODUCTS_PER_PAGE = 20;
+const FEATURED_FILTER_BRANDS = ["Lopi", "Fireplace Xtrordinair", "Fire Garden"];
 
 function formatPagePrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -38,6 +39,7 @@ function formatPagePrice(price: number) {
 }
 
 function getPriceBucket(price: number) {
+  if (price <= 0) return "Contact for Pricing";
   if (price < 1500) return "Under $1,500";
   if (price < 3000) return "$1,500 - $2,999";
   if (price < 5000) return "$3,000 - $4,999";
@@ -153,7 +155,23 @@ export default function CategoryPage() {
     return true;
   });
 
-  const availableBrands = [...new Set(categoryProducts.map((product) => product.brand).filter(Boolean))].sort();
+  const brandCounts = categoryProducts.reduce<Record<string, number>>((counts, product) => {
+    if (product.brand) counts[product.brand] = (counts[product.brand] ?? 0) + 1;
+    return counts;
+  }, {});
+  const availableBrands = Object.keys(brandCounts).sort((a, b) => {
+    const featuredA = FEATURED_FILTER_BRANDS.indexOf(a);
+    const featuredB = FEATURED_FILTER_BRANDS.indexOf(b);
+
+    if (featuredA !== -1 || featuredB !== -1) {
+      if (featuredA === -1) return 1;
+      if (featuredB === -1) return -1;
+      return featuredA - featuredB;
+    }
+
+    return a.localeCompare(b);
+  });
+  const featuredAvailableBrands = FEATURED_FILTER_BRANDS.filter((brand) => brandCounts[brand]);
   const availablePriceBuckets = [...new Set(categoryProducts.map((product) => getPriceBucket(product.salePrice ?? product.price)))];
 
   const filteredProducts = categoryProducts.filter((product) => {
@@ -311,7 +329,28 @@ export default function CategoryPage() {
             </div>
 
             <div className="px-5 py-8">
-              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Brand</h2>
+              {featuredAvailableBrands.length > 0 && (
+                <div className="mb-7 border-b border-[#e0e0e0] pb-6">
+                  <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Featured Brands</h2>
+                  <div className="mt-4 space-y-2">
+                    {featuredAvailableBrands.map((brand) => (
+                      <button
+                        key={brand}
+                        type="button"
+                        onClick={() => toggleBrand(brand, !selectedBrands.includes(brand))}
+                        className={`w-full border px-3 py-2 text-left text-sm font-bold transition ${
+                          selectedBrands.includes(brand)
+                            ? "border-[#a54210] bg-[#a54210] text-white"
+                            : "border-[#d9c7b0] bg-[#fbf4ea] text-[#2a211b] hover:border-[#a54210]"
+                        }`}
+                      >
+                        {brand} <span className="font-normal opacity-75">({brandCounts[brand]})</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <h2 className="text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">All Brands</h2>
               <div className="mt-4 max-h-[420px] overflow-auto pr-2">
                 {availableBrands.map((brand) => (
                   <label key={brand} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
@@ -321,7 +360,8 @@ export default function CategoryPage() {
                       onChange={(event) => toggleBrand(brand, event.target.checked)}
                       className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
                     />
-                    <span className="ml-4">{brand}</span>
+                    <span className="ml-4 flex-1">{brand}</span>
+                    <span className="ml-2 text-xs text-[#8a8175]">{brandCounts[brand]}</span>
                   </label>
                 ))}
               </div>
@@ -386,7 +426,28 @@ export default function CategoryPage() {
                       ))}
                     </div>
                     <div>
-                      <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Brand</h2>
+                      {featuredAvailableBrands.length > 0 && (
+                        <div className="mb-6">
+                          <h2 className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Featured Brands</h2>
+                          <div className="space-y-2">
+                            {featuredAvailableBrands.map((brand) => (
+                              <button
+                                key={brand}
+                                type="button"
+                                onClick={() => toggleBrand(brand, !selectedBrands.includes(brand))}
+                                className={`w-full border px-3 py-2 text-left text-sm font-bold transition ${
+                                  selectedBrands.includes(brand)
+                                    ? "border-[#a54210] bg-[#a54210] text-white"
+                                    : "border-[#d9c7b0] bg-white text-[#2a211b]"
+                                }`}
+                              >
+                                {brand} <span className="font-normal opacity-75">({brandCounts[brand]})</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                      <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">All Brands</h2>
                       {availableBrands.map((brand) => (
                         <label key={brand} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
                           <input
@@ -395,7 +456,8 @@ export default function CategoryPage() {
                             onChange={(event) => toggleBrand(brand, event.target.checked)}
                             className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
                           />
-                          <span className="ml-4">{brand}</span>
+                          <span className="ml-4 flex-1">{brand}</span>
+                          <span className="ml-2 text-xs text-[#8a8175]">{brandCounts[brand]}</span>
                         </label>
                       ))}
                     </div>

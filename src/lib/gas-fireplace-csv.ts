@@ -25,6 +25,10 @@ type ScrapedRecord = {
   rating?: number;
   reviewCount?: number;
   isBestSeller?: boolean;
+  contactForPricing?: boolean;
+  description?: string;
+  shortDescription?: string;
+  imageUrls?: string[];
 };
 
 let cachedProductsPromise: Promise<Product[]> | null = null;
@@ -176,7 +180,7 @@ function parseScrapedGasFireplaceProducts(jsonText: string): Product[] {
           ? record.salePrice
           : undefined;
 
-      if (!name || !slug || primaryPrice <= 0) {
+      if (!name || !slug || (primaryPrice <= 0 && !record.contactForPricing)) {
         return null;
       }
 
@@ -185,14 +189,15 @@ function parseScrapedGasFireplaceProducts(jsonText: string): Product[] {
         sku: (record.sku || slug).trim(),
         name,
         slug,
-        description: name,
-        shortDescription: toSentenceExcerpt(name),
+        description: stripHtml(record.description || name),
+        shortDescription: toSentenceExcerpt(stripHtml(record.shortDescription || name)),
         price: primaryPrice,
         salePrice: promoPrice && primaryPrice > promoPrice ? promoPrice : undefined,
+        contactForPricing: Boolean(record.contactForPricing),
         categoryId: "fireplaces",
         subcategoryId: "gas-fireplaces",
         brand: (record.brand || name.split(" ")[0] || "Fireplace").trim(),
-        images: record.imageUrl ? [record.imageUrl] : sampleProducts[0]?.images ?? [],
+        images: record.imageUrls?.length ? record.imageUrls : record.imageUrl ? [record.imageUrl] : sampleProducts[0]?.images ?? [],
         features: record.productUrl ? [`Product page: ${record.productUrl}`] : [],
         specifications: {
           Model: (record.sku || slug).trim(),
@@ -281,8 +286,9 @@ function mergeGasFireplaceProducts(baseProducts: Product[], overrideProducts: Pr
   }
 
   const overrideLookup = buildProductLookup(overrideProducts);
+  const matchedOverrideKeys = new Set<string>();
 
-  return baseProducts.map((product) => {
+  const merged = baseProducts.map((product) => {
     const override =
       overrideLookup.get(product.slug.toLowerCase()) ??
       overrideLookup.get(product.sku.toLowerCase()) ??
@@ -292,6 +298,10 @@ function mergeGasFireplaceProducts(baseProducts: Product[], overrideProducts: Pr
       return product;
     }
 
+    matchedOverrideKeys.add(override.slug.toLowerCase());
+    matchedOverrideKeys.add(override.sku.toLowerCase());
+    matchedOverrideKeys.add(normalizeSkuForLookup(override.sku));
+
     return {
       ...product,
       name: override.name || product.name,
@@ -299,6 +309,7 @@ function mergeGasFireplaceProducts(baseProducts: Product[], overrideProducts: Pr
       shortDescription: override.shortDescription || product.shortDescription,
       price: override.price || product.price,
       salePrice: override.salePrice,
+      contactForPricing: override.contactForPricing || product.contactForPricing,
       brand: override.brand || product.brand,
       images: override.images.length > 0 ? override.images : product.images,
       features: override.features.length > 0 ? override.features : product.features,
@@ -311,6 +322,15 @@ function mergeGasFireplaceProducts(baseProducts: Product[], overrideProducts: Pr
       isBestSeller: override.isBestSeller,
     };
   });
+
+  const newOverrideProducts = overrideProducts.filter(
+    (product) =>
+      !matchedOverrideKeys.has(product.slug.toLowerCase()) &&
+      !matchedOverrideKeys.has(product.sku.toLowerCase()) &&
+      !matchedOverrideKeys.has(normalizeSkuForLookup(product.sku))
+  );
+
+  return [...newOverrideProducts, ...merged];
 }
 
 async function loadGasFireplaceProductsInternal(): Promise<Product[]> {
