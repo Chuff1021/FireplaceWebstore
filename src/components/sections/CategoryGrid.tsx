@@ -3,15 +3,6 @@ import Image from "next/image";
 import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
-const featuredCategoryLinks = [
-  { label: "Fireplace Xtrordinair Gas Fireplaces", href: "/search?q=Fireplace%20Xtrordinair%20gas" },
-  { label: "Fireplace Xtrordinair Wood Fireplaces", href: "/search?q=Fireplace%20Xtrordinair%20wood" },
-  { label: "Lopi Wood Stoves", href: "/search?q=Lopi%20wood%20stove" },
-  { label: "Lopi Gas Stoves", href: "/search?q=Lopi%20gas%20stove" },
-  { label: "Lopi Inserts", href: "/search?q=Lopi%20insert" },
-  { label: "Fire Garden Outdoor", href: "/search?q=Fire%20Garden" },
-];
-
 const categoryVisuals: Record<string, string> = {
   fireplaces: "/products-upgraded/gas-fireplaces/fpx-probuilder42lineardeluxe.webp",
   inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
@@ -82,29 +73,6 @@ Start with the hearth category that fits your project, including Fireplace Xtror
           ))}
         </div>
 
-        <div className="mt-8 border border-white/70 bg-white/62 px-5 py-5 shadow-[0_24px_70px_rgba(82,48,17,0.10)] backdrop-blur-xl md:px-6">
-          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#b84d13]">
-                Popular Paths
-              </p>
-              <p className="mt-2 text-sm text-[#655649]">
-Fast paths into the new Travis Industries brands by the category customers actually shop.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-2.5">
-              {featuredCategoryLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-full border border-[#efd8bd] bg-white/75 px-4 py-2 text-sm font-bold text-[#2a211b] shadow-sm backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
