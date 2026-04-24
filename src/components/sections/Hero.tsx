@@ -86,7 +86,7 @@ export function Hero() {
         <div className="hidden lg:block">
           <div className="ml-auto max-w-[500px] border border-[#ff7a18]/35 bg-black/55 p-6 shadow-2xl shadow-black/50 backdrop-blur">
             <Image
-              src="/logo-hero.png"
+              src="/logo.png"
               alt={defaultStoreConfig.storeName}
               width={1100}
               height={1016}

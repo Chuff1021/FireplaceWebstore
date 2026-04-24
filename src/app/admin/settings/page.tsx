@@ -214,7 +214,7 @@ export default function AdminSettingsPage() {
           description="Shown in the site header on a white background."
           variant="main"
           currentUrl={logos.mainLogo}
-          fallbackUrl="/logo.svg"
+          fallbackUrl="/logo.png"
           darkBackground={false}
         />
         <LogoUploadCard
@@ -222,7 +222,7 @@ export default function AdminSettingsPage() {
           description="Shown in the footer on a dark background. Use a light/white version of your logo."
           variant="light"
           currentUrl={logos.lightLogo}
-          fallbackUrl="/logo-light.svg"
+          fallbackUrl="/logo.png"
           darkBackground={true}
         />
       </div>

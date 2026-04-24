@@ -48,7 +48,7 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
           <div>
             <div className="mb-4">
               <Image
-                src={lightLogoUrl ?? "/logo-light.svg"}
+                src={lightLogoUrl ?? "/logo.png"}
                 alt={defaultStoreConfig.storeName}
                 width={220}
                 height={54}

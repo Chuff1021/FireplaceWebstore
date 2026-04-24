@@ -15,7 +15,7 @@ export function getLogoUrl(): string {
       return `/logo-custom${ext}`;
     }
   }
-  return "/logo.svg";
+  return "/logo.png";
 }
 
 /**
@@ -29,5 +29,5 @@ export function getLightLogoUrl(): string {
       return `/logo-custom-light${ext}`;
     }
   }
-  return "/logo-light.svg";
+  return "/logo.png";
 }
