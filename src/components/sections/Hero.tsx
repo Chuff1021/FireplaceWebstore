@@ -31,7 +31,7 @@ export function Hero() {
           </div>
 
           <h1 className="max-w-4xl text-[48px] font-black leading-[0.94] tracking-[-0.06em] text-white md:text-[72px] xl:text-[92px]">
-            Build the hearth your home deserves.
+            Discover the Fireplace your home deserves
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[#f3e7d4] md:text-xl">
