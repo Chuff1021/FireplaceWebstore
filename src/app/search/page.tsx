@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useMemo, Suspense } from "react";
+import { useEffect, useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { sampleProducts, productCategories, Product, ProductCategory } from "@/lib/store-config";
+import { productCategories, Product, ProductCategory } from "@/lib/store-config";
 import { Search, X } from "lucide-react";
 import { resolveProductImage } from "@/lib/product-images";
 
@@ -12,17 +12,37 @@ function SearchResults() {
   const searchParams = useSearchParams();
   const queryParam = searchParams.get("q") || "";
   const [query, setQuery] = useState(queryParam);
+  const [allProducts, setAllProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/products?limit=10000")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((products: Product[]) => {
+        if (active) setAllProducts(Array.isArray(products) ? products : []);
+      })
+      .catch(() => {
+        if (active) setAllProducts([]);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const results = useMemo<{ products: Product[]; categories: ProductCategory[] }>(() => {
     const q = queryParam.toLowerCase().trim();
     if (!q) return { products: [], categories: [] };
 
-    const matchingProducts = sampleProducts.filter(
+    const matchingProducts = allProducts.filter(
       (product) =>
         product.name.toLowerCase().includes(q) ||
         product.description.toLowerCase().includes(q) ||
         product.categoryId.toLowerCase().includes(q) ||
-        product.brand.toLowerCase().includes(q)
+        product.subcategoryId?.toLowerCase().includes(q) ||
+        product.brand.toLowerCase().includes(q) ||
+        product.sku.toLowerCase().includes(q)
     );
 
     const matchingCategories = productCategories.filter(
@@ -32,7 +52,7 @@ function SearchResults() {
     );
 
     return { products: matchingProducts, categories: matchingCategories };
-  }, [queryParam]);
+  }, [allProducts, queryParam]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -170,9 +190,9 @@ function SearchResults() {
                       </h3>
                       <div className="mt-2 flex items-center gap-2">
                         <span className="text-lg font-bold text-gray-900">
-                          ${(product.salePrice ?? product.price).toLocaleString()}
+                          {product.contactForPricing || product.price <= 0 ? "Contact for Pricing" : `$${(product.salePrice ?? product.price).toLocaleString()}`}
                         </span>
-                        {product.salePrice && (
+                        {!product.contactForPricing && product.price > 0 && product.salePrice && (
                           <span className="text-sm text-gray-400 line-through">
                             ${product.price.toLocaleString()}
                           </span>
