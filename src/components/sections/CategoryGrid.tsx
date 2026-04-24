@@ -4,19 +4,19 @@ import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
 const featuredCategoryLinks = [
-  { label: "Gas Fireplaces", href: "/category/gas-fireplaces" },
-  { label: "Electric Fireplaces", href: "/category/electric-fireplaces" },
-  { label: "Wood Fireplaces", href: "/category/wood-fireplaces" },
-  { label: "Gas Inserts", href: "/category/gas-inserts" },
-  { label: "Wood Stoves", href: "/category/wood-stoves" },
-  { label: "Pellet Stoves", href: "/category/pellet-stoves" },
+  { label: "FireplaceX Gas Fireplaces", href: "/search?q=FireplaceX%20gas" },
+  { label: "FireplaceX Wood Fireplaces", href: "/search?q=FireplaceX%20wood" },
+  { label: "Lopi Wood Stoves", href: "/search?q=Lopi%20wood%20stove" },
+  { label: "Lopi Gas Stoves", href: "/search?q=Lopi%20gas%20stove" },
+  { label: "Lopi Inserts", href: "/search?q=Lopi%20insert" },
+  { label: "Fire Garden Outdoor", href: "/search?q=Fire%20Garden" },
 ];
 
 const categoryVisuals: Record<string, string> = {
-  fireplaces: "/products/electric-fireplaces/ama-60-tru-view-xl-eba8bac5.webp",
-  inserts: "/products/gas-inserts/maj-ruby35in-9a1628a9.webp",
-  stoves: "/products/wood-stoves/osb-ob03500-bba28a5a.webp",
-  outdoor: "/categories/home-outdoor.webp",
+  fireplaces: "/products-upgraded/gas-fireplaces/fpx-probuilder42lineardeluxe.webp",
+  inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
+  stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
+  outdoor: "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp",
   accessories: "/categories/home-accessories.webp",
   parts: "/categories/home-parts.webp",
 };
@@ -39,7 +39,7 @@ export function CategoryGrid() {
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#655649]">
-            Start with the hearth category that fits your project, then narrow by fuel type, size, style, brand, and replacement-part needs.
+Start with the hearth category that fits your project, including FireplaceX fireplaces, Lopi stoves and inserts, Fire Garden outdoor fire features, and replacement-part needs.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export function CategoryGrid() {
                 Popular Paths
               </p>
               <p className="mt-2 text-sm text-[#655649]">
-                Popular fireplace categories and fuel types for faster shopping.
+Fast paths into the new Travis Industries brands by the category customers actually shop.
               </p>
             </div>
             <div className="flex flex-wrap gap-2.5">

@@ -89,7 +89,7 @@ export default function CategoryPage() {
     async function loadProducts() {
       setIsLoadingProducts(true);
       try {
-        const response = await fetch("/api/products?limit=2000", { cache: "no-store" });
+        const response = await fetch("/api/products?limit=10000", { cache: "no-store" });
         if (!response.ok) return;
 
         const data = (await response.json()) as Product[];

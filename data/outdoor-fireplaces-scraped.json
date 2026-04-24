@@ -5268,5 +5268,113 @@
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
+  },
+  {
+    "sku": "FG-4024-LINEAR-FIREPLACE",
+    "name": "Fire Garden 4024 Linear Outdoor Gas Fireplace",
+    "slug": "fg-4024-linear-fireplace",
+    "price": 0,
+    "brand": "Fire Garden",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp",
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp"
+    ],
+    "productUrl": "https://www.firegardenoutdoors.com/4024-linear-fireplace/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fire Garden outdoor fireplace availability, configuration options, and dealer pricing.",
+    "description": "Fire Garden 4024 Linear Outdoor Gas Fireplace. Fire Garden by Travis Industries outdoor fire feature. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "FG-6424-LINEAR-FIREPLACE",
+    "name": "Fire Garden 6424 Linear Outdoor Gas Fireplace",
+    "slug": "fg-6424-linear-fireplace",
+    "price": 0,
+    "brand": "Fire Garden",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/fg-6424-linear-fireplace.webp",
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/fg-6424-linear-fireplace.webp"
+    ],
+    "productUrl": "https://www.firegardenoutdoors.com/6424-linear-fireplaces/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fire Garden outdoor fireplace availability, configuration options, and dealer pricing.",
+    "description": "Fire Garden 6424 Linear Outdoor Gas Fireplace. Fire Garden by Travis Industries outdoor fire feature. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "FG-4035-TRADITIONAL-FIREPLACE",
+    "name": "Fire Garden 4035 Outdoor Traditional Gas Fireplace",
+    "slug": "fg-4035-traditional-fireplace",
+    "price": 0,
+    "brand": "Fire Garden",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/fg-4035-traditional-fireplace.webp",
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/fg-4035-traditional-fireplace.webp"
+    ],
+    "productUrl": "https://www.firegardenoutdoors.com/4035-outdoor-traditional-gas-fireplaces/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fire Garden outdoor fireplace availability, configuration options, and dealer pricing.",
+    "description": "Fire Garden 4035 Outdoor Traditional Gas Fireplace. Fire Garden by Travis Industries outdoor fire feature. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "FG-VORACIOUS-BURNERS",
+    "name": "Fire Garden Voracious Fire Pit Burners",
+    "slug": "fg-voracious-burners",
+    "price": 0,
+    "brand": "Fire Garden",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/fg-voracious-burners.webp",
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/fg-voracious-burners.webp"
+    ],
+    "productUrl": "https://www.firegardenoutdoors.com/voracious-fire-pit-burners/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fire Garden outdoor fireplace availability, configuration options, and dealer pricing.",
+    "description": "Fire Garden Voracious Fire Pit Burners. Fire Garden by Travis Industries outdoor fire feature. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "FG-TEMPEST-TORCH",
+    "name": "Fire Garden Tempest Outdoor Torch",
+    "slug": "fg-tempest-torch",
+    "price": 0,
+    "brand": "Fire Garden",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/fg-tempest-torch.webp",
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/fg-tempest-torch.webp"
+    ],
+    "productUrl": "https://www.firegardenoutdoors.com/product/tempest-20k-torches-24v-electric-ignition-ng-torch/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fire Garden outdoor fireplace availability, configuration options, and dealer pricing.",
+    "description": "Fire Garden Tempest Outdoor Torch. Fire Garden by Travis Industries outdoor fire feature. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "FG-36-FIREPIT-BURNER",
+    "name": "Fire Garden 36 Inch Fire Pit Burner",
+    "slug": "fg-36-firepit-burner",
+    "price": 0,
+    "brand": "Fire Garden",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/fg-36-firepit-burner.webp",
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/fg-36-firepit-burner.webp"
+    ],
+    "productUrl": "https://www.firegardenoutdoors.com/product/36-firepit-burner/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fire Garden outdoor fireplace availability, configuration options, and dealer pricing.",
+    "description": "Fire Garden 36 Inch Fire Pit Burner. Fire Garden by Travis Industries outdoor fire feature. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

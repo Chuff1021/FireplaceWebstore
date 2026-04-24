@@ -180,6 +180,7 @@ export const productCategories: ProductCategory[] = [
     description: "Fire pits, outdoor fireplaces & more",
     image: "/categories/outdoor.jpg",
     subcategories: [
+      { id: "outdoor-fireplaces", name: "Outdoor Fireplaces", slug: "outdoor-fireplaces", description: "Fire Garden and outdoor gas fireplaces", image: "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp" },
       { id: "fire-pits", name: "Fire Pits", slug: "fire-pits", description: "Fire pits for outdoor gatherings", image: "/categories/fire-pits.jpg" },
       { id: "outdoor-kitchens", name: "Outdoor Kitchens", slug: "outdoor-kitchens", description: "Complete outdoor cooking solutions", image: "/categories/outdoor-kitchens.jpg" },
     ],
