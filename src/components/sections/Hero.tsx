@@ -30,8 +30,8 @@ export function Hero() {
             Aaron&apos;s Fireplace Co. · Est. 1989
           </div>
 
-          <h1 className="max-w-4xl text-[42px] font-black leading-[0.98] tracking-[-0.052em] text-white md:text-[62px] xl:text-[78px]">
-            Discover the fireplace your home deserves.
+          <h1 className="max-w-4xl text-[38px] font-black leading-[1.08] tracking-[-0.035em] text-white md:text-[54px] xl:text-[66px]">
+            Discover the Fireplace Your Home Deserves
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[#f3e7d4] md:text-xl">
