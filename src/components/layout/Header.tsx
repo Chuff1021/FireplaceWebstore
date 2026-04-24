@@ -82,6 +82,13 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
             <div className="hidden items-center gap-5 lg:flex">
               <Link
+                href="/contractor-portal"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-white shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition hover:border-[#ff7a18] hover:text-[#ffb36b]"
+              >
+                Contractor Portal
+              </Link>
+
+              <Link
                 href="/category/parts"
                 className="inline-flex items-center justify-center rounded-full border border-[#ff7a18]/55 bg-[#ff7a18] px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[0_12px_30px_rgba(255,122,24,0.18)] transition hover:bg-[#ff963f]"
               >
@@ -160,6 +167,12 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
         <div className="hidden border-t border-white/10 bg-[#15120f] lg:block">
           <nav className="mx-auto flex h-10 max-w-[1640px] items-center px-5">
+            <Link
+              href="/contractor-portal"
+              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#ffb36b] transition-colors hover:text-white"
+            >
+              Contractor Portal
+            </Link>
             {productCategories.slice(0, 5).map((category) => (
               <div
                 key={category.id}
@@ -196,6 +209,13 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         {isMenuOpen && (
           <div className="border-t border-black/10 bg-white lg:hidden">
             <nav className="space-y-2 px-4 py-4">
+              <Link
+                href="/contractor-portal"
+                className="block py-2 text-sm font-bold text-[#a54210]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contractor Portal
+              </Link>
               {productCategories.map((category) => (
                 <div key={category.id}>
                   <Link
