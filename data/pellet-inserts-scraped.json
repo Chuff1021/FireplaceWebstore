@@ -50,5 +50,23 @@
     "rating": 4.8,
     "reviewCount": 4,
     "isBestSeller": false
+  },
+  {
+    "sku": "LOPI-AGPPELLETINSERT",
+    "name": "Lopi AGP Pellet Insert",
+    "slug": "lopi-agppelletinsert",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/pellet-inserts/lopi-agppelletinsert.webp",
+    "productUrl": "https://www.lopistoves.com/product/agp-pellet-insert/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/pellet-inserts/lopi-agppelletinsert.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi AGP Pellet Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

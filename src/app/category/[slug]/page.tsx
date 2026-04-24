@@ -263,7 +263,7 @@ export default function CategoryPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#a54210]">{product.brand}</p>
                     <h2 className="mt-2 line-clamp-2 text-sm font-medium text-gray-900">{product.name}</h2>
                     <p className="mt-3 text-lg font-semibold text-[#a54210]">
-                      {formatPagePrice(product.salePrice ?? product.price)}
+                      {product.contactForPricing || product.price <= 0 ? "Contact for Pricing" : formatPagePrice(product.salePrice ?? product.price)}
                     </p>
                   </div>
                 </Link>
@@ -417,6 +417,7 @@ export default function CategoryPage() {
                     const href = getProductLinkProps(product);
                     const image = resolveProductImage(product.images[0], product.images);
                     const livePrice = product.salePrice ?? product.price;
+                    const isContactForPricing = product.contactForPricing || product.price <= 0;
                     const hasReviews = product.reviewCount > 0;
 
                     return (
@@ -459,7 +460,7 @@ export default function CategoryPage() {
 
                         <div className="mt-2">
                           <span className="text-base font-bold leading-5 tracking-[0.29px] text-[#a54210] md:text-lg md:tracking-[0.32px]">
-                            {formatPagePrice(livePrice)}
+                            {isContactForPricing ? "Contact for Pricing" : formatPagePrice(livePrice)}
                           </span>
                         </div>
 

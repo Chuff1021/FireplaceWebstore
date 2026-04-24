@@ -736,5 +736,59 @@
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
+  },
+  {
+    "sku": "LOPI-EVERGREENNEXGENHYBRIDINSERT",
+    "name": "Lopi Evergreen NexGen Hybrid™ Insert",
+    "slug": "lopi-evergreennexgenhybridinsert",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
+    "productUrl": "https://www.lopistoves.com/product/evergreen-nexgen-hybrid-insert/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Evergreen NexGen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-ANSWERNEXGENHYBRIDINSERT",
+    "name": "Lopi Answer NexGen Hybrid™ Insert",
+    "slug": "lopi-answernexgenhybridinsert",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert.webp",
+    "productUrl": "https://www.lopistoves.com/product/answer-nexgen-hybrid-insert/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Answer NexGen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-ANSWERNEXGENFYREINSERT",
+    "name": "Lopi Answer NexGen Fyre™ Insert",
+    "slug": "lopi-answernexgenfyreinsert",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert.webp",
+    "productUrl": "https://www.lopistoves.com/product/answer-nexgen-fyre-insert/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Answer NexGen Fyre™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

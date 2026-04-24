@@ -17,6 +17,7 @@ function formatPrice(price: number) {
 export function ProductCard({ product }: { product: Product }) {
   const { addItem, openCart } = useCartStore();
   const productImage = resolveProductImage(product.images[0], product.images);
+  const isContactForPricing = product.contactForPricing || product.price <= 0;
   const displayPrice = product.salePrice ?? product.price;
   const discount = product.salePrice
     ? Math.round(((product.price - product.salePrice) / product.price) * 100)
@@ -45,19 +46,25 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="bg-black px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-white">
             {product.brand || "Fireplace"}
           </span>
-          {product.salePrice && (
+          {isContactForPricing ? (
+            <span className="bg-[#ff7a18] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-black">
+              Contact for Pricing
+            </span>
+          ) : product.salePrice && (
             <span className="bg-[#ff7a18] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-black">
               Save {discount}%
             </span>
           )}
         </div>
-        <button
-          onClick={handleAddToCart}
-          className="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:bg-[#ff7a18] hover:text-black"
-          aria-label="Add to cart"
-        >
-          <ShoppingCart className="h-5 w-5" />
-        </button>
+        {!isContactForPricing && (
+          <button
+            onClick={handleAddToCart}
+            className="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:bg-[#ff7a18] hover:text-black"
+            aria-label="Add to cart"
+          >
+            <ShoppingCart className="h-5 w-5" />
+          </button>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-5">
@@ -89,10 +96,10 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="mt-auto pt-5">
           <div className="flex items-end justify-between gap-3 border-t border-[#eadfce] pt-4">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.16em] text-[#8a8175]">Starting at</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#8a8175]">{isContactForPricing ? "Dealer pricing" : "Starting at"}</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-xl font-black text-[#1d1712]">{formatPrice(displayPrice)}</span>
-                {product.salePrice && <span className="text-sm text-[#8a8175] line-through">{formatPrice(product.price)}</span>}
+                <span className="text-xl font-black text-[#1d1712]">{isContactForPricing ? "Contact for Pricing" : formatPrice(displayPrice)}</span>
+                {!isContactForPricing && product.salePrice && <span className="text-sm text-[#8a8175] line-through">{formatPrice(product.price)}</span>}
               </div>
             </div>
             <span className="inline-flex items-center gap-1 text-sm font-bold text-[#a54210]">

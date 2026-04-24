@@ -1233,5 +1233,203 @@
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
+  },
+  {
+    "sku": "LOPI-EVERGREENNEXGENHYBRID",
+    "name": "Lopi Evergreen NexGen Hybrid™",
+    "slug": "lopi-evergreennexgenhybrid",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
+    "productUrl": "https://www.lopistoves.com/product/evergreen-nexgen-hybrid/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Evergreen NexGen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-LARGEFLUSHWOODNEXGENHYBRIDARCHED",
+    "name": "Lopi Large Flush Wood NexGen Hybrid™ Arched",
+    "slug": "lopi-largeflushwoodnexgenhybridarched",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-largeflushwoodnexgenhybridarched.webp",
+    "productUrl": "https://www.lopistoves.com/product/large-flush-wood-nexgen-hybrid-arch/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-largeflushwoodnexgenhybridarched.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Large Flush Wood NexGen Hybrid™ Arched. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-LARGEFLUSHWOODNEXGENHYBRIDRECTANGULAR",
+    "name": "Lopi Large Flush Wood NexGen Hybrid™ Rectangular",
+    "slug": "lopi-largeflushwoodnexgenhybridrectangular",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-largeflushwoodnexgenhybridrectangular.webp",
+    "productUrl": "https://www.lopistoves.com/product/large-flush-wood-nexgen-hybrid-rect/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-largeflushwoodnexgenhybridrectangular.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Large Flush Wood NexGen Hybrid™ Rectangular. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-ROCKPORTNEXGENHYBRID",
+    "name": "Lopi Rockport NexGen Hybrid™",
+    "slug": "lopi-rockportnexgenhybrid",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-rockportnexgenhybrid.webp",
+    "productUrl": "https://www.lopistoves.com/product/rockport-nexgen-hybrid/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-rockportnexgenhybrid.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Rockport NexGen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-LIBERTYNEXGENHYBRID",
+    "name": "Lopi Liberty NexGen Hybrid™",
+    "slug": "lopi-libertynexgenhybrid",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-libertynexgenhybrid.webp",
+    "productUrl": "https://www.lopistoves.com/product/liberty-nexgen-hybrid/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-libertynexgenhybrid.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Liberty NexGen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-ANSWERNEXGENHYBRID",
+    "name": "Lopi Answer NexGen Hybrid™",
+    "slug": "lopi-answernexgenhybrid",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-answernexgenhybrid.webp",
+    "productUrl": "https://www.lopistoves.com/product/answer-nexgen-hybrid/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-answernexgenhybrid.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Answer NexGen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-ENDEAVORNEXGENHYBRID",
+    "name": "Lopi Endeavor NexGen Hybrid™",
+    "slug": "lopi-endeavornexgenhybrid",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-endeavornexgenhybrid.webp",
+    "productUrl": "https://www.lopistoves.com/product/endeavor-nexgen-hybrid/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-endeavornexgenhybrid.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Endeavor NexGen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-MEDIUMFLUSHWOODNEXGENHYBRIDRECTANGULAR",
+    "name": "Lopi Medium Flush Wood NexGen Hybrid™ Rectangular",
+    "slug": "lopi-mediumflushwoodnexgenhybridrectangular",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-mediumflushwoodnexgenhybridrectangular.webp",
+    "productUrl": "https://www.lopistoves.com/product/medium-flush-wood-nexgen-hybrid-rectangular/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-mediumflushwoodnexgenhybridrectangular.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Medium Flush Wood NexGen Hybrid™ Rectangular. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-MEDIUMFLUSHWOODNEXGENHYBRIDARCHED",
+    "name": "Lopi Medium Flush Wood NexGen Hybrid™ Arched",
+    "slug": "lopi-mediumflushwoodnexgenhybridarched",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-mediumflushwoodnexgenhybridarched.webp",
+    "productUrl": "https://www.lopistoves.com/product/medium-flush-wood-nexgen-hybrid-arch/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-mediumflushwoodnexgenhybridarched.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Medium Flush Wood NexGen Hybrid™ Arched. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-LIBERTYNEXGENFYRE",
+    "name": "Lopi Liberty NexGen Fyre™",
+    "slug": "lopi-libertynexgenfyre",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-libertynexgenfyre.webp",
+    "productUrl": "https://www.lopistoves.com/product/liberty-nexgen-fyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-libertynexgenfyre.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Liberty NexGen Fyre™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-CAPECODFLUSHWOODHYBRIDFYRE",
+    "name": "Lopi Cape Cod Flush Wood Hybrid™ Fyre™",
+    "slug": "lopi-capecodflushwoodhybridfyre",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/wood-stoves/lopi-capecodflushwoodhybridfyre.webp",
+    "productUrl": "https://www.lopistoves.com/product/cape-cod-flush-wood-hybrid-fyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-stoves/lopi-capecodflushwoodhybridfyre.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Cape Cod Flush Wood Hybrid™ Fyre™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

@@ -16,6 +16,10 @@ type ScrapedRecord = {
   rating?: number;
   reviewCount?: number;
   isBestSeller?: boolean;
+  contactForPricing?: boolean;
+  description?: string;
+  shortDescription?: string;
+  imageUrls?: string[];
 };
 
 type LoadScrapedCategoryProductsOptions = {
@@ -84,7 +88,7 @@ export async function loadScrapedCategoryProducts(
         ? record.salePrice
         : undefined;
 
-    if (!name || !slug || primaryPrice <= 0) {
+    if (!name || !slug || (primaryPrice <= 0 && !record.contactForPricing)) {
       return null;
     }
 
@@ -93,14 +97,15 @@ export async function loadScrapedCategoryProducts(
       sku: (record.sku || slug).trim(),
       name,
       slug,
-      description: name,
-      shortDescription: toSentenceExcerpt(name),
+      description: stripHtml(record.description || name),
+      shortDescription: toSentenceExcerpt(stripHtml(record.shortDescription || name)),
       price: primaryPrice,
       salePrice: promoPrice && primaryPrice > promoPrice ? promoPrice : undefined,
+      contactForPricing: Boolean(record.contactForPricing),
       categoryId: options.categoryId,
       subcategoryId: options.subcategoryId,
       brand: (record.brand || name.split(" ")[0] || "Fireplace").trim(),
-      images: record.imageUrl ? [record.imageUrl] : sampleProducts[0]?.images ?? [],
+      images: record.imageUrls?.length ? record.imageUrls : record.imageUrl ? [record.imageUrl] : sampleProducts[0]?.images ?? [],
       features: record.productUrl ? [`Product page: ${record.productUrl}`] : [],
       specifications: {
         Model: (record.sku || slug).trim(),

@@ -606,5 +606,347 @@
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSLARGEGSB",
+    "name": "Lopi Radiant Plus Large GSB",
+    "slug": "lopi-radiantpluslargegsb",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-large-gsb/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargegsb.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Large GSB. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSLARGEMV",
+    "name": "Lopi Radiant Plus Large MV",
+    "slug": "lopi-radiantpluslargemv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantpluslargemv.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-large-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantpluslargemv.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Large MV. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSMEDIUMGSB",
+    "name": "Lopi Radiant Plus Medium GSB",
+    "slug": "lopi-radiantplusmediumgsb",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-medium-gsb/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediumgsb.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Medium GSB. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-RADIANTPLUSMEDIUMMV",
+    "name": "Lopi Radiant Plus Medium MV",
+    "slug": "lopi-radiantplusmediummv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-radiantplusmediummv.webp",
+    "productUrl": "https://www.lopistoves.com/product/radiant-plus-medium-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-radiantplusmediummv.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Radiant Plus Medium MV. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-DEERFIELDII",
+    "name": "Lopi Deerfield Ii",
+    "slug": "lopi-deerfieldii",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-deerfieldii.webp",
+    "productUrl": "https://www.lopistoves.com/product/deerfield-ii/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-deerfieldii.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Deerfield Ii. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-34DVLDELUXEEMBERGLO",
+    "name": "Lopi 34 DVL Deluxe Ember Glo",
+    "slug": "lopi-34dvldeluxeemberglo",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo.webp",
+    "productUrl": "https://www.lopistoves.com/product/34-dvl-deluxe-ember-glo/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-34dvldeluxeemberglo.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 34 DVL Deluxe Ember Glo. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-NORTHFIELD",
+    "name": "Lopi Northfield",
+    "slug": "lopi-northfield",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-northfield.webp",
+    "productUrl": "https://www.lopistoves.com/product/northfield/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-northfield.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Northfield. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-CYPRESSGSR",
+    "name": "Lopi Cypress Gsr",
+    "slug": "lopi-cypressgsr",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-cypressgsr.webp",
+    "productUrl": "https://www.lopistoves.com/product/cypress-gsr/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-cypressgsr.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Cypress Gsr. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-430MODFYRE",
+    "name": "Lopi 430 Modfyre",
+    "slug": "lopi-430modfyre",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-430modfyre.webp",
+    "productUrl": "https://www.lopistoves.com/product/430-modfyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-430modfyre.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 430 Modfyre. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-616MODFYRE",
+    "name": "Lopi 616 Modfyre",
+    "slug": "lopi-616modfyre",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-616modfyre.webp",
+    "productUrl": "https://www.lopistoves.com/product/616-modfyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-616modfyre.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 616 Modfyre. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-NORTHFIELDRADIANTMV",
+    "name": "Lopi Northfield Radiant MV",
+    "slug": "lopi-northfieldradiantmv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-northfieldradiantmv.webp",
+    "productUrl": "https://www.lopistoves.com/product/northfield-radiant-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-northfieldradiantmv.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Northfield Radiant MV. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-32DVSDELUXEEMBERGLO",
+    "name": "Lopi 32 Dvs Deluxe Ember Glo",
+    "slug": "lopi-32dvsdeluxeemberglo",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo.webp",
+    "productUrl": "https://www.lopistoves.com/product/32-dvs-deluxe-ember-glo/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-32dvsdeluxeemberglo.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 32 Dvs Deluxe Ember Glo. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-616DELUXE",
+    "name": "Lopi 616 Deluxe",
+    "slug": "lopi-616deluxe",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-616deluxe.webp",
+    "productUrl": "https://www.lopistoves.com/product/616-deluxe/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-616deluxe.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 616 Deluxe. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-GREENFIELDSTOVE",
+    "name": "Lopi Greenfield_stove",
+    "slug": "lopi-greenfieldstove",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-greenfieldstove.webp",
+    "productUrl": "https://www.lopistoves.com/product/greenfield_stove/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-greenfieldstove.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Greenfield_stove. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-BERKSHIRE",
+    "name": "Lopi Berkshire",
+    "slug": "lopi-berkshire",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-berkshire.webp",
+    "productUrl": "https://www.lopistoves.com/product/berkshire/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-berkshire.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Berkshire. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-BERKSHIRERADIANTMVCOPY",
+    "name": "Lopi Berkshire Radiant MV Copy",
+    "slug": "lopi-berkshireradiantmvcopy",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy.webp",
+    "productUrl": "https://www.lopistoves.com/product/berkshire-radiant-mv-copy/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmvcopy.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Berkshire Radiant MV Copy. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-BERKSHIRERADIANTMV",
+    "name": "Lopi Berkshire Radiant MV",
+    "slug": "lopi-berkshireradiantmv",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-berkshireradiantmv.webp",
+    "productUrl": "https://www.lopistoves.com/product/berkshire-radiant-mv/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-berkshireradiantmv.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Berkshire Radiant MV. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-430DELUXE",
+    "name": "Lopi 430 Deluxe",
+    "slug": "lopi-430deluxe",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-430deluxe.webp",
+    "productUrl": "https://www.lopistoves.com/product/430-deluxe/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-430deluxe.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi 430 Deluxe. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+  },
+  {
+    "sku": "LOPI-DEERFIELD",
+    "name": "Lopi Deerfield",
+    "slug": "lopi-deerfield",
+    "price": 0,
+    "brand": "Lopi",
+    "imageUrl": "/products-upgraded/gas-stoves/lopi-deerfield.webp",
+    "productUrl": "https://www.lopistoves.com/product/deerfield/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/lopi-deerfield.webp"
+    ],
+    "contactForPricing": true,
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
+    "description": "Lopi Deerfield. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

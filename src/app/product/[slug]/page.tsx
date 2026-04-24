@@ -120,7 +120,8 @@ export default function ProductPage() {
     );
   }
 
-  const discount = product.salePrice
+  const isContactForPricing = product.contactForPricing || product.price <= 0;
+  const discount = !isContactForPricing && product.salePrice
     ? Math.round(((product.price - product.salePrice) / product.price) * 100)
     : 0;
 
@@ -170,7 +171,7 @@ export default function ProductPage() {
 
               {/* Badges */}
               <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
-                {product.salePrice && (
+                {!isContactForPricing && product.salePrice && (
                   <span className="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded">
                     {discount}% OFF
                   </span>
@@ -240,9 +241,9 @@ export default function ProductPage() {
             {/* Price */}
             <div className="flex items-baseline gap-3 mb-6">
               <span className="text-3xl font-bold text-gray-900">
-                {formatPrice(product.salePrice ?? product.price)}
+                {isContactForPricing ? "Contact for Pricing" : formatPrice(product.salePrice ?? product.price)}
               </span>
-              {product.salePrice && (
+              {!isContactForPricing && product.salePrice && (
                 <>
                   <span className="text-xl text-gray-400 line-through">
                     {formatPrice(product.price)}
@@ -281,7 +282,7 @@ export default function ProductPage() {
 
             {/* Quantity & Add to Cart */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center border rounded-lg">
+              {!isContactForPricing && <div className="flex items-center border rounded-lg">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="p-3 hover:bg-gray-100 transition-colors"
@@ -297,16 +298,26 @@ export default function ProductPage() {
                 >
                   <Plus className="w-4 h-4" />
                 </button>
-              </div>
+              </div>}
 
-              <button
-                onClick={handleAddToCart}
-                disabled={!product.inStock}
-                className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
-              >
-                <ShoppingCart className="w-5 h-5" />
-                Add to Cart
-              </button>
+              {isContactForPricing ? (
+                <Link
+                  href={`/contact?product=${encodeURIComponent(product.sku)}`}
+                  className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors"
+                >
+                  <Phone className="w-5 h-5" />
+                  Contact for Pricing
+                </Link>
+              ) : (
+                <button
+                  onClick={handleAddToCart}
+                  disabled={!product.inStock}
+                  className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                >
+                  <ShoppingCart className="w-5 h-5" />
+                  Add to Cart
+                </button>
+              )}
 
               <button
                 className="p-3 border rounded-lg hover:bg-gray-100 transition-colors"

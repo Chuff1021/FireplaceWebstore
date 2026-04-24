@@ -224,6 +224,7 @@ export interface Product {
   shortDescription: string;
   price: number;
   salePrice?: number;
+  contactForPricing?: boolean;
   categoryId: string;
   subcategoryId?: string;
   brand: string;
