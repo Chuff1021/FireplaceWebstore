@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 
 export function BrandsBar() {
   const brands = [
@@ -25,38 +26,55 @@ export function BrandsBar() {
   ];
 
   return (
-    <section className="bg-white py-12 text-center md:py-[60px] xl:py-20" id="featured-brands">
-      <div className="mx-auto max-w-[1640px] px-4 md:px-5">
-        <h2 className="mb-8 text-[32px] font-normal leading-[1.13] tracking-[0.24px] text-[#212121] md:mb-10 xl:mb-12">
-          Featured Brands
-        </h2>
-
-        <div className="mx-auto flex max-w-[1145px] flex-wrap justify-center">
-          {brands.map((brand) => (
-            <Link
-              key={brand.name}
-              href={`/search?q=${encodeURIComponent(brand.name)}`}
-              className="group -ml-px -mt-px flex h-[123px] w-1/2 items-center justify-center border border-[#e0e0e0] bg-white px-[9.5px] py-4 transition-colors duration-300 hover:bg-[#faf7f2] md:w-1/3 xl:w-[209px]"
-            >
-              <div className={`relative w-full ${brand.featuredImage ? "h-full" : "h-[76px]"}`}>
-                <Image
-                  src={brand.logo}
-                  alt={`${brand.name} logo`}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 20vw"
-                />
-              </div>
-            </Link>
-          ))}
+    <section className="relative overflow-hidden border-t border-[#f0dfcc] bg-[#fffaf3] py-16 md:py-20" id="featured-brands">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,122,24,0.11),transparent_28%),radial-gradient(circle_at_82%_65%,rgba(255,184,105,0.16),transparent_24%),linear-gradient(180deg,#fffaf3_0%,#f8eee1_100%)]" />
+      <div className="relative mx-auto max-w-[1640px] px-4 md:px-5">
+        <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_0.55fr] lg:items-end">
+          <div>
+            <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.26em] text-[#b84d13]">
+              <ShieldCheck className="h-4 w-4 text-[#ff7a18]" />
+              Trusted Hearth Brands
+            </p>
+            <h2 className="mt-4 text-[34px] font-black leading-[1.04] tracking-[-0.045em] text-[#1d1712] md:text-[52px]">
+              Shop the Names Homeowners and Installers Trust
+            </h2>
+          </div>
+          <p className="max-w-xl text-base leading-7 text-[#655649]">
+            Browse proven fireplace, stove, venting, log set, and hearth accessory brands backed by real product support.
+          </p>
         </div>
 
-        <Link
-          href="/search"
-          className="mt-7 inline-block text-sm leading-7 tracking-[0.44px] text-[#212121] underline underline-offset-4 md:mt-8"
-        >
-          View all
-        </Link>
+        <div className="rounded-[2rem] border border-white/70 bg-white/58 p-3 shadow-[0_30px_90px_rgba(82,48,17,0.12)] backdrop-blur-xl md:p-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {brands.map((brand) => (
+              <Link
+                key={brand.name}
+                href={`/search?q=${encodeURIComponent(brand.name)}`}
+                className="group relative flex h-[118px] items-center justify-center overflow-hidden rounded-2xl border border-[#f0dfcc] bg-white/80 px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ff7a18]/70 hover:bg-white hover:shadow-[0_18px_42px_rgba(255,122,24,0.16)]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-[#ff7a18]/8 opacity-0 transition group-hover:opacity-100" />
+                <div className={`relative w-full transition duration-300 group-hover:scale-[1.035] ${brand.featuredImage ? "h-full" : "h-[70px]"}`}>
+                  <Image
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1280px) 25vw, 16vw"
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/search"
+            className="inline-flex items-center gap-3 rounded-full border border-[#efd8bd] bg-white/80 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-[#1d1712] shadow-sm backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
+          >
+            View All Brands <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );
