@@ -14,6 +14,10 @@ import { resolveProductImage } from "@/lib/product-images";
 
 const PRODUCTS_PER_PAGE = 24;
 const MIRRORED_CATEGORY_SLUGS = new Set([
+  "fireplaces",
+  "inserts",
+  "stoves",
+  "outdoor",
   "gas-fireplaces",
   "electric-fireplaces",
   "wood-fireplaces",
@@ -370,12 +374,35 @@ export default function CategoryPage() {
 
           <div className="min-w-0 flex-1">
             <div className="border-b border-[#e0e0e0] px-4 py-5 md:px-5 xl:px-5">
-              <h1 className="text-[32px] font-normal leading-[1.25] tracking-[-0.2px] text-[#212121] md:text-[32px] xl:text-[40px] xl:tracking-[-0.33px]">
-                {categoryName}
-              </h1>
-              <p className="mt-3 max-w-[900px] text-sm leading-6 text-[#5b5d5b]">
-                {`Shop our catalog of ${categoryName.toLowerCase()} using the same clean category presentation as the mirrored source page, backed by your storefront catalog.`}
-              </p>
+              <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#a54210]">Aaron&apos;s Fireplace Superstore</p>
+                  <h1 className="mt-2 text-[34px] font-black leading-[1.08] tracking-[-0.045em] text-[#212121] md:text-[44px] xl:text-[56px]">
+                    {categoryName}
+                  </h1>
+                  <p className="mt-3 max-w-[900px] text-sm leading-6 text-[#5b5d5b]">
+                    {`Compare ${categoryName.toLowerCase()} by trusted brands, fuel type, install style, and project budget. Use the filters to narrow the catalog fast.`}
+                  </p>
+                </div>
+                {featuredAvailableBrands.length > 0 && (
+                  <div className="flex flex-wrap gap-2 lg:max-w-[520px] lg:justify-end">
+                    {featuredAvailableBrands.map((brand) => (
+                      <button
+                        key={brand}
+                        type="button"
+                        onClick={() => toggleBrand(brand, !selectedBrands.includes(brand))}
+                        className={`rounded-full border px-4 py-2 text-xs font-black uppercase tracking-[0.1em] transition ${
+                          selectedBrands.includes(brand)
+                            ? "border-[#a54210] bg-[#a54210] text-white"
+                            : "border-[#e1cbb2] bg-[#fffaf3] text-[#2a211b] hover:border-[#a54210]"
+                        }`}
+                      >
+                        {brand} ({brandCounts[brand]})
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="px-4 pb-16 pt-4 md:px-5 md:pt-6 xl:px-5 xl:pt-4">
