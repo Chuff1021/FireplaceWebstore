@@ -1,0 +1,24 @@
+<svg width="1200" height="1080" viewBox="0 0 1200 1080" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Aaron's Fireplace Co. badge logo</title>
+  <desc id="desc">Large badge logo for Aaron's Fireplace Co. using black, orange, and white.</desc>
+  <path d="M600 26C740 26 858 111 902 232C920 282 926 334 930 384C932 411 943 421 969 428L1132 475C1168 486 1192 519 1192 557V791C1192 815 1178 837 1156 848L634 1062C612 1071 588 1071 566 1062L44 848C22 837 8 815 8 791V557C8 519 32 486 68 475L231 428C257 421 268 411 270 384C274 334 280 282 298 232C342 111 460 26 600 26Z" fill="#050505" stroke="#FF7A18" stroke-width="22"/>
+  <path d="M600 53C726 53 831 129 871 240C887 284 895 335 898 388C902 430 924 450 961 461L1123 508C1145 514 1160 534 1160 557V791C1160 803 1153 814 1142 819L622 1033C608 1039 592 1039 578 1033L58 819C47 814 40 803 40 791V557C40 534 55 514 77 508L239 461C276 450 298 430 302 388C305 335 313 284 329 240C369 129 474 53 600 53Z" stroke="#FF7A18" stroke-width="10"/>
+  <g fill="#FF7A18">
+    <path d="M550 96C641 145 679 246 631 333C603 384 552 414 549 486C497 455 481 389 522 322C552 273 604 247 605 175C592 215 568 245 528 263C463 292 414 368 417 449C419 490 433 523 458 551C380 501 365 398 419 308C450 256 497 222 521 186C541 155 545 123 550 96Z"/>
+    <path d="M705 219C773 275 791 367 744 432C714 474 662 493 656 563C729 553 789 511 813 452C849 365 807 269 705 219Z"/>
+    <path d="M610 235C638 308 606 360 565 414C529 462 512 506 523 574C584 588 628 552 631 498C634 442 685 415 706 375C736 319 699 258 610 235Z"/>
+  </g>
+  <text x="336" y="436" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="64" font-weight="900" letter-spacing="8" fill="#FFFFFF">EST.</text>
+  <text x="740" y="436" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="64" font-weight="900" letter-spacing="8" fill="#FFFFFF">1989</text>
+  <g fill="#FF7A18">
+    <rect x="142" y="431" width="160" height="18" rx="6"/>
+    <rect x="898" y="431" width="160" height="18" rx="6"/>
+    <rect x="70" y="772" width="188" height="24" rx="7"/>
+    <rect x="942" y="772" width="188" height="24" rx="7"/>
+    <rect x="70" y="822" width="188" height="24" rx="7"/>
+    <rect x="942" y="822" width="188" height="24" rx="7"/>
+    <path d="M250 906H950L600 1040L250 906Z" stroke="#FF7A18" stroke-width="16" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="600" y="655" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="188" font-weight="900" letter-spacing="2" fill="#FFFFFF" transform="skewX(-7)">AARON&apos;S</text>
+  <text x="600" y="810" text-anchor="middle" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="112" font-weight="900" letter-spacing="11" fill="#FFFFFF" transform="skewX(-4)">FIREPLACE CO.</text>
+</svg>

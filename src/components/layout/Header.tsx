@@ -53,9 +53,9 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               <Image
                 src={logoUrl ?? defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
-                width={171}
-                height={53}
-                className="h-10 w-auto md:h-12"
+                width={256}
+                height={60}
+                className="h-9 w-auto md:h-11"
                 priority
               />
             </Link>

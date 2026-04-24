@@ -84,12 +84,12 @@ export function Hero() {
         </div>
 
         <div className="hidden lg:block">
-          <div className="ml-auto max-w-[440px] border border-[#ff7a18]/35 bg-black/55 p-6 shadow-2xl shadow-black/50 backdrop-blur">
+          <div className="ml-auto max-w-[500px] border border-[#ff7a18]/35 bg-black/55 p-6 shadow-2xl shadow-black/50 backdrop-blur">
             <Image
-              src={defaultStoreConfig.logo}
+              src="/logo-badge.svg"
               alt={defaultStoreConfig.storeName}
-              width={760}
-              height={360}
+              width={900}
+              height={810}
               className="mx-auto h-auto w-full"
               priority
             />
