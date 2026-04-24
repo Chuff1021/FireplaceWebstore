@@ -6,11 +6,14 @@
     "price": 1619.99,
     "salePrice": 1312.49,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dpx-bf39dxp-ca95742a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dpx-bf39dxp.webp",
     "productUrl": "https://www.efireplacestore.com/dpx-bf39dxp.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dpx-bf39dxp.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL42CFH",
@@ -19,11 +22,14 @@
     "price": 1054.9,
     "salePrice": 959,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl42cfh-6ec85ae8.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl42cfh.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl42cfh.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl42cfh.webp"
+    ]
   },
   {
     "sku": "MDF-CEF-50B",
@@ -32,11 +38,14 @@
     "price": 1169.99,
     "salePrice": 949,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-cef-50b-72b49dff.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-cef-50b.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-cef-50b.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-cef-50b.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB36H-BS",
@@ -45,11 +54,14 @@
     "price": 1351.9,
     "salePrice": 1229,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb36h-bs-b464eac5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb36h-bs.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb36h-bs.html",
     "rating": 5,
     "reviewCount": 6,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb36h-bs.webp"
+    ]
   },
   {
     "sku": "DIM-CDFI500-PRO",
@@ -58,11 +70,14 @@
     "price": 2619.99,
     "salePrice": 2129.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-cdfi500-pro-d069db98.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-cdfi500-pro.webp",
     "productUrl": "https://www.efireplacestore.com/dim-cdfi500-pro.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-cdfi500-pro.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL50CFH",
@@ -71,11 +86,14 @@
     "price": 1351.9,
     "salePrice": 1229,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl50cfh-6a32bd2f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl50cfh.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl50cfh.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl50cfh.webp"
+    ]
   },
   {
     "sku": "DIM-XHD26L",
@@ -84,11 +102,14 @@
     "price": 859.99,
     "salePrice": 695.45,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xhd26l-8a8a56a4.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xhd26l.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd26l.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xhd26l.webp"
+    ]
   },
   {
     "sku": "DPX-BF45DXP",
@@ -97,11 +118,14 @@
     "price": 1859.99,
     "salePrice": 1511.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dpx-bf45dxp-1964acf6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dpx-bf45dxp.webp",
     "productUrl": "https://www.efireplacestore.com/dpx-bf45dxp.html",
     "rating": 4.5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dpx-bf45dxp.webp"
+    ]
   },
   {
     "sku": "SPF-SF-SCN55",
@@ -110,11 +134,14 @@
     "price": 3079.99,
     "salePrice": 2499,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-scn55-3ec8f56d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-scn55.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-scn55.html",
     "rating": 4.8,
     "reviewCount": 6,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-scn55.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL72CFH",
@@ -123,11 +150,14 @@
     "price": 1923.9,
     "salePrice": 1749,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl72cfh-80c90197.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl72cfh.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl72cfh.html",
     "rating": 4.7,
     "reviewCount": 7,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl72cfh.webp"
+    ]
   },
   {
     "sku": "DIM-RBF30",
@@ -136,11 +166,14 @@
     "price": 2539.99,
     "salePrice": 2059.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-rbf30-9a4435c5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-rbf30.webp",
     "productUrl": "https://www.efireplacestore.com/dim-rbf30.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-rbf30.webp"
+    ]
   },
   {
     "sku": "MON-SF-BI36-E",
@@ -162,11 +195,14 @@
     "price": 2089.99,
     "salePrice": 1699,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-rs-4229-0ecf686a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-rs-4229.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-rs-4229.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-rs-4229.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLP50-BK",
@@ -175,11 +211,14 @@
     "price": 1919.99,
     "salePrice": 1559,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-allp50-bk-2ee91564.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-allp50-bk.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-allp50-bk.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-allp50-bk.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLS50",
@@ -188,11 +227,14 @@
     "price": 1669.99,
     "salePrice": 1359,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alls50-306ecc10.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alls50.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alls50.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alls50.webp"
+    ]
   },
   {
     "sku": "DPX-BF33DXP",
@@ -201,11 +243,14 @@
     "price": 1469.99,
     "salePrice": 1197.32,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dpx-bf33dxp-b5621fe2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dpx-bf33dxp.webp",
     "productUrl": "https://www.efireplacestore.com/dpx-bf33dxp.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dpx-bf33dxp.webp"
+    ]
   },
   {
     "sku": "DIM-RBF36",
@@ -214,11 +259,14 @@
     "price": 3099.99,
     "salePrice": 2519.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-rbf36-5ba7cf2d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-rbf36.webp",
     "productUrl": "https://www.efireplacestore.com/dim-rbf36.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-rbf36.webp"
+    ]
   },
   {
     "sku": "DIM-XHD28L",
@@ -227,11 +275,14 @@
     "price": 959.99,
     "salePrice": 781.19,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xhd28l-4242c1b3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xhd28l.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd28l.html",
     "rating": 4.3,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xhd28l.webp"
+    ]
   },
   {
     "sku": "DIM-XHD23G",
@@ -240,11 +291,14 @@
     "price": 709.99,
     "salePrice": 572.69,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xhd23g-f434b946.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xhd23g.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd23g.html",
     "rating": 3,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xhd23g.webp"
+    ]
   },
   {
     "sku": "DIM-RBF36P",
@@ -253,11 +307,14 @@
     "price": 3149.99,
     "salePrice": 2559.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-rbf36p-acde9228.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-rbf36p.webp",
     "productUrl": "https://www.efireplacestore.com/dim-rbf36p.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-rbf36p.webp"
+    ]
   },
   {
     "sku": "DIM-RBF42",
@@ -266,11 +323,14 @@
     "price": 2789.99,
     "salePrice": 2269.79,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-rbf42-5ba7cf2d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-rbf42.webp",
     "productUrl": "https://www.efireplacestore.com/dim-rbf42.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-rbf42.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL36CFH",
@@ -279,11 +339,14 @@
     "price": 834.9,
     "salePrice": 759,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl36cfh-9f1ba103.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl36cfh.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl36cfh.html",
     "rating": 5,
     "reviewCount": 6,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl36cfh.webp"
+    ]
   },
   {
     "sku": "SUP-MPE-45S",
@@ -292,11 +355,14 @@
     "price": 1549.99,
     "salePrice": 1259,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-45s-45f3f389.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-45s.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-45s.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-45s.webp"
+    ]
   },
   {
     "sku": "REM-WM-SLIM-65",
@@ -305,11 +371,14 @@
     "price": 2689.99,
     "salePrice": 2189.99,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-wm-slim-65-8390f87c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-wm-slim-65.webp",
     "productUrl": "https://www.efireplacestore.com/rem-wm-slim-65.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-wm-slim-65.webp"
+    ]
   },
   {
     "sku": "SPF-SF-INC36",
@@ -318,11 +387,14 @@
     "price": 6399.99,
     "salePrice": 5199,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-inc36-1cab1224.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-inc36.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-inc36.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-inc36.webp"
+    ]
   },
   {
     "sku": "LDH-VEW60-A",
@@ -344,11 +416,14 @@
     "price": 3199.99,
     "salePrice": 2599,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-60-lumina-15f933d6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-60-lumina.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-60-lumina.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-60-lumina.webp"
+    ]
   },
   {
     "sku": "MDF-RS-3626",
@@ -357,11 +432,14 @@
     "price": 1849.99,
     "salePrice": 1499,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-rs-3626-1f1508b0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-rs-3626.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-rs-3626.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-rs-3626.webp"
+    ]
   },
   {
     "sku": "DPX-BF39STP",
@@ -370,11 +448,14 @@
     "price": 1609.99,
     "salePrice": 1305.42,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dpx-bf39stp-f3ba4a16.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dpx-bf39stp.webp",
     "productUrl": "https://www.efireplacestore.com/dpx-bf39stp.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dpx-bf39stp.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL60CFH",
@@ -383,11 +464,14 @@
     "price": 1692.9,
     "salePrice": 1539,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl60cfh-2f26707f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl60cfh.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl60cfh.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl60cfh.webp"
+    ]
   },
   {
     "sku": "AMA-BI-40-XTRASLIM",
@@ -396,11 +480,14 @@
     "price": 2339.99,
     "salePrice": 1899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-40-xtraslim-530c89c1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-40-xtraslim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-40-xtraslim.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-40-xtraslim.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLP60-BK",
@@ -409,11 +496,14 @@
     "price": 2309.99,
     "salePrice": 1879,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-allp60-bk-be9d447f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-allp60-bk.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-allp60-bk.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-allp60-bk.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB36H-MF",
@@ -422,11 +512,14 @@
     "price": 2946.9,
     "salePrice": 2679,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb36h-mf-260a738f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb36h-mf.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb36h-mf.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb36h-mf.webp"
+    ]
   },
   {
     "sku": "DIM-X-PLF4214-XS",
@@ -435,11 +528,14 @@
     "price": 1609.99,
     "salePrice": 1304.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-x-plf4214-xs-dc562f80.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-x-plf4214-xs.webp",
     "productUrl": "https://www.efireplacestore.com/dim-x-plf4214-xs.html",
     "rating": 4.8,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-x-plf4214-xs.webp"
+    ]
   },
   {
     "sku": "HLM-FE9021",
@@ -461,11 +557,14 @@
     "price": 3606.9,
     "salePrice": 3279,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb42h-mf-260a738f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb42h-mf.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb42h-mf.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb42h-mf.webp"
+    ]
   },
   {
     "sku": "HLM-FR9310",
@@ -487,11 +586,14 @@
     "price": 1479.99,
     "salePrice": 1199,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alls40-306ecc10.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alls40.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alls40.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alls40.webp"
+    ]
   },
   {
     "sku": "LDH-VEW40-A",
@@ -513,11 +615,14 @@
     "price": 4179.99,
     "salePrice": 3399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-88-lumina-15f933d6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-88-lumina.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-88-lumina.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-88-lumina.webp"
+    ]
   },
   {
     "sku": "REM-WM-34",
@@ -526,11 +631,14 @@
     "price": 2569.99,
     "salePrice": 2088.19,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-wm-34-9c4b8a0a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-wm-34.webp",
     "productUrl": "https://www.efireplacestore.com/rem-wm-34.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-wm-34.webp"
+    ]
   },
   {
     "sku": "LDH-VEW50-A",
@@ -552,11 +660,14 @@
     "price": 5239.99,
     "salePrice": 4259.98,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-cdfi500-x2-7385d71c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-cdfi500-x2.webp",
     "productUrl": "https://www.efireplacestore.com/dim-cdfi500-x2.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-cdfi500-x2.webp"
+    ]
   },
   {
     "sku": "DIM-XLF74",
@@ -565,11 +676,14 @@
     "price": 4549.99,
     "salePrice": 3699.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xlf74-2e7104fc.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xlf74.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xlf74.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xlf74.webp"
+    ]
   },
   {
     "sku": "DIM-XLF50",
@@ -578,11 +692,14 @@
     "price": 3749.99,
     "salePrice": 3049.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xlf50-63bddcdb.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xlf50.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xlf50.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xlf50.webp"
+    ]
   },
   {
     "sku": "MON-SF-BI30-EB",
@@ -604,11 +721,14 @@
     "price": 2209.99,
     "salePrice": 1799,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-sps-60b-4f46da00.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-sps-60b.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-sps-60b.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-sps-60b.webp"
+    ]
   },
   {
     "sku": "REM-102735-XS",
@@ -617,11 +737,14 @@
     "price": 2329.99,
     "salePrice": 1896.55,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102735-xs-89a7535c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102735-xs.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102735-xs.html",
     "rating": 4.8,
     "reviewCount": 6,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102735-xs.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL42CHD",
@@ -630,11 +753,14 @@
     "price": 1560.9,
     "salePrice": 1419,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl42chd-541c2aa7.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl42chd.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl42chd.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl42chd.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FML-48-5523-STL",
@@ -643,11 +769,14 @@
     "price": 2759.99,
     "salePrice": 2239,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fml-48-5523-stl-5ae52e48.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fml-48-5523-stl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fml-48-5523-stl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fml-48-5523-stl.webp"
+    ]
   },
   {
     "sku": "AMA-BI-50-SLIM-OD",
@@ -656,11 +785,14 @@
     "price": 3079.99,
     "salePrice": 2499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-50-slim-od-3f123785.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-50-slim-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-50-slim-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-50-slim-od.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB50AB",
@@ -669,11 +801,14 @@
     "price": 3166.9,
     "salePrice": 2879,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb50ab-aba31ab5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb50ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb50ab.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb50ab.webp"
+    ]
   },
   {
     "sku": "HLM-FR8543",
@@ -695,11 +830,14 @@
     "price": 2349.99,
     "salePrice": 1909,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-slim-50-11e151ae.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-slim-50.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-slim-50.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-slim-50.webp"
+    ]
   },
   {
     "sku": "REM-WM-SLIM-55",
@@ -708,11 +846,14 @@
     "price": 1859.99,
     "salePrice": 1512.39,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-wm-slim-55-8390f87c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-wm-slim-55.webp",
     "productUrl": "https://www.efireplacestore.com/rem-wm-slim-55.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-wm-slim-55.webp"
+    ]
   },
   {
     "sku": "DIM-XHD28G",
@@ -721,11 +862,14 @@
     "price": 969.99,
     "salePrice": 790.39,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xhd28g-012030df.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xhd28g.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd28g.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xhd28g.webp"
+    ]
   },
   {
     "sku": "SDZ-ZHS-432",
@@ -747,11 +891,14 @@
     "price": 2299.99,
     "salePrice": 1872.63,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102755-xs-b3983eda.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102755-xs.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102755-xs.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102755-xs.webp"
+    ]
   },
   {
     "sku": "MDF-LPS-4414",
@@ -760,11 +907,14 @@
     "price": 2829.99,
     "salePrice": 2299,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lps-4414-32ac1930.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lps-4414.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lps-4414.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lps-4414.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-48",
@@ -773,11 +923,14 @@
     "price": 3439.99,
     "salePrice": 2799,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-48-8dc3f89e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-48.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-48.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-48.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB36LCD-MF",
@@ -786,11 +939,14 @@
     "price": 4277.9,
     "salePrice": 3889,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb36lcd-mf-8bcefe3e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb36lcd-mf.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb36lcd-mf.html",
     "rating": 5,
     "reviewCount": 6,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb36lcd-mf.webp"
+    ]
   },
   {
     "sku": "DIM-X-XLF10017-XD",
@@ -799,11 +955,14 @@
     "price": 7689.99,
     "salePrice": 6249.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-x-xlf10017-xd-a72ce016.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-x-xlf10017-xd.webp",
     "productUrl": "https://www.efireplacestore.com/dim-x-xlf10017-xd.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-x-xlf10017-xd.webp"
+    ]
   },
   {
     "sku": "DIM-XHD26G",
@@ -812,11 +971,14 @@
     "price": 919.99,
     "salePrice": 746.89,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xhd26g-9844af4f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xhd26g.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd26g.html",
     "rating": 3,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xhd26g.webp"
+    ]
   },
   {
     "sku": "AMA-CE33",
@@ -825,11 +987,14 @@
     "price": 1849.99,
     "salePrice": 1499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ce33-77840556.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ce33.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ce33.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ce33.webp"
+    ]
   },
   {
     "sku": "HLM-FR9392",
@@ -864,11 +1029,14 @@
     "price": 3079.99,
     "salePrice": 2499,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-od55-d2b7712b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-od55.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-od55.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-od55.webp"
+    ]
   },
   {
     "sku": "LDH-ZEF48XC",
@@ -890,11 +1058,14 @@
     "price": 4179.99,
     "salePrice": 3399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-100-325a547a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-100.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-100.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-100.webp"
+    ]
   },
   {
     "sku": "JRH-EF10263",
@@ -916,11 +1087,14 @@
     "price": 4179.99,
     "salePrice": 3399.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xlf60-f3684c97.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xlf60.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xlf60.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xlf60.webp"
+    ]
   },
   {
     "sku": "DIM-RBF24DLX",
@@ -929,11 +1103,14 @@
     "price": 1759.99,
     "salePrice": 1429.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-rbf24dlx-5916449a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-rbf24dlx.webp",
     "productUrl": "https://www.efireplacestore.com/dim-rbf24dlx.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-rbf24dlx.webp"
+    ]
   },
   {
     "sku": "DIM-XHD23L",
@@ -942,11 +1119,14 @@
     "price": 739.99,
     "salePrice": 599.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xhd23l-38f076e6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xhd23l.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd23l.html",
     "rating": 4.3,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xhd23l.webp"
+    ]
   },
   {
     "sku": "REM-102745-XS",
@@ -955,11 +1135,14 @@
     "price": 2449.99,
     "salePrice": 1988.99,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102745-xs-9e452b19.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102745-xs.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102745-xs.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102745-xs.webp"
+    ]
   },
   {
     "sku": "MDF-SPS-50B",
@@ -968,11 +1151,14 @@
     "price": 1969.99,
     "salePrice": 1599,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-sps-50b-4f46da00.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-sps-50b.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-sps-50b.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-sps-50b.webp"
+    ]
   },
   {
     "sku": "DIM-XLF100",
@@ -981,11 +1167,14 @@
     "price": 5169.99,
     "salePrice": 4199.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-xlf100-63bddcdb.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-xlf100.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xlf100.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-xlf100.webp"
+    ]
   },
   {
     "sku": "DIM-500002573",
@@ -994,11 +1183,14 @@
     "price": 4429.99,
     "salePrice": 3599.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500002573-445f96bf.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500002573.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500002573.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500002573.webp"
+    ]
   },
   {
     "sku": "AMA-BI-60-XTRASLIM",
@@ -1007,11 +1199,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-60-xtraslim-2f58951e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-60-xtraslim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-60-xtraslim.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-60-xtraslim.webp"
+    ]
   },
   {
     "sku": "MDF-RS-3021",
@@ -1020,11 +1215,14 @@
     "price": 1449.99,
     "salePrice": 1179,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-rs-3021-1f1508b0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-rs-3021.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-rs-3021.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-rs-3021.webp"
+    ]
   },
   {
     "sku": "NPL-NEFBD60HE",
@@ -1033,11 +1231,14 @@
     "price": 3397.9,
     "salePrice": 3089,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefbd60he-055f0845.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefbd60he.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefbd60he.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefbd60he.webp"
+    ]
   },
   {
     "sku": "SUP-MPE-60D",
@@ -1046,11 +1247,14 @@
     "price": 2989.99,
     "salePrice": 2429,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-60d-f5992ef1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-60d.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-60d.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-60d.webp"
+    ]
   },
   {
     "sku": "MDF-LPS-5614",
@@ -1059,11 +1263,14 @@
     "price": 3079.99,
     "salePrice": 2499,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lps-5614-32ac1930.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lps-5614.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lps-5614.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lps-5614.webp"
+    ]
   },
   {
     "sku": "HLM-FR8525",
@@ -1085,11 +1292,14 @@
     "price": 2819.99,
     "salePrice": 2289,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-allp72-bk-2ee91564.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-allp72-bk.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-allp72-bk.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-allp72-bk.webp"
+    ]
   },
   {
     "sku": "SPF-SF-FORMAT36",
@@ -1098,11 +1308,14 @@
     "price": 959.99,
     "salePrice": 779,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-format36-9fcebde0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-format36.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-format36.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-format36.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FML-72-7823-STL",
@@ -1111,11 +1324,14 @@
     "price": 3729.99,
     "salePrice": 3029,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fml-72-7823-stl-83db30d0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fml-72-7823-stl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fml-72-7823-stl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fml-72-7823-stl.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-50-BESPOKE",
@@ -1124,11 +1340,14 @@
     "price": 3319.99,
     "salePrice": 2699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-50-bespoke-96d526df.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-50-bespoke.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-50-bespoke.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-50-bespoke.webp"
+    ]
   },
   {
     "sku": "SDZ-ZHS-425",
@@ -1163,11 +1382,14 @@
     "price": 3319.99,
     "salePrice": 2699,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-sct55-bk-78659c50.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-sct55-bk.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-sct55-bk.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-sct55-bk.webp"
+    ]
   },
   {
     "sku": "SUP-MPE-55S",
@@ -1176,11 +1398,14 @@
     "price": 1909.99,
     "salePrice": 1549,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-55s-45f3f389.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-55s.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-55s.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-55s.webp"
+    ]
   },
   {
     "sku": "REM-102755-DE",
@@ -1189,11 +1414,14 @@
     "price": 3209.99,
     "salePrice": 2611.61,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102755-de-88a2e28b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102755-de.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102755-de.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102755-de.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-30",
@@ -1202,11 +1430,14 @@
     "price": 1969.99,
     "salePrice": 1599,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-30-4fae36c5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-30.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-30.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-30.webp"
+    ]
   },
   {
     "sku": "MDF-SPS-100B",
@@ -1215,11 +1446,14 @@
     "price": 3549.99,
     "salePrice": 2889,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-sps-100b-4f46da00.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-sps-100b.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-sps-100b.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-sps-100b.webp"
+    ]
   },
   {
     "sku": "MDF-LPM-6816",
@@ -1228,11 +1462,14 @@
     "price": 4739.99,
     "salePrice": 3849,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lpm-6816-8b4f8359.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lpm-6816.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lpm-6816.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lpm-6816.webp"
+    ]
   },
   {
     "sku": "JRH-EF10145",
@@ -1280,11 +1517,14 @@
     "price": 719.99,
     "salePrice": 584.18,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-swm4820-5e0d8175.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-swm4820.webp",
     "productUrl": "https://www.efireplacestore.com/dim-swm4820.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-swm4820.webp"
+    ]
   },
   {
     "sku": "MDF-OR52-SLIM",
@@ -1293,11 +1533,14 @@
     "price": 5259.99,
     "salePrice": 4279,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or52-slim-1eb26ac8.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or52-slim.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or52-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or52-slim.webp"
+    ]
   },
   {
     "sku": "SPF-SF-INC36-MK-WS-INC36",
@@ -1306,11 +1549,14 @@
     "price": 7219.99,
     "salePrice": 5868,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-inc36-mk-ws-inc36-a66f0976.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-inc36-mk-ws-inc36.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-inc36-mk-ws-inc36.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-inc36-mk-ws-inc36.webp"
+    ]
   },
   {
     "sku": "DYN-DY-BTX74",
@@ -1332,11 +1578,14 @@
     "price": 1739.99,
     "salePrice": 1411.66,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-gds23l8-1904gb-c69f90b5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-gds23l8-1904gb.webp",
     "productUrl": "https://www.efireplacestore.com/dim-gds23l8-1904gb.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-gds23l8-1904gb.webp"
+    ]
   },
   {
     "sku": "DYN-DY-BTX64",
@@ -1371,11 +1620,14 @@
     "price": 3958.9,
     "salePrice": 3599,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb74ab-8e5ea90e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb74ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb74ab.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb74ab.webp"
+    ]
   },
   {
     "sku": "LDH-ZEF45XC",
@@ -1397,11 +1649,14 @@
     "price": 1599.99,
     "salePrice": 1299,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-evo5020-448469ee.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-evo5020.webp",
     "productUrl": "https://www.efireplacestore.com/ama-evo5020.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-evo5020.webp"
+    ]
   },
   {
     "sku": "REM-CLASSIC-SLIM-33",
@@ -1410,11 +1665,14 @@
     "price": 1939.99,
     "salePrice": 1574.99,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-classic-slim-33-ac7dbcda.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-classic-slim-33.webp",
     "productUrl": "https://www.efireplacestore.com/rem-classic-slim-33.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-classic-slim-33.webp"
+    ]
   },
   {
     "sku": "MDF-WMC-68LPM-RTF-LPM-6816",
@@ -1423,11 +1681,14 @@
     "price": 6639.99,
     "salePrice": 5399,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-wmc-68lpm-rtf-lpm-6816-e2534ba1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-wmc-68lpm-rtf-lpm-6816.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-wmc-68lpm-rtf-lpm-6816.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-wmc-68lpm-rtf-lpm-6816.webp"
+    ]
   },
   {
     "sku": "MDF-SPM-4226",
@@ -1436,11 +1697,14 @@
     "price": 3379.99,
     "salePrice": 2749,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-spm-4226-74944707.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-spm-4226.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-spm-4226.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-spm-4226.webp"
+    ]
   },
   {
     "sku": "SDZ-LOE-381",
@@ -1462,11 +1726,14 @@
     "price": 2159.99,
     "salePrice": 1759,
     "brand": "Empire",
-    "imageUrl": "/products/electric-fireplaces/emp-ebl50-96381944.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/emp-ebl50.webp",
     "productUrl": "https://www.efireplacestore.com/emp-ebl50.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/emp-ebl50.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL62AB",
@@ -1475,11 +1742,14 @@
     "price": 2946.9,
     "salePrice": 2679,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl62ab-303d812b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl62ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl62ab.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl62ab.webp"
+    ]
   },
   {
     "sku": "LDH-ZEF32A",
@@ -1501,11 +1771,14 @@
     "price": 5289.99,
     "salePrice": 4299,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-88-xt-a163e001.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-88-xt.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-88-xt.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-88-xt.webp"
+    ]
   },
   {
     "sku": "HLM-FE9278",
@@ -1527,11 +1800,14 @@
     "price": 6519.99,
     "salePrice": 5299,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or60-multi-31b36d57.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or60-multi.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or60-multi.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or60-multi.webp"
+    ]
   },
   {
     "sku": "SPF-SF-SCN43",
@@ -1540,11 +1816,14 @@
     "price": 2689.99,
     "salePrice": 2189,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-scn43-3ec8f56d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-scn43.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-scn43.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-scn43.webp"
+    ]
   },
   {
     "sku": "SDZ-LOE-398",
@@ -1566,11 +1845,14 @@
     "price": 8369.99,
     "salePrice": 6799.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003155-6f508742.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003155.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003155.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003155.webp"
+    ]
   },
   {
     "sku": "EMP-EBL34",
@@ -1579,11 +1861,14 @@
     "price": 1349.99,
     "salePrice": 1099,
     "brand": "Empire",
-    "imageUrl": "/products/electric-fireplaces/emp-ebl34-57f40ecb.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/emp-ebl34.webp",
     "productUrl": "https://www.efireplacestore.com/emp-ebl34.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/emp-ebl34.webp"
+    ]
   },
   {
     "sku": "HLM-FC1137456",
@@ -1605,11 +1890,14 @@
     "price": 2689.99,
     "salePrice": 2189,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-od43-d2b7712b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-od43.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-od43.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-od43.webp"
+    ]
   },
   {
     "sku": "MDF-OR30-TRAD",
@@ -1618,11 +1906,14 @@
     "price": 3259.99,
     "salePrice": 2649,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or30-trad-ca09c105.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or30-trad.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or30-trad.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or30-trad.webp"
+    ]
   },
   {
     "sku": "MDF-OR36-TRAD",
@@ -1631,11 +1922,14 @@
     "price": 3939.99,
     "salePrice": 3199,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or36-trad-ca09c105.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or36-trad.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or36-trad.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or36-trad.webp"
+    ]
   },
   {
     "sku": "MDF-OR26-TRAD",
@@ -1644,11 +1938,14 @@
     "price": 2639.99,
     "salePrice": 2149,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or26-trad-ca09c105.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or26-trad.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or26-trad.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or26-trad.webp"
+    ]
   },
   {
     "sku": "DYN-DY-BTX52",
@@ -1748,11 +2045,14 @@
     "price": 5139.99,
     "salePrice": 4178,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ama-trv-55-bespoke-design-media-14pce-147036c3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ama-trv-55-bespoke-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ama-trv-55-bespoke-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ama-trv-55-bespoke-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-AMA-TRV-75-BESPOKE-DESIGN-MEDIA-14PCE",
@@ -1761,11 +2061,14 @@
     "price": 6369.99,
     "salePrice": 5178,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ama-trv-75-bespoke-design-media-14pce-147036c3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ama-trv-75-bespoke-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ama-trv-75-bespoke-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ama-trv-75-bespoke-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-74-XT-BESPOKE-DESIGN-MEDIA-BIRCH-15PCE",
@@ -1774,11 +2077,14 @@
     "price": 6029.99,
     "salePrice": 4899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-74-xt-bespoke-design-media-birch-15pce-9ed7905a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-74-xt-bespoke-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-74-xt-bespoke-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-74-xt-bespoke-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "AMA-BI-50-DEEP-XT-DESIGN-MEDIA-14PCE",
@@ -1787,11 +2093,14 @@
     "price": 4649.99,
     "salePrice": 3778,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-50-deep-xt-design-media-14pce-b6e5754c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-50-deep-xt-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-50-deep-xt-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-50-deep-xt-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "NPL-NEFBD50HE",
@@ -1800,11 +2109,14 @@
     "price": 3056.9,
     "salePrice": 2779,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefbd50he-0230cb7a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefbd50he.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefbd50he.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefbd50he.webp"
+    ]
   },
   {
     "sku": "SEI-37-003-023-6-39",
@@ -1839,11 +2151,14 @@
     "price": 644.55,
     "salePrice": 585.95,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefvc32h-15b68f94.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefvc32h.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefvc32h.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefvc32h.webp"
+    ]
   },
   {
     "sku": "SEI-FE9275",
@@ -1865,11 +2180,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-38-b51c7ffc.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-38.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-38.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-38.webp"
+    ]
   },
   {
     "sku": "NPL-NEFVC38H",
@@ -1878,11 +2196,14 @@
     "price": 779.9,
     "salePrice": 709,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefvc38h-2057db5d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefvc38h.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefvc38h.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefvc38h.webp"
+    ]
   },
   {
     "sku": "DIM-SIL72",
@@ -1891,11 +2212,14 @@
     "price": 1349.99,
     "salePrice": 1099.39,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-sil72-7ffbbbeb.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-sil72.webp",
     "productUrl": "https://www.efireplacestore.com/dim-sil72.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-sil72.webp"
+    ]
   },
   {
     "sku": "REM-102765-XS",
@@ -1904,11 +2228,14 @@
     "price": 3629.99,
     "salePrice": 2949.5,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102765-xs-f7577259.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102765-xs.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102765-xs.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102765-xs.webp"
+    ]
   },
   {
     "sku": "MDF-CEF-60B",
@@ -1917,11 +2244,14 @@
     "price": 1329.99,
     "salePrice": 1079,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-cef-60b-3b68cdfc.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-cef-60b.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-cef-60b.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-cef-60b.webp"
+    ]
   },
   {
     "sku": "DIM-500002574",
@@ -1930,11 +2260,14 @@
     "price": 4959.99,
     "salePrice": 4029.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500002574-445f96bf.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500002574.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500002574.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500002574.webp"
+    ]
   },
   {
     "sku": "DPX-VF2927L",
@@ -1943,11 +2276,14 @@
     "price": 3589.99,
     "salePrice": 2917.19,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dpx-vf2927l-bf65c62a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dpx-vf2927l.webp",
     "productUrl": "https://www.efireplacestore.com/dpx-vf2927l.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dpx-vf2927l.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB26H",
@@ -1956,11 +2292,14 @@
     "price": 845.9,
     "salePrice": 769,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb26h-fc65ea86.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb26h.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb26h.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb26h.webp"
+    ]
   },
   {
     "sku": "HLM-FR9278",
@@ -1982,11 +2321,14 @@
     "price": 1849.99,
     "salePrice": 1503.79,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-gds28l8-1924sk-5f804c8d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-gds28l8-1924sk.webp",
     "productUrl": "https://www.efireplacestore.com/dim-gds28l8-1924sk.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-gds28l8-1924sk.webp"
+    ]
   },
   {
     "sku": "NPL-NEFP33-0214W",
@@ -1995,11 +2337,14 @@
     "price": 2264.9,
     "salePrice": 2059,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefp33-0214w-d5994d22.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefp33-0214w.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefp33-0214w.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefp33-0214w.webp"
+    ]
   },
   {
     "sku": "MDF-RS-5435",
@@ -2008,11 +2353,14 @@
     "price": 3869.99,
     "salePrice": 3149,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-rs-5435-2fdc4b82.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-rs-5435.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-rs-5435.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-rs-5435.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB30H",
@@ -2021,11 +2369,14 @@
     "price": 1021.9,
     "salePrice": 929,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb30h-59a4aaa2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb30h.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb30h.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb30h.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB60H-3SV",
@@ -2034,11 +2385,14 @@
     "price": 2770.9,
     "salePrice": 2519,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb60h-3sv-da5fdbb5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb60h-3sv.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb60h-3sv.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb60h-3sv.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-30-XS",
@@ -2047,11 +2401,14 @@
     "price": 2339.99,
     "salePrice": 1899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-30-xs-28eedc5b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-30-xs.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-30-xs.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-30-xs.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-44",
@@ -2060,11 +2417,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-44-5964c589.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-44.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-44.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-44.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-60-BESPOKE",
@@ -2073,11 +2433,14 @@
     "price": 3569.99,
     "salePrice": 2899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-60-bespoke-c9146b7e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-60-bespoke.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-60-bespoke.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-60-bespoke.webp"
+    ]
   },
   {
     "sku": "MDF-SPS-74B",
@@ -2086,11 +2449,14 @@
     "price": 2829.99,
     "salePrice": 2299,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-sps-74b-4f46da00.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-sps-74b.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-sps-74b.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-sps-74b.webp"
+    ]
   },
   {
     "sku": "HLM-FE9275",
@@ -2112,11 +2478,14 @@
     "price": 3439.99,
     "salePrice": 2799,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-60-slim-od-7832835c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-60-slim-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-60-slim-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-60-slim-od.webp"
+    ]
   },
   {
     "sku": "AMA-72-TRV-XT-XL",
@@ -2125,11 +2494,14 @@
     "price": 5659.99,
     "salePrice": 4599,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-72-trv-xt-xl-19f18d1f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-72-trv-xt-xl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-72-trv-xt-xl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-72-trv-xt-xl.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-33-XS",
@@ -2138,11 +2510,14 @@
     "price": 2579.99,
     "salePrice": 2099,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-33-xs-2cebb02e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-33-xs.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-33-xs.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-33-xs.webp"
+    ]
   },
   {
     "sku": "AMA-BI-30-XTRASLIM",
@@ -2151,11 +2526,14 @@
     "price": 1849.99,
     "salePrice": 1499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-30-xtraslim-0b4b8f1d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-30-xtraslim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-30-xtraslim.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-30-xtraslim.webp"
+    ]
   },
   {
     "sku": "MDF-OR60-SLIM",
@@ -2164,11 +2542,14 @@
     "price": 5899.99,
     "salePrice": 4799,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or60-slim-1eb26ac8.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or60-slim.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or60-slim.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or60-slim.webp"
+    ]
   },
   {
     "sku": "MDF-LPS-8014",
@@ -2177,11 +2558,14 @@
     "price": 4489.99,
     "salePrice": 3649,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lps-8014-32ac1930.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lps-8014.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lps-8014.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lps-8014.webp"
+    ]
   },
   {
     "sku": "DIM-SWM4220",
@@ -2190,11 +2574,14 @@
     "price": 849.99,
     "salePrice": 693.39,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-swm4220-c6090f60.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-swm4220.webp",
     "productUrl": "https://www.efireplacestore.com/dim-swm4220.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-swm4220.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB50H-3SV",
@@ -2203,11 +2590,14 @@
     "price": 2660.9,
     "salePrice": 2419,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb50h-3sv-d9a540a1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb50h-3sv.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb50h-3sv.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb50h-3sv.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-34-XT",
@@ -2216,11 +2606,14 @@
     "price": 2579.99,
     "salePrice": 2099,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-34-xt-fb4e374f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-34-xt.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-34-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-34-xt.webp"
+    ]
   },
   {
     "sku": "HLM-FC1009359",
@@ -2242,11 +2635,14 @@
     "price": 3009.99,
     "salePrice": 2442.33,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102745-xt-7e0c568a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102745-xt.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102745-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102745-xt.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL65LCD-3SV",
@@ -2255,11 +2651,14 @@
     "price": 5531.9,
     "salePrice": 5029,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl65lcd-3sv-dae9ab64.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl65lcd-3sv.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl65lcd-3sv.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl65lcd-3sv.webp"
+    ]
   },
   {
     "sku": "AMA-30-TRV-SLIM",
@@ -2268,11 +2667,14 @@
     "price": 3199.99,
     "salePrice": 2599,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-30-trv-slim-4fd937d6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-30-trv-slim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-30-trv-slim.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-30-trv-slim.webp"
+    ]
   },
   {
     "sku": "SUP-MPE-100D",
@@ -2281,11 +2683,14 @@
     "price": 5029.99,
     "salePrice": 4089,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-100d-536942a3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-100d.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-100d.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-100d.webp"
+    ]
   },
   {
     "sku": "SUP-MPE-84D",
@@ -2294,11 +2699,14 @@
     "price": 3869.99,
     "salePrice": 3149,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-84d-833206b7.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-84d.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-84d.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-84d.webp"
+    ]
   },
   {
     "sku": "AMA-BI-72-DEEP-OD",
@@ -2307,11 +2715,14 @@
     "price": 5539.99,
     "salePrice": 4499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-72-deep-od-1a00c888.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-72-deep-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-72-deep-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-72-deep-od.webp"
+    ]
   },
   {
     "sku": "AMA-BI-88-SLIM-OD",
@@ -2320,11 +2731,14 @@
     "price": 4549.99,
     "salePrice": 3699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-88-slim-od-61f64ef0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-88-slim-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-88-slim-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-88-slim-od.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FML-34-4023-STL",
@@ -2333,11 +2747,14 @@
     "price": 2349.99,
     "salePrice": 1909,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fml-34-4023-stl-8fdacbfc.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fml-34-4023-stl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fml-34-4023-stl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fml-34-4023-stl.webp"
+    ]
   },
   {
     "sku": "SUP-MPE-72D",
@@ -2346,11 +2763,14 @@
     "price": 3229.99,
     "salePrice": 2629,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-72d-d52f4f97.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-72d.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-72d.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-72d.webp"
+    ]
   },
   {
     "sku": "MDF-LPM-4416",
@@ -2359,11 +2779,14 @@
     "price": 3419.99,
     "salePrice": 2779,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lpm-4416-f8f4d091.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lpm-4416.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lpm-4416.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lpm-4416.webp"
+    ]
   },
   {
     "sku": "MDF-LPS-6814",
@@ -2372,11 +2795,14 @@
     "price": 3809.99,
     "salePrice": 3099,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lps-6814-da53d2d2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lps-6814.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lps-6814.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lps-6814.webp"
+    ]
   },
   {
     "sku": "LDH-ZEF55VC",
@@ -2398,11 +2824,14 @@
     "price": 1929.99,
     "salePrice": 1569,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fml-26-3223-stl-59ef180f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fml-26-3223-stl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fml-26-3223-stl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fml-26-3223-stl.webp"
+    ]
   },
   {
     "sku": "AMA-WM-BI-2428-VLR-BG",
@@ -2411,11 +2840,14 @@
     "price": 2349.99,
     "salePrice": 1909,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-bi-2428-vlr-bg-21f8f0f9.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-bi-2428-vlr-bg.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-bi-2428-vlr-bg.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-bi-2428-vlr-bg.webp"
+    ]
   },
   {
     "sku": "AMA-BI-50-DEEP-OD",
@@ -2424,11 +2856,14 @@
     "price": 4549.99,
     "salePrice": 3699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-50-deep-od-e9175f3f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-50-deep-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-50-deep-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-50-deep-od.webp"
+    ]
   },
   {
     "sku": "HLM-FC8532",
@@ -2450,11 +2885,14 @@
     "price": 5599.99,
     "salePrice": 4549.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500002608-445f96bf.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500002608.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500002608.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500002608.webp"
+    ]
   },
   {
     "sku": "HLM-FE1080859",
@@ -2476,11 +2914,14 @@
     "price": 2129.99,
     "salePrice": 1733.39,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-classic-slim-26-ac7dbcda.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-classic-slim-26.webp",
     "productUrl": "https://www.efireplacestore.com/rem-classic-slim-26.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-classic-slim-26.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-26-XS",
@@ -2489,11 +2930,14 @@
     "price": 2089.99,
     "salePrice": 1699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-26-xs-c2e49e5d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-26-xs.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-26-xs.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-26-xs.webp"
+    ]
   },
   {
     "sku": "AMA-40-TRV-SLIM",
@@ -2502,11 +2946,14 @@
     "price": 3439.99,
     "salePrice": 2799,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-40-trv-slim-ab97073d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-40-trv-slim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-40-trv-slim.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-40-trv-slim.webp"
+    ]
   },
   {
     "sku": "HLM-FE9310",
@@ -2528,11 +2975,14 @@
     "price": 1098.9,
     "salePrice": 999,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefp32-5320bw-f90f83ac.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefp32-5320bw.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefp32-5320bw.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefp32-5320bw.webp"
+    ]
   },
   {
     "sku": "AMA-BI-88-DEEP-OD",
@@ -2541,11 +2991,14 @@
     "price": 6149.99,
     "salePrice": 4999,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-88-deep-od-4474e761.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-88-deep-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-88-deep-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-88-deep-od.webp"
+    ]
   },
   {
     "sku": "AMA-50-TRV-SLIM",
@@ -2554,11 +3007,14 @@
     "price": 3439.99,
     "salePrice": 2799,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-50-trv-slim-ab97073d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-50-trv-slim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-50-trv-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-50-trv-slim.webp"
+    ]
   },
   {
     "sku": "MDF-OR76-MULTI",
@@ -2567,11 +3023,14 @@
     "price": 8859.99,
     "salePrice": 7199,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or76-multi-31b36d57.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or76-multi.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or76-multi.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or76-multi.webp"
+    ]
   },
   {
     "sku": "SDZ-LOE-374",
@@ -2593,11 +3052,14 @@
     "price": 3039.99,
     "salePrice": 2469,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fm-50-bg-05f2b5a2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fm-50-bg.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fm-50-bg.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fm-50-bg.webp"
+    ]
   },
   {
     "sku": "HLM-FE9365",
@@ -2619,11 +3081,14 @@
     "price": 5039.99,
     "salePrice": 4099,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-60-deep-od-2c6179f2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-60-deep-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-60-deep-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-60-deep-od.webp"
+    ]
   },
   {
     "sku": "HLM-FE9362",
@@ -2658,11 +3123,14 @@
     "price": 2069.99,
     "salePrice": 1679,
     "brand": "Superior",
-    "imageUrl": "/products/electric-fireplaces/sup-mpe-33-n-4ce2f9db.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/sup-mpe-33-n.webp",
     "productUrl": "https://www.efireplacestore.com/sup-mpe-33-n.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/sup-mpe-33-n.webp"
+    ]
   },
   {
     "sku": "NPL-NEFB62AB",
@@ -2671,11 +3139,14 @@
     "price": 3595.9,
     "salePrice": 3269,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb62ab-5bc57f45.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb62ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb62ab.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb62ab.webp"
+    ]
   },
   {
     "sku": "MDF-RS-2621",
@@ -2684,11 +3155,14 @@
     "price": 1229.99,
     "salePrice": 999,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-rs-2621-1f1508b0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-rs-2621.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-rs-2621.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-rs-2621.webp"
+    ]
   },
   {
     "sku": "DIM-X-XLF8817-XD",
@@ -2697,11 +3171,14 @@
     "price": 7199.99,
     "salePrice": 5849.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-x-xlf8817-xd-57d758ea.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-x-xlf8817-xd.webp",
     "productUrl": "https://www.efireplacestore.com/dim-x-xlf8817-xd.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-x-xlf8817-xd.webp"
+    ]
   },
   {
     "sku": "DIM-X-XLF6017-XD",
@@ -2710,11 +3187,14 @@
     "price": 6029.99,
     "salePrice": 4899.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-x-xlf6017-xd-b6845bf5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-x-xlf6017-xd.webp",
     "productUrl": "https://www.efireplacestore.com/dim-x-xlf6017-xd.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-x-xlf6017-xd.webp"
+    ]
   },
   {
     "sku": "DIM-FEF3226L3",
@@ -2788,11 +3268,14 @@
     "price": 5719.99,
     "salePrice": 4649,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lps-9614-32ac1930.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lps-9614.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lps-9614.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lps-9614.webp"
+    ]
   },
   {
     "sku": "EMP-EBL74",
@@ -2801,11 +3284,14 @@
     "price": 3059.99,
     "salePrice": 2485,
     "brand": "Empire",
-    "imageUrl": "/products/electric-fireplaces/emp-ebl74-baf41d1a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/emp-ebl74.webp",
     "productUrl": "https://www.efireplacestore.com/emp-ebl74.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/emp-ebl74.webp"
+    ]
   },
   {
     "sku": "DYN-DY-BTS40",
@@ -2866,11 +3352,14 @@
     "price": 3579.99,
     "salePrice": 2905.97,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102755-xt-c1991acd.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102755-xt.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102755-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102755-xt.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-50-XT",
@@ -2879,11 +3368,14 @@
     "price": 3939.99,
     "salePrice": 3199,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-50-xt-b02b357e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-50-xt.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-50-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-50-xt.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FM-60-7023-BG",
@@ -2892,11 +3384,14 @@
     "price": 3859.99,
     "salePrice": 3139,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fm-60-7023-bg-36f2f0b1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fm-60-7023-bg.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fm-60-7023-bg.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fm-60-7023-bg.webp"
+    ]
   },
   {
     "sku": "AMA-CE30",
@@ -2905,11 +3400,14 @@
     "price": 1479.99,
     "salePrice": 1199,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ce30-77840556.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ce30.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ce30.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ce30.webp"
+    ]
   },
   {
     "sku": "AMA-CE26",
@@ -2918,11 +3416,14 @@
     "price": 1229.99,
     "salePrice": 999,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ce26-77840556.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ce26.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ce26.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ce26.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FM-34-4423-BG",
@@ -2931,11 +3432,14 @@
     "price": 2619.99,
     "salePrice": 2129,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fm-34-4423-bg-8967d2ba.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fm-34-4423-bg.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fm-34-4423-bg.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fm-34-4423-bg.webp"
+    ]
   },
   {
     "sku": "AMA-ZECL-31-3228-STL",
@@ -2944,11 +3448,14 @@
     "price": 1929.99,
     "salePrice": 1569,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-zecl-31-3228-stl-d69d9c36.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-zecl-31-3228-stl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-zecl-31-3228-stl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-zecl-31-3228-stl.webp"
+    ]
   },
   {
     "sku": "AMA-FS-26-922",
@@ -2957,11 +3464,14 @@
     "price": 2089.99,
     "salePrice": 1699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-fs-26-922-c1d4233f.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-fs-26-922.webp",
     "productUrl": "https://www.efireplacestore.com/ama-fs-26-922.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-fs-26-922.webp"
+    ]
   },
   {
     "sku": "AMA-BI-72-SLIM-OD",
@@ -2970,11 +3480,14 @@
     "price": 3939.99,
     "salePrice": 3199,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-72-slim-od-708f213a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-72-slim-od.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-72-slim-od.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-72-slim-od.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-100-BESPOKE-DESIGN-MEDIA-BIRCH-10PCE",
@@ -2983,11 +3496,14 @@
     "price": 5169.99,
     "salePrice": 4199,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-100-bespoke-design-media-birch-10pce-c1f857bc.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-100-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-100-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-100-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "HLM-FR9321",
@@ -3009,11 +3525,14 @@
     "price": 4959.99,
     "salePrice": 4029,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-wmc-44lpm-rtf-lpm-4416-e2534ba1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-wmc-44lpm-rtf-lpm-4416.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-wmc-44lpm-rtf-lpm-4416.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-wmc-44lpm-rtf-lpm-4416.webp"
+    ]
   },
   {
     "sku": "HLM-FR1080859",
@@ -3035,11 +3554,14 @@
     "price": 2479.99,
     "salePrice": 2016.39,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-30-bay-slim-14298f32.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-30-bay-slim.webp",
     "productUrl": "https://www.efireplacestore.com/rem-30-bay-slim.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-30-bay-slim.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-26",
@@ -3048,11 +3570,14 @@
     "price": 1849.99,
     "salePrice": 1499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-26-4fae36c5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-26.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-26.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-26.webp"
+    ]
   },
   {
     "sku": "HLM-FE1009359",
@@ -3074,11 +3599,14 @@
     "price": 3939.99,
     "salePrice": 3199,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lpm-5616-71d37625.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lpm-5616.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lpm-5616.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lpm-5616.webp"
+    ]
   },
   {
     "sku": "DIM-C3P18LJ-2086DO",
@@ -3087,11 +3615,14 @@
     "price": 829.99,
     "salePrice": 670.22,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-c3p18lj-2086do-840d5058.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-c3p18lj-2086do.webp",
     "productUrl": "https://www.efireplacestore.com/dim-c3p18lj-2086do.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-c3p18lj-2086do.webp"
+    ]
   },
   {
     "sku": "MDF-OR52-MULTI",
@@ -3100,11 +3631,14 @@
     "price": 5899.99,
     "salePrice": 4799,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or52-multi-104b0593.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or52-multi.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or52-multi.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or52-multi.webp"
+    ]
   },
   {
     "sku": "MDF-OR100-SLIM",
@@ -3113,11 +3647,14 @@
     "price": 9229.99,
     "salePrice": 7499,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or100-slim-1eb26ac8.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or100-slim.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or100-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or100-slim.webp"
+    ]
   },
   {
     "sku": "MDF-OR100-MULTI",
@@ -3126,11 +3663,14 @@
     "price": 12299.99,
     "salePrice": 9999,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or100-multi-31b36d57.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or100-multi.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or100-multi.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or100-multi.webp"
+    ]
   },
   {
     "sku": "DIM-SWM3520",
@@ -3139,11 +3679,14 @@
     "price": 479.99,
     "salePrice": 392.19,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-swm3520-278a6944.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-swm3520.webp",
     "productUrl": "https://www.efireplacestore.com/dim-swm3520.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-swm3520.webp"
+    ]
   },
   {
     "sku": "HLM-FE9359",
@@ -3165,11 +3708,14 @@
     "price": 1589.99,
     "salePrice": 1295,
     "brand": "Empire",
-    "imageUrl": "/products/electric-fireplaces/emp-ef39-6b09f7d2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/emp-ef39.webp",
     "productUrl": "https://www.efireplacestore.com/emp-ef39.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/emp-ef39.webp"
+    ]
   },
   {
     "sku": "HLM-FE1137556",
@@ -3243,11 +3789,14 @@
     "price": 2709.99,
     "salePrice": 2199,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-34-bespoke-design-media-birch-10pce-19e84ed3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-34-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-34-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-34-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FM-26-3623-BG",
@@ -3256,11 +3805,14 @@
     "price": 2069.99,
     "salePrice": 1679,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fm-26-3623-bg-6fbe7209.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fm-26-3623-bg.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fm-26-3623-bg.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fm-26-3623-bg.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-74-BESPOKE",
@@ -3269,11 +3821,14 @@
     "price": 4059.99,
     "salePrice": 3299,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-74-bespoke-a6f28f08.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-74-bespoke.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-74-bespoke.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-74-bespoke.webp"
+    ]
   },
   {
     "sku": "HLM-FR9362",
@@ -3321,11 +3876,14 @@
     "price": 7869.99,
     "salePrice": 6399,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or54-trad-ca09c105.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or54-trad.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or54-trad.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or54-trad.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLE78",
@@ -3334,11 +3892,14 @@
     "price": 6889.99,
     "salePrice": 5599,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alle78-c247f2f6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alle78.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alle78.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alle78.webp"
+    ]
   },
   {
     "sku": "MDF-LPM-9616",
@@ -3347,11 +3908,14 @@
     "price": 6829.99,
     "salePrice": 5549,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lpm-9616-8fc53a0e.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lpm-9616.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lpm-9616.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lpm-9616.webp"
+    ]
   },
   {
     "sku": "MDF-OR42-TRAD",
@@ -3360,11 +3924,14 @@
     "price": 4669.99,
     "salePrice": 3799,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or42-trad-ca09c105.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or42-trad.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or42-trad.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or42-trad.webp"
+    ]
   },
   {
     "sku": "MDF-WMC-80LPM-RTF-LPM-8016",
@@ -3373,11 +3940,14 @@
     "price": 7689.99,
     "salePrice": 6249,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-wmc-80lpm-rtf-lpm-8016-e2534ba1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-wmc-80lpm-rtf-lpm-8016.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-wmc-80lpm-rtf-lpm-8016.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-wmc-80lpm-rtf-lpm-8016.webp"
+    ]
   },
   {
     "sku": "LST-LDFP0009US-BLK",
@@ -3399,11 +3969,14 @@
     "price": 3079.99,
     "salePrice": 2499,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-sct43-bk-78659c50.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-sct43-bk.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-sct43-bk.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-sct43-bk.webp"
+    ]
   },
   {
     "sku": "SPF-SF-TR65",
@@ -3412,11 +3985,14 @@
     "price": 4419.99,
     "salePrice": 3589,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-tr65-8495a27a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-tr65.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-tr65.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-tr65.webp"
+    ]
   },
   {
     "sku": "SPF-SF-TR78",
@@ -3425,11 +4001,14 @@
     "price": 5119.99,
     "salePrice": 4159,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-tr78-8b18f0d0.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-tr78.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-tr78.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-tr78.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLS60",
@@ -3438,11 +4017,14 @@
     "price": 2049.99,
     "salePrice": 1669,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alls60-2a123629.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alls60.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alls60.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alls60.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLE100",
@@ -3451,11 +4033,14 @@
     "price": 8729.99,
     "salePrice": 7099,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alle100-c247f2f6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alle100.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alle100.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alle100.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLE60",
@@ -3464,11 +4049,14 @@
     "price": 5509.99,
     "salePrice": 4479,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alle60-c247f2f6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alle60.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alle60.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alle60.webp"
+    ]
   },
   {
     "sku": "CMB-CAM5332-1WHTLG3",
@@ -3490,11 +4078,14 @@
     "price": 11989.99,
     "salePrice": 9749.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-136809-ae4be4a6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-136809.webp",
     "productUrl": "https://www.efireplacestore.com/dim-136809.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-136809.webp"
+    ]
   },
   {
     "sku": "DIM-500003863",
@@ -3503,11 +4094,14 @@
     "price": 2649.99,
     "salePrice": 2149.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003863-d23afae6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003863.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003863.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003863.webp"
+    ]
   },
   {
     "sku": "DIM-500003866",
@@ -3516,11 +4110,14 @@
     "price": 5169.99,
     "salePrice": 4199.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003866-9f853143.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003866.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003866.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003866.webp"
+    ]
   },
   {
     "sku": "DIM-500003151",
@@ -3529,11 +4126,14 @@
     "price": 6699.99,
     "salePrice": 5449.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003151-832ad1c1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003151.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003151.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003151.webp"
+    ]
   },
   {
     "sku": "DIM-136786",
@@ -3542,11 +4142,14 @@
     "price": 7809.99,
     "salePrice": 6349.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-136786-6952c793.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-136786.webp",
     "productUrl": "https://www.efireplacestore.com/dim-136786.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-136786.webp"
+    ]
   },
   {
     "sku": "DIM-500003050",
@@ -3555,11 +4158,14 @@
     "price": 3739.99,
     "salePrice": 3041.27,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003050-132990df.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003050.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003050.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003050.webp"
+    ]
   },
   {
     "sku": "DIM-X-XLF7417-XD",
@@ -3568,11 +4174,14 @@
     "price": 6889.99,
     "salePrice": 5599.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-x-xlf7417-xd-0f48ae42.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-x-xlf7417-xd.webp",
     "productUrl": "https://www.efireplacestore.com/dim-x-xlf7417-xd.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-x-xlf7417-xd.webp"
+    ]
   },
   {
     "sku": "DIM-500003051",
@@ -3581,11 +4190,14 @@
     "price": 4709.99,
     "salePrice": 3829.79,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003051-132990df.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003051.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003051.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003051.webp"
+    ]
   },
   {
     "sku": "DIM-500002563",
@@ -3594,11 +4206,14 @@
     "price": 6559.99,
     "salePrice": 5329.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500002563-445f96bf.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500002563.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500002563.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500002563.webp"
+    ]
   },
   {
     "sku": "DIM-500003060",
@@ -3607,11 +4222,14 @@
     "price": 7699.99,
     "salePrice": 6262.49,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003060-1dec659a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003060.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003060.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003060.webp"
+    ]
   },
   {
     "sku": "DIM-X-XLF5017-XD",
@@ -3620,11 +4238,14 @@
     "price": 5169.99,
     "salePrice": 4199.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-x-xlf5017-xd-0ac9101b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-x-xlf5017-xd.webp",
     "productUrl": "https://www.efireplacestore.com/dim-x-xlf5017-xd.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-x-xlf5017-xd.webp"
+    ]
   },
   {
     "sku": "DIM-FEF3226L2L",
@@ -3646,11 +4267,14 @@
     "price": 5639.99,
     "salePrice": 4586.39,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003049-33857e1a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003049.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003049.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003049.webp"
+    ]
   },
   {
     "sku": "DIM-136793",
@@ -3659,11 +4283,14 @@
     "price": 10739.99,
     "salePrice": 8729.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-136793-8e03ed0d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-136793.webp",
     "productUrl": "https://www.efireplacestore.com/dim-136793.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-136793.webp"
+    ]
   },
   {
     "sku": "HLM-FC1137256",
@@ -3984,11 +4611,14 @@
     "price": 2559.99,
     "salePrice": 2079,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alls72-2a123629.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alls72.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alls72.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alls72.webp"
+    ]
   },
   {
     "sku": "SPF-SF-TR50",
@@ -3997,11 +4627,14 @@
     "price": 3839.99,
     "salePrice": 3119,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-tr50-8726e91b.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-tr50.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-tr50.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-tr50.webp"
+    ]
   },
   {
     "sku": "HLM-FR1137556",
@@ -4127,11 +4760,14 @@
     "price": 8149.99,
     "salePrice": 6629,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-wmc-80lpm-esp-lpm-8016-0766fcea.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-wmc-80lpm-esp-lpm-8016.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-wmc-80lpm-esp-lpm-8016.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-wmc-80lpm-esp-lpm-8016.webp"
+    ]
   },
   {
     "sku": "HLM-FC1095859",
@@ -4179,11 +4815,14 @@
     "price": 4563.9,
     "salePrice": 4149,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefb96ab-5bc57f45.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefb96ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefb96ab.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefb96ab.webp"
+    ]
   },
   {
     "sku": "NPL-NEFL74AB",
@@ -4192,11 +4831,14 @@
     "price": 3166.9,
     "salePrice": 2879,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl74ab-ecafbadb.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl74ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl74ab.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl74ab.webp"
+    ]
   },
   {
     "sku": "SPF-SF-ALLE50",
@@ -4205,11 +4847,14 @@
     "price": 4869.99,
     "salePrice": 3959,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-fireplaces/spf-sf-alle50-c247f2f6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/spf-sf-alle50.webp",
     "productUrl": "https://www.efireplacestore.com/spf-sf-alle50.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/spf-sf-alle50.webp"
+    ]
   },
   {
     "sku": "HLM-FE1137859",
@@ -4257,11 +4902,14 @@
     "price": 5659.99,
     "salePrice": 4599,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-wmc-56lpm-rtf-lpm-5616-e2534ba1.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-wmc-56lpm-rtf-lpm-5616.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-wmc-56lpm-rtf-lpm-5616.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-wmc-56lpm-rtf-lpm-5616.webp"
+    ]
   },
   {
     "sku": "MDF-OR76-SLIM",
@@ -4270,11 +4918,14 @@
     "price": 7379.99,
     "salePrice": 5999,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-or76-slim-1eb26ac8.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-or76-slim.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-or76-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-or76-slim.webp"
+    ]
   },
   {
     "sku": "HLM-FR1080759",
@@ -4309,11 +4960,14 @@
     "price": 2495.9,
     "salePrice": 2269,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefl50ab-6dd7ddf9.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefl50ab.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefl50ab.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefl50ab.webp"
+    ]
   },
   {
     "sku": "MDF-LPM-8016",
@@ -4322,11 +4976,14 @@
     "price": 5599.99,
     "salePrice": 4549,
     "brand": "Modern",
-    "imageUrl": "/products/electric-fireplaces/mdf-lpm-8016-71d37625.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/mdf-lpm-8016.webp",
     "productUrl": "https://www.efireplacestore.com/mdf-lpm-8016.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/mdf-lpm-8016.webp"
+    ]
   },
   {
     "sku": "DIM-500003152",
@@ -4335,11 +4992,14 @@
     "price": 7689.99,
     "salePrice": 6249.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003152-df4ed844.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003152.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003152.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003152.webp"
+    ]
   },
   {
     "sku": "DIM-500003154",
@@ -4348,11 +5008,14 @@
     "price": 7959.99,
     "salePrice": 6469.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003154-f4fa63a5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003154.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003154.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003154.webp"
+    ]
   },
   {
     "sku": "HLM-FR9365",
@@ -4530,11 +5193,14 @@
     "price": 5719.99,
     "salePrice": 4649.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-500003149-c51f39bc.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-500003149.webp",
     "productUrl": "https://www.efireplacestore.com/dim-500003149.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-500003149.webp"
+    ]
   },
   {
     "sku": "ORT-E-LECTRA50",
@@ -5050,11 +5716,14 @@
     "price": 3749.99,
     "salePrice": 3044.24,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102765-xt-43476142.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102765-xt.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102765-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102765-xt.webp"
+    ]
   },
   {
     "sku": "REM-102765-DE",
@@ -5063,11 +5732,14 @@
     "price": 3619.99,
     "salePrice": 2942.63,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102765-de-a0877001.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102765-de.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102765-de.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102765-de.webp"
+    ]
   },
   {
     "sku": "REM-40-BAY-SLIM",
@@ -5076,11 +5748,14 @@
     "price": 2819.99,
     "salePrice": 2291.11,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-40-bay-slim-14298f32.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-40-bay-slim.webp",
     "productUrl": "https://www.efireplacestore.com/rem-40-bay-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-40-bay-slim.webp"
+    ]
   },
   {
     "sku": "REM-CLASSIC-SLIM-30",
@@ -5089,11 +5764,14 @@
     "price": 1779.99,
     "salePrice": 1442.99,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-classic-slim-30-78e1ee09.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-classic-slim-30.webp",
     "productUrl": "https://www.efireplacestore.com/rem-classic-slim-30.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-classic-slim-30.webp"
+    ]
   },
   {
     "sku": "REM-60-BAY-SLIM",
@@ -5102,11 +5780,14 @@
     "price": 3139.99,
     "salePrice": 2553.59,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-60-bay-slim-14298f32.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-60-bay-slim.webp",
     "productUrl": "https://www.efireplacestore.com/rem-60-bay-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-60-bay-slim.webp"
+    ]
   },
   {
     "sku": "REM-102745-DE",
@@ -5115,11 +5796,14 @@
     "price": 2739.99,
     "salePrice": 2229.12,
     "brand": "Remii",
-    "imageUrl": "/products/electric-fireplaces/rem-102745-de-9b4004be.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/rem-102745-de.webp",
     "productUrl": "https://www.efireplacestore.com/rem-102745-de.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/rem-102745-de.webp"
+    ]
   },
   {
     "sku": "CMB-CAM35WMEF-2WHT",
@@ -5193,11 +5877,14 @@
     "price": 3319.99,
     "salePrice": 2699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-50-bespoke-design-media-birch-10pce-8cb1b194.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-50-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-50-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-50-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-50-LUMINA",
@@ -5206,11 +5893,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-50-lumina-15f933d6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-50-lumina.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-50-lumina.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-50-lumina.webp"
+    ]
   },
   {
     "sku": "AMA-72-TRU-VIEW-XL",
@@ -5219,11 +5909,14 @@
     "price": 5409.99,
     "salePrice": 4399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-72-tru-view-xl-d4095861.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-72-tru-view-xl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-72-tru-view-xl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-72-tru-view-xl.webp"
+    ]
   },
   {
     "sku": "AMA-BI-40-DEEP-XT-DESIGN-MEDIA-14PCE",
@@ -5232,11 +5925,14 @@
     "price": 3909.99,
     "salePrice": 3178,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-40-deep-xt-design-media-14pce-b6e5754c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-40-deep-xt-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-40-deep-xt-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-40-deep-xt-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-34-LUMINA",
@@ -5245,11 +5941,14 @@
     "price": 2339.99,
     "salePrice": 1899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-34-lumina-15f933d6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-34-lumina.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-34-lumina.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-34-lumina.webp"
+    ]
   },
   {
     "sku": "AMA-40-TRU-VIEW-XL-DESIGN-MEDIA-14PCE",
@@ -5258,11 +5957,14 @@
     "price": 3539.99,
     "salePrice": 2878,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-40-tru-view-xl-design-media-14pce-7cacb360.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-40-tru-view-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-40-tru-view-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-40-tru-view-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "CMB-CAM5332-1WHTCRS",
@@ -5440,11 +6142,14 @@
     "price": 5999.99,
     "salePrice": 4878,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-72-trv-xt-xl-design-media-14pce-852d41a7.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-72-trv-xt-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-72-trv-xt-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-72-trv-xt-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-88-TRV-XT-XL-DESIGN-MEDIA-14PCE",
@@ -5453,11 +6158,14 @@
     "price": 6149.99,
     "salePrice": 4999,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-88-trv-xt-xl-design-media-14pce-17979c35.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-88-trv-xt-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-88-trv-xt-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-88-trv-xt-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-60-TRV-SLIM",
@@ -5466,11 +6174,14 @@
     "price": 3939.99,
     "salePrice": 3199,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-60-trv-slim-ab97073d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-60-trv-slim.webp",
     "productUrl": "https://www.efireplacestore.com/ama-60-trv-slim.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-60-trv-slim.webp"
+    ]
   },
   {
     "sku": "AMA-40-TRV-XT-XL-DESIGN-MEDIA-14PCE",
@@ -5479,11 +6190,14 @@
     "price": 4399.99,
     "salePrice": 3578,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-40-trv-xt-xl-design-media-14pce-4dae6028.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-40-trv-xt-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-40-trv-xt-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-40-trv-xt-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-WM-FM-88-10023-BG",
@@ -5492,11 +6206,14 @@
     "price": 5099.99,
     "salePrice": 4149,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-wm-fm-88-10023-bg-8fa17125.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-wm-fm-88-10023-bg.webp",
     "productUrl": "https://www.efireplacestore.com/ama-wm-fm-88-10023-bg.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-wm-fm-88-10023-bg.webp"
+    ]
   },
   {
     "sku": "AMA-BI-72-DEEP-XT-DESIGN-MEDIA-14PCE",
@@ -5505,11 +6222,14 @@
     "price": 5629.99,
     "salePrice": 4578,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-72-deep-xt-design-media-14pce-29f51044.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-72-deep-xt-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-72-deep-xt-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-72-deep-xt-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-50-XT-BESPOKE-DESIGN-MEDIA-BIRCH-15PCE",
@@ -5518,11 +6238,14 @@
     "price": 4919.99,
     "salePrice": 3999,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-50-xt-bespoke-design-media-birch-15pce-9ed7905a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-50-xt-bespoke-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-50-xt-bespoke-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-50-xt-bespoke-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "AMA-60-TRU-VIEW-XL",
@@ -5531,11 +6254,14 @@
     "price": 4549.99,
     "salePrice": 3699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-60-tru-view-xl-eba8bac5.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-60-tru-view-xl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-60-tru-view-xl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-60-tru-view-xl.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-42-LUMINA",
@@ -5544,11 +6270,14 @@
     "price": 2579.99,
     "salePrice": 2099,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-42-lumina-15f933d6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-42-lumina.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-42-lumina.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-42-lumina.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-88-XT-BESPOKE-DESIGN-MEDIA-BIRCH-15PCE",
@@ -5557,11 +6286,14 @@
     "price": 6769.99,
     "salePrice": 5499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-88-xt-bespoke-design-media-birch-15pce-9ed7905a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-88-xt-bespoke-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-88-xt-bespoke-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-88-xt-bespoke-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "AMA-50-TRV-XT-XL-DESIGN-MEDIA-14PCE",
@@ -5570,11 +6302,14 @@
     "price": 4889.99,
     "salePrice": 3978,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-50-trv-xt-xl-design-media-14pce-d8117661.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-50-trv-xt-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-50-trv-xt-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-50-trv-xt-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-50-TRV-XT-XL",
@@ -5583,11 +6318,14 @@
     "price": 4549.99,
     "salePrice": 3699,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-50-trv-xt-xl-e6670648.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-50-trv-xt-xl.webp",
     "productUrl": "https://www.efireplacestore.com/ama-50-trv-xt-xl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-50-trv-xt-xl.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-100-XT",
@@ -5596,11 +6334,14 @@
     "price": 5659.99,
     "salePrice": 4599,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-100-xt-47b7c979.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-100-xt.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-100-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-100-xt.webp"
+    ]
   },
   {
     "sku": "AMA-EVO3620",
@@ -5609,11 +6350,14 @@
     "price": 1229.99,
     "salePrice": 999,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-evo3620-448469ee.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-evo3620.webp",
     "productUrl": "https://www.efireplacestore.com/ama-evo3620.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-evo3620.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-100-XT-BESPOKE-DESIGN-MEDIA-BIRCH-15PCE",
@@ -5622,11 +6366,14 @@
     "price": 7259.99,
     "salePrice": 5899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-100-xt-bespoke-design-media-birch-15pce-9ed7905a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-100-xt-bespoke-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-100-xt-bespoke-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-100-xt-bespoke-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-74-BESPOKE-DESIGN-MEDIA-BIRCH-10PCE",
@@ -5635,11 +6382,14 @@
     "price": 4179.99,
     "salePrice": 3399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-74-bespoke-design-media-birch-10pce-056143a8.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-74-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-74-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-74-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-88-BESPOKE-DESIGN-MEDIA-BIRCH-10PCE",
@@ -5648,11 +6398,14 @@
     "price": 4669.99,
     "salePrice": 3799,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-88-bespoke-design-media-birch-10pce-4df94607.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-88-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-88-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-88-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "AMA-AMA-TRV-65-BESPOKE-DESIGN-MEDIA-14PCE",
@@ -5661,11 +6414,14 @@
     "price": 5879.99,
     "salePrice": 4778,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ama-trv-65-bespoke-design-media-14pce-147036c3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ama-trv-65-bespoke-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ama-trv-65-bespoke-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ama-trv-65-bespoke-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-72-TRU-VIEW-XL-DESIGN-MEDIA-14PCE",
@@ -5674,11 +6430,14 @@
     "price": 5409.99,
     "salePrice": 4399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-72-tru-view-xl-design-media-14pce-08983ef2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-72-tru-view-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-72-tru-view-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-72-tru-view-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-50-TRU-VIEW-XL-DESIGN-MEDIA-14PCE",
@@ -5687,11 +6446,14 @@
     "price": 4279.99,
     "salePrice": 3478,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-50-tru-view-xl-design-media-14pce-c943d054.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-50-tru-view-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-50-tru-view-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-50-tru-view-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-60-TRU-VIEW-XL-DESIGN-MEDIA-14PCE",
@@ -5700,11 +6462,14 @@
     "price": 4889.99,
     "salePrice": 3978,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-60-tru-view-xl-design-media-14pce-08983ef2.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-60-tru-view-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-60-tru-view-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-60-tru-view-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-60-TRV-XT-XL-DESIGN-MEDIA-14PCE",
@@ -5713,11 +6478,14 @@
     "price": 5409.99,
     "salePrice": 4399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-60-trv-xt-xl-design-media-14pce-0da31042.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-60-trv-xt-xl-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-60-trv-xt-xl-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-60-trv-xt-xl-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-BI-88-DEEP-XT-DESIGN-MEDIA-14PCE",
@@ -5726,11 +6494,14 @@
     "price": 6249.99,
     "salePrice": 5078,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-88-deep-xt-design-media-14pce-4a233fce.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-88-deep-xt-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-88-deep-xt-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-88-deep-xt-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-AMA-TRV-45-BESPOKE-DESIGN-MEDIA-14PCE",
@@ -5739,11 +6510,14 @@
     "price": 4529.99,
     "salePrice": 3678,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ama-trv-45-bespoke-design-media-14pce-147036c3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ama-trv-45-bespoke-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ama-trv-45-bespoke-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ama-trv-45-bespoke-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-38-SIG-DESIGN-MEDIA-BIRCH-15PCE",
@@ -5752,11 +6526,14 @@
     "price": 7259.99,
     "salePrice": 5899,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-38-sig-design-media-birch-15pce-7545c1b6.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-38-sig-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-38-sig-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-38-sig-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-42-BESPOKE-DESIGN-MEDIA-BIRCH-10PCE",
@@ -5765,11 +6542,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-42-bespoke-design-media-birch-10pce-80577caa.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-42-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-42-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-42-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "AMA-EVO4220",
@@ -5778,11 +6558,14 @@
     "price": 1349.99,
     "salePrice": 1099,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-evo4220-448469ee.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-evo4220.webp",
     "productUrl": "https://www.efireplacestore.com/ama-evo4220.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-evo4220.webp"
+    ]
   },
   {
     "sku": "AMA-BI-88-DEEP-XT",
@@ -5791,11 +6574,14 @@
     "price": 5899.99,
     "salePrice": 4799,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-88-deep-xt-e489457d.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-88-deep-xt.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-88-deep-xt.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-88-deep-xt.webp"
+    ]
   },
   {
     "sku": "AMA-EVO6020",
@@ -5804,11 +6590,14 @@
     "price": 1849.99,
     "salePrice": 1499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-evo6020-448469ee.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-evo6020.webp",
     "productUrl": "https://www.efireplacestore.com/ama-evo6020.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-evo6020.webp"
+    ]
   },
   {
     "sku": "AMA-AMA-TRV-85-BESPOKE-DESIGN-MEDIA-14PCE",
@@ -5817,11 +6606,14 @@
     "price": 6739.99,
     "salePrice": 5478,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-ama-trv-85-bespoke-design-media-14pce-147036c3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-ama-trv-85-bespoke-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ama-trv-85-bespoke-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-ama-trv-85-bespoke-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-BI-60-DEEP-XT-DESIGN-MEDIA-14PCE",
@@ -5830,11 +6622,14 @@
     "price": 5139.99,
     "salePrice": 4178,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-bi-60-deep-xt-design-media-14pce-aa1c1129.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-bi-60-deep-xt-design-media-14pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-bi-60-deep-xt-design-media-14pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-bi-60-deep-xt-design-media-14pce.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-30-BESPOKE-DESIGN-MEDIA-BIRCH-15PCE",
@@ -5843,11 +6638,14 @@
     "price": 3169.99,
     "salePrice": 2578,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-trd-30-bespoke-design-media-birch-15pce-7bb54f5c.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-trd-30-bespoke-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-30-bespoke-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-trd-30-bespoke-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-60-BESPOKE-DESIGN-MEDIA-BIRCH-10PCE",
@@ -5856,11 +6654,14 @@
     "price": 3689.99,
     "salePrice": 2999,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-60-bespoke-design-media-birch-10pce-3d828d73.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-60-bespoke-design-media-birch-10pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-60-bespoke-design-media-birch-10pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-60-bespoke-design-media-birch-10pce.webp"
+    ]
   },
   {
     "sku": "AMA-SYM-60-XT-BESPOKE-DESIGN-MEDIA-BIRCH-15PCE",
@@ -5869,11 +6670,14 @@
     "price": 5759.99,
     "salePrice": 4678,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-fireplaces/ama-sym-60-xt-bespoke-design-media-birch-15pce-9ed7905a.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/ama-sym-60-xt-bespoke-design-media-birch-15pce.webp",
     "productUrl": "https://www.efireplacestore.com/ama-sym-60-xt-bespoke-design-media-birch-15pce.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/ama-sym-60-xt-bespoke-design-media-birch-15pce.webp"
+    ]
   },
   {
     "sku": "HLM-FE1119656",
@@ -5921,11 +6725,14 @@
     "price": 1692.9,
     "salePrice": 1539,
     "brand": "Napoleon",
-    "imageUrl": "/products/electric-fireplaces/npl-nefp32-5019w-iot-623980f3.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/npl-nefp32-5019w-iot.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nefp32-5019w-iot.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/npl-nefp32-5019w-iot.webp"
+    ]
   },
   {
     "sku": "DIM-FEF3226L1",
@@ -5947,11 +6754,14 @@
     "price": 1579.99,
     "salePrice": 1284.39,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-gds26g8-1908im-f4403d11.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-gds26g8-1908im.webp",
     "productUrl": "https://www.efireplacestore.com/dim-gds26g8-1908im.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-gds26g8-1908im.webp"
+    ]
   },
   {
     "sku": "DIM-FEF3226L2R",
@@ -6025,11 +6835,14 @@
     "price": 1439.99,
     "salePrice": 1167.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-fireplaces/dim-gds26l8-1918tw-8ffcfd82.webp",
+    "imageUrl": "/products-upgraded/electric-fireplaces/dim-gds26l8-1918tw.webp",
     "productUrl": "https://www.efireplacestore.com/dim-gds26l8-1918tw.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-fireplaces/dim-gds26l8-1918tw.webp"
+    ]
   },
   {
     "sku": "DYN-DY-BFM82",

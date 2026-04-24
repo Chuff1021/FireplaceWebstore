@@ -1189,11 +1189,14 @@
     "price": 4009.99,
     "salePrice": 3259,
     "brand": "Empire",
-    "imageUrl": "/products/outdoor-fireplaces/cui-op36fp72m-0bbf8eb2.webp",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/cui-op36fp72m.webp",
     "productUrl": "https://www.efireplacestore.com/cui-op36fp72m.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/cui-op36fp72m.webp"
+    ]
   },
   {
     "sku": "CUI-OP42FP72M",
@@ -1202,11 +1205,14 @@
     "price": 4379.99,
     "salePrice": 3559,
     "brand": "Empire",
-    "imageUrl": "/products/outdoor-fireplaces/cui-op42fp72m-5dfb5e5d.webp",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/cui-op42fp72m.webp",
     "productUrl": "https://www.efireplacestore.com/cui-op42fp72m.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/cui-op42fp72m.webp"
+    ]
   },
   {
     "sku": "KGM-OFP5548S1",
@@ -1345,11 +1351,14 @@
     "price": 6345.9,
     "salePrice": 5769,
     "brand": "Napoleon",
-    "imageUrl": "/products/outdoor-fireplaces/npl-gss42cfn-d706e0dc.webp",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/npl-gss42cfn.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gss42cfn.html",
     "rating": 5,
     "reviewCount": 9,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/npl-gss42cfn.webp"
+    ]
   },
   {
     "sku": "AMA-TRD-38",
@@ -1462,11 +1471,14 @@
     "price": 6669.99,
     "salePrice": 5419,
     "brand": "Superior",
-    "imageUrl": "/products/outdoor-fireplaces/sup-vre4550wh-5a605356.webp",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/sup-vre4550wh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-vre4550wh.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/sup-vre4550wh.webp"
+    ]
   },
   {
     "sku": "FRK-01FR0742",
@@ -1579,11 +1591,14 @@
     "price": 2679.99,
     "salePrice": 2179,
     "brand": "Superior",
-    "imageUrl": "/products/outdoor-fireplaces/sup-vre4236wh-f8cfa144.webp",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/sup-vre4236wh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-vre4236wh.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/sup-vre4236wh.webp"
+    ]
   },
   {
     "sku": "AMA-BI-60-SLIM-OD",
@@ -1774,11 +1789,14 @@
     "price": 3259.99,
     "salePrice": 2649,
     "brand": "Superior",
-    "imageUrl": "/products/outdoor-fireplaces/sup-vre4242ws-f8cfa144.webp",
+    "imageUrl": "/products-upgraded/outdoor-fireplaces/sup-vre4242ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-vre4242ws.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/outdoor-fireplaces/sup-vre4242ws.webp"
+    ]
   },
   {
     "sku": "KGM-OFP4336S2",

@@ -58,11 +58,14 @@
     "price": 1229.99,
     "salePrice": 998.99,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-inserts/dim-xhd33g-a462a4fa.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/dim-xhd33g.webp",
     "productUrl": "https://www.efireplacestore.com/dim-xhd33g.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/dim-xhd33g.webp"
+    ]
   },
   {
     "sku": "SPF-GI-32-ZC",
@@ -71,11 +74,14 @@
     "price": 919.99,
     "salePrice": 749,
     "brand": "Simplifire",
-    "imageUrl": "/products/electric-inserts/spf-gi-32-zc-cada6d7f.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/spf-gi-32-zc.webp",
     "productUrl": "https://www.efireplacestore.com/spf-gi-32-zc.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/spf-gi-32-zc.webp"
+    ]
   },
   {
     "sku": "DPX-DFI2310",
@@ -84,11 +90,14 @@
     "price": 809.99,
     "salePrice": 660.65,
     "brand": "Dimplex",
-    "imageUrl": "/products/electric-inserts/dpx-dfi2310-ebad73d2.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/dpx-dfi2310.webp",
     "productUrl": "https://www.efireplacestore.com/dpx-dfi2310.html",
     "rating": 4.8,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/dpx-dfi2310.webp"
+    ]
   },
   {
     "sku": "DYN-DY-FI40D",
@@ -110,11 +119,14 @@
     "price": 3199.99,
     "salePrice": 2599,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-inserts/ama-ins-fm-34-200bb023.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-ins-fm-34.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ins-fm-34.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-ins-fm-34.webp"
+    ]
   },
   {
     "sku": "DYN-DY-FI35D",
@@ -136,11 +148,14 @@
     "price": 1849.99,
     "salePrice": 1499,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-inserts/ama-trd-26-i-2f0282fc.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-trd-26-i.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-26-i.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-trd-26-i.webp"
+    ]
   },
   {
     "sku": "LDH-ZEF38VC",
@@ -188,11 +203,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-inserts/ama-trd-38-i-7c81a544.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-trd-38-i.webp",
     "productUrl": "https://www.efireplacestore.com/ama-trd-38-i.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-trd-38-i.webp"
+    ]
   },
   {
     "sku": "AMA-INS-FM-30",
@@ -201,11 +219,14 @@
     "price": 2949.99,
     "salePrice": 2399,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-inserts/ama-ins-fm-30-07a8c475.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-ins-fm-30.webp",
     "productUrl": "https://www.efireplacestore.com/ama-ins-fm-30.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-ins-fm-30.webp"
+    ]
   },
   {
     "sku": "LDH-ZEF38VCII",
@@ -240,11 +261,14 @@
     "price": 2079.99,
     "salePrice": 1688,
     "brand": "Amantii",
-    "imageUrl": "/products/electric-inserts/ama-zecl-31-3228-stl-i-arch-584072f5.webp",
+    "imageUrl": "/products-upgraded/electric-inserts/ama-zecl-31-3228-stl-i-arch.webp",
     "productUrl": "https://www.efireplacestore.com/ama-zecl-31-3228-stl-i-arch.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/electric-inserts/ama-zecl-31-3228-stl-i-arch.webp"
+    ]
   },
   {
     "sku": "SPF-SF-INS35-SD",

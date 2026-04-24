@@ -97,11 +97,14 @@
     "price": 4509.99,
     "salePrice": 3669,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp20cc70bn-38f77bfc.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20cc70bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp20cc70bn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20cc70bn.webp"
+    ]
   },
   {
     "sku": "EMP-DVP20CC30BN",
@@ -110,11 +113,14 @@
     "price": 4159.99,
     "salePrice": 3379,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp20cc30bn-accf5980.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20cc30bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp20cc30bn.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20cc30bn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD10CC30BN",
@@ -123,11 +129,14 @@
     "price": 3039.99,
     "salePrice": 2469,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd10cc30bn-95a6e6da.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd10cc30bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd10cc30bn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd10cc30bn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD20CC30BN",
@@ -136,11 +145,14 @@
     "price": 3099.99,
     "salePrice": 2519,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd20cc30bn-5be96eb8.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20cc30bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd20cc30bn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20cc30bn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD20CC70BN",
@@ -149,11 +161,14 @@
     "price": 3269.99,
     "salePrice": 2659,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd20cc70bn-95a6e6da.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20cc70bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd20cc70bn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20cc70bn.webp"
+    ]
   },
   {
     "sku": "EMP-DVP30CC70BN",
@@ -162,11 +177,14 @@
     "price": 4909.99,
     "salePrice": 3989,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp30cc70bn-38f77bfc.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30cc70bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp30cc70bn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30cc70bn.webp"
+    ]
   },
   {
     "sku": "EMP-DVP30CC30BN",
@@ -175,11 +193,14 @@
     "price": 4649.99,
     "salePrice": 3779,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp30cc30bn-accf5980.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30cc30bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp30cc30bn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30cc30bn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD30CC30BN",
@@ -188,11 +209,14 @@
     "price": 3429.99,
     "salePrice": 2789,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd30cc30bn-5be96eb8.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30cc30bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd30cc30bn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30cc30bn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD30CC70BN",
@@ -201,11 +225,14 @@
     "price": 3589.99,
     "salePrice": 2919,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd30cc70bn-95a6e6da.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30cc70bn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd30cc70bn.html",
     "rating": 5,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30cc70bn.webp"
+    ]
   },
   {
     "sku": "EMP-HRSQ25MVL",
@@ -214,11 +241,14 @@
     "price": 1269.99,
     "salePrice": 1034.41,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-hrsq25mvl-e5c7edc4.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-hrsq25mvl.webp",
     "productUrl": "https://www.efireplacestore.com/emp-hrsq25mvl.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-hrsq25mvl.webp"
+    ]
   },
   {
     "sku": "EMP-DVP30MS30FN",
@@ -227,11 +257,14 @@
     "price": 3369.99,
     "salePrice": 2739,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp30ms30fn-09481b5a.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30ms30fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp30ms30fn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30ms30fn.webp"
+    ]
   },
   {
     "sku": "EMP-DVP30MS70FN",
@@ -240,11 +273,14 @@
     "price": 3519.99,
     "salePrice": 2859,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp30ms70fn-09481b5a.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp30ms70fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp30ms70fn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp30ms70fn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD30MS70FN",
@@ -253,11 +289,14 @@
     "price": 2599.99,
     "salePrice": 2109,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd30ms70fn-2804ee7a.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30ms70fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd30ms70fn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30ms70fn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD30MS30FN",
@@ -266,11 +305,14 @@
     "price": 2439.99,
     "salePrice": 1979,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd30ms30fn-d1082b20.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd30ms30fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd30ms30fn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd30ms30fn.webp"
+    ]
   },
   {
     "sku": "EMP-DVP20MS70FN",
@@ -279,11 +321,14 @@
     "price": 3489.99,
     "salePrice": 2839,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp20ms70fn-09481b5a.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20ms70fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp20ms70fn.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20ms70fn.webp"
+    ]
   },
   {
     "sku": "EMP-DVP20MS30FN",
@@ -292,11 +337,14 @@
     "price": 3319.99,
     "salePrice": 2699,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-dvp20ms30fn-09481b5a.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-dvp20ms30fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvp20ms30fn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-dvp20ms30fn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD20MS70FN",
@@ -305,11 +353,14 @@
     "price": 2509.99,
     "salePrice": 2039,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd20ms70fn-14281b17.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20ms70fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd20ms70fn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20ms70fn.webp"
+    ]
   },
   {
     "sku": "EMP-VFD20MS30FN",
@@ -318,11 +369,14 @@
     "price": 2369.99,
     "salePrice": 1929,
     "brand": "Empire",
-    "imageUrl": "/products/gas-stoves/emp-vfd20ms30fn-14281b17.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/emp-vfd20ms30fn.webp",
     "productUrl": "https://www.efireplacestore.com/emp-vfd20ms30fn.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/emp-vfd20ms30fn.webp"
+    ]
   },
   {
     "sku": "KGM-FDV451NE",
@@ -435,11 +489,14 @@
     "price": 3353.9,
     "salePrice": 3049,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds20-2956c040.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds20.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds20.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds20.webp"
+    ]
   },
   {
     "sku": "NPL-GDS25",
@@ -448,11 +505,14 @@
     "price": 4882.9,
     "salePrice": 4439,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds25-074c7857.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds25.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds25.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds25.webp"
+    ]
   },
   {
     "sku": "NPL-GDS60",
@@ -461,11 +521,14 @@
     "price": 5267.9,
     "salePrice": 4789,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds60-921aecbb.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds60.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds60.html",
     "rating": 4.5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds60.webp"
+    ]
   },
   {
     "sku": "NPL-GDS50",
@@ -474,11 +537,14 @@
     "price": 4882.9,
     "salePrice": 4439,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds50-e94bc683.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds50.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds50.html",
     "rating": 5,
     "reviewCount": 8,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds50.webp"
+    ]
   },
   {
     "sku": "NPL-GDS28-1NE",
@@ -487,11 +553,14 @@
     "price": 4123.9,
     "salePrice": 3749,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds28-1ne-82d4c88d.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds28-1ne.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds28-1ne.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds28-1ne.webp"
+    ]
   },
   {
     "sku": "NPL-GDS28-1NSB",
@@ -500,11 +569,14 @@
     "price": 4002.9,
     "salePrice": 3639,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds28-1nsb-82d4c88d.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds28-1nsb.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds28-1nsb.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds28-1nsb.webp"
+    ]
   },
   {
     "sku": "NPL-GDS50-1NE",
@@ -513,11 +585,14 @@
     "price": 4882.9,
     "salePrice": 4439,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-stoves/npl-gds50-1ne-466d7a11.webp",
+    "imageUrl": "/products-upgraded/gas-stoves/npl-gds50-1ne.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gds50-1ne.html",
     "rating": 5,
     "reviewCount": 8,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-stoves/npl-gds50-1ne.webp"
+    ]
   },
   {
     "sku": "TNS-TN24-BODYA",

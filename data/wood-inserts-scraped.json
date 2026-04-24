@@ -214,11 +214,14 @@
     "price": 3729.99,
     "salePrice": 3029,
     "brand": "Empire",
-    "imageUrl": "/products/wood-inserts/ems-wb17in-8b65b43d.webp",
+    "imageUrl": "/products-upgraded/wood-inserts/ems-wb17in.webp",
     "productUrl": "https://www.efireplacestore.com/ems-wb17in.html",
     "rating": 4.8,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-inserts/ems-wb17in.webp"
+    ]
   },
   {
     "sku": "OSB-OB02045",
@@ -240,11 +243,14 @@
     "price": 4059.99,
     "salePrice": 3299,
     "brand": "Empire",
-    "imageUrl": "/products/wood-inserts/ems-wb23in-4b6925ac.webp",
+    "imageUrl": "/products-upgraded/wood-inserts/ems-wb23in.webp",
     "productUrl": "https://www.efireplacestore.com/ems-wb23in.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-inserts/ems-wb23in.webp"
+    ]
   },
   {
     "sku": "ESW-ESW0009",

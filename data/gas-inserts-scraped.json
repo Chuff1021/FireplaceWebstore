@@ -6,11 +6,14 @@
     "price": 3749.99,
     "salePrice": 3049,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-ruby30in-9a1628a9.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-ruby30in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-ruby30in.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-ruby30in.webp"
+    ]
   },
   {
     "sku": "MON-VFI33LNV",
@@ -32,11 +35,14 @@
     "price": 3529.99,
     "salePrice": 2869,
     "brand": "Superior",
-    "imageUrl": "/products/gas-inserts/sup-dri2027ten-fd9b4de4.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/sup-dri2027ten.webp",
     "productUrl": "https://www.efireplacestore.com/sup-dri2027ten.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/sup-dri2027ten.webp"
+    ]
   },
   {
     "sku": "MAJ-RUBY35IN",
@@ -45,11 +51,14 @@
     "price": 3909.99,
     "salePrice": 3179,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-ruby35in-9a1628a9.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-ruby35in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-ruby35in.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-ruby35in.webp"
+    ]
   },
   {
     "sku": "MAJ-JASPER30IN",
@@ -58,11 +67,14 @@
     "price": 2789.99,
     "salePrice": 2269,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-jasper30in-37c6f48a.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-jasper30in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-jasper30in.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-jasper30in.webp"
+    ]
   },
   {
     "sku": "EMP-VFPC20IN73N",
@@ -97,11 +109,14 @@
     "price": 4189.99,
     "salePrice": 3409,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-trilliant30in-a6f825b0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-trilliant30in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-trilliant30in.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-trilliant30in.webp"
+    ]
   },
   {
     "sku": "MON-VFI33LNI",
@@ -136,11 +151,14 @@
     "price": 3529.99,
     "salePrice": 2869,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-ruby25in-9a1628a9.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-ruby25in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-ruby25in.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-ruby25in.webp"
+    ]
   },
   {
     "sku": "MAJ-TRILLIANT35IN",
@@ -149,11 +167,14 @@
     "price": 4369.99,
     "salePrice": 3549,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-trilliant35in-a6f825b0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-trilliant35in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-trilliant35in.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-trilliant35in.webp"
+    ]
   },
   {
     "sku": "EMP-VFPC20IN33N",
@@ -175,11 +196,14 @@
     "price": 3869.99,
     "salePrice": 3149,
     "brand": "Superior",
-    "imageUrl": "/products/gas-inserts/sup-dri2032ten-fd9b4de4.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/sup-dri2032ten.webp",
     "productUrl": "https://www.efireplacestore.com/sup-dri2032ten.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/sup-dri2032ten.webp"
+    ]
   },
   {
     "sku": "EMP-VFLC28IN72N",
@@ -201,11 +225,14 @@
     "price": 4277.9,
     "salePrice": 3889,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-inserts/npl-gdizc-2118f40b.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/npl-gdizc.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gdizc.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/npl-gdizc.webp"
+    ]
   },
   {
     "sku": "CUI-DVC26IN71N",
@@ -214,11 +241,14 @@
     "price": 3839.99,
     "salePrice": 3119,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/cui-dvc26in71n-415fd4f0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/cui-dvc26in71n.webp",
     "productUrl": "https://www.efireplacestore.com/cui-dvc26in71n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/cui-dvc26in71n.webp"
+    ]
   },
   {
     "sku": "EMP-VFPC28IN73N",
@@ -292,11 +322,14 @@
     "price": 3919.99,
     "salePrice": 3189,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/cui-dvc28in31n-415fd4f0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/cui-dvc28in31n.webp",
     "productUrl": "https://www.efireplacestore.com/cui-dvc28in31n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/cui-dvc28in31n.webp"
+    ]
   },
   {
     "sku": "CUI-DVC26IN31N",
@@ -305,11 +338,14 @@
     "price": 3529.99,
     "salePrice": 2869,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/cui-dvc26in31n-415fd4f0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/cui-dvc26in31n.webp",
     "productUrl": "https://www.efireplacestore.com/cui-dvc26in31n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/cui-dvc26in31n.webp"
+    ]
   },
   {
     "sku": "CUI-DVC28IN71N",
@@ -318,11 +354,14 @@
     "price": 4259.99,
     "salePrice": 3459,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/cui-dvc28in71n-415fd4f0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/cui-dvc28in71n.webp",
     "productUrl": "https://www.efireplacestore.com/cui-dvc28in71n.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/cui-dvc28in71n.webp"
+    ]
   },
   {
     "sku": "EMP-VFLC10IN32N",
@@ -409,11 +448,14 @@
     "price": 3958.9,
     "salePrice": 3599,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-inserts/npl-gdix4n-e7795512.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/npl-gdix4n.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gdix4n.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/npl-gdix4n.webp"
+    ]
   },
   {
     "sku": "CUI-DVC20IN31N",
@@ -422,11 +464,14 @@
     "price": 3319.99,
     "salePrice": 2699,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/cui-dvc20in31n-415fd4f0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/cui-dvc20in31n.webp",
     "productUrl": "https://www.efireplacestore.com/cui-dvc20in31n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/cui-dvc20in31n.webp"
+    ]
   },
   {
     "sku": "CUI-DVC20IN71N",
@@ -435,11 +480,14 @@
     "price": 3639.99,
     "salePrice": 2959,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/cui-dvc20in71n-415fd4f0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/cui-dvc20in71n.webp",
     "productUrl": "https://www.efireplacestore.com/cui-dvc20in71n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/cui-dvc20in71n.webp"
+    ]
   },
   {
     "sku": "KGM-IDV26N",
@@ -474,11 +522,14 @@
     "price": 5779.99,
     "salePrice": 4699,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/emp-dvct35cbn95n-521670c7.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/emp-dvct35cbn95n.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvct35cbn95n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/emp-dvct35cbn95n.webp"
+    ]
   },
   {
     "sku": "NPL-GDIX3N",
@@ -487,11 +538,14 @@
     "price": 3573.9,
     "salePrice": 3249,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-inserts/npl-gdix3n-c299f705.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/npl-gdix3n.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gdix3n.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/npl-gdix3n.webp"
+    ]
   },
   {
     "sku": "EMP-VFLC20IN72N",
@@ -513,11 +567,14 @@
     "price": 3243.9,
     "salePrice": 2949,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-inserts/npl-gdi3n-03c1232f.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/npl-gdi3n.webp",
     "productUrl": "https://www.efireplacestore.com/npl-gdi3n.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/npl-gdi3n.webp"
+    ]
   },
   {
     "sku": "SFL-ABBOT-30PG-DELUXE-NG",
@@ -539,11 +596,14 @@
     "price": 5249.99,
     "salePrice": 4265,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/emp-dvct30cbn95n-0a6b9687.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/emp-dvct30cbn95n.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvct30cbn95n.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/emp-dvct30cbn95n.webp"
+    ]
   },
   {
     "sku": "EMP-DVCP34BN91N",
@@ -552,11 +612,14 @@
     "price": 5039.99,
     "salePrice": 4099,
     "brand": "Empire",
-    "imageUrl": "/products/gas-inserts/emp-dvcp34bn91n-9b3fed30.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/emp-dvcp34bn91n.webp",
     "productUrl": "https://www.efireplacestore.com/emp-dvcp34bn91n.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/emp-dvcp34bn91n.webp"
+    ]
   },
   {
     "sku": "MAJ-RUBYP30IL",
@@ -565,11 +628,14 @@
     "price": 4399.99,
     "salePrice": 3579,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-rubyp30il-c323e2aa.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-rubyp30il.webp",
     "productUrl": "https://www.efireplacestore.com/maj-rubyp30il.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-rubyp30il.webp"
+    ]
   },
   {
     "sku": "MAJ-RUBYP30IN-BIR",
@@ -578,11 +644,14 @@
     "price": 4659.99,
     "salePrice": 3789,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-rubyp30in-bir-c323e2aa.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-rubyp30in-bir.webp",
     "productUrl": "https://www.efireplacestore.com/maj-rubyp30in-bir.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-rubyp30in-bir.webp"
+    ]
   },
   {
     "sku": "MAJ-TRILLIANT25IN",
@@ -591,11 +660,14 @@
     "price": 3999.99,
     "salePrice": 3249,
     "brand": "Majestic",
-    "imageUrl": "/products/gas-inserts/maj-trilliant25in-a6f825b0.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/maj-trilliant25in.webp",
     "productUrl": "https://www.efireplacestore.com/maj-trilliant25in.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/maj-trilliant25in.webp"
+    ]
   },
   {
     "sku": "INS-MPI34-B",
@@ -643,11 +715,14 @@
     "price": 3298.9,
     "salePrice": 2999,
     "brand": "Napoleon",
-    "imageUrl": "/products/gas-inserts/npl-rd3n-f5cedf59.webp",
+    "imageUrl": "/products-upgraded/gas-inserts/npl-rd3n.webp",
     "productUrl": "https://www.efireplacestore.com/npl-rd3n.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/npl-rd3n.webp"
+    ]
   },
   {
     "sku": "KGM-IDV26LPE",

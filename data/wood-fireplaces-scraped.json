@@ -6,11 +6,14 @@
     "price": 1389.99,
     "salePrice": 1129,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct2036wsi-88420bf3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct2036wsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct2036wsi.html",
     "rating": 4.3,
     "reviewCount": 3,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct2036wsi.webp"
+    ]
   },
   {
     "sku": "SUP-WRT2036WSI",
@@ -19,11 +22,14 @@
     "price": 1319.99,
     "salePrice": 1069,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt2036wsi-4dc333f3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt2036wsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt2036wsi.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt2036wsi.webp"
+    ]
   },
   {
     "sku": "SUP-WCT2042WSI",
@@ -32,11 +38,14 @@
     "price": 1599.99,
     "salePrice": 1299,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct2042wsi-4dc333f3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct2042wsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct2042wsi.html",
     "rating": 4.7,
     "reviewCount": 3,
-    "isBestSeller": true
+    "isBestSeller": true,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct2042wsi.webp"
+    ]
   },
   {
     "sku": "OSB-OB04007",
@@ -71,11 +80,14 @@
     "price": 1559.99,
     "salePrice": 1269,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-be36-34f90422.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-be36.webp",
     "productUrl": "https://www.efireplacestore.com/maj-be36.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-be36.webp"
+    ]
   },
   {
     "sku": "SUP-WCT3042WSI",
@@ -84,11 +96,14 @@
     "price": 2019.99,
     "salePrice": 1639,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct3042wsi-130ae110.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct3042wsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct3042wsi.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct3042wsi.webp"
+    ]
   },
   {
     "sku": "ODL-ODVILLA-42H",
@@ -110,11 +125,14 @@
     "price": 2549.99,
     "salePrice": 2069,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sa42c-e405630a.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sa42c.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sa42c.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sa42c.webp"
+    ]
   },
   {
     "sku": "VAL-FP15A",
@@ -136,11 +154,14 @@
     "price": 3829.99,
     "salePrice": 3109,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sb80-2b26c078.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sb80.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sb80.html",
     "rating": 4.5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sb80.webp"
+    ]
   },
   {
     "sku": "MAJ-BE42",
@@ -149,11 +170,14 @@
     "price": 2399.99,
     "salePrice": 1949,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-be42-34f90422.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-be42.webp",
     "productUrl": "https://www.efireplacestore.com/maj-be42.html",
     "rating": 4.8,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-be42.webp"
+    ]
   },
   {
     "sku": "SUP-WRT2042WSI",
@@ -162,11 +186,14 @@
     "price": 1539.99,
     "salePrice": 1249,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt2042wsi-4dc333f3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt2042wsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt2042wsi.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt2042wsi.webp"
+    ]
   },
   {
     "sku": "MSL-MFP44",
@@ -227,11 +254,14 @@
     "price": 1939.99,
     "salePrice": 1579,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3042rsi-659e4fa6.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3042rsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3042rsi.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3042rsi.webp"
+    ]
   },
   {
     "sku": "MAJ-SB60",
@@ -240,11 +270,14 @@
     "price": 2849.99,
     "salePrice": 2319,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sb60-2b26c078.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sb60.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sb60.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sb60.webp"
+    ]
   },
   {
     "sku": "MAJ-DSR42",
@@ -253,11 +286,14 @@
     "price": 4939.99,
     "salePrice": 4019,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-dsr42-4c4ec601.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-dsr42.webp",
     "productUrl": "https://www.efireplacestore.com/maj-dsr42.html",
     "rating": 4.8,
     "reviewCount": 4,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-dsr42.webp"
+    ]
   },
   {
     "sku": "STA-SA-36CN",
@@ -292,11 +328,14 @@
     "price": 1969.99,
     "salePrice": 1599,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sa36c-e405630a.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sa36c.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sa36c.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sa36c.webp"
+    ]
   },
   {
     "sku": "SUP-WRE3042WS",
@@ -305,11 +344,14 @@
     "price": 4269.99,
     "salePrice": 3469,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wre3042ws-25ed9e25.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wre3042ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wre3042ws.html",
     "rating": 5,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wre3042ws.webp"
+    ]
   },
   {
     "sku": "SUP-WCT3036RSI",
@@ -318,11 +360,14 @@
     "price": 1809.99,
     "salePrice": 1469,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct3036rsi-1dd230c7.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct3036rsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct3036rsi.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct3036rsi.webp"
+    ]
   },
   {
     "sku": "SUP-WRT4542RH",
@@ -331,11 +376,14 @@
     "price": 4779.99,
     "salePrice": 3889,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt4542rh-38006bc3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt4542rh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt4542rh.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt4542rh.webp"
+    ]
   },
   {
     "sku": "VAL-FP12R",
@@ -370,11 +418,14 @@
     "price": 5359.99,
     "salePrice": 4359,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt4550rh-38006bc3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt4550rh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt4550rh.html",
     "rating": 4,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt4550rh.webp"
+    ]
   },
   {
     "sku": "VAL-FP15",
@@ -487,11 +538,14 @@
     "price": 9189.99,
     "salePrice": 7469,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct6940ws-2450488e.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct6940ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct6940ws.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct6940ws.webp"
+    ]
   },
   {
     "sku": "CUI-WRE4550RS",
@@ -500,11 +554,14 @@
     "price": 7239.99,
     "salePrice": 5889,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/cui-wre4550rs-dc7edbe2.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/cui-wre4550rs.webp",
     "productUrl": "https://www.efireplacestore.com/cui-wre4550rs.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/cui-wre4550rs.webp"
+    ]
   },
   {
     "sku": "VNT-VB00015",
@@ -526,11 +583,14 @@
     "price": 2549.99,
     "salePrice": 2069,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sa42r-f65d4065.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sa42r.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sa42r.html",
     "rating": 4.3,
     "reviewCount": 3,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sa42r.webp"
+    ]
   },
   {
     "sku": "OSB-OB04016",
@@ -552,11 +612,14 @@
     "price": 4439.99,
     "salePrice": 3609,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt6036-1df34b26.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt6036.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt6036.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt6036.webp"
+    ]
   },
   {
     "sku": "SUP-WRT8048",
@@ -565,11 +628,14 @@
     "price": 5969.99,
     "salePrice": 4849,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt8048-c378f4de.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt8048.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt8048.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt8048.webp"
+    ]
   },
   {
     "sku": "SUP-WRT6050",
@@ -578,11 +644,14 @@
     "price": 5089.99,
     "salePrice": 4139,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt6050-1df34b26.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt6050.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt6050.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt6050.webp"
+    ]
   },
   {
     "sku": "FRK-01FR0330",
@@ -656,11 +725,14 @@
     "price": 3099.99,
     "salePrice": 2519,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wre3036rh-25ed9e25.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wre3036rh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wre3036rh.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wre3036rh.webp"
+    ]
   },
   {
     "sku": "SUP-WRT3036RSI",
@@ -669,11 +741,14 @@
     "price": 1749.99,
     "salePrice": 1419,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3036rsi-659e4fa6.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3036rsi.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3036rsi.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3036rsi.webp"
+    ]
   },
   {
     "sku": "MAJ-SB100",
@@ -682,11 +757,14 @@
     "price": 5519.99,
     "salePrice": 4489,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sb100-2b26c078.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sb100.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sb100.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sb100.webp"
+    ]
   },
   {
     "sku": "SUP-WRT3538WS",
@@ -695,11 +773,14 @@
     "price": 3679.99,
     "salePrice": 2989,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3538ws-d48546ab.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3538ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3538ws.html",
     "rating": 5,
     "reviewCount": 2,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3538ws.webp"
+    ]
   },
   {
     "sku": "CUI-WRE4536RS",
@@ -708,11 +789,14 @@
     "price": 6779.99,
     "salePrice": 5509,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/cui-wre4536rs-d5de72f9.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/cui-wre4536rs.webp",
     "productUrl": "https://www.efireplacestore.com/cui-wre4536rs.html",
     "rating": 4,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/cui-wre4536rs.webp"
+    ]
   },
   {
     "sku": "MAJ-SA36R",
@@ -721,11 +805,14 @@
     "price": 1969.99,
     "salePrice": 1599,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-sa36r-424786e3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-sa36r.webp",
     "productUrl": "https://www.efireplacestore.com/maj-sa36r.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-sa36r.webp"
+    ]
   },
   {
     "sku": "FRK-01FR1042",
@@ -877,11 +964,14 @@
     "price": 4609.99,
     "salePrice": 3749,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt6042-44f807e8.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt6042.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt6042.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt6042.webp"
+    ]
   },
   {
     "sku": "FRK-01FR0736",
@@ -955,11 +1045,14 @@
     "price": 4169.99,
     "salePrice": 3389,
     "brand": "Empire",
-    "imageUrl": "/products/wood-fireplaces/emp-wb54fb0f-fde0276a.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/emp-wb54fb0f.webp",
     "productUrl": "https://www.efireplacestore.com/emp-wb54fb0f.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/emp-wb54fb0f.webp"
+    ]
   },
   {
     "sku": "ODL-ODCTGWD-36",
@@ -1020,11 +1113,14 @@
     "price": 6459.99,
     "salePrice": 5249,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3920ws-8b94a7f3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3920ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3920ws.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3920ws.webp"
+    ]
   },
   {
     "sku": "SUP-WRE4542RS",
@@ -1033,11 +1129,14 @@
     "price": 6889.99,
     "salePrice": 5599,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wre4542rs-59a9dec3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wre4542rs.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wre4542rs.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wre4542rs.webp"
+    ]
   },
   {
     "sku": "SUP-WRT4536RH",
@@ -1046,11 +1145,14 @@
     "price": 4639.99,
     "salePrice": 3769,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt4536rh-38006bc3.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt4536rh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt4536rh.html",
     "rating": 5,
     "reviewCount": 1,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt4536rh.webp"
+    ]
   },
   {
     "sku": "SUP-WRT3543WS",
@@ -1059,11 +1161,14 @@
     "price": 3949.99,
     "salePrice": 3209,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3543ws-d48546ab.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3543ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3543ws.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3543ws.webp"
+    ]
   },
   {
     "sku": "SUP-WRT3543WH",
@@ -1072,11 +1177,14 @@
     "price": 4069.99,
     "salePrice": 3309,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3543wh-d48546ab.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3543wh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3543wh.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3543wh.webp"
+    ]
   },
   {
     "sku": "MAJ-ODCASTLEWD-42",
@@ -1085,11 +1193,14 @@
     "price": 3999.99,
     "salePrice": 3249,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-odcastlewd-42-2bf3b1bc.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-odcastlewd-42.webp",
     "productUrl": "https://www.efireplacestore.com/maj-odcastlewd-42.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-odcastlewd-42.webp"
+    ]
   },
   {
     "sku": "NPL-NZ5000-T",
@@ -1098,11 +1209,14 @@
     "price": 7148.9,
     "salePrice": 6499,
     "brand": "Napoleon",
-    "imageUrl": "/products/wood-fireplaces/npl-nz5000-t-3f5d6ab2.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/npl-nz5000-t.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nz5000-t.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/npl-nz5000-t.webp"
+    ]
   },
   {
     "sku": "MAJ-ASH42",
@@ -1111,11 +1225,14 @@
     "price": 4849.99,
     "salePrice": 3939,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-ash42-7efb5890.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-ash42.webp",
     "productUrl": "https://www.efireplacestore.com/maj-ash42.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-ash42.webp"
+    ]
   },
   {
     "sku": "FRK-01FR1242",
@@ -1163,11 +1280,14 @@
     "price": 4189.99,
     "salePrice": 3409,
     "brand": "Majestic",
-    "imageUrl": "/products/wood-fireplaces/maj-ash36-44f8f048.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/maj-ash36.webp",
     "productUrl": "https://www.efireplacestore.com/maj-ash36.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/maj-ash36.webp"
+    ]
   },
   {
     "sku": "SUP-WRT3538WH",
@@ -1176,11 +1296,14 @@
     "price": 3799.99,
     "salePrice": 3089,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wrt3538wh-d48546ab.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wrt3538wh.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wrt3538wh.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wrt3538wh.webp"
+    ]
   },
   {
     "sku": "ODL-ODCTGWD-42",
@@ -1215,11 +1338,14 @@
     "price": 6459.99,
     "salePrice": 5249,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct6920ws-56f16a5d.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct6920ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct6920ws.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct6920ws.webp"
+    ]
   },
   {
     "sku": "FRK-01FR1036",
@@ -1267,11 +1393,14 @@
     "price": 17488.9,
     "salePrice": 15899,
     "brand": "Napoleon",
-    "imageUrl": "/products/wood-fireplaces/npl-nz8000-81562b9b.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/npl-nz8000.webp",
     "productUrl": "https://www.efireplacestore.com/npl-nz8000.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/npl-nz8000.webp"
+    ]
   },
   {
     "sku": "STA-NA48",
@@ -1319,11 +1448,14 @@
     "price": 6129.99,
     "salePrice": 4979,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wre6042-6ba29183.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wre6042.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wre6042.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wre6042.webp"
+    ]
   },
   {
     "sku": "FRK-01FR0530",
@@ -1358,11 +1490,14 @@
     "price": 6449.99,
     "salePrice": 5239,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wre6050-6ba29183.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wre6050.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wre6050.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wre6050.webp"
+    ]
   },
   {
     "sku": "DRO-DE00401",
@@ -1410,11 +1545,14 @@
     "price": 6329.99,
     "salePrice": 5149,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wct4920ws-60b4d8fd.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wct4920ws.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wct4920ws.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wct4920ws.webp"
+    ]
   },
   {
     "sku": "MSL-MFP44-14",
@@ -1540,11 +1678,14 @@
     "price": 6089.99,
     "salePrice": 4949,
     "brand": "Empire",
-    "imageUrl": "/products/wood-fireplaces/ems-wb30fp-57b0b29a.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/ems-wb30fp.webp",
     "productUrl": "https://www.efireplacestore.com/ems-wb30fp.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/ems-wb30fp.webp"
+    ]
   },
   {
     "sku": "VAL-FP10RSK",
@@ -1566,11 +1707,14 @@
     "price": 6679.99,
     "salePrice": 5429,
     "brand": "Empire",
-    "imageUrl": "/products/wood-fireplaces/ems-wb43fp-57b0b29a.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/ems-wb43fp.webp",
     "productUrl": "https://www.efireplacestore.com/ems-wb43fp.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/ems-wb43fp.webp"
+    ]
   },
   {
     "sku": "EMP-WB36FB0F",
@@ -1579,11 +1723,14 @@
     "price": 3699.99,
     "salePrice": 3009,
     "brand": "Empire",
-    "imageUrl": "/products/wood-fireplaces/emp-wb36fb0f-4fce31cd.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/emp-wb36fb0f.webp",
     "productUrl": "https://www.efireplacestore.com/emp-wb36fb0f.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/emp-wb36fb0f.webp"
+    ]
   },
   {
     "sku": "CUI-WRE4550RS-White-Stacked-SD",
@@ -1605,11 +1752,14 @@
     "price": 3899.99,
     "salePrice": 3169,
     "brand": "Empire",
-    "imageUrl": "/products/wood-fireplaces/emp-wb44fb0f-fde0276a.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/emp-wb44fb0f.webp",
     "productUrl": "https://www.efireplacestore.com/emp-wb44fb0f.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/emp-wb44fb0f.webp"
+    ]
   },
   {
     "sku": "SUP-WRE6036",
@@ -1618,11 +1768,14 @@
     "price": 5989.99,
     "salePrice": 4869,
     "brand": "Superior",
-    "imageUrl": "/products/wood-fireplaces/sup-wre6036-6ba29183.webp",
+    "imageUrl": "/products-upgraded/wood-fireplaces/sup-wre6036.webp",
     "productUrl": "https://www.efireplacestore.com/sup-wre6036.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
+    "isBestSeller": false,
+    "imageUrls": [
+      "/products-upgraded/wood-fireplaces/sup-wre6036.webp"
+    ]
   },
   {
     "sku": "SDZ-FSN-748",
