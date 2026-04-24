@@ -26,8 +26,8 @@ export function BrandsBar() {
   ];
 
   return (
-    <section className="relative overflow-hidden border-t border-[#f0dfcc] bg-[#fffaf3] py-16 md:py-20" id="featured-brands">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,122,24,0.11),transparent_28%),radial-gradient(circle_at_82%_65%,rgba(255,184,105,0.16),transparent_24%),linear-gradient(180deg,#fffaf3_0%,#f8eee1_100%)]" />
+    <section className="relative overflow-hidden border-t border-[#ff7a18]/20 bg-[#0d0b0a] py-16 text-white md:py-20" id="featured-brands">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_84%_66%,rgba(255,255,255,0.08),transparent_24%),linear-gradient(180deg,#120f0c_0%,#1d1510_54%,#090807_100%)]" />
       <div className="relative mx-auto max-w-[1640px] px-4 md:px-5">
         <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_0.55fr] lg:items-end">
           <div>
@@ -35,22 +35,22 @@ export function BrandsBar() {
               <ShieldCheck className="h-4 w-4 text-[#ff7a18]" />
               Trusted Hearth Brands
             </p>
-            <h2 className="mt-4 text-[34px] font-black leading-[1.04] tracking-[-0.045em] text-[#1d1712] md:text-[52px]">
+            <h2 className="mt-4 text-[34px] font-black leading-[1.04] tracking-[-0.045em] text-white md:text-[52px]">
               Shop the Names Homeowners and Installers Trust
             </h2>
           </div>
-          <p className="max-w-xl text-base leading-7 text-[#655649]">
+          <p className="max-w-xl text-base leading-7 text-[#d8c7b2]">
             Browse proven fireplace, stove, venting, log set, and hearth accessory brands backed by real product support.
           </p>
         </div>
 
-        <div className="rounded-[2rem] border border-white/70 bg-white/58 p-3 shadow-[0_30px_90px_rgba(82,48,17,0.12)] backdrop-blur-xl md:p-4">
+        <div className="rounded-[2rem] border border-white/12 bg-white/[0.055] p-3 shadow-[0_30px_90px_rgba(0,0,0,0.35)] backdrop-blur-xl md:p-4">
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
             {brands.map((brand) => (
               <Link
                 key={brand.name}
                 href={`/search?q=${encodeURIComponent(brand.name)}`}
-                className="group relative flex h-[118px] items-center justify-center overflow-hidden rounded-2xl border border-[#f0dfcc] bg-white/80 px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ff7a18]/70 hover:bg-white hover:shadow-[0_18px_42px_rgba(255,122,24,0.16)]"
+                className="group relative flex h-[118px] items-center justify-center overflow-hidden rounded-2xl border border-white/12 bg-white/90 px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ff7a18]/75 hover:bg-white hover:shadow-[0_18px_42px_rgba(255,122,24,0.24)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-[#ff7a18]/8 opacity-0 transition group-hover:opacity-100" />
                 <div className={`relative w-full transition duration-300 group-hover:scale-[1.035] ${brand.featuredImage ? "h-full" : "h-[70px]"}`}>
@@ -70,7 +70,7 @@ export function BrandsBar() {
         <div className="mt-8 flex justify-center">
           <Link
             href="/search"
-            className="inline-flex items-center gap-3 rounded-full border border-[#efd8bd] bg-white/80 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-[#1d1712] shadow-sm backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
+            className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-sm backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
           >
             View All Brands <ArrowRight className="h-4 w-4" />
           </Link>
