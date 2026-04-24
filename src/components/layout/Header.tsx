@@ -15,7 +15,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
   return (
     <>
-      <div className="hidden bg-[#212121] text-white md:block">
+      <div className="hidden bg-[#11100e] text-white md:block">
         <div className="mx-auto flex max-w-[1640px] items-center justify-between px-5 py-2 text-[13px]">
           <div className="flex items-center divide-x divide-white/20">
             {[
@@ -38,9 +38,9 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-black/10 bg-white">
+      <header className="sticky top-0 z-50 border-b border-[#ff7a18]/25 bg-[#080808] shadow-lg shadow-black/20">
         <div className="mx-auto max-w-[1640px] px-4 md:px-5">
-          <div className="flex h-24 items-center justify-between gap-4 md:h-28">
+          <div className="flex h-20 items-center justify-between gap-4 md:h-24">
             <button
               className="p-2 lg:hidden"
               onClick={() => setIsMenuOpen((current) => !current)}
@@ -55,23 +55,23 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 alt={defaultStoreConfig.storeName}
                 width={640}
                 height={591}
-                className="h-full w-auto object-contain"
+                className="h-full w-auto object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.45)]"
                 priority
               />
             </Link>
 
             <div className="hidden min-w-0 flex-1 lg:block xl:pl-4">
               <form action="/search" method="GET" className="mx-auto max-w-[760px]">
-                <div className="flex h-11 items-center border border-[#bdbdbd] bg-white">
+                <div className="flex h-12 items-center border border-[#ff7a18]/45 bg-[#fffaf2] shadow-inner shadow-black/10">
                   <input
                     type="text"
                     name="q"
-                    placeholder="Search by brand, model, or keyword"
-                    className="h-full min-w-0 flex-1 px-4 text-sm text-[#424242] outline-none"
+                    placeholder="Search by brand, model, SKU, or part number"
+                    className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-[#201914] outline-none placeholder:text-[#7a6a5a]"
                   />
                   <button
                     type="submit"
-                    className="flex h-full w-12 items-center justify-center border-l border-[#bdbdbd] text-[#424242]"
+                    className="flex h-full w-14 items-center justify-center border-l border-[#e0cbb4] bg-[#ff7a18] text-black transition hover:bg-[#ff963f]"
                     aria-label="Search"
                   >
                     <Search className="h-4 w-4" />
@@ -81,25 +81,25 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             </div>
 
             <div className="hidden items-center gap-5 lg:flex">
-              <div className="text-right text-sm text-[#424242]">
+              <div className="text-right text-sm text-[#e7d9c7]">
                 <p>Order Online or Call</p>
                 <a
                   href={`tel:${defaultStoreConfig.phone}`}
-                  className="font-semibold text-[#212121] hover:text-[#a54210]"
+                  className="font-semibold text-white hover:text-[#ffb36b]"
                 >
                   {defaultStoreConfig.phone}
                 </a>
               </div>
 
               <button
-                className="relative flex items-center gap-2 text-[#424242] transition-colors hover:text-[#a54210]"
+                className="relative flex items-center gap-2 text-white transition-colors hover:text-[#ffb36b]"
                 onClick={toggleCart}
                 aria-label="Shopping cart"
               >
                 <ShoppingCart className="h-5 w-5" />
                 <span className="text-sm">Cart</span>
                 {getItemCount() > 0 && (
-                  <span className="absolute -right-2 -top-2 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-white bg-[#212121] text-[10px] font-semibold text-white">
+                  <span className="absolute -right-2 -top-2 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#ff7a18] text-[10px] font-semibold text-black">
                     {getItemCount()}
                   </span>
                 )}
@@ -112,16 +112,16 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 onClick={() => setIsSearchOpen((current) => !current)}
                 aria-label="Search"
               >
-                <Search className="h-5 w-5 text-[#424242]" />
+                <Search className="h-5 w-5 text-white" />
               </button>
               <button
                 className="relative p-2"
                 onClick={toggleCart}
                 aria-label="Shopping cart"
               >
-                <ShoppingCart className="h-5 w-5 text-[#424242]" />
+                <ShoppingCart className="h-5 w-5 text-white" />
                 {getItemCount() > 0 && (
-                  <span className="absolute -right-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-white bg-[#212121] text-[10px] font-semibold text-white">
+                  <span className="absolute -right-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 border-black bg-[#ff7a18] text-[10px] font-semibold text-black">
                     {getItemCount()}
                   </span>
                 )}
@@ -151,7 +151,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
           )}
         </div>
 
-        <div className="hidden border-t border-black/10 bg-[#f4f4f4] lg:block">
+        <div className="hidden border-t border-white/10 bg-[#15120f] lg:block">
           <nav className="mx-auto flex h-10 max-w-[1640px] items-center px-5">
             {productCategories.slice(0, 5).map((category) => (
               <div
@@ -162,7 +162,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               >
                 <Link
                   href={`/category/${category.slug}`}
-                  className="flex h-10 items-center gap-1 text-xs font-medium tracking-[0.3px] text-[#212121] transition-colors hover:text-[#a54210]"
+                  className="flex h-10 items-center gap-1 text-xs font-semibold uppercase tracking-[0.08em] text-[#f3e7d4] transition-colors hover:text-[#ffb36b]"
                 >
                   {category.name}
                   {category.subcategories && <ChevronDown className="h-4 w-4" />}
