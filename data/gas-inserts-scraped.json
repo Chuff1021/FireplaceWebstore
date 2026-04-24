@@ -739,7 +739,7 @@
   },
   {
     "sku": "LOPI-EVERGREENNEXGENHYBRIDINSERT",
-    "name": "Lopi Evergreen Nex Gen Hybrid\u2122 Insert",
+    "name": "Lopi Evergreen Nex Gen Hybrid™ Insert",
     "slug": "lopi-evergreennexgenhybridinsert",
     "price": 0,
     "brand": "Lopi",
@@ -749,15 +749,18 @@
     "reviewCount": 0,
     "isBestSeller": false,
     "imageUrls": [
-      "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp"
+      "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
+      "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert-2.webp",
+      "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert-3.webp",
+      "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert-4.webp"
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Evergreen Nex Gen Hybrid\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Evergreen Nex Gen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
     "sku": "LOPI-ANSWERNEXGENHYBRIDINSERT",
-    "name": "Lopi Answer Nex Gen Hybrid\u2122 Insert",
+    "name": "Lopi Answer Nex Gen Hybrid™ Insert",
     "slug": "lopi-answernexgenhybridinsert",
     "price": 0,
     "brand": "Lopi",
@@ -767,15 +770,18 @@
     "reviewCount": 0,
     "isBestSeller": false,
     "imageUrls": [
-      "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert.webp"
+      "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert.webp",
+      "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert-2.webp",
+      "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert-3.webp",
+      "/products-upgraded/gas-inserts/lopi-answernexgenhybridinsert-4.webp"
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Answer Nex Gen Hybrid\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Answer Nex Gen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
     "sku": "LOPI-ANSWERNEXGENFYREINSERT",
-    "name": "Lopi Answer Nex Gen Fyre\u2122 Insert",
+    "name": "Lopi Answer Nex Gen Fyre™ Insert",
     "slug": "lopi-answernexgenfyreinsert",
     "price": 0,
     "brand": "Lopi",
@@ -785,10 +791,13 @@
     "reviewCount": 0,
     "isBestSeller": false,
     "imageUrls": [
-      "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert.webp"
+      "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert.webp",
+      "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert-2.webp",
+      "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert-3.webp",
+      "/products-upgraded/gas-inserts/lopi-answernexgenfyreinsert-4.webp"
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Answer Nex Gen Fyre\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Answer Nex Gen Fyre™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

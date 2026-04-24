@@ -159,12 +159,12 @@ export default function ProductPage() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div>
-            <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl relative overflow-hidden">
+            <div className="aspect-square bg-gradient-to-br from-gray-50 to-[#f2eee7] rounded-2xl relative overflow-hidden border border-[#eadfce]">
               <Image
                 src={primaryProductImage}
                 alt={product.name}
                 fill
-                className="object-cover"
+                className="object-contain p-6"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -202,7 +202,7 @@ export default function ProductPage() {
                     src={img}
                     alt={`${product.name} view ${i + 1}`}
                     fill
-                    className="object-cover"
+                    className="object-contain p-1"
                     sizes="80px"
                   />
                 </button>
