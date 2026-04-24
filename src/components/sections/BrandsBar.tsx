@@ -21,7 +21,7 @@ export function BrandsBar() {
     { name: "AW Perkins", logo: "/brands/efs-featured/aw-perkins.webp", featuredImage: true },
     { name: "MRCOOL", logo: "/brands/efs-featured/mr--cool.webp", featuredImage: true },
     { name: "Ventis", logo: "/brands/efs-featured/ventis.webp", featuredImage: true },
-    { name: "FireplaceX", logo: "/brands/fireplacex.png", featuredImage: false },
+    { name: "Fireplace Xtrordinair", logo: "/brands/fireplacex.png", featuredImage: false },
     { name: "Lopi", logo: "/brands/lopi.png", featuredImage: false },
   ];
 

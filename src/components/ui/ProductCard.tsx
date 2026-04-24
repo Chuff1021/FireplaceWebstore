@@ -29,9 +29,11 @@ export function ProductCard({ product }: { product: Product }) {
     openCart();
   };
 
+  const cardHref = isContactForPricing ? `/contact?product=${encodeURIComponent(product.sku)}` : `/product/${product.slug}`;
+
   return (
     <Link
-      href={`/product/${product.slug}`}
+      href={cardHref}
       className="group flex h-full flex-col overflow-hidden border border-[#ded5c8] bg-[#fffdf9] transition-all duration-300 hover:-translate-y-1 hover:border-[#ff7a18] hover:shadow-[0_28px_70px_rgba(32,20,10,0.14)]"
     >
       <div className="relative aspect-[1.08/1] overflow-hidden bg-[#f2eee7]">
@@ -98,12 +100,12 @@ export function ProductCard({ product }: { product: Product }) {
             <div>
               <p className="text-[11px] uppercase tracking-[0.16em] text-[#8a8175]">{isContactForPricing ? "Dealer pricing" : "Starting at"}</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-xl font-black text-[#1d1712]">{isContactForPricing ? "Contact for Pricing" : formatPrice(displayPrice)}</span>
+                <span className={isContactForPricing ? "inline-flex items-center justify-center border border-[#a54210] bg-[#a54210] px-3 py-2 text-sm font-black uppercase tracking-[0.08em] text-white transition group-hover:bg-[#7f2f0b]" : "text-xl font-black text-[#1d1712]"}>{isContactForPricing ? "Contact for Pricing" : formatPrice(displayPrice)}</span>
                 {!isContactForPricing && product.salePrice && <span className="text-sm text-[#8a8175] line-through">{formatPrice(product.price)}</span>}
               </div>
             </div>
             <span className="inline-flex items-center gap-1 text-sm font-bold text-[#a54210]">
-              View <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              {isContactForPricing ? "Request Quote" : "View"} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
           </div>
         </div>

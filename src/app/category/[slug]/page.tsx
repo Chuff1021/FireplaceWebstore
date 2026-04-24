@@ -89,7 +89,7 @@ export default function CategoryPage() {
     async function loadProducts() {
       setIsLoadingProducts(true);
       try {
-        const response = await fetch("/api/products?limit=10000", { cache: "no-store" });
+        const response = await fetch(`/api/products?category=${encodeURIComponent(slug)}&limit=10000`, { cache: "no-store" });
         if (!response.ok) return;
 
         const data = (await response.json()) as Product[];
@@ -458,10 +458,20 @@ export default function CategoryPage() {
                           <div className="mb-2 mt-3 text-sm text-[#9e9e9e]">No reviews yet</div>
                         )}
 
-                        <div className="mt-2">
-                          <span className="text-base font-bold leading-5 tracking-[0.29px] text-[#a54210] md:text-lg md:tracking-[0.32px]">
-                            {isContactForPricing ? "Contact for Pricing" : formatPagePrice(livePrice)}
-                          </span>
+                        <div className="mt-3">
+                          {isContactForPricing ? (
+                            <Link
+                              href={`/contact?product=${encodeURIComponent(product.sku)}`}
+                              className="inline-flex w-full items-center justify-center gap-2 border border-[#a54210] bg-[#a54210] px-4 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#7f2f0b]"
+                            >
+                              Contact for Pricing
+                              <ChevronRight className="h-4 w-4" />
+                            </Link>
+                          ) : (
+                            <span className="text-base font-bold leading-5 tracking-[0.29px] text-[#a54210] md:text-lg md:tracking-[0.32px]">
+                              {formatPagePrice(livePrice)}
+                            </span>
+                          )}
                         </div>
 
                         <div className="mt-3">

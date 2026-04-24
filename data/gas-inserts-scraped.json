@@ -739,7 +739,7 @@
   },
   {
     "sku": "LOPI-EVERGREENNEXGENHYBRIDINSERT",
-    "name": "Lopi Evergreen NexGen Hybrid™ Insert",
+    "name": "Lopi Evergreen Nex Gen Hybrid\u2122 Insert",
     "slug": "lopi-evergreennexgenhybridinsert",
     "price": 0,
     "brand": "Lopi",
@@ -753,11 +753,11 @@
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Evergreen NexGen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Evergreen Nex Gen Hybrid\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
     "sku": "LOPI-ANSWERNEXGENHYBRIDINSERT",
-    "name": "Lopi Answer NexGen Hybrid™ Insert",
+    "name": "Lopi Answer Nex Gen Hybrid\u2122 Insert",
     "slug": "lopi-answernexgenhybridinsert",
     "price": 0,
     "brand": "Lopi",
@@ -771,11 +771,11 @@
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Answer NexGen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Answer Nex Gen Hybrid\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
     "sku": "LOPI-ANSWERNEXGENFYREINSERT",
-    "name": "Lopi Answer NexGen Fyre™ Insert",
+    "name": "Lopi Answer Nex Gen Fyre\u2122 Insert",
     "slug": "lopi-answernexgenfyreinsert",
     "price": 0,
     "brand": "Lopi",
@@ -789,6 +789,6 @@
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Answer NexGen Fyre™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Answer Nex Gen Fyre\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]

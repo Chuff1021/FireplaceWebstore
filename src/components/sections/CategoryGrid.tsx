@@ -4,8 +4,8 @@ import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
 const featuredCategoryLinks = [
-  { label: "FireplaceX Gas Fireplaces", href: "/search?q=FireplaceX%20gas" },
-  { label: "FireplaceX Wood Fireplaces", href: "/search?q=FireplaceX%20wood" },
+  { label: "Fireplace Xtrordinair Gas Fireplaces", href: "/search?q=Fireplace%20Xtrordinair%20gas" },
+  { label: "Fireplace Xtrordinair Wood Fireplaces", href: "/search?q=Fireplace%20Xtrordinair%20wood" },
   { label: "Lopi Wood Stoves", href: "/search?q=Lopi%20wood%20stove" },
   { label: "Lopi Gas Stoves", href: "/search?q=Lopi%20gas%20stove" },
   { label: "Lopi Inserts", href: "/search?q=Lopi%20insert" },
@@ -39,7 +39,7 @@ export function CategoryGrid() {
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#655649]">
-Start with the hearth category that fits your project, including FireplaceX fireplaces, Lopi stoves and inserts, Fire Garden outdoor fire features, and replacement-part needs.
+Start with the hearth category that fits your project, including Fireplace Xtrordinair fireplaces, Lopi stoves and inserts, Fire Garden outdoor fire features, and replacement-part needs.
           </p>
         </div>
 
