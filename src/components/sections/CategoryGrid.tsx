@@ -23,8 +23,8 @@ const categoryVisuals: Record<string, string> = {
 
 export function CategoryGrid() {
   return (
-    <section className="relative overflow-hidden border-t border-[#ff7a18]/20 bg-[#080706] py-16 text-white md:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_10%,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_88%_28%,rgba(255,255,255,0.08),transparent_24%),linear-gradient(180deg,#080706_0%,#14100d_52%,#070606_100%)]" />
+    <section className="relative overflow-hidden border-t border-[#ff7a18]/20 bg-[#17120e] py-16 text-white md:py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_10%,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_88%_28%,rgba(255,255,255,0.08),transparent_24%),linear-gradient(180deg,#1f1711_0%,#241a13_52%,#120f0c_100%)]" />
       <div className="absolute left-1/2 top-0 h-px w-[84%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ff7a18]/70 to-transparent" />
 
       <div className="relative mx-auto max-w-[1640px] px-4 md:px-5">
@@ -35,11 +35,11 @@ export function CategoryGrid() {
               Shop By Category
             </p>
             <h2 className="mt-4 text-[38px] font-black leading-[0.98] tracking-[-0.055em] text-white md:text-[58px]">
-              Choose your hearth department.
+              Shop fireplaces, stoves, inserts, and parts.
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#d8c7b2]">
-            A cleaner, high-contrast category gateway with liquid-glass cards, premium depth, and direct paths into the products customers actually shop.
+            Find the right hearth product faster — from complete fireplace systems to inserts, freestanding stoves, outdoor fire features, accessories, and replacement parts.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export function CategoryGrid() {
             <Link
               key={category.id}
               href={`/category/${category.slug}`}
-              className="group relative min-h-[330px] overflow-hidden border border-white/12 bg-white/[0.055] shadow-[0_24px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/70 hover:bg-white/[0.09] hover:shadow-[0_30px_90px_rgba(255,122,24,0.16)]"
+              className="group relative min-h-[330px] overflow-hidden border border-white/14 bg-white/[0.075] shadow-[0_24px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/70 hover:bg-white/[0.12] hover:shadow-[0_30px_90px_rgba(255,122,24,0.16)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-[#ff7a18]/10 opacity-60" />
               <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#ff7a18]/20 blur-3xl transition group-hover:bg-[#ff7a18]/35" />
@@ -89,7 +89,7 @@ export function CategoryGrid() {
                 Popular Paths
               </p>
               <p className="mt-2 text-sm text-[#d8c7b2]">
-                Fast lanes into the categories customers shop most often.
+                Popular fireplace categories and fuel types for faster shopping.
               </p>
             </div>
             <div className="flex flex-wrap gap-2.5">
