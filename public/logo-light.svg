@@ -1,25 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" fill="none">
-  <defs>
-    <linearGradient id="ahh-gold-light" x1="0" y1="84" x2="84" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#A66A1F"/>
-      <stop offset="0.48" stop-color="#D9A64A"/>
-      <stop offset="1" stop-color="#F7E1AE"/>
-    </linearGradient>
-    <linearGradient id="ahh-ember-light" x1="26" y1="62" x2="52" y2="28" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#B86526"/>
-      <stop offset="1" stop-color="#FFF3D8"/>
-    </linearGradient>
-  </defs>
-
-  <g transform="translate(8 6)">
-    <rect x="0.75" y="0.75" width="82.5" height="82.5" rx="20" stroke="#E5C58A" stroke-opacity="0.55" stroke-width="1.5"/>
-    <path d="M42 68c-11.6 0-19-8.8-19-18.8 0-8.4 4.9-15.4 10.8-20.9-.4 6.8 2.6 10.6 6.6 10.6-1.9-5.6-.1-12 5.3-16.9-1.1 6 1.6 11.2 5.2 14.8 3.7-3.5 5.5-8.1 5.1-12.4 5.7 5.5 9 12.6 9 20.6 0 11-8.4 23-23 23Z" fill="url(#ahh-gold-light)"/>
-    <path d="M42.1 68c0-6.7.2-13.3.2-19.9 5.8.2 9.1 4.4 9.1 9.6 0 5.6-3.3 10.3-8.4 10.3h-.9Z" fill="url(#ahh-ember-light)"/>
-    <path d="M24 69.5h36" stroke="#E5C58A" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+  <title id="title">Aaron's Fireplace Co.</title>
+  <desc id="desc">Orange, cream, and black badge logo for Aaron's Fireplace Co., established 1989.</desc>
+  <path d="M380 22c75 0 139 48 162 115l121 31c27 7 47 32 47 61v34c0 29-20 54-48 61l-215 55c-44 11-90 11-134 0L98 324c-28-7-48-32-48-61v-34c0-29 20-54 47-61l121-31C241 70 305 22 380 22Z" fill="#050505"/>
+  <path d="M380 39c69 0 126 46 144 108l4 14 130 33c15 4 26 18 26 34v34c0 16-11 30-27 34l-214 55c-41 11-85 11-126 0L103 296c-16-4-27-18-27-34v-34c0-16 11-30 26-34l130-33 4-14C254 85 311 39 380 39Z" fill="#050505" stroke="#ff7a18" stroke-width="13"/>
+  <path d="M166 269h428" stroke="#ff7a18" stroke-width="10" stroke-linecap="round"/>
+  <path d="M214 306h332l-82 35H296l-82-35Z" fill="none" stroke="#ff7a18" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M288 205H109" stroke="#ff7a18" stroke-width="11"/>
+  <path d="M651 205H472" stroke="#ff7a18" stroke-width="11"/>
+  <path d="M279 248H104" stroke="#ff7a18" stroke-width="9"/>
+  <path d="M656 248H481" stroke="#ff7a18" stroke-width="9"/>
+  <g transform="translate(295 72)">
+    <path d="M72 126c-36 0-59-27-59-58 0-27 17-49 38-66-2 25 8 39 24 39-8-22 1-43 24-61-5 26 7 45 23 59 13-12 21-28 20-43 23 20 36 46 36 74 0 34-28 56-62 56H72Z" fill="#ff7a18"/>
+    <path d="M85 126c3-30 13-52 35-74 5 17 20 31 20 50 0 14-11 24-25 24H85Z" fill="#ff8c24"/>
   </g>
-
-  <line x1="106" y1="14" x2="106" y2="82" stroke="#D9A64A" stroke-opacity="0.6"/>
-
-  <text x="124" y="42" font-family="'Avenir Next', 'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="2.8" fill="#F0C979">AARON&#x2019;S</text>
-  <text x="124" y="72" font-family="'Didot', 'Bodoni MT', 'Playfair Display', Georgia, serif" font-size="36" font-weight="600" letter-spacing="1" fill="#FFFFFF">Hearth &amp; Home</text>
+  <text x="220" y="180" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="31" fill="#fff" letter-spacing="2">EST.</text>
+  <text x="540" y="180" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="31" fill="#fff" letter-spacing="2">1989</text>
+  <text x="380" y="251" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-weight="900" fill="#fff" letter-spacing="3">AARON'S</text>
+  <text x="380" y="311" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="48" fill="#fff" letter-spacing="7">FIREPLACE CO.</text>
 </svg>

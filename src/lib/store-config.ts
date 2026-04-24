@@ -61,13 +61,13 @@ export interface StoreConfig {
 
 // Default configuration — Aaron's Hearth and Home
 export const defaultStoreConfig: StoreConfig = {
-  storeName: "Aaron's Hearth and Home",
-  tagline: "Republic, Missouri's Trusted Fireplace & Heating Experts",
+  storeName: "Aaron's Fireplace Co.",
+  tagline: "Fireplaces, inserts, stoves, and parts since 1989",
   logo: "/logo.svg",
   favicon: "/favicon.ico",
   
   phone: "(417) 555-0199",
-  email: "info@aaronshearthandhome.com",
+  email: "aaronsfireplaceco@yahoo.com",
   address: {
     street: "100 E Hines St",
     city: "Republic",
@@ -104,8 +104,8 @@ export const defaultStoreConfig: StoreConfig = {
   },
   
   seo: {
-    metaTitle: "Aaron's Hearth and Home | Fireplaces, Inserts & Stoves in Republic, MO",
-    metaDescription: "Aaron's Hearth and Home in Republic, Missouri — shop gas fireplaces, wood stoves, electric fireplaces, inserts, and accessories. Expert advice, professional installation, and free shipping on orders over $499.",
+    metaTitle: "Aaron's Fireplace Co. | Fireplaces, Inserts, Stoves & Parts",
+    metaDescription: "Shop fireplaces, inserts, stoves, replacement parts, and hearth supplies from Aaron's Fireplace Co. Expert support, trusted brands, and nationwide online ordering.",
     keywords: [
       "fireplace",
       "fireplace store Republic MO",
@@ -115,8 +115,11 @@ export const defaultStoreConfig: StoreConfig = {
       "fireplace insert",
       "pellet stove",
       "fireplace accessories",
-      "Aaron's Hearth and Home",
-      "Republic Missouri fireplace",
+      "Aaron's Fireplace Co.",
+      "Aaron's Fireplace Co.",
+      "fireplace superstore",
+      "fireplace parts",
+      "fireplace replacement parts",
     ],
   },
 };
