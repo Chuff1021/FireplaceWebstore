@@ -63,7 +63,7 @@ export interface StoreConfig {
 export const defaultStoreConfig: StoreConfig = {
   storeName: "Aaron's Fireplace Co.",
   tagline: "Fireplaces, inserts, stoves, and parts since 1989",
-  logo: "/logo.svg",
+  logo: "/logo-web.png",
   favicon: "/favicon.ico",
   
   phone: "(417) 555-0199",

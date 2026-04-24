@@ -40,7 +40,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
       <header className="sticky top-0 z-50 border-b border-black/10 bg-white">
         <div className="mx-auto max-w-[1640px] px-4 md:px-5">
-          <div className="flex h-16 items-center justify-between gap-4 md:h-[66px]">
+          <div className="flex h-24 items-center justify-between gap-4 md:h-28">
             <button
               className="p-2 lg:hidden"
               onClick={() => setIsMenuOpen((current) => !current)}
@@ -49,18 +49,18 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
-            <Link href="/" className="flex shrink-0 items-center">
+            <Link href="/" className="flex shrink-0 items-center self-stretch py-2">
               <Image
                 src={logoUrl ?? defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
-                width={256}
-                height={60}
-                className="h-9 w-auto md:h-11"
+                width={640}
+                height={591}
+                className="h-full w-auto object-contain"
                 priority
               />
             </Link>
 
-            <div className="hidden min-w-0 flex-1 lg:block">
+            <div className="hidden min-w-0 flex-1 lg:block xl:pl-4">
               <form action="/search" method="GET" className="mx-auto max-w-[760px]">
                 <div className="flex h-11 items-center border border-[#bdbdbd] bg-white">
                   <input
