@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
 const featuredCategoryLinks = [
@@ -22,63 +23,73 @@ const categoryVisuals: Record<string, string> = {
 
 export function CategoryGrid() {
   return (
-    <section className="border-t border-[#e5e0d8] bg-[#f7f3ec] py-14 md:py-16">
-      <div className="mx-auto max-w-[1640px] px-4 md:px-5">
-        <div className="mb-8 flex flex-col gap-4 border-b border-[#d9d2c6] pb-6 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#a54210]">
+    <section className="relative overflow-hidden border-t border-[#ff7a18]/20 bg-[#080706] py-16 text-white md:py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_10%,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_88%_28%,rgba(255,255,255,0.08),transparent_24%),linear-gradient(180deg,#080706_0%,#14100d_52%,#070606_100%)]" />
+      <div className="absolute left-1/2 top-0 h-px w-[84%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#ff7a18]/70 to-transparent" />
+
+      <div className="relative mx-auto max-w-[1640px] px-4 md:px-5">
+        <div className="mb-10 grid gap-6 border-b border-white/10 pb-8 lg:grid-cols-[0.95fr_0.55fr] lg:items-end">
+          <div className="max-w-4xl">
+            <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.26em] text-[#ff9a3d]">
+              <Flame className="h-4 w-4 fill-[#ff7a18] text-[#ff7a18]" />
               Shop By Category
             </p>
-            <h2 className="mt-3 text-[30px] font-normal tracking-[-0.03em] text-[#1f1f1f] md:text-[38px]">
-              Browse the main hearth categories without hunting through the menu.
+            <h2 className="mt-4 text-[38px] font-black leading-[0.98] tracking-[-0.055em] text-white md:text-[58px]">
+              Choose your hearth department.
             </h2>
           </div>
-          <p className="max-w-xl text-sm leading-6 text-[#5f605c] md:text-[15px]">
-            Start with the department that fits the space, then drill into fuel type, inserts, or freestanding stoves.
+          <p className="max-w-xl text-base leading-7 text-[#d8c7b2]">
+            A cleaner, high-contrast category gateway with liquid-glass cards, premium depth, and direct paths into the products customers actually shop.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
-          {productCategories.map((category) => (
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          {productCategories.map((category, index) => (
             <Link
               key={category.id}
               href={`/category/${category.slug}`}
-              className="group overflow-hidden border border-[#d9d2c6] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#c46b33] hover:shadow-[0_18px_45px_rgba(52,32,16,0.08)]"
+              className="group relative min-h-[330px] overflow-hidden border border-white/12 bg-white/[0.055] shadow-[0_24px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#ff7a18]/70 hover:bg-white/[0.09] hover:shadow-[0_30px_90px_rgba(255,122,24,0.16)]"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#efe6da]">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-[#ff7a18]/10 opacity-60" />
+              <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#ff7a18]/20 blur-3xl transition group-hover:bg-[#ff7a18]/35" />
+
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#17120e]">
                 <Image
                   src={categoryVisuals[category.id] ?? category.image}
                   alt={category.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover opacity-88 saturate-[0.92] transition duration-500 group-hover:scale-105 group-hover:opacity-100 group-hover:saturate-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2d170d]/40 via-transparent to-transparent" />
-              </div>
-              <div className="flex items-center justify-between gap-3 px-4 py-4 md:px-5">
-                <div>
-                  <h3 className="text-base font-semibold text-[#1f1f1f] transition-colors group-hover:text-[#a54210]">
-                    {category.name}
-                  </h3>
-                  <p className="mt-1 line-clamp-2 text-xs leading-5 text-[#6d6d68] md:text-[13px]">
-                    {category.description}
-                  </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070606] via-[#070606]/25 to-transparent" />
+                <div className="absolute left-3 top-3 rounded-full border border-white/15 bg-black/45 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#ffb36b] backdrop-blur-md">
+                  0{index + 1}
                 </div>
-                <span className="shrink-0 text-xl text-[#a54210] transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
+              </div>
+
+              <div className="relative flex min-h-[150px] flex-col px-5 py-5">
+                <h3 className="text-xl font-black tracking-[-0.035em] text-white transition-colors group-hover:text-[#ffb36b]">
+                  {category.name}
+                </h3>
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-[#cfc0ad]">
+                  {category.description}
+                </p>
+                <div className="mt-auto flex items-center justify-between pt-5 text-sm font-black uppercase tracking-[0.12em] text-[#ff8a24]">
+                  <span>Shop now</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </div>
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="mt-7 border border-[#d9d2c6] bg-white px-4 py-5 md:px-5">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-8 border border-white/12 bg-white/[0.055] px-5 py-5 shadow-[0_24px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl md:px-6">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#a54210]">
+              <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff9a3d]">
                 Popular Paths
               </p>
-              <p className="mt-2 text-sm text-[#5f605c]">
-                Jump straight into the categories customers shop most often.
+              <p className="mt-2 text-sm text-[#d8c7b2]">
+                Fast lanes into the categories customers shop most often.
               </p>
             </div>
             <div className="flex flex-wrap gap-2.5">
@@ -86,7 +97,7 @@ export function CategoryGrid() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-full border border-[#cfc6b8] px-4 py-2 text-sm font-medium text-[#383734] transition-colors hover:border-[#c46b33] hover:text-[#a54210]"
+                  className="rounded-full border border-white/15 bg-black/25 px-4 py-2 text-sm font-bold text-[#f3e7d4] backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
                 >
                   {item.label}
                 </Link>
