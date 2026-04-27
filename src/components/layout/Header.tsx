@@ -49,19 +49,19 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
-            <Link href="/" className="flex shrink-0 items-center self-stretch py-2">
+            <Link href="/" className="flex w-[180px] shrink-0 items-center self-stretch py-2 xl:w-[220px]">
               <Image
                 src={logoUrl ?? defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
                 width={640}
                 height={591}
-                className="h-full w-auto object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.45)]"
+                className="h-full w-auto max-w-full object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.45)]"
                 priority
               />
             </Link>
 
-            <div className="hidden min-w-0 flex-1 lg:block xl:pl-4">
-              <form action="/search" method="GET" className="mx-auto max-w-[760px]">
+            <div className="hidden min-w-[360px] flex-1 lg:block xl:pl-4">
+              <form action="/search" method="GET" className="mx-auto w-full max-w-[980px]">
                 <div className="flex h-12 items-center border border-[#ff7a18]/45 bg-[#fffaf2] shadow-inner shadow-black/10">
                   <input
                     type="text"
@@ -200,7 +200,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               href="/category/parts"
               className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#f3e7d4] transition-colors hover:text-[#ffb36b]"
             >
-              Parts Superstore
+              Parts Department
             </Link>
           </nav>
         </div>
