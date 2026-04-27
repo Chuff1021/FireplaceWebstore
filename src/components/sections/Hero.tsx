@@ -51,6 +51,12 @@ export function Hero() {
             >
               Find Parts
             </Link>
+            <Link
+              href="/service-appointment"
+              className="inline-flex items-center justify-center border border-[#ff7a18]/50 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-[#ffb36b] backdrop-blur transition hover:bg-[#ff7a18] hover:text-black"
+            >
+              Book Service Appointment
+            </Link>
           </div>
 
           <form action="/search" method="GET" className="mt-9 max-w-2xl border border-white/15 bg-white p-2 shadow-2xl shadow-black/40">
