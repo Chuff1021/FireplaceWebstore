@@ -8,13 +8,12 @@ import type { Product } from "@/lib/store-config";
 
 const FEATURED_TRAVIS_SLUGS = [
   "fpx-4415highoutputdeluxe",
-  "fpx-864tv40kdeluxe",
+  "fpx-6015highoutputdeluxe",
   "fpx-probuilder36cleanfacedeluxe",
   "lopi-evergreennexgenhybrid",
   "lopi-rockportnexgenhybrid",
   "lopi-radiantpluslargegsb",
   "lopi-agppelletstove",
-  "lopi-deerfieldii",
 ];
 
 function preferFireplacePhotos(product: Product): Product {

@@ -2,6 +2,7 @@ import "server-only";
 
 import { readdir, readFile } from "fs/promises";
 import path from "path";
+import { DEFAULT_PRODUCT_IMAGE } from "@/lib/product-images";
 import { type Product } from "@/lib/store-config";
 
 type ImportedPartRecord = {
@@ -124,7 +125,7 @@ export async function loadImportedPartsProducts(): Promise<Product[]> {
         categoryId: "parts",
         subcategoryId,
         brand,
-        images: record.imageUrl ? [record.imageUrl] : ["/categories/parts.jpg"],
+        images: record.imageUrl ? [record.imageUrl] : [DEFAULT_PRODUCT_IMAGE],
         features: [
           record.partType ? `Part Type: ${record.partType}` : "",
           record.availability ? `Availability: ${record.availability}` : "",
