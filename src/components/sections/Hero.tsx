@@ -90,13 +90,12 @@ export function Hero() {
             <div className="mt-6 border-t border-white/10 pt-5">
               <Link
                 href="/design-tool"
-                className="text-sm font-black uppercase tracking-[0.22em] text-[#ffb36b] transition hover:text-white"
+                className="inline-flex items-center justify-center bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
               >
                 Get Help Choosing a Fireplace
               </Link>
-              <p className="mt-2 text-2xl font-black tracking-[-0.04em] text-white">Fireplaces. Parts. Expert help.</p>
-              <p className="mt-3 text-sm leading-6 text-[#d9cbb9]">
-                A more premium storefront built around trust, clear product discovery, and high-quality manufacturer imagery.
+              <p className="mt-4 text-sm leading-6 text-[#d9cbb9]">
+                Click here to get expert help with choosing the right fireplace.
               </p>
             </div>
           </div>
