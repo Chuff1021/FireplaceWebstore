@@ -88,13 +88,6 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 Contractor Portal
               </Link>
 
-              <Link
-                href="/category/parts"
-                className="inline-flex items-center justify-center rounded-full border border-[#ff7a18]/55 bg-[#ff7a18] px-4 py-2 text-xs font-black uppercase tracking-[0.12em] text-black shadow-[0_12px_30px_rgba(255,122,24,0.18)] transition hover:bg-[#ff963f]"
-              >
-                Parts Superstore
-              </Link>
-
               <div className="text-right text-sm text-[#e7d9c7]">
                 <p>Order Online or Call</p>
                 <a
@@ -203,6 +196,12 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 )}
               </div>
             ))}
+            <Link
+              href="/category/parts"
+              className="mr-5 flex h-10 items-center text-xs font-semibold uppercase tracking-[0.08em] text-[#f3e7d4] transition-colors hover:text-[#ffb36b]"
+            >
+              Parts Superstore
+            </Link>
           </nav>
         </div>
 
