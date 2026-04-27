@@ -34,7 +34,7 @@ export const partsDepartments: PartsDepartment[] = [
     name: "Wood & Coal Stove Parts",
     slug: "wood-coal-stove-parts",
     description: "Model-specific replacement parts for wood and coal stoves, inserts, and furnaces.",
-    image: "/categories/wood-stoves.jpg",
+    image: "/products/parts/cc-300.jpg",
     sourceUrl: "https://www.stove-parts-unlimited.com/wood-coal-stove-parts/",
     brands: [
       { name: "Napoleon", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Napoleon.html" },
@@ -49,7 +49,7 @@ export const partsDepartments: PartsDepartment[] = [
     name: "Gas Fireplace Parts",
     slug: "gas-fireplace-parts",
     description: "Valves, pilots, logs, burners, control boards, and ignition parts for gas fireplaces.",
-    image: "/categories/gas-fireplaces.jpg",
+    image: "/products/parts/1006-p002si.jpg",
     sourceUrl: "https://www.stove-parts-unlimited.com/gas-fireplace-parts/",
     brands: [
       { name: "Majestic", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Majestic.html" },
@@ -64,7 +64,7 @@ export const partsDepartments: PartsDepartment[] = [
     name: "Gas Stove Parts",
     slug: "gas-stove-parts",
     description: "Replacement burners, valves, blowers, controls, and trim parts for freestanding gas stoves.",
-    image: "/categories/gas-stoves.jpg",
+    image: "/products/parts/50-589.jpg",
     sourceUrl: "https://www.stove-parts-unlimited.com/gas-stove-parts/",
     brands: [
       { name: "Napoleon", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Napoleon.html" },
@@ -79,7 +79,7 @@ export const partsDepartments: PartsDepartment[] = [
     name: "Pellet Stove Parts",
     slug: "pellet-stove-parts",
     description: "Augers, exhaust blowers, igniters, control boards, and wear parts for pellet appliances.",
-    image: "/categories/pellet-stoves.jpg",
+    image: "/products/parts/812-0180.jpg",
     sourceUrl: "https://www.stove-parts-unlimited.com/pellet-stove-parts/",
     brands: [
       { name: "Harman", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Harman.html" },
@@ -94,7 +94,7 @@ export const partsDepartments: PartsDepartment[] = [
     name: "Electric Stove Parts",
     slug: "electric-stove-parts",
     description: "Heating elements, controls, switches, lamps, and service parts for electric hearth units.",
-    image: "/categories/electric-fireplaces.jpg",
+    image: "/products/parts/h5876.jpg",
     sourceUrl: "https://www.stove-parts-unlimited.com/electric-stove-parts/",
     brands: [
       { name: "Dimplex", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Dimplex.html" },
@@ -109,7 +109,7 @@ export const partsDepartments: PartsDepartment[] = [
     name: "Outdoor Fireplace Parts",
     slug: "outdoor-fireplace-parts",
     description: "Burner assemblies, valves, ignition parts, media, and service components for outdoor hearth products.",
-    image: "/categories/outdoor-fireplaces.jpg",
+    image: "/products/parts/w565-0062.jpg",
     sourceUrl: "https://www.stove-parts-unlimited.com/outdoor-fireplace-parts/",
     brands: [
       { name: "Napoleon", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Napoleon.html" },
