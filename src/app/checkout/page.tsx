@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { ArrowLeft, Lock, Check } from "lucide-react";
+import { ArrowLeft, Mail, Phone, ShieldAlert } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
+import { defaultStoreConfig } from "@/lib/store-config";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -14,460 +14,81 @@ function formatPrice(price: number) {
 
 export default function CheckoutPage() {
   const { items, getSubtotal, getShipping, getTax, getTotal } = useCartStore();
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+
+  const orderSummary = items
+    .map((item) => `${item.quantity} x ${item.product.name} (${item.product.sku ?? item.product.id})`)
+    .join("\n");
+  const mailtoHref = `mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent("Online order / quote request")}&body=${encodeURIComponent(`Hello Aaron's Fireplace Co.,\n\nI would like help completing this order or quote request:\n\n${orderSummary}\n\nEstimated subtotal: ${formatPrice(getSubtotal())}\nEstimated shipping shown online: ${formatPrice(getShipping())}\nEstimated tax shown online: ${formatPrice(getTax())}\nEstimated total shown online: ${formatPrice(getTotal())}\n\nName:\nPhone:\nShipping address:\nQuestions / notes:\n`)}`;
 
   if (items.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">
-          Your Cart is Empty
-        </h1>
-        <p className="text-gray-600 mb-8">
-          Add some items to your cart before checking out.
-        </p>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5" />
-          Continue Shopping
+      <main className="min-h-screen bg-[#f6efe5] px-4 py-16 text-center">
+        <h1 className="text-3xl font-black tracking-[-0.04em] text-[#1d1712]">Your cart is empty</h1>
+        <p className="mx-auto mt-3 max-w-xl text-[#6c6256]">Add fireplaces, parts, or accessories before requesting help with an order.</p>
+        <Link href="/" className="mt-8 inline-flex items-center gap-2 bg-[#ff7a18] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-[#ff963f]">
+          <ArrowLeft className="h-4 w-4" /> Continue shopping
         </Link>
-      </div>
+      </main>
     );
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        {/* Progress Steps */}
-        <div className="flex items-center justify-center gap-4 mb-12">
-          {[
-            { num: 1, label: "Shipping" },
-            { num: 2, label: "Payment" },
-            { num: 3, label: "Review" },
-          ].map((s, i) => (
-            <div key={s.num} className="flex items-center gap-4">
-              <button
-                onClick={() => setStep(s.num as 1 | 2 | 3)}
-                className={`flex items-center gap-2 ${
-                  step >= s.num ? "text-orange-600" : "text-gray-400"
-                }`}
-              >
-                <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                    step > s.num
-                      ? "bg-green-600 text-white"
-                      : step === s.num
-                      ? "bg-orange-600 text-white"
-                      : "bg-gray-200 text-gray-500"
-                  }`}
-                >
-                  {step > s.num ? <Check className="w-4 h-4" /> : s.num}
-                </div>
-                <span className="hidden sm:inline font-medium">{s.label}</span>
-              </button>
-              {i < 2 && (
-                <div
-                  className={`w-12 sm:w-24 h-0.5 ${
-                    step > s.num ? "bg-green-600" : "bg-gray-200"
-                  }`}
-                />
-              )}
-            </div>
-          ))}
+    <main className="min-h-screen bg-[#f6efe5]">
+      <section className="relative overflow-hidden bg-[#0b0b0a] px-4 py-16 text-white md:px-6 md:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,122,24,0.22),transparent_30%)]" />
+        <div className="relative mx-auto max-w-5xl">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#ff9a3d]">Order request</p>
+          <h1 className="mt-5 text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">Complete your order with Aaron&apos;s.</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#e6d8c4]">
+            Online card checkout is temporarily disabled for launch safety. We are not collecting card numbers on this website until a real payment processor is connected. Send this cart to Aaron&apos;s and we&apos;ll confirm price, availability, shipping, and payment options directly.
+          </p>
         </div>
+      </section>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Form Section */}
-          <div className="lg:col-span-2">
-            {/* Step 1: Shipping */}
-            {step === 1 && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h2 className="text-xl font-bold text-gray-900 mb-6">
-                  Shipping Information
-                </h2>
-                <form
-                  className="space-y-4"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setStep(2);
-                  }}
-                >
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        placeholder="John"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        placeholder="Doe"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Street Address
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="123 Main Street"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Apartment, Suite, etc. (optional)
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="Apt 4B"
-                    />
-                  </div>
-
-                  <div className="grid sm:grid-cols-3 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        City
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        placeholder="Anytown"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        State
-                      </label>
-                      <select
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      >
-                        <option value="">Select</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="IL">Illinois</option>
-                        <option value="NY">New York</option>
-                        <option value="TX">Texas</option>
-                        {/* Add more states as needed */}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        ZIP Code
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        placeholder="12345"
-                      />
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors mt-6"
-                  >
-                    Continue to Payment
-                  </button>
-                </form>
-              </div>
-            )}
-
-            {/* Step 2: Payment */}
-            {step === 2 && (
-              <div className="bg-white rounded-xl p-6 border">
-                <h2 className="text-xl font-bold text-gray-900 mb-6">
-                  Payment Information
-                </h2>
-                <form
-                  className="space-y-4"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setStep(3);
-                  }}
-                >
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-                    <Lock className="w-4 h-4" />
-                    Your payment information is encrypted and secure
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Card Number
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="1234 5678 9012 3456"
-                    />
-                  </div>
-
-                  <div className="grid sm:grid-cols-3 gap-4">
-                    <div className="sm:col-span-2">
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Expiration Date
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        placeholder="MM / YY"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        CVV
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                        placeholder="123"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Name on Card
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="John Doe"
-                    />
-                  </div>
-
-                  <div className="flex gap-4 mt-6">
-                    <button
-                      type="button"
-                      onClick={() => setStep(1)}
-                      className="px-6 py-3 border rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-                    >
-                      Back
-                    </button>
-                    <button
-                      type="submit"
-                      className="flex-1 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors"
-                    >
-                      Review Order
-                    </button>
-                  </div>
-                </form>
-              </div>
-            )}
-
-            {/* Step 3: Review */}
-            {step === 3 && (
-              <div className="space-y-6">
-                <div className="bg-white rounded-xl p-6 border">
-                  <h2 className="text-xl font-bold text-gray-900 mb-6">
-                    Review Your Order
-                  </h2>
-
-                  {/* Shipping Address */}
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <h3 className="font-medium text-gray-900">
-                        Shipping Address
-                      </h3>
-                      <button
-                        onClick={() => setStep(1)}
-                        className="text-sm text-orange-600 hover:text-orange-700"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <p className="text-gray-600 text-sm">
-                      John Doe
-                      <br />
-                      123 Main Street
-                      <br />
-                      Anytown, ST 12345
-                    </p>
-                  </div>
-
-                  {/* Payment Method */}
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <h3 className="font-medium text-gray-900">
-                        Payment Method
-                      </h3>
-                      <button
-                        onClick={() => setStep(2)}
-                        className="text-sm text-orange-600 hover:text-orange-700"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <p className="text-gray-600 text-sm">
-                      💳 Visa ending in 3456
-                    </p>
-                  </div>
-
-                  {/* Order Items */}
-                  <div>
-                    <h3 className="font-medium text-gray-900 mb-4">
-                      Order Items
-                    </h3>
-                    <div className="space-y-4">
-                      {items.map((item) => (
-                        <div
-                          key={item.product.id}
-                          className="flex items-center gap-4 py-3 border-b last:border-0"
-                        >
-                          <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-2xl">🔥</span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="font-medium text-gray-900 line-clamp-1">
-                              {item.product.name}
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              Qty: {item.quantity}
-                            </p>
-                          </div>
-                          <div className="font-medium text-gray-900">
-                            {formatPrice(
-                              (item.product.salePrice ?? item.product.price) *
-                                item.quantity
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <button
-                    onClick={() => setStep(2)}
-                    className="px-6 py-3 border rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    Back
-                  </button>
-                  <button className="flex-1 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-2">
-                    <Lock className="w-4 h-4" />
-                    Place Order — {formatPrice(getTotal())}
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Order Summary Sidebar */}
-          <div>
-            <div className="bg-white rounded-xl p-6 border sticky top-24">
-              <h3 className="font-bold text-gray-900 mb-4">Order Summary</h3>
-
-              <div className="space-y-3 text-sm">
-                {items.map((item) => (
-                  <div
-                    key={item.product.id}
-                    className="flex justify-between"
-                  >
-                    <span className="text-gray-600 line-clamp-1 flex-1 mr-2">
-                      {item.product.name} × {item.quantity}
-                    </span>
-                    <span className="font-medium flex-shrink-0">
-                      {formatPrice(
-                        (item.product.salePrice ?? item.product.price) *
-                          item.quantity
-                      )}
-                    </span>
-                  </div>
-                ))}
-
-                <div className="border-t pt-3 mt-3 space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Subtotal</span>
-                    <span className="font-medium">
-                      {formatPrice(getSubtotal())}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Shipping</span>
-                    <span className="font-medium">
-                      {getShipping() === 0 ? (
-                        <span className="text-green-600">FREE</span>
-                      ) : (
-                        formatPrice(getShipping())
-                      )}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Tax</span>
-                    <span className="font-medium">
-                      {formatPrice(getTax())}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="border-t pt-3 mt-3">
-                  <div className="flex justify-between text-lg font-bold">
-                    <span>Total</span>
-                    <span className="text-orange-600">
-                      {formatPrice(getTotal())}
-                    </span>
-                  </div>
-                </div>
-              </div>
+      <section className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:px-6 lg:grid-cols-[1fr_0.42fr]">
+        <div className="border border-[#ded5c8] bg-white p-6 shadow-[0_24px_80px_rgba(32,20,10,0.10)] md:p-8">
+          <div className="flex items-start gap-4 border border-[#ffd0a3] bg-[#fff7ed] p-5">
+            <ShieldAlert className="mt-1 h-6 w-6 shrink-0 text-[#ff7a18]" />
+            <div>
+              <h2 className="text-2xl font-black tracking-[-0.04em] text-[#1d1712]">No payment information is collected here.</h2>
+              <p className="mt-2 text-sm leading-6 text-[#6c6256]">This protects customers and keeps the live site honest while payment/order infrastructure is finished.</p>
             </div>
           </div>
+
+          <h3 className="mt-8 text-xl font-black text-[#1d1712]">Cart items</h3>
+          <div className="mt-4 divide-y divide-[#eadfce] border border-[#eadfce]">
+            {items.map((item) => (
+              <div key={item.product.id} className="grid gap-3 p-4 sm:grid-cols-[1fr_auto]">
+                <div>
+                  <p className="font-black text-[#1d1712]">{item.product.name}</p>
+                  <p className="mt-1 text-sm text-[#6c6256]">Qty: {item.quantity}{item.product.sku ? ` · SKU: ${item.product.sku}` : ""}</p>
+                </div>
+                <div className="font-black text-[#1d1712]">{formatPrice((item.product.salePrice ?? item.product.price) * item.quantity)}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href={mailtoHref} className="inline-flex items-center justify-center gap-2 bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]">
+              <Mail className="h-4 w-4" /> Email this cart
+            </a>
+            <a href={`tel:${defaultStoreConfig.phone}`} className="inline-flex items-center justify-center gap-2 border border-[#1d1712] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-[#1d1712] transition hover:bg-[#1d1712] hover:text-white">
+              <Phone className="h-4 w-4" /> Call {defaultStoreConfig.phone}
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <aside className="h-fit border border-[#ded5c8] bg-[#fffdf9] p-6 shadow-[0_24px_80px_rgba(32,20,10,0.08)]">
+          <h2 className="text-xl font-black text-[#1d1712]">Estimated summary</h2>
+          <div className="mt-5 space-y-3 text-sm">
+            <div className="flex justify-between"><span className="text-[#6c6256]">Subtotal</span><span className="font-bold text-[#1d1712]">{formatPrice(getSubtotal())}</span></div>
+            <div className="flex justify-between"><span className="text-[#6c6256]">Shipping estimate</span><span className="font-bold text-[#1d1712]">{formatPrice(getShipping())}</span></div>
+            <div className="flex justify-between"><span className="text-[#6c6256]">Tax estimate</span><span className="font-bold text-[#1d1712]">{formatPrice(getTax())}</span></div>
+            <div className="flex justify-between border-t border-[#eadfce] pt-4 text-lg"><span className="font-black text-[#1d1712]">Estimated total</span><span className="font-black text-[#ff7a18]">{formatPrice(getTotal())}</span></div>
+          </div>
+          <p className="mt-5 text-xs leading-5 text-[#6c6256]">Final availability, freight, tax, and payment method must be confirmed by Aaron&apos;s Fireplace Co.</p>
+        </aside>
+      </section>
+    </main>
   );
 }

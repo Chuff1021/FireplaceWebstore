@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { defaultStoreConfig } from "@/lib/store-config";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -12,19 +12,9 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const { address } = defaultStoreConfig;
   const fullAddress = `${address.street}, ${address.city}, ${address.state} ${address.zip}`;
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setSubmitted(true);
-    setLoading(false);
-  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -54,16 +44,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
 
-              {submitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                  <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600">
-                    {"Thank you for contacting us. We'll get back to you within 24-48 hours."}
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -150,22 +131,15 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full bg-red-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  <a
+                    href={`mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent(formData.subject || "Website contact request")}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`)}`}
+                    className="w-full bg-red-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-800 transition-colors flex items-center justify-center gap-2"
                   >
-                    {loading ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        <Send className="h-5 w-5" />
-                        Send Message
-                      </>
-                    )}
-                  </button>
+                    <Send className="h-5 w-5" />
+                    Email Aaron's Fireplace Co.
+                  </a>
+                  <p className="text-sm text-gray-500">This opens your email app with the message filled in. Direct email is the safest launch option until live CRM capture is connected.</p>
                 </form>
-              )}
             </div>
 
             {/* Contact Info */}

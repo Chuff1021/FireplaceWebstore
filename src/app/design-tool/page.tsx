@@ -89,7 +89,6 @@ function OptionButton({ selected, title, subtitle, onClick }: { selected: boolea
 export default function DesignToolPage() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>(initialAnswers);
-  const [submitted, setSubmitted] = useState(false);
   const progress = Math.round(((step + 1) / steps.length) * 100);
 
   const setAnswer = (key: keyof Answers, value: string) => {
@@ -107,6 +106,8 @@ export default function DesignToolPage() {
     step === 4 ? Boolean(answers.budget) :
     Boolean(answers.contact);
 
+  const mailtoHref = `mailto:aaronsfireplaceco@yahoo.com?subject=${encodeURIComponent("Fireplace matchmaker request")}&body=${encodeURIComponent(`Contact: ${answers.contact}\nZip: ${answers.zip}\nTimeline: ${answers.timeline}\nProject type: ${answers.projectType}\nFuel: ${answers.fuel}\nRoom size: ${answers.roomSize}\nStyle: ${answers.style}\nBudget: ${answers.budget}\n\nNotes:\n${answers.notes}`)}`;
+
   return (
     <main className="min-h-screen bg-[#f7f1e8]">
       <section className="relative overflow-hidden bg-[#0b0b0a] px-4 py-16 text-white md:px-5 md:py-20">
@@ -117,15 +118,14 @@ export default function DesignToolPage() {
             Find the right fireplace without guessing.
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#e6d8c4]">
-            This is not fake AI visualization. It is a practical planning intake that helps narrow fuel type, fitment, style, budget, and next steps for expert follow-up.
+            Answer a few practical planning questions so Aaron's can narrow fuel type, fitment, style, budget, and next steps for expert follow-up.
           </p>
         </div>
       </section>
 
       <section className="mx-auto grid max-w-[1240px] gap-8 px-4 py-10 md:px-5 lg:grid-cols-[0.72fr_0.28fr]">
         <div className="border border-[#e2d3c0] bg-white p-6 shadow-[0_24px_80px_rgba(48,31,14,0.08)] md:p-8">
-          {!submitted ? (
-            <>
+          <>
               <div className="mb-8">
                 <div className="mb-3 flex items-center justify-between text-sm text-[#7a6d5f]">
                   <span className="font-bold">Step {step + 1} of {steps.length}: {steps[step]}</span>
@@ -212,29 +212,18 @@ export default function DesignToolPage() {
                     Continue <ArrowRight className="h-4 w-4" />
                   </button>
                 ) : (
-                  <button type="button" onClick={() => setSubmitted(true)} disabled={!canContinue} className="inline-flex items-center gap-2 bg-[#ff7a18] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-[#ff963f] disabled:opacity-30">
-                    Build My Plan <Send className="h-4 w-4" />
-                  </button>
+                  <a href={canContinue ? mailtoHref : undefined} aria-disabled={!canContinue} className={`inline-flex items-center gap-2 px-6 py-3 text-sm font-black uppercase tracking-[0.12em] transition ${canContinue ? "bg-[#ff7a18] text-black hover:bg-[#ff963f]" : "cursor-not-allowed bg-[#ff7a18]/40 text-black/50"}`}>
+                    Email My Plan <Mail className="h-4 w-4" />
+                  </a>
                 )}
               </div>
-            </>
-          ) : (
-            <div className="py-10 text-center">
-              <CheckCircle className="mx-auto h-14 w-14 text-[#ff7a18]" />
-              <h2 className="mt-5 text-4xl font-black tracking-[-0.05em] text-[#1d1712]">Plan captured.</h2>
-              <p className="mx-auto mt-4 max-w-2xl text-[#6c6256]">
-                Next step is wiring this into email/CRM. For now, this page proves the new direction: practical fireplace planning instead of fake visualization.
-              </p>
-              <Link href="/category/fireplaces" className="mt-8 inline-flex items-center gap-2 bg-black px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white hover:bg-[#ff7a18] hover:text-black">
-                Browse fireplaces <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          )}
+            <p className="mt-4 text-sm text-[#6c6256]">This opens your email app with the plan filled in. Direct email is the safest launch option until live CRM capture is connected.</p>
+          </>
         </div>
 
         <aside className="space-y-4">
           {[
-            { icon: Flame, title: "No fake render promise", text: "This tool collects buying signals and fitment details we can actually act on." },
+            { icon: Flame, title: "Practical planning", text: "This tool collects buying signals and fitment details Aaron's can actually act on." },
             { icon: Camera, title: "Photos still help", text: "Room or model photos can be reviewed by an expert instead of pretending AI will solve everything." },
             { icon: Wrench, title: "Built for follow-up", text: "The end goal is a quote, part match, or shortlist — not a novelty demo." },
             { icon: Phone, title: "Expert-assisted", text: "Fireplace purchases are complex. This flow supports human trust instead of replacing it." },
