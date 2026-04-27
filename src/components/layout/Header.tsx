@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, ShoppingCart, Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Search, ShoppingCart, Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig, productCategories } from "@/lib/store-config";
 
@@ -12,6 +12,8 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { getItemCount, toggleCart } = useCartStore();
+  const addressLine = `${defaultStoreConfig.address.street}, ${defaultStoreConfig.address.city}, ${defaultStoreConfig.address.state} ${defaultStoreConfig.address.zip}`;
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressLine)}`;
 
   return (
     <>
@@ -28,13 +30,24 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               </span>
             ))}
           </div>
-          <a
-            href={`tel:${defaultStoreConfig.phone}`}
-            className="flex items-center gap-2 text-white/90 transition-colors hover:text-white"
-          >
-            <Phone className="h-4 w-4" />
-            {defaultStoreConfig.phone}
-          </a>
+          <div className="flex items-center gap-5">
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-white/80 transition-colors hover:text-white"
+            >
+              <MapPin className="h-4 w-4 text-[#ffb36b]" />
+              {addressLine}
+            </a>
+            <a
+              href={`tel:${defaultStoreConfig.phone}`}
+              className="flex items-center gap-2 text-white/90 transition-colors hover:text-white"
+            >
+              <Phone className="h-4 w-4" />
+              {defaultStoreConfig.phone}
+            </a>
+          </div>
         </div>
       </div>
 
@@ -92,9 +105,17 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
                 <p>Order Online or Call</p>
                 <a
                   href={`tel:${defaultStoreConfig.phone}`}
-                  className="font-semibold text-white hover:text-[#ffb36b]"
+                  className="block font-semibold text-white hover:text-[#ffb36b]"
                 >
                   {defaultStoreConfig.phone}
+                </a>
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-xs text-[#ffb36b] hover:text-white"
+                >
+                  {defaultStoreConfig.address.street}, {defaultStoreConfig.address.city}
                 </a>
               </div>
 
