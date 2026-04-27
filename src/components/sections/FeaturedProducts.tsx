@@ -1,21 +1,34 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Flame, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import { ProductCard } from "@/components/ui/ProductCard";
 import type { Product } from "@/lib/store-config";
 
-const TRAVIS_BRANDS = ["Fireplace Xtrordinair", "Lopi", "Fire Garden"];
-const EXCLUDED_CATEGORY_IDS = new Set(["parts"]);
+const FEATURED_TRAVIS_SLUGS = [
+  "fpx-4415highoutputdeluxe",
+  "fpx-864tv40kdeluxe",
+  "fpx-probuilder36cleanfacedeluxe",
+  "lopi-evergreennexgenhybrid",
+  "lopi-rockportnexgenhybrid",
+  "lopi-radiantpluslargegsb",
+  "lopi-agppelletstove",
+  "lopi-deerfieldii",
+];
 
-function isTravisProduct(product: Product) {
-  return TRAVIS_BRANDS.includes(product.brand) && !EXCLUDED_CATEGORY_IDS.has(product.categoryId);
-}
+function preferFireplacePhotos(product: Product): Product {
+  const images = product.images ?? [];
+  const betterImages = [
+    ...images.filter((image) => /-(3|4)\.webp$/.test(image)),
+    ...images.filter((image) => /-2\.webp$/.test(image)),
+    ...images.filter((image) => !/-[2-4]\.webp$/.test(image)),
+  ];
 
-function brandSort(product: Product) {
-  const index = TRAVIS_BRANDS.indexOf(product.brand);
-  return index === -1 ? TRAVIS_BRANDS.length : index;
+  return {
+    ...product,
+    images: Array.from(new Set(betterImages)),
+  };
 }
 
 export function FeaturedProducts() {
@@ -25,36 +38,29 @@ export function FeaturedProducts() {
   useEffect(() => {
     let cancelled = false;
 
-    async function loadTravisProducts() {
+    async function loadFeaturedTravisProducts() {
       try {
         const response = await fetch("/api/products?limit=10000");
         if (!response.ok) throw new Error("Failed to load products");
         const catalog = (await response.json()) as Product[];
-        const travisProducts = catalog
-          .filter(isTravisProduct)
-          .sort((a, b) => brandSort(a) - brandSort(b) || a.name.localeCompare(b.name));
+        const curatedProducts = FEATURED_TRAVIS_SLUGS.map((slug) => catalog.find((product) => product.slug === slug))
+          .filter((product): product is Product => Boolean(product))
+          .map(preferFireplacePhotos);
 
-        if (!cancelled) setProducts(travisProducts);
+        if (!cancelled) setProducts(curatedProducts);
       } catch (error) {
-        console.error("Unable to load Travis Industries products", error);
+        console.error("Unable to load featured Travis products", error);
         if (!cancelled) setProducts([]);
       } finally {
         if (!cancelled) setLoading(false);
       }
     }
 
-    loadTravisProducts();
+    loadFeaturedTravisProducts();
     return () => {
       cancelled = true;
     };
   }, []);
-
-  const brandCounts = useMemo(() => {
-    return TRAVIS_BRANDS.map((brand) => ({
-      brand,
-      count: products.filter((product) => product.brand === brand).length,
-    }));
-  }, [products]);
 
   return (
     <section className="relative overflow-hidden bg-[#11100e] py-20 text-white">
@@ -63,43 +69,30 @@ export function FeaturedProducts() {
         <div className="mb-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div>
             <p className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.26em] text-[#ff8a24]">
-              <Sparkles className="h-4 w-4" /> Travis Industries Collection
+              <Sparkles className="h-4 w-4" /> Featured Fireplaces
             </p>
             <h2 className="mt-4 max-w-4xl text-[38px] font-black leading-[0.98] tracking-[-0.055em] md:text-[58px]">
-              Premium fireplaces from Lopi, Fireplace Xtrordinair, and Fire Garden.
+              A curated mix of Fireplace Xtrordinair and Lopi favorites.
             </h2>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d8c7b2]">
-              Explore current Travis Industries models available through Aaron&apos;s Fireplace Co. These products are quote-based so we can confirm fit, venting, options, and dealer pricing before the project moves forward.
+              A small selection of premium Travis Industries fireplaces and stoves available through Aaron&apos;s Fireplace Co. Request a quote and we&apos;ll help confirm fit, venting, options, and dealer pricing.
             </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-3 lg:justify-self-end">
-            {brandCounts.map(({ brand, count }) => (
-              <div key={brand} className="border border-white/10 bg-white/[0.05] p-5 backdrop-blur">
-                <div className="flex items-center gap-2 text-[#ffb36b]">
-                  <Flame className="h-5 w-5" />
-                  <span className="text-[11px] font-black uppercase tracking-[0.18em]">Featured Brand</span>
-                </div>
-                <p className="mt-3 text-lg font-black text-white">{brand}</p>
-                <p className="mt-1 text-sm text-[#d8c7b2]">{loading ? "Loading" : `${count} models`}</p>
-              </div>
-            ))}
+          <div className="border border-white/10 bg-white/[0.05] p-6 backdrop-blur lg:justify-self-end">
+            <div className="flex items-start gap-3">
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#ff7a18]" />
+              <p className="max-w-xl text-sm leading-6 text-[#e8d9c7]">
+                Need help choosing? These featured models can be routed through our quote flow so we can help match the right fireplace, insert, or stove to your space.
+              </p>
+            </div>
+            <Link
+              href="/design-tool"
+              className="mt-5 inline-flex items-center justify-center gap-2 bg-[#ff7a18] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
+            >
+              Get Help Choosing <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-        </div>
-
-        <div className="mb-8 flex flex-col gap-4 border border-white/10 bg-black/30 p-5 backdrop-blur md:flex-row md:items-center md:justify-between">
-          <div className="flex items-start gap-3">
-            <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#ff7a18]" />
-            <p className="max-w-3xl text-sm leading-6 text-[#e8d9c7]">
-              Need help choosing? Every Travis model here can be routed through our quote flow so we can help match the right fireplace, insert, stove, or outdoor fire feature to the space.
-            </p>
-          </div>
-          <Link
-            href="/design-tool"
-            className="inline-flex shrink-0 items-center justify-center gap-2 bg-[#ff7a18] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
-          >
-            Get Help Choosing <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
 
         {loading ? (
@@ -116,7 +109,7 @@ export function FeaturedProducts() {
           </div>
         ) : (
           <div className="border border-white/10 bg-white/[0.05] p-8 text-center text-[#d8c7b2]">
-            Travis Industries products are being prepared for this section.
+            Featured Fireplace Xtrordinair and Lopi products are being prepared for this section.
           </div>
         )}
       </div>
