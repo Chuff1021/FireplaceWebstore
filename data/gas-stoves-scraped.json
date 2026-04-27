@@ -1,18 +1,5 @@
 [
   {
-    "sku": "KGM-FDV451NE-Natural-Gas-SD",
-    "name": "(Open Box Item) - Kingsman 26 Inch Direct Vent Natural Gas Heating Stove - Intermittent Pilot",
-    "slug": "kgm-fdv451ne-natural-gas-sd",
-    "price": 2179.99,
-    "salePrice": 1773.77,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv451ne-natural-gas-sd-7b935ec6.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv451ne-natural-gas-sd.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "BSC-NV-S-TOWNSEND-ALD-LP",
     "name": "Buck Stove 26 1/2 Inch Townsend II Steel Vent Free Gas Heating Stove (Small)",
     "slug": "bsc-nv-s-townsend-ald-lp",
@@ -377,110 +364,6 @@
     "imageUrls": [
       "/products-upgraded/gas-stoves/emp-vfd20ms30fn.webp"
     ]
-  },
-  {
-    "sku": "KGM-FDV451NE",
-    "name": "Kingsman 26 Inch Direct Vent Gas Heating Stove - Intermittent Pilot",
-    "slug": "kgm-fdv451ne",
-    "price": 3449.99,
-    "salePrice": 2800.19,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv451ne-842863e7.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv451ne.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-FDV451N",
-    "name": "Kingsman 26 Inch Direct Vent Gas Heating Stove - Millivolt",
-    "slug": "kgm-fdv451n",
-    "price": 2459.99,
-    "salePrice": 1994.99,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv451n-842863e7.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv451n.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-FVF350",
-    "name": "Kingsman 28 Inch Vent Free Gas Heating Stove",
-    "slug": "kgm-fvf350",
-    "price": 1199.99,
-    "salePrice": 972.39,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fvf350-f02d11ed.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fvf350.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-FDV200SN",
-    "name": "Kingsman FDV200S Free Standing Direct Vent Gas Heating Stove - Millivolt Pilot",
-    "slug": "kgm-fdv200sn",
-    "price": 3009.99,
-    "salePrice": 2444.99,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv200sn-17fe9164.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv200sn.html",
-    "rating": 5,
-    "reviewCount": 4,
-    "isBestSeller": true
-  },
-  {
-    "sku": "KGM-FDV200SNE2",
-    "name": "Kingsman FDV200S Free Standing Direct Vent Gas Heating Stove with Blower - IPI Pilot",
-    "slug": "kgm-fdv200sne2",
-    "price": 3189.99,
-    "salePrice": 2595.03,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv200sne2-17fe9164.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv200sne2.html",
-    "rating": 5,
-    "reviewCount": 3,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-FDV350N7",
-    "name": "Kingsman FDV350 Free Standing Direct Vent Gas Heating Stove - 7 Day Millivolt",
-    "slug": "kgm-fdv350n7",
-    "price": 3259.99,
-    "salePrice": 2652.3,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv350n7-93fec4be.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv350n7.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-FDV350N",
-    "name": "Kingsman FDV350 Free Standing Direct Vent Gas Heating Stove - Millivolt Pilot",
-    "slug": "kgm-fdv350n",
-    "price": 3269.99,
-    "salePrice": 2659.99,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv350n-64eefac6.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv350n.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": true
-  },
-  {
-    "sku": "KGM-FDV350NE2",
-    "name": "Kingsman FDV350 Free Standing Direct Vent Gas Heating Stove with Blower - IPI Pilot",
-    "slug": "kgm-fdv350ne2",
-    "price": 3559.99,
-    "salePrice": 2893.79,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-stoves/kgm-fdv350ne2-64eefac6.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-fdv350ne2.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "NPL-GDS20",

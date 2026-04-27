@@ -90,19 +90,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "KGM-IDV34N",
-    "name": "Kingsman IDV34 Direct Vent Gas Fireplace Insert - Millivolt Pilot",
-    "slug": "kgm-idv34n",
-    "price": 2479.99,
-    "salePrice": 2013.99,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv34n-973aeac9.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv34n.html",
-    "rating": 5,
-    "reviewCount": 2,
-    "isBestSeller": false
-  },
-  {
     "sku": "MAJ-TRILLIANT30IN",
     "name": "Majestic 30 Inch Trilliant Direct Vent Gas Fireplace Insert with Intellifire Ignition",
     "slug": "maj-trilliant30in",
@@ -290,19 +277,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "KGM-IDV44N",
-    "name": "Kingsman IDV44 Direct Vent Gas Fireplace Insert - Millivolt Pilot",
-    "slug": "kgm-idv44n",
-    "price": 2989.99,
-    "salePrice": 2428.19,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv44n-973aeac9.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv44n.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
     "sku": "SFL-ABBOT-30BL-DELUXE-NG",
     "name": "Sierra Flame 30 Inch Abbot Deluxe Direct Vent Gas Fireplace Insert - Log Set",
     "slug": "sfl-abbot-30bl-deluxe-ng",
@@ -377,71 +351,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "KGM-IDV34NE",
-    "name": "Kingsman IDV34 Direct Vent Gas Fireplace Insert - IPI Pilot",
-    "slug": "kgm-idv34ne",
-    "price": 2539.99,
-    "salePrice": 2065.89,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv34ne-275cff18.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv34ne.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-IDV44NE",
-    "name": "Kingsman IDV44 Direct Vent Gas Fireplace Insert - IPI Pilot",
-    "slug": "kgm-idv44ne",
-    "price": 2999.99,
-    "salePrice": 2441.39,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv44ne-275cff18.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv44ne.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-IDV34NE2",
-    "name": "Kingsman IDV34 Direct Vent Gas Fireplace Insert - Proflame 2 IPI",
-    "slug": "kgm-idv34ne2",
-    "price": 3029.99,
-    "salePrice": 2464.79,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv34ne2-dd8727dd.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv34ne2.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-IDV44NE2",
-    "name": "Kingsman IDV44 Direct Vent Gas Fireplace Insert - Proflame 2 IPI",
-    "slug": "kgm-idv44ne2",
-    "price": 3489.99,
-    "salePrice": 2834.99,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv44ne2-dd8727dd.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv44ne2.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "KGM-IDV26NE2",
-    "name": "Kingsman IDV26 Direct Vent Gas Fireplace Insert - Proflame 2 IPI",
-    "slug": "kgm-idv26ne2",
-    "price": 3629.99,
-    "salePrice": 2947.9,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv26ne2-d4ea6e73.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv26ne2.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "NPL-GDIX4N",
     "name": "Napoleon 34 Inch Oakville X4 Direct Vent Gas Fireplace Insert (Modern)",
     "slug": "npl-gdix4n",
@@ -488,19 +397,6 @@
     "imageUrls": [
       "/products-upgraded/gas-inserts/cui-dvc20in71n.webp"
     ]
-  },
-  {
-    "sku": "KGM-IDV26N",
-    "name": "Kingsman IDV26 Direct Vent Gas Fireplace Insert - Millivolt Pilot",
-    "slug": "kgm-idv26n",
-    "price": 2829.99,
-    "salePrice": 2297.09,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv26n-7e9e5ddf.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv26n.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
   },
   {
     "sku": "PTS-DVI-30M-01-32N",
@@ -683,32 +579,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "NPL-TDIX3N-1",
-    "name": "Timberwolf 29 Inch TDI3 Bluetooth-Enabled Natural Gas Fireplace Insert with Logs - IPI (Modern)",
-    "slug": "npl-tdix3n-1",
-    "price": 3628.9,
-    "salePrice": 3299,
-    "brand": "Timberwolf",
-    "imageUrl": "/products/gas-inserts/npl-tdix3n-1-20713be2.webp",
-    "productUrl": "https://www.efireplacestore.com/npl-tdix3n-1.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "NPL-TDIG3N-1",
-    "name": "Timberwolf 29 Inch TDI3 Bluetooth-Enabled Natural Gas Fireplace Insert with Glass - IPI (Modern)",
-    "slug": "npl-tdig3n-1",
-    "price": 3628.9,
-    "salePrice": 3299,
-    "brand": "Timberwolf",
-    "imageUrl": "/products/gas-inserts/npl-tdig3n-1-1ba54f2e.webp",
-    "productUrl": "https://www.efireplacestore.com/npl-tdig3n-1.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "NPL-RD3N",
     "name": "Napoleon Rosedale 3 Gas Fireplace Insert",
     "slug": "npl-rd3n",
@@ -723,19 +593,6 @@
     "imageUrls": [
       "/products-upgraded/gas-inserts/npl-rd3n.webp"
     ]
-  },
-  {
-    "sku": "KGM-IDV26LPE",
-    "name": "Kingsman IDV26 Direct Vent Gas Fireplace Insert - IPI",
-    "slug": "kgm-idv26lpe",
-    "price": 3039.99,
-    "salePrice": 2470.19,
-    "brand": "Kingsman",
-    "imageUrl": "/products/gas-inserts/kgm-idv26lpe-7e9e5ddf.webp",
-    "productUrl": "https://www.efireplacestore.com/kgm-idv26lpe.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "LOPI-EVERGREENNEXGENHYBRIDINSERT",
