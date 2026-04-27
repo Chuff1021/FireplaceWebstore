@@ -51,12 +51,6 @@ export function Hero() {
             >
               Find Parts
             </Link>
-            <Link
-              href="/design-tool"
-              className="inline-flex items-center justify-center border border-[#ff7a18]/50 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-[#ffb36b] backdrop-blur transition hover:bg-[#ff7a18] hover:text-black"
-            >
-              Get Help Choosing
-            </Link>
           </div>
 
           <form action="/search" method="GET" className="mt-9 max-w-2xl border border-white/15 bg-white p-2 shadow-2xl shadow-black/40">
@@ -94,7 +88,12 @@ export function Hero() {
               priority
             />
             <div className="mt-6 border-t border-white/10 pt-5">
-              <p className="text-sm uppercase tracking-[0.22em] text-[#ffb36b]">Intake engine</p>
+              <Link
+                href="/design-tool"
+                className="text-sm font-black uppercase tracking-[0.22em] text-[#ffb36b] transition hover:text-white"
+              >
+                Get Help Choosing a Fireplace
+              </Link>
               <p className="mt-2 text-2xl font-black tracking-[-0.04em] text-white">Fireplaces. Parts. Expert help.</p>
               <p className="mt-3 text-sm leading-6 text-[#d9cbb9]">
                 A more premium storefront built around trust, clear product discovery, and high-quality manufacturer imagery.
