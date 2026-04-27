@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, ShoppingCart, Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Search, ShoppingCart, Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig, productCategories } from "@/lib/store-config";
 
@@ -30,24 +30,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               </span>
             ))}
           </div>
-          <div className="flex items-center gap-5">
-            <a
-              href={mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-white/80 transition-colors hover:text-white"
-            >
-              <MapPin className="h-4 w-4 text-[#ffb36b]" />
-              {addressLine}
-            </a>
-            <a
-              href={`tel:${defaultStoreConfig.phone}`}
-              className="flex items-center gap-2 text-white/90 transition-colors hover:text-white"
-            >
-              <Phone className="h-4 w-4" />
-              {defaultStoreConfig.phone}
-            </a>
-          </div>
+
         </div>
       </div>
 
