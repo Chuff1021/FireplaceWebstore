@@ -140,7 +140,7 @@ export const productCategories: ProductCategory[] = [
     name: "Fireplaces",
     slug: "fireplaces",
     description: "Complete fireplace units for any home",
-    image: "/categories/fireplaces.jpg",
+    image: "/products-upgraded/wood-fireplaces/fpx-42apex-3.webp",
     subcategories: [
       { id: "gas-fireplaces", name: "Gas Fireplaces", slug: "gas-fireplaces", description: "Natural gas and propane fireplaces", image: "/categories/gas-fireplaces.jpg" },
       { id: "wood-fireplaces", name: "Wood Fireplaces", slug: "wood-fireplaces", description: "Traditional wood-burning fireplaces", image: "/categories/wood-fireplaces.jpg" },

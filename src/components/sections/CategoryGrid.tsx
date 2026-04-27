@@ -4,7 +4,7 @@ import { ArrowRight, Flame } from "lucide-react";
 import { productCategories } from "@/lib/store-config";
 
 const categoryVisuals: Record<string, string> = {
-  fireplaces: "/products-upgraded/gas-fireplaces/fpx-probuilder42lineardeluxe.webp",
+  fireplaces: "/products-upgraded/wood-fireplaces/fpx-42apex-3.webp",
   inserts: "/products-upgraded/gas-inserts/lopi-evergreennexgenhybridinsert.webp",
   stoves: "/products-upgraded/wood-stoves/lopi-evergreennexgenhybrid.webp",
   outdoor: "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp",
