@@ -29,7 +29,8 @@ const departmentMap: Record<string, string> = {
   "Gas Fireplace Parts": "gas-fireplace-parts",
   "Gas Stove Parts": "gas-stove-parts",
   "Pellet Stove Parts": "pellet-stove-parts",
-  "Electric Stove Parts": "electric-stove-parts",
+  "Electric Stove Parts": "electric-fireplace-parts",
+  "Electric Fireplace Parts": "electric-fireplace-parts",
   "Outdoor Fireplace Parts": "outdoor-fireplace-parts",
 };
 

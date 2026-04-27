@@ -91,11 +91,11 @@ export const partsDepartments: PartsDepartment[] = [
     ],
   },
   {
-    name: "Electric Stove Parts",
-    slug: "electric-stove-parts",
-    description: "Heating elements, controls, switches, lamps, and service parts for electric hearth units.",
-    image: "/products/parts/h5876.jpg",
-    sourceUrl: "https://www.stove-parts-unlimited.com/electric-stove-parts/",
+    name: "Electric Fireplace Parts",
+    slug: "electric-fireplace-parts",
+    description: "Heating elements, controls, switches, lamps, remotes, and service parts for electric fireplaces.",
+    image: "/products/parts/led-all40.jpg",
+    sourceUrl: "https://www.stove-parts-unlimited.com/electric-fireplace-parts/",
     brands: [
       { name: "Dimplex", sourceUrl: "https://www.stove-parts-unlimited.com/brands/Dimplex.html" },
       { name: "SimpliFire", sourceUrl: "https://www.stove-parts-unlimited.com/simplifyre-electric-parts/" },

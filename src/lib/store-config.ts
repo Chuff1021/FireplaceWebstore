@@ -209,7 +209,7 @@ export const productCategories: ProductCategory[] = [
       { id: "gas-fireplace-parts", name: "Gas Fireplace Parts", slug: "gas-fireplace-parts", description: "Valves, pilots, burners, and gas fireplace service parts", image: "/categories/gas-fireplaces.jpg" },
       { id: "gas-stove-parts", name: "Gas Stove Parts", slug: "gas-stove-parts", description: "Gas stove replacement components and controls", image: "/categories/gas-stoves.jpg" },
       { id: "pellet-stove-parts", name: "Pellet Stove Parts", slug: "pellet-stove-parts", description: "Augers, blowers, igniters, and pellet stove wear parts", image: "/categories/pellet-stoves.jpg" },
-      { id: "electric-stove-parts", name: "Electric Stove Parts", slug: "electric-stove-parts", description: "Electric stove and fireplace service parts", image: "/categories/electric-fireplaces.jpg" },
+      { id: "electric-fireplace-parts", name: "Electric Fireplace Parts", slug: "electric-fireplace-parts", description: "Electric fireplace heating elements, remotes, controls, and service parts", image: "/products/parts/led-all40.jpg" },
       { id: "outdoor-fireplace-parts", name: "Outdoor Fireplace Parts", slug: "outdoor-fireplace-parts", description: "Outdoor hearth burners, valves, and media components", image: "/categories/outdoor-fireplaces.jpg" },
     ],
   },
