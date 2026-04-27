@@ -21,7 +21,7 @@ export function DesignToolBanner() {
             Not sure what fits? We&apos;ll help narrow it down.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[#d8c7b2]">
-            We&apos;re replacing fake AI room rendering with a practical fireplace matchmaker: dimensions, fuel type, style, budget, photos, and expert follow-up when needed.
+            Answer a few quick questions about your room, fuel type, style, budget, and project photos. We&apos;ll point you toward realistic fireplace options and follow up with expert guidance when your project needs a closer look.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
