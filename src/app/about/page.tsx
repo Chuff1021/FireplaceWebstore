@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">About {defaultStoreConfig.storeName}</h1>
             <p className="text-xl text-red-100 max-w-3xl mx-auto">
-              Serving Republic, Missouri and the surrounding areas with quality fireplace solutions since 2010.
+              Serving Republic, Missouri and the surrounding areas with quality fireplace solutions since 1989.
             </p>
           </div>
         </div>

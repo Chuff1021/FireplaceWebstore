@@ -59,26 +59,26 @@ export interface StoreConfig {
   };
 }
 
-// Default configuration — Aaron's Hearth and Home
+// Default configuration — Aaron's Fireplace Co.
 export const defaultStoreConfig: StoreConfig = {
   storeName: "Aaron's Fireplace Co.",
   tagline: "Fireplaces, inserts, stoves, and parts since 1989",
   logo: "/logo.png",
   favicon: "/favicon.ico",
   
-  phone: "(417) 555-0199",
+  phone: "(417) 732-9775",
   email: "aaronsfireplaceco@yahoo.com",
   address: {
-    street: "100 E Hines St",
+    street: "611 E Harrison St",
     city: "Republic",
     state: "MO",
     zip: "65738",
   },
   
   social: {
-    facebook: "https://facebook.com/aaronshearthandhome",
-    instagram: "https://instagram.com/aaronshearthandhome",
-    youtube: "https://youtube.com/aaronshearthandhome",
+    facebook: "https://facebook.com/Aaronsfireplaceco",
+    instagram: "",
+    youtube: "",
   },
   
   theme: {
@@ -91,8 +91,8 @@ export const defaultStoreConfig: StoreConfig = {
   
   business: {
     hours: {
-      weekdays: "8:00 AM - 5:00 PM",
-      saturday: "9:00 AM - 3:00 PM",
+      weekdays: "9:00 AM - 5:00 PM",
+      saturday: "By appointment",
       sunday: "Closed",
     },
     showrooms: true,

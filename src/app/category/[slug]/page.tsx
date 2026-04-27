@@ -9,7 +9,7 @@ import {
   isPartsCategorySlug,
   PartsCategoryExperience,
 } from "@/components/parts/PartsCategoryExperience";
-import { productCategories, type Product } from "@/lib/store-config";
+import { defaultStoreConfig, productCategories, type Product } from "@/lib/store-config";
 import { resolveProductImage } from "@/lib/product-images";
 
 const PRODUCTS_PER_PAGE = 24;
@@ -629,10 +629,10 @@ export default function CategoryPage() {
           </div>
           <div className="flex flex-col gap-3 md:flex-row md:flex-wrap xl:ml-auto xl:gap-9">
             <a
-              href="tel:4175550199"
+              href={`tel:${defaultStoreConfig.phone}`}
               className="inline-flex items-center text-sm font-bold uppercase tracking-[0.08em] xl:text-base xl:font-normal xl:tracking-[0.06em]"
             >
-              Call (417) 555-0199
+              Call {defaultStoreConfig.phone}
             </a>
             <Link
               href="/contact"
