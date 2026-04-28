@@ -217,8 +217,16 @@ export default function CategoryPage() {
         return (b.salePrice ?? b.price) - (a.salePrice ?? a.price);
       case "name":
         return a.name.localeCompare(b.name);
-      default:
-        return a.isFeatured === b.isFeatured ? 0 : a.isFeatured ? -1 : 1;
+      default: {
+        const priority = (product: Product) => {
+          if (slug === "stoves" && product.brand === "Lopi" && product.subcategoryId === "wood-stoves") return 0;
+          const featuredBrandIndex = FEATURED_FILTER_BRANDS.indexOf(product.brand);
+          if (featuredBrandIndex !== -1) return 10 + featuredBrandIndex;
+          return product.isFeatured ? 50 : 100;
+        };
+        const priorityDifference = priority(a) - priority(b);
+        return priorityDifference !== 0 ? priorityDifference : a.name.localeCompare(b.name);
+      }
     }
   });
 
