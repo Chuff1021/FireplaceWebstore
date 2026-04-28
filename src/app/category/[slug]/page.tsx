@@ -156,7 +156,7 @@ export default function CategoryPage() {
     return <PartsCategoryExperience slug={slug} />;
   }
 
-  const categoryProducts = catalogProducts.filter((product) => {
+  const baseCategoryProducts = catalogProducts.filter((product) => {
     if (parentCategory) {
       const subcategoryIds = new Set((parentCategory.subcategories ?? []).map((sub) => sub.id));
       return (
@@ -171,6 +171,18 @@ export default function CategoryPage() {
 
     return true;
   });
+
+  const categoryProducts =
+    slug === "fireplaces"
+      ? Array.from(
+          new Map(
+            [
+              ...baseCategoryProducts,
+              ...catalogProducts.filter((product) => product.brand === "Lopi"),
+            ].map((product) => [product.id, product])
+          ).values()
+        )
+      : baseCategoryProducts;
 
   const brandCounts = categoryProducts.reduce<Record<string, number>>((counts, product) => {
     if (product.brand) counts[product.brand] = (counts[product.brand] ?? 0) + 1;
