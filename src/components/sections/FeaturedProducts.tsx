@@ -36,9 +36,12 @@ export function FeaturedProducts() {
 
     async function loadFeaturedTravisProducts() {
       try {
-        const response = await fetch("/api/products?limit=10000");
-        if (!response.ok) throw new Error("Failed to load products");
-        const catalog = (await response.json()) as Product[];
+        const responses = await Promise.all([
+          fetch("/api/products?category=gas-fireplaces&limit=10000"),
+          fetch("/api/products?category=wood-fireplaces&limit=10000"),
+        ]);
+        if (responses.some((response) => !response.ok)) throw new Error("Failed to load products");
+        const catalog = (await Promise.all(responses.map((response) => response.json()))).flat() as Product[];
         const curatedProducts = FEATURED_TRAVIS_SLUGS.map((slug) => catalog.find((product) => product.slug === slug))
           .filter((product): product is Product => Boolean(product))
           .map(preferFireplacePhotos);
