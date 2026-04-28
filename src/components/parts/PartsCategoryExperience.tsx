@@ -325,7 +325,7 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
                       </div>
                       <div className="border border-[#ded5c8] bg-[#fff7ed] px-4 py-3">
                         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#ff7a18]">Showing</p>
-                        <p className="mt-2 text-2xl font-black text-[#201914]">{filteredProducts.length}</p>
+                        <p className="mt-2 text-2xl font-black text-[#201914]">{filteredProducts.length.toLocaleString()}</p>
                       </div>
                     </div>
                   </div>

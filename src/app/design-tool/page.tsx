@@ -217,7 +217,7 @@ export default function DesignToolPage() {
                   </a>
                 )}
               </div>
-            <p className="mt-4 text-sm text-[#6c6256]">This opens your email app with the plan filled in. Direct email is the safest launch option until live CRM capture is connected.</p>
+            <p className="mt-4 text-sm text-[#6c6256]">This opens your email app with the plan filled in so Aaron's Fireplace Co. can review the details and recommend the next step.</p>
           </>
         </div>
 
@@ -227,7 +227,7 @@ export default function DesignToolPage() {
             { icon: Camera, title: "Photos still help", text: "Room or model photos can be reviewed by an expert instead of pretending AI will solve everything." },
             { icon: Wrench, title: "Built for follow-up", text: "The end goal is a quote, part match, or shortlist — not a novelty demo." },
             { icon: Phone, title: "Expert-assisted", text: "Fireplace purchases are complex. This flow supports human trust instead of replacing it." },
-            { icon: Mail, title: "Lead capture ready", text: "The page is structured for email/CRM integration in the next sprint." },
+            { icon: Mail, title: "Easy follow-up", text: "Your answers turn into a clear email Aaron's can review before calling or replying." },
             { icon: Zap, title: "Fast path", text: "A customer can answer the basics in under two minutes." },
           ].map(({ icon: Icon, title, text }) => (
             <div key={title} className="border border-[#e2d3c0] bg-white p-5">

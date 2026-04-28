@@ -141,7 +141,7 @@ export default function ServiceAppointmentPage() {
               <a href={canSubmit ? mailtoHref : undefined} aria-disabled={!canSubmit} className={`inline-flex w-full items-center justify-center gap-3 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] transition md:w-auto ${canSubmit ? "bg-[#ff7a18] text-black hover:bg-[#ff963f]" : "cursor-not-allowed bg-[#ff7a18]/40 text-black/50"}`}>
                 Email Service Request <Mail className="h-4 w-4" />
               </a>
-              <p className="text-sm text-[#6c6256]">This opens your email app with the request filled in. Direct email is the safest launch option until live CRM capture is connected.</p>
+              <p className="text-sm text-[#6c6256]">This opens your email app with the request filled in so Aaron's Fireplace Co. can follow up to confirm the final appointment.</p>
             </form>
         </div>
 

@@ -25,7 +25,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid min-h-[690px] max-w-[1640px] items-center gap-12 px-4 py-16 md:px-5 lg:grid-cols-[1.02fr_0.78fr] lg:py-24">
         <div className="max-w-3xl">
-          <div className="mb-7 inline-flex items-center gap-3 border border-[#ff7a18]/40 bg-black/45 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-[#ffb36b] backdrop-blur">
+          <div className="mb-7 inline-flex max-w-full items-center gap-2 border border-[#ff7a18]/40 bg-black/45 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#ffb36b] backdrop-blur sm:gap-3 sm:px-4 sm:text-xs sm:tracking-[0.24em]">
             <Flame className="h-4 w-4 fill-[#ff7a18] text-[#ff7a18]" />
             Aaron&apos;s Fireplace Co. · Est. 1989
           </div>
@@ -60,14 +60,16 @@ export function Hero() {
           </div>
 
           <form action="/search" method="GET" className="mt-9 max-w-2xl border border-white/15 bg-white p-2 shadow-2xl shadow-black/40">
-            <div className="flex h-14 items-center">
-              <Search className="ml-4 h-5 w-5 text-[#7a5a42]" />
-              <input
-                name="q"
-                placeholder="Search by brand, model, SKU, or part number"
-                className="h-full min-w-0 flex-1 px-4 text-base text-[#211a15] outline-none"
-              />
-              <button className="h-full bg-[#17110d] px-6 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[#ff7a18] hover:text-black">
+            <div className="flex min-h-14 flex-col gap-2 sm:h-14 sm:flex-row sm:items-center sm:gap-0">
+              <div className="flex h-12 min-w-0 flex-1 items-center sm:h-full">
+                <Search className="ml-3 h-5 w-5 shrink-0 text-[#7a5a42] sm:ml-4" />
+                <input
+                  name="q"
+                  placeholder="Search model, SKU, or part"
+                  className="h-full min-w-0 flex-1 px-3 text-sm text-[#211a15] outline-none sm:px-4 sm:text-base"
+                />
+              </div>
+              <button className="h-12 bg-[#17110d] px-5 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-[#ff7a18] hover:text-black sm:h-full sm:px-6">
                 Search
               </button>
             </div>

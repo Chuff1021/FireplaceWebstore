@@ -38,7 +38,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         <div className="mx-auto max-w-[1640px] px-4 md:px-5">
           <div className="flex h-20 items-center justify-between gap-4 md:h-24">
             <button
-              className="p-2 lg:hidden"
+              className="p-2 text-white transition hover:text-[#ffb36b] lg:hidden"
               onClick={() => setIsMenuOpen((current) => !current)}
               aria-label="Toggle menu"
             >

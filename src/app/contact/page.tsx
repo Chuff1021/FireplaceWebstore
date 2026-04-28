@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { defaultStoreConfig } from "@/lib/store-config";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,6 +15,8 @@ export default function ContactPage() {
 
   const { address } = defaultStoreConfig;
   const fullAddress = `${address.street}, ${address.city}, ${address.state} ${address.zip}`;
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
+  const emailHref = `mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent(formData.subject || "Website contact request")}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`)}`;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -23,181 +25,86 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-red-900 to-red-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto">
-              {"Have questions? We're here to help. Reach out to our team and we'll get back to you promptly."}
-            </p>
-          </div>
+    <main className="bg-[#f6efe5]">
+      <section className="relative overflow-hidden bg-[#0b0b0a] px-4 py-16 text-white md:px-6 md:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,122,24,0.22),transparent_30%),radial-gradient(circle_at_82%_18%,rgba(255,179,107,0.12),transparent_24%)]" />
+        <div className="relative mx-auto max-w-6xl">
+          <p className="text-xs font-black uppercase tracking-[0.28em] text-[#ff9a3d]">Contact Aaron&apos;s Fireplace Co.</p>
+          <h1 className="mt-5 text-[42px] font-black leading-[0.98] tracking-[-0.055em] md:text-[68px]">Real fireplace help from a real hearth team.</h1>
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-[#e6d8c4]">
+            Need help choosing a fireplace, confirming a part, planning installation, or scheduling service? Send the details and Aaron&apos;s will help with the next step.
+          </p>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+      <section className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:px-6 lg:grid-cols-[1fr_0.82fr]">
+        <div className="border border-[#ded5c8] bg-[#fffdf9] p-6 shadow-[0_24px_80px_rgba(32,20,10,0.10)] md:p-8">
+          <h2 className="text-3xl font-black tracking-[-0.04em] text-[#1d1712]">Send us a message</h2>
+          <p className="mt-2 text-sm leading-6 text-[#6c6256]">
+            The button below opens your email app with the details filled in so you can send the request directly to Aaron&apos;s Fireplace Co.
+          </p>
 
-              <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                        placeholder="John Smith"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                        placeholder="(417) 555-0123"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                        Subject *
-                      </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        required
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                      >
-                        <option value="">Select a subject</option>
-                        <option value="sales">Product Inquiry</option>
-                        <option value="installation">Installation Question</option>
-                        <option value="service">Service & Maintenance</option>
-                        <option value="parts">Parts & Accessories</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
-                      placeholder="How can we help you?"
-                    />
-                  </div>
-
-                  <a
-                    href={`mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent(formData.subject || "Website contact request")}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`)}`}
-                    className="w-full bg-red-700 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-800 transition-colors flex items-center justify-center gap-2"
-                  >
-                    <Send className="h-5 w-5" />
-                    Email Aaron's Fireplace Co.
-                  </a>
-                  <p className="text-sm text-gray-500">This opens your email app with the message filled in. Direct email is the safest launch option until live CRM capture is connected.</p>
-                </form>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                  <MapPin className="h-6 w-6 text-red-700 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">{fullAddress}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                  <Phone className="h-6 w-6 text-red-700 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">{defaultStoreConfig.phone}</p>
-                    <p className="text-sm text-gray-500">Call us during business hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                  <Mail className="h-6 w-6 text-red-700 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">{defaultStoreConfig.email}</p>
-                    <p className="text-sm text-gray-500">We respond within 24-48 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                  <Clock className="h-6 w-6 text-red-700 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                    <div className="text-gray-600 space-y-1">
-                      <p>Monday - Friday: {defaultStoreConfig.business.hours.weekdays}</p>
-                      <p>Saturday: {defaultStoreConfig.business.hours.saturday}</p>
-                      <p>Sunday: {defaultStoreConfig.business.hours.sunday}</p>
-                    </div>
-                  </div>
-                </div>
+          <form className="mt-7 space-y-6">
+            <div className="grid gap-5 md:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="mb-1 block text-sm font-bold text-[#1d1712]">Full Name *</label>
+                <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Full name" />
               </div>
-
-              {/* Map Placeholder */}
-              <div className="mt-8 bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <MapPin className="h-12 w-12 mx-auto mb-2 opacity-50" />
-                  <p>Map coming soon</p>
-                  <p className="text-sm">Republic, Missouri</p>
-                </div>
+              <div>
+                <label htmlFor="email" className="mb-1 block text-sm font-bold text-[#1d1712]">Email Address *</label>
+                <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="you@example.com" />
               </div>
             </div>
-          </div>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <div>
+                <label htmlFor="phone" className="mb-1 block text-sm font-bold text-[#1d1712]">Phone Number</label>
+                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="(417) 732-9775" />
+              </div>
+              <div>
+                <label htmlFor="subject" className="mb-1 block text-sm font-bold text-[#1d1712]">Subject *</label>
+                <select id="subject" name="subject" required value={formData.subject} onChange={handleChange} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]">
+                  <option value="">Select a subject</option>
+                  <option value="Product Inquiry">Product Inquiry</option>
+                  <option value="Installation Question">Installation Question</option>
+                  <option value="Service & Maintenance">Service & Maintenance</option>
+                  <option value="Parts & Accessories">Parts & Accessories</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="mb-1 block text-sm font-bold text-[#1d1712]">Message *</label>
+              <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Tell us what you need help with. Model numbers, photos you can send, measurements, and project details all help." />
+            </div>
+
+            <a href={emailHref} className="inline-flex w-full items-center justify-center gap-3 bg-[#ff7a18] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f] md:w-auto">
+              <Send className="h-4 w-4" /> Email Aaron&apos;s Fireplace Co.
+            </a>
+          </form>
         </div>
+
+        <aside className="space-y-5">
+          {[
+            { icon: MapPin, title: "Showroom", text: fullAddress, href: mapsHref, action: "Open in Maps" },
+            { icon: Phone, title: "Phone", text: defaultStoreConfig.phone, href: `tel:${defaultStoreConfig.phone}`, action: "Call Aaron's" },
+            { icon: Mail, title: "Email", text: defaultStoreConfig.email, href: `mailto:${defaultStoreConfig.email}`, action: "Send Email" },
+            { icon: Clock, title: "Business Hours", text: `Mon-Fri ${defaultStoreConfig.business.hours.weekdays} · Saturday ${defaultStoreConfig.business.hours.saturday} · Sunday ${defaultStoreConfig.business.hours.sunday}` },
+          ].map(({ icon: Icon, title, text, href, action }) => (
+            <div key={title} className="border border-[#ded5c8] bg-[#fffdf9] p-5 shadow-[0_18px_55px_rgba(32,20,10,0.08)]">
+              <Icon className="h-6 w-6 text-[#ff7a18]" />
+              <h3 className="mt-4 text-lg font-black text-[#1d1712]">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[#6c6256]">{text}</p>
+              {href && action && (
+                <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="mt-4 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#c24d12] hover:text-[#ff7a18]">
+                  {action} <ArrowRight className="h-4 w-4" />
+                </a>
+              )}
+            </div>
+          ))}
+        </aside>
       </section>
-    </div>
+    </main>
   );
 }

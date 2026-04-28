@@ -6,7 +6,7 @@ export default function ContractorSignupPage() {
       <div className="mx-auto max-w-5xl">
         <p className="text-xs font-black uppercase tracking-[0.24em] text-[#b84d13]">Contractor Application</p>
         <h1 className="mt-4 text-5xl font-black tracking-[-0.05em]">Apply for contractor pricing.</h1>
-        <p className="mt-4 max-w-3xl text-[#655649]">This is the intake foundation. Next step is wiring it to CRM/email, document storage, and account approval.</p>
+        <p className="mt-4 max-w-3xl text-[#655649]">Apply for contractor support, bid coordination, and future trade-program access with Aaron's Fireplace Co.</p>
         <form className="mt-10 grid gap-5 border border-[#ead6bd] bg-white p-6 shadow-xl md:grid-cols-2">
           {["Company Name", "Primary Contact", "Email", "Phone", "Trade Role", "Service Area"].map((label) => (
             <label key={label} className="text-sm font-bold text-[#3a2d23]">
