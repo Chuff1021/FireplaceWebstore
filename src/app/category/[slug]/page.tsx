@@ -50,6 +50,18 @@ function getPriceBucket(price: number) {
   return "$5,000+";
 }
 
+function getFuelType(product: Product) {
+  const source = `${product.name} ${product.categoryId} ${product.subcategoryId ?? ""}`.toLowerCase();
+  if (source.includes("electric")) return "Electric";
+  if (source.includes("pellet")) return "Pellet";
+  if (source.includes("wood")) return "Wood";
+  if (source.includes("outdoor") || source.includes("fire garden")) return "Outdoor";
+  if (source.includes("gas") || source.includes("lopi") || source.includes("fireplace xtrordinair") || source.includes("fpx")) return "Gas";
+  return "Other";
+}
+
+const FUEL_TYPE_ORDER = ["Gas", "Wood", "Electric", "Pellet", "Outdoor", "Other"];
+
 function getProductLink(product: Product) {
   return `/product/${product.slug}`;
 }
@@ -81,6 +93,7 @@ export default function CategoryPage() {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [selectedPrices, setSelectedPrices] = useState<string[]>([]);
+  const [selectedFuelTypes, setSelectedFuelTypes] = useState<string[]>([]);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -120,7 +133,7 @@ export default function CategoryPage() {
 
   useEffect(() => {
     setPage(1);
-  }, [slug, selectedBrands, selectedPrices, sortBy]);
+  }, [slug, selectedBrands, selectedPrices, selectedFuelTypes, sortBy]);
 
   const parentCategory = productCategories.find((category) => category.slug === slug);
   const flattenedSubcategories = productCategories.flatMap((category) =>
@@ -177,14 +190,23 @@ export default function CategoryPage() {
   });
   const featuredAvailableBrands = FEATURED_FILTER_BRANDS.filter((brand) => brandCounts[brand]);
   const availablePriceBuckets = [...new Set(categoryProducts.map((product) => getPriceBucket(product.salePrice ?? product.price)))];
+  const fuelTypeCounts = categoryProducts.reduce<Record<string, number>>((counts, product) => {
+    const fuelType = getFuelType(product);
+    counts[fuelType] = (counts[fuelType] ?? 0) + 1;
+    return counts;
+  }, {});
+  const availableFuelTypes = FUEL_TYPE_ORDER.filter((fuelType) => fuelTypeCounts[fuelType]);
+  const showFuelTypeFilter = availableFuelTypes.length > 1 && ["fireplaces", "inserts", "stoves", "outdoor"].includes(slug);
 
   const filteredProducts = categoryProducts.filter((product) => {
     const livePrice = product.salePrice ?? product.price;
     const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(product.brand);
     const matchesPrice =
       selectedPrices.length === 0 || selectedPrices.includes(getPriceBucket(livePrice));
+    const matchesFuelType =
+      selectedFuelTypes.length === 0 || selectedFuelTypes.includes(getFuelType(product));
 
-    return matchesBrand && matchesPrice;
+    return matchesBrand && matchesPrice && matchesFuelType;
   });
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
@@ -216,6 +238,12 @@ export default function CategoryPage() {
   function togglePrice(range: string, checked: boolean) {
     setSelectedPrices((current) =>
       checked ? [...current, range] : current.filter((item) => item !== range)
+    );
+  }
+
+  function toggleFuelType(fuelType: string, checked: boolean) {
+    setSelectedFuelTypes((current) =>
+      checked ? [...current, fuelType] : current.filter((item) => item !== fuelType)
     );
   }
 
@@ -329,6 +357,24 @@ export default function CategoryPage() {
                     </label>
                   ))}
                 </div>
+
+                {showFuelTypeFilter && (
+                  <div className="border-t border-[#e0e0e0] pt-4">
+                    <p className="mb-3 font-medium text-[#424242]">Fuel Type</p>
+                    {availableFuelTypes.map((fuelType) => (
+                      <label key={fuelType} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
+                        <input
+                          type="checkbox"
+                          checked={selectedFuelTypes.includes(fuelType)}
+                          onChange={(event) => toggleFuelType(fuelType, event.target.checked)}
+                          className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                        />
+                        <span className="ml-4 flex-1">{fuelType}</span>
+                        <span className="ml-2 text-xs text-[#8a8175]">{fuelTypeCounts[fuelType]}</span>
+                      </label>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -451,6 +497,23 @@ export default function CategoryPage() {
                           <span className="ml-4">{range}</span>
                         </label>
                       ))}
+                      {showFuelTypeFilter && (
+                        <div className="mt-6 border-t border-[#d9c7b0] pt-5">
+                          <h2 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#a54210]">Fuel Type</h2>
+                          {availableFuelTypes.map((fuelType) => (
+                            <label key={fuelType} className="mb-3 flex cursor-pointer items-start text-sm text-[#424242]">
+                              <input
+                                type="checkbox"
+                                checked={selectedFuelTypes.includes(fuelType)}
+                                onChange={(event) => toggleFuelType(fuelType, event.target.checked)}
+                                className="mt-0.5 h-5 w-5 rounded-none border-[#bdbdbd] text-[#a54210] focus:ring-0"
+                              />
+                              <span className="ml-4 flex-1">{fuelType}</span>
+                              <span className="ml-2 text-xs text-[#8a8175]">{fuelTypeCounts[fuelType]}</span>
+                            </label>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     <div>
                       {featuredAvailableBrands.length > 0 && (
