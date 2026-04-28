@@ -40,11 +40,12 @@ export default function ProductPage() {
   const [activeTab, setActiveTab] = useState<"description" | "specs" | "reviews">(
     "description"
   );
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const { addItem, openCart } = useCartStore();
 
   const product = remoteProduct;
   const productImages = resolveProductImages(product?.images?.[0], product?.images);
-  const primaryProductImage = resolveProductImage(product?.images?.[0], product?.images);
+  const selectedProductImage = productImages[selectedImageIndex] ?? productImages[0];
 
   useEffect(() => {
     let cancelled = false;
@@ -94,6 +95,10 @@ export default function ProductPage() {
       cancelled = true;
     };
   }, [slug]);
+
+  useEffect(() => {
+    setSelectedImageIndex(0);
+  }, [slug, product?.id]);
 
   if (!product && isLoadingRemoteProduct) {
     return (
@@ -161,7 +166,7 @@ export default function ProductPage() {
           <div>
             <div className="aspect-square bg-gradient-to-br from-gray-50 to-[#f2eee7] rounded-2xl relative overflow-hidden border border-[#eadfce]">
               <Image
-                src={primaryProductImage}
+                src={selectedProductImage}
                 alt={product.name}
                 fill
                 className="object-contain p-6"
@@ -194,9 +199,12 @@ export default function ProductPage() {
               {productImages.map((img, i) => (
                 <button
                   key={i}
-                  className={`relative w-20 h-20 rounded-lg border-2 overflow-hidden bg-gray-100 ${
-                    i === 0 ? "border-orange-600" : "border-gray-200"
+                  type="button"
+                  onClick={() => setSelectedImageIndex(i)}
+                  className={`relative w-20 h-20 rounded-lg border-2 overflow-hidden bg-gray-100 transition ${
+                    i === selectedImageIndex ? "border-orange-600 ring-2 ring-orange-200" : "border-gray-200 hover:border-orange-300"
                   }`}
+                  aria-label={`Show ${product.name} image ${i + 1}`}
                 >
                   <Image
                     src={img}
