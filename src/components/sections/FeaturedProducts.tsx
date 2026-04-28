@@ -7,13 +7,10 @@ import { ProductCard } from "@/components/ui/ProductCard";
 import type { Product } from "@/lib/store-config";
 
 const FEATURED_TRAVIS_SLUGS = [
-  "fpx-4415highoutputdeluxe",
-  "fpx-6015highoutputdeluxe",
-  "fpx-probuilder36cleanfacedeluxe",
-  "lopi-evergreennexgenhybrid",
-  "lopi-rockportnexgenhybrid",
-  "lopi-radiantpluslargegsb",
-  "lopi-agppelletstove",
+  "fireplace-xtrordinair-4237-ember-glo-gas-fireplace",
+  "fireplace-xtrordinair-864-tv-40k-gas-fireplace",
+  "fpx-42apex",
+  "fpx-44elitenexgenhybrid",
 ];
 
 function preferFireplacePhotos(product: Product): Product {
@@ -71,18 +68,15 @@ export function FeaturedProducts() {
               <Sparkles className="h-4 w-4" /> Featured Fireplaces
             </p>
             <h2 className="mt-4 max-w-4xl text-[38px] font-black leading-[0.98] tracking-[-0.055em] md:text-[58px]">
-              A curated mix of Fireplace Xtrordinair and Lopi favorites.
+              Featured Fireplace Xtrordinair models
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d8c7b2]">
-              A small selection of premium Travis Industries fireplaces and stoves available through Aaron&apos;s Fireplace Co. Request a quote and we&apos;ll help confirm fit, venting, options, and dealer pricing.
-            </p>
           </div>
 
           <div className="border border-white/10 bg-white/[0.05] p-6 backdrop-blur lg:justify-self-end">
             <div className="flex items-start gap-3">
               <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#ff7a18]" />
               <p className="max-w-xl text-sm leading-6 text-[#e8d9c7]">
-                Need help choosing? These featured models can be routed through our quote flow so we can help match the right fireplace, insert, or stove to your space.
+                Need help choosing? Send us your room, venting, and style goals and we&apos;ll help match the right fireplace to your home.
               </p>
             </div>
             <Link
@@ -108,7 +102,7 @@ export function FeaturedProducts() {
           </div>
         ) : (
           <div className="border border-white/10 bg-white/[0.05] p-8 text-center text-[#d8c7b2]">
-            Featured Fireplace Xtrordinair and Lopi products are being prepared for this section.
+            Featured Fireplace Xtrordinair products are being prepared for this section.
           </div>
         )}
       </div>

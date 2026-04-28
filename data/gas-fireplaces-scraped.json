@@ -8417,5 +8417,55 @@
     "features": [
       "Available model/configuration options confirmed during quote instead of shown as duplicate products."
     ]
+  },
+  {
+    "sku": "FPX-4237-EG",
+    "name": "Fireplace Xtrordinair 4237 Ember-Glo Gas Fireplace",
+    "slug": "fireplace-xtrordinair-4237-ember-glo-gas-fireplace",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "categoryId": "fireplaces",
+    "subcategoryId": "gas-fireplaces",
+    "imageUrl": "/products-upgraded/gas-fireplaces/fpx-4237emberglodeluxe-featured.webp",
+    "imageUrls": [
+      "/products-upgraded/gas-fireplaces/fpx-4237emberglodeluxe-featured.webp",
+      "/products-upgraded/gas-fireplaces/fpx-4237emberglodeluxe-4.webp",
+      "/products-upgraded/gas-fireplaces/fpx-4237emberglodeluxe-3.webp"
+    ],
+    "shortDescription": "Current Fireplace Xtrordinair 4237 Ember-Glo gas fireplace. Options confirmed during quote.",
+    "description": "Current Fireplace Xtrordinair 4237 Ember-Glo gas fireplace available through Aaron’s Fireplace Co. Face, finish, media, and installation requirements are confirmed during quote.",
+    "features": [
+      "Current Fireplace Xtrordinair model",
+      "Face/finish options confirmed during quote",
+      "Contact Aaron’s for fit, venting, and dealer pricing"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "FPX-864-TV-40K",
+    "name": "Fireplace Xtrordinair 864 TV 40K Gas Fireplace",
+    "slug": "fireplace-xtrordinair-864-tv-40k-gas-fireplace",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "categoryId": "fireplaces",
+    "subcategoryId": "gas-fireplaces",
+    "imageUrl": "/products-upgraded/gas-fireplaces/fpx-864tv40kdeluxe-featured.webp",
+    "imageUrls": [
+      "/products-upgraded/gas-fireplaces/fpx-864tv40kdeluxe-featured.webp"
+    ],
+    "shortDescription": "Current Fireplace Xtrordinair 864 TV 40K gas fireplace. Options confirmed during quote.",
+    "description": "Current Fireplace Xtrordinair 864 TV 40K gas fireplace available through Aaron’s Fireplace Co. Face, finish, media, and installation requirements are confirmed during quote.",
+    "features": [
+      "Current Fireplace Xtrordinair model",
+      "Face/finish options confirmed during quote",
+      "Contact Aaron’s for fit, venting, and dealer pricing"
+    ],
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
   }
 ]
