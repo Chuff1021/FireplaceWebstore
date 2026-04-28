@@ -1076,90 +1076,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "FPX-LARGEFLUSHWOODARCHEDNEXGENHYBRID",
-    "name": "Fireplace Xtrordinair Large Flush Wood Arched Nex Gen Hybrid™",
-    "slug": "fpx-largeflushwoodarchednexgenhybrid",
-    "price": 0,
-    "brand": "Fireplace Xtrordinair",
-    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-largeflushwoodarchednexgenhybrid-3.webp",
-    "productUrl": "https://www.fireplacex.com/product/large-flush-wood-arched-nexgen-hybrid/",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false,
-    "imageUrls": [
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodarchednexgenhybrid-3.webp",
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodarchednexgenhybrid.webp",
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodarchednexgenhybrid-2.webp",
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodarchednexgenhybrid-4.webp"
-    ],
-    "contactForPricing": true,
-    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair availability, configuration options, and dealer pricing.",
-    "description": "Fireplace Xtrordinair Large Flush Wood Arched Nex Gen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
-  },
-  {
-    "sku": "FPX-LARGEFLUSHWOODRECTANGULARNEXGENHYBRID",
-    "name": "Fireplace Xtrordinair Large Flush Wood Rectangular Nex Gen Hybrid™",
-    "slug": "fpx-largeflushwoodrectangularnexgenhybrid",
-    "price": 0,
-    "brand": "Fireplace Xtrordinair",
-    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-3.webp",
-    "productUrl": "https://www.fireplacex.com/product/large-flush-wood-rectangular-nexgen-hybrid/",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false,
-    "imageUrls": [
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-3.webp",
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid.webp",
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-2.webp",
-      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-4.webp"
-    ],
-    "contactForPricing": true,
-    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair availability, configuration options, and dealer pricing.",
-    "description": "Fireplace Xtrordinair Large Flush Wood Rectangular Nex Gen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
-  },
-  {
-    "sku": "FPX-MEDIUMFLUSHWOODRECTANGULARNEXGENHYBRID",
-    "name": "Fireplace Xtrordinair Medium Flush Wood Rectangular Nex Gen Hybrid™",
-    "slug": "fpx-mediumflushwoodrectangularnexgenhybrid",
-    "price": 0,
-    "brand": "Fireplace Xtrordinair",
-    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-3.webp",
-    "productUrl": "https://www.fireplacex.com/product/medium-flush-wood-rectangular-nexgen-hybrid/",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false,
-    "imageUrls": [
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-3.webp",
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid.webp",
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-2.webp",
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-4.webp"
-    ],
-    "contactForPricing": true,
-    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair availability, configuration options, and dealer pricing.",
-    "description": "Fireplace Xtrordinair Medium Flush Wood Rectangular Nex Gen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
-  },
-  {
-    "sku": "FPX-MEDIUMFLUSHWOODARCHEDNEXGENHYBRID",
-    "name": "Fireplace Xtrordinair Medium Flush Wood Arched Nex Gen Hybrid™",
-    "slug": "fpx-mediumflushwoodarchednexgenhybrid",
-    "price": 0,
-    "brand": "Fireplace Xtrordinair",
-    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodarchednexgenhybrid-3.webp",
-    "productUrl": "https://www.fireplacex.com/product/medium-flush-wood-arched-nexgen-hybrid/",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false,
-    "imageUrls": [
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodarchednexgenhybrid-3.webp",
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodarchednexgenhybrid.webp",
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodarchednexgenhybrid-2.webp",
-      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodarchednexgenhybrid-4.webp"
-    ],
-    "contactForPricing": true,
-    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair availability, configuration options, and dealer pricing.",
-    "description": "Fireplace Xtrordinair Medium Flush Wood Arched Nex Gen Hybrid™. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
-  },
-  {
     "sku": "FPX-44ELITENEXGENHYBRID",
     "name": "Fireplace Xtrordinair 44 Elite Nex Gen Hybrid™",
     "slug": "fpx-44elitenexgenhybrid",
@@ -1223,45 +1139,51 @@
     "description": "Fireplace Xtrordinair 42 Apex. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
-    "sku": "FPX-36ELITE",
-    "name": "Fireplace Xtrordinair 36 Elite",
-    "slug": "fpx-36elite",
+    "sku": "FPX-LARGEFLUSHWOODRECTANGULARNEXGENHYBRID",
+    "name": "Fireplace Xtrordinair Large Flush Wood NexGen-Hybrid™",
+    "slug": "fireplace-xtrordinair-large-flush-wood-nexgen-hybrid",
     "price": 0,
     "brand": "Fireplace Xtrordinair",
-    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-36elite-3.webp",
-    "productUrl": "https://www.fireplacex.com/product/36-elite/",
+    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-3.webp",
+    "productUrl": "https://www.fireplacex.com/product/large-flush-wood-rectangular-nexgen-hybrid/",
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false,
     "imageUrls": [
-      "/products-upgraded/wood-fireplaces/fpx-36elite-3.webp",
-      "/products-upgraded/wood-fireplaces/fpx-36elite.webp",
-      "/products-upgraded/wood-fireplaces/fpx-36elite-2.webp",
-      "/products-upgraded/wood-fireplaces/fpx-36elite-4.webp"
+      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-3.webp",
+      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid.webp",
+      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-2.webp",
+      "/products-upgraded/wood-fireplaces/fpx-largeflushwoodrectangularnexgenhybrid-4.webp"
     ],
     "contactForPricing": true,
-    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair availability, configuration options, and dealer pricing.",
-    "description": "Fireplace Xtrordinair 36 Elite. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "shortDescription": "Current Large Flush Wood NexGen-Hybrid fireplace with arched or rectangular face options.",
+    "description": "Current Fireplace Xtrordinair Large Flush Wood NexGen-Hybrid fireplace. Choose arched or rectangular face/options during quote.",
+    "features": [
+      "Face options: Arched or Rectangular."
+    ]
   },
   {
-    "sku": "FPX-44ELITE",
-    "name": "Fireplace Xtrordinair 44 Elite",
-    "slug": "fpx-44elite",
+    "sku": "FPX-MEDIUMFLUSHWOODRECTANGULARNEXGENHYBRID",
+    "name": "Fireplace Xtrordinair Medium Flush Wood NexGen-Hybrid™",
+    "slug": "fireplace-xtrordinair-medium-flush-wood-nexgen-hybrid",
     "price": 0,
     "brand": "Fireplace Xtrordinair",
-    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-44elite-3.webp",
-    "productUrl": "https://www.fireplacex.com/product/44-elite/",
+    "imageUrl": "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-3.webp",
+    "productUrl": "https://www.fireplacex.com/product/medium-flush-wood-rectangular-nexgen-hybrid/",
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false,
     "imageUrls": [
-      "/products-upgraded/wood-fireplaces/fpx-44elite-3.webp",
-      "/products-upgraded/wood-fireplaces/fpx-44elite.webp",
-      "/products-upgraded/wood-fireplaces/fpx-44elite-2.webp",
-      "/products-upgraded/wood-fireplaces/fpx-44elite-4.webp"
+      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-3.webp",
+      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid.webp",
+      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-2.webp",
+      "/products-upgraded/wood-fireplaces/fpx-mediumflushwoodrectangularnexgenhybrid-4.webp"
     ],
     "contactForPricing": true,
-    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair availability, configuration options, and dealer pricing.",
-    "description": "Fireplace Xtrordinair 44 Elite. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "shortDescription": "Current Medium Flush Wood NexGen-Hybrid fireplace with arched or rectangular face options.",
+    "description": "Current Fireplace Xtrordinair Medium Flush Wood NexGen-Hybrid fireplace. Choose arched or rectangular face/options during quote.",
+    "features": [
+      "Face options: Arched or Rectangular."
+    ]
   }
 ]
