@@ -72,9 +72,29 @@ export default function ProductPage() {
 
             if (relatedResponse.ok && !cancelled) {
               const relatedData = (await relatedResponse.json()) as Product[];
-              setRelatedProducts(
-                relatedData.filter((item) => item.id !== loadedProduct.id).slice(0, 4)
-              );
+              let recommendations = relatedData.filter((item) => item.id !== loadedProduct.id);
+
+              if (loadedProduct.brand === "Fireplace Xtrordinair") {
+                const catalogResponse = await fetch("/api/products?limit=10000", { cache: "no-store" });
+                if (catalogResponse.ok && !cancelled) {
+                  const catalogData = (await catalogResponse.json()) as Product[];
+                  const featuredFireplaceRecommendations = [
+                    "fpx-42apex",
+                    "fpx-44elitenexgenhybrid",
+                  ]
+                    .map((recommendedSlug) => catalogData.find((item) => item.slug === recommendedSlug))
+                    .filter((item): item is Product => Boolean(item))
+                    .filter((item) => item.id !== loadedProduct.id);
+
+                  recommendations = Array.from(
+                    new Map(
+                      [...featuredFireplaceRecommendations, ...recommendations].map((item) => [item.id, item])
+                    ).values()
+                  );
+                }
+              }
+
+              setRelatedProducts(recommendations.slice(0, 4));
             }
           } else {
             setRelatedProducts([]);
