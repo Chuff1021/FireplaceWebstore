@@ -23,7 +23,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             {[
               "Free Shipping on orders over $99",
               "110% Low Price Guaranteed",
-              "Expert Sales Support 7 Days a Week",
+              "Expert Sales Support",
             ].map((message) => (
               <span key={message} className="px-7 first:pl-0 last:pr-0">
                 {message}
