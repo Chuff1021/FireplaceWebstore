@@ -104,58 +104,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "DRO-DP00070",
-    "name": "Drolet Eco-55 Pellet Stove",
-    "slug": "dro-dp00070",
-    "price": 3489.99,
-    "salePrice": 2840.34,
-    "brand": "Drolet",
-    "imageUrl": "/products/pellet-stoves/dro-dp00070-b7257817.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-dp00070.html",
-    "rating": 5,
-    "reviewCount": 3,
-    "isBestSeller": true
-  },
-  {
-    "sku": "DRO-DP00070KVB",
-    "name": "Drolet Eco-55 Pellet Stove with Basement Venting Kit",
-    "slug": "dro-dp00070kvb",
-    "price": 3759.99,
-    "salePrice": 3055.07,
-    "brand": "Drolet",
-    "imageUrl": "/products/pellet-stoves/dro-dp00070kvb-29d77a00.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-dp00070kvb.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DP00070KVG",
-    "name": "Drolet Eco-55 Pellet Stove with Ground Floor Kit",
-    "slug": "dro-dp00070kvg",
-    "price": 3609.99,
-    "salePrice": 2932.49,
-    "brand": "Drolet",
-    "imageUrl": "/products/pellet-stoves/dro-dp00070kvg-f7fe7987.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-dp00070kvg.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DP00071K",
-    "name": "Drolet Eco-55 ST Pellet Stove with Maintenance Kit",
-    "slug": "dro-dp00071k",
-    "price": 3639.99,
-    "salePrice": 2956.21,
-    "brand": "Drolet",
-    "imageUrl": "/products/pellet-stoves/dro-dp00071k-09ec0f45.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-dp00071k.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "FLI-MMPS",
     "name": "Flame Innovation 19 Inch Mini Me Non-Electric Pellet Stove",
     "slug": "fli-mmps",

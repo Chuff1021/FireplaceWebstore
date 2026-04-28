@@ -1,31 +1,5 @@
 [
   {
-    "sku": "DRO-DB03137K3",
-    "name": "Drolet Escape 1500-I Wood Burning Fireplace Insert Kit - 35 Feet",
-    "slug": "dro-db03137k3",
-    "price": 2459.99,
-    "salePrice": 2002.49,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-inserts/dro-db03137k3-56fd842a.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-db03137k3.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": true
-  },
-  {
-    "sku": "OSB-OB01900",
-    "name": "Osburn Matrix 1900 Wood Burning Fireplace Insert",
-    "slug": "osb-ob01900",
-    "price": 3989.99,
-    "salePrice": 3239,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/osb-ob01900-077ab046.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob01900.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": true
-  },
-  {
     "sku": "TNS-TN20-INSB",
     "name": "True North TN20 B Series Wood Burning Fireplace Insert",
     "slug": "tns-tn20-insb",
@@ -52,97 +26,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "OSB-OB02028",
-    "name": "Osburn 36 Inch Matrix Wood Fireplace Insert",
-    "slug": "osb-ob02028",
-    "price": 4859.99,
-    "salePrice": 3949,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/osb-ob02028-e3e4ec29.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob02028.html",
-    "rating": 4,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DB03125",
-    "name": "Drolet Escape 1800-I Wood Burning Fireplace Insert",
-    "slug": "dro-db03125",
-    "price": 2329.99,
-    "salePrice": 1893.3,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-inserts/dro-db03125-594f65a2.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-db03125.html",
-    "rating": 5,
-    "reviewCount": 2,
-    "isBestSeller": false
-  },
-  {
-    "sku": "OSB-OB03510",
-    "name": "Osburn 3500 Wood Fireplace Insert",
-    "slug": "osb-ob03510",
-    "price": 4699.99,
-    "salePrice": 3819,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/osb-ob03510-adff2e5d.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob03510.html",
-    "rating": 4.7,
-    "reviewCount": 3,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DB03127K",
-    "name": "Drolet Escape 1800-I Wood Burning Fireplace Insert Kit - 25 Feet",
-    "slug": "dro-db03127k",
-    "price": 3219.99,
-    "salePrice": 2612.99,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-inserts/dro-db03127k-0f7f7790.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-db03127k.html",
-    "rating": 4.9,
-    "reviewCount": 10,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DB03137K",
-    "name": "Drolet Escape 1500-I Wood Burning Fireplace Insert Kit - 25 Feet",
-    "slug": "dro-db03137k",
-    "price": 3119.99,
-    "salePrice": 2534.99,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-inserts/dro-db03137k-56fd842a.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-db03137k.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DB03128K",
-    "name": "Drolet Escape 1800-I Wood Burning Fireplace Insert Kit - 35 Feet",
-    "slug": "dro-db03128k",
-    "price": 3129.99,
-    "salePrice": 2545.27,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-inserts/dro-db03128k-eedf90c2.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-db03128k.html",
-    "rating": 5,
-    "reviewCount": 2,
-    "isBestSeller": false
-  },
-  {
-    "sku": "OSB-OB02700",
-    "name": "Osburn Matrix 2700 Wood Burning Fireplace Insert",
-    "slug": "osb-ob02700",
-    "price": 5679.99,
-    "salePrice": 4619,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/osb-ob02700-c41273cc.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob02700.html",
-    "rating": 5,
-    "reviewCount": 3,
-    "isBestSeller": false
-  },
-  {
     "sku": "BSC-FP21I",
     "name": "Buck Stove Model 21 Wood Burning Fireplace Insert",
     "slug": "bsc-fp21i",
@@ -153,19 +36,6 @@
     "productUrl": "https://www.efireplacestore.com/bsc-fp21i.html",
     "rating": 4.7,
     "reviewCount": 7,
-    "isBestSeller": false
-  },
-  {
-    "sku": "OSB-OB01705",
-    "name": "Osburn 1700 Wood Burning Fireplace Insert",
-    "slug": "osb-ob01705",
-    "price": 3429.99,
-    "salePrice": 2789,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/osb-ob01705-bd68312b.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob01705.html",
-    "rating": 5,
-    "reviewCount": 2,
     "isBestSeller": false
   },
   {
@@ -224,19 +94,6 @@
     ]
   },
   {
-    "sku": "OSB-OB02045",
-    "name": "Osburn Inspire 2000 Wood Burning Fireplace Insert",
-    "slug": "osb-ob02045",
-    "price": 4399.99,
-    "salePrice": 3574,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/osb-ob02045-86ed41f4.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob02045.html",
-    "rating": 5,
-    "reviewCount": 4,
-    "isBestSeller": false
-  },
-  {
     "sku": "EMS-WB23IN",
     "name": "Empire Stove 29 Inch Metallic Black Steel Archway 2300 Wood Burning Fireplace Insert",
     "slug": "ems-wb23in",
@@ -276,19 +133,6 @@
     "productUrl": "https://www.efireplacestore.com/vnt-vb00021.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DRO-DB03137",
-    "name": "Drolet Escape 1500-I Wood Burning Fireplace Insert",
-    "slug": "dro-db03137",
-    "price": 3069.99,
-    "salePrice": 2493.13,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-inserts/dro-db03137-478856af.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-db03137.html",
-    "rating": 4.8,
-    "reviewCount": 5,
     "isBestSeller": false
   },
   {
@@ -406,19 +250,6 @@
     "productUrl": "https://www.efireplacestore.com/ins-ml230gl.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "SBI-OB02011",
-    "name": "Osburn 2000 Wood Burning Fireplace Insert",
-    "slug": "sbi-ob02011",
-    "price": 3849.99,
-    "salePrice": 3129,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-inserts/sbi-ob02011-32e1a01d.webp",
-    "productUrl": "https://www.efireplacestore.com/sbi-ob02011.html",
-    "rating": 5,
-    "reviewCount": 1,
     "isBestSeller": false
   },
   {

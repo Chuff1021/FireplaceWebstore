@@ -48,32 +48,6 @@
     ]
   },
   {
-    "sku": "OSB-OB04007",
-    "name": "Osburn Stratford II Wood Burning Fireplace",
-    "slug": "osb-ob04007",
-    "price": 5539.99,
-    "salePrice": 4499,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-fireplaces/osb-ob04007-f58d2443.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob04007.html",
-    "rating": 5,
-    "reviewCount": 6,
-    "isBestSeller": false
-  },
-  {
-    "sku": "VAL-FP10R",
-    "name": "Valcourt Lafayette II Wood Burning Fireplace",
-    "slug": "val-fp10r",
-    "price": 4369.99,
-    "salePrice": 3549.19,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp10r-69b56cd3.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp10r.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
     "sku": "MAJ-BE36",
     "name": "Majestic Royalton Radiant Wood Burning Fireplace - 36 Inch",
     "slug": "maj-be36",
@@ -135,19 +109,6 @@
     ]
   },
   {
-    "sku": "VAL-FP15A",
-    "name": "Valcourt Arched Faceplate Waterloo Wood Burning Fireplace",
-    "slug": "val-fp15a",
-    "price": 6149.99,
-    "salePrice": 4998.75,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp15a-c2c5b3c5.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp15a.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
     "sku": "MAJ-SB80",
     "name": "Majestic 42 Inch Biltmore Radiant Wood Burning Fireplace",
     "slug": "maj-sb80",
@@ -206,19 +167,6 @@
     "productUrl": "https://www.efireplacestore.com/msl-mfp44.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "VAL-FP10RS",
-    "name": "Valcourt Lafayette IIS Wood Burning Fireplace",
-    "slug": "val-fp10rs",
-    "price": 4029.99,
-    "salePrice": 3275.59,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp10rs-02158804.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp10rs.html",
-    "rating": 4,
-    "reviewCount": 1,
     "isBestSeller": false
   },
   {
@@ -296,32 +244,6 @@
     ]
   },
   {
-    "sku": "STA-SA-36CN",
-    "name": "Stone Age Manufacturing 36 Inch Contractor Fireplace Kit",
-    "slug": "sta-sa-36cn",
-    "price": 3439.99,
-    "salePrice": 2792.7,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa-36cn-579656f9.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa-36cn.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA-48CN",
-    "name": "Stone Age Manufacturing 48 Inch Contractor Fireplace Kit",
-    "slug": "sta-sa-48cn",
-    "price": 3979.99,
-    "salePrice": 3234.32,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa-48cn-579656f9.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa-48cn.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "MAJ-SA36C",
     "name": "Majestic Sovereign Heat Circulating Wood Burning Fireplace - 36 Inch",
     "slug": "maj-sa36c",
@@ -386,32 +308,6 @@
     ]
   },
   {
-    "sku": "VAL-FP12R",
-    "name": "Valcourt Mundo II Wood Burning Fireplace",
-    "slug": "val-fp12r",
-    "price": 4309.99,
-    "salePrice": 3503.99,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp12r-d6d283d5.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp12r.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0048",
-    "name": "FireRock 48 Inch Conventional Masonry Fireplace",
-    "slug": "frk-01fr0048",
-    "price": 4389.99,
-    "salePrice": 3564.59,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0048-fe3884e4.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0048.html",
-    "rating": 4.5,
-    "reviewCount": 4,
-    "isBestSeller": false
-  },
-  {
     "sku": "SUP-WRT4550RH",
     "name": "Superior 50 Inch WRT 4500 Series Smooth Faced Woodburning Firebox - WRT4550RH",
     "slug": "sup-wrt4550rh",
@@ -428,19 +324,6 @@
     ]
   },
   {
-    "sku": "VAL-FP15",
-    "name": "Valcourt Waterloo Wood Burning Fireplace",
-    "slug": "val-fp15",
-    "price": 5899.99,
-    "salePrice": 4795.59,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp15-18c87530.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp15.html",
-    "rating": 4,
-    "reviewCount": 2,
-    "isBestSeller": false
-  },
-  {
     "sku": "BSC-FP-ZC21",
     "name": "Buck Stove Model 21ZC Non-Catalytic Wood Fireplace",
     "slug": "bsc-fp-zc21",
@@ -454,19 +337,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "OSB-OB04010",
-    "name": "Osburn EPA Certified Horizon Wood Fireplace - OB04011",
-    "slug": "osb-ob04010",
-    "price": 7159.99,
-    "salePrice": 5824,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-fireplaces/osb-ob04010-812b04c2.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob04010.html",
-    "rating": 4.7,
-    "reviewCount": 3,
-    "isBestSeller": false
-  },
-  {
     "sku": "VNT-VWFHE350",
     "name": "Ventis HE350 Wood Burning Fireplace",
     "slug": "vnt-vwfhe350",
@@ -477,19 +347,6 @@
     "productUrl": "https://www.efireplacestore.com/vnt-vwfhe350.html",
     "rating": 4,
     "reviewCount": 2,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0348",
-    "name": "FireRock 48 Inch See-Through Vented Masonry Fireplace",
-    "slug": "frk-01fr0348",
-    "price": 5529.99,
-    "salePrice": 4497.64,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0348-dce21ad8.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0348.html",
-    "rating": 5,
-    "reviewCount": 4,
     "isBestSeller": false
   },
   {
@@ -516,19 +373,6 @@
     "productUrl": "https://www.efireplacestore.com/msl-mfp63.html",
     "rating": 0,
     "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "VAL-FP11",
-    "name": "Valcourt Frontenac Wood Burning Fireplace",
-    "slug": "val-fp11",
-    "price": 7329.99,
-    "salePrice": 5956.89,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp11-416ae52a.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp11.html",
-    "rating": 5,
-    "reviewCount": 4,
     "isBestSeller": false
   },
   {
@@ -593,19 +437,6 @@
     ]
   },
   {
-    "sku": "OSB-OB04016",
-    "name": "Osburn Everest II Wood Burning Fireplace",
-    "slug": "osb-ob04016",
-    "price": 6229.99,
-    "salePrice": 5064,
-    "brand": "Osburn",
-    "imageUrl": "/products/wood-fireplaces/osb-ob04016-15a4c4ef.webp",
-    "productUrl": "https://www.efireplacestore.com/osb-ob04016.html",
-    "rating": 5,
-    "reviewCount": 3,
-    "isBestSeller": false
-  },
-  {
     "sku": "SUP-WRT6036",
     "name": "Superior 36 Inch WRT6000 Wood Burning Mosaic Masonry Fireplace Firebox",
     "slug": "sup-wrt6036",
@@ -652,71 +483,6 @@
     "imageUrls": [
       "/products-upgraded/wood-fireplaces/sup-wrt6050.webp"
     ]
-  },
-  {
-    "sku": "FRK-01FR0330",
-    "name": "FireRock 30 Inch See-Through Vented Masonry Fireplace",
-    "slug": "frk-01fr0330",
-    "price": 3309.99,
-    "salePrice": 2687.29,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0330-dce21ad8.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0330.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA48",
-    "name": "Stone Age Manufacturing 48 Inch Standard Fireplace Kit",
-    "slug": "sta-sa48",
-    "price": 5949.99,
-    "salePrice": 4839.11,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa48-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa48.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0536",
-    "name": "FireRock 36 Inch Rumford Style Vented Masonry Fireplace",
-    "slug": "frk-01fr0536",
-    "price": 4329.99,
-    "salePrice": 3520.99,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0536-2ff2daa3.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0536.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "VAL-FP1LM",
-    "name": "Valcourt Manoir Wood Burning Fireplace",
-    "slug": "val-fp1lm",
-    "price": 4369.99,
-    "salePrice": 3554.1,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp1lm-b93515c1.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp1lm.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0860",
-    "name": "FireRock 60 Inch Linear Masonry Fireplace",
-    "slug": "frk-01fr0860",
-    "price": 5919.99,
-    "salePrice": 4810.79,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0860-eab13471.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0860.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "SUP-WRE3036RH",
@@ -815,71 +581,6 @@
     ]
   },
   {
-    "sku": "FRK-01FR1042",
-    "name": "FireRock 42 Inch California Conventional Masonry Fireplace",
-    "slug": "frk-01fr1042",
-    "price": 4489.99,
-    "salePrice": 3650.39,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1042-ce51eb29.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1042.html",
-    "rating": 4.5,
-    "reviewCount": 2,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA-24CN",
-    "name": "Stone Age Manufacturing 24 Inch Contractor Outdoor Fireplace Kit",
-    "slug": "sta-sa-24cn",
-    "price": 2719.99,
-    "salePrice": 2213.39,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa-24cn-579656f9.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa-24cn.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0548",
-    "name": "FireRock 48 Inch Rumford Style Vented Masonry Fireplace",
-    "slug": "frk-01fr0548",
-    "price": 5529.99,
-    "salePrice": 4497.64,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0548-2ff2daa3.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0548.html",
-    "rating": 4.3,
-    "reviewCount": 3,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA36",
-    "name": "Stone Age Manufacturing 36 Inch Standard Fireplace Kit",
-    "slug": "sta-sa36",
-    "price": 4799.99,
-    "salePrice": 3899.99,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa36-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa36.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0042",
-    "name": "FireRock 42 Inch Conventional Masonry Fireplace",
-    "slug": "frk-01fr0042",
-    "price": 4849.99,
-    "salePrice": 3944.19,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0042-fe3884e4.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0042.html",
-    "rating": 4,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
     "sku": "MSL-MFPST43",
     "name": "Mason Lite 43 Inch See-Through Masonry Fireplace Firebox Kit",
     "slug": "msl-mfpst43",
@@ -888,58 +589,6 @@
     "brand": "Mason",
     "imageUrl": "/products/wood-fireplaces/msl-mfpst43-02bb1eca.webp",
     "productUrl": "https://www.efireplacestore.com/msl-mfpst43.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0036",
-    "name": "FireRock 36 Inch Conventional Masonry Fireplace",
-    "slug": "frk-01fr0036",
-    "price": 4369.99,
-    "salePrice": 3547.79,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0036-fe3884e4.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0036.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR1230",
-    "name": "FireRock 30 Inch Arched Outdoor Masonry Fireplace",
-    "slug": "frk-01fr1230",
-    "price": 3209.99,
-    "salePrice": 2607.55,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1230-97fac313.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1230.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0542",
-    "name": "FireRock 42 Inch Rumford Style Vented Masonry Fireplace",
-    "slug": "frk-01fr0542",
-    "price": 5429.99,
-    "salePrice": 4414.79,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0542-2ff2daa3.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0542.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR1048",
-    "name": "FireRock 48 Inch California Conventional Masonry Fireplace",
-    "slug": "frk-01fr1048",
-    "price": 5529.99,
-    "salePrice": 4497.64,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1048-ce51eb29.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1048.html",
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
@@ -974,71 +623,6 @@
     ]
   },
   {
-    "sku": "FRK-01FR0736",
-    "name": "FireRock 36 Inch Straight Outdoor Masonry Fireplace",
-    "slug": "frk-01fr0736",
-    "price": 3559.99,
-    "salePrice": 2893.79,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0736-3c49cf97.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0736.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-NA36",
-    "name": "Stone Age Manufacturing 36 Inch Zero Clearance Fireplace Kit",
-    "slug": "sta-na36",
-    "price": 3649.99,
-    "salePrice": 2965.19,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-na36-b8223cdf.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-na36.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "VAL-FP7CB",
-    "name": "Valcourt Antoinette Wood Burning Fireplace",
-    "slug": "val-fp7cb",
-    "price": 5929.99,
-    "salePrice": 4822.99,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp7cb-7b289620.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp7cb.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA-36CN-ST",
-    "name": "Stone Age Manufacturing 36 Inch Contractor See-Through Fireplace Kit",
-    "slug": "sta-sa-36cn-st",
-    "price": 3219.99,
-    "salePrice": 2615.24,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa-36cn-st-579656f9.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa-36cn-st.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0060",
-    "name": "FireRock 60 Inch Conventional Oversized Masonry Fireplace",
-    "slug": "frk-01fr0060",
-    "price": 6299.99,
-    "salePrice": 5123.99,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0060-ce51eb29.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0060.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "EMP-WB54FB0F",
     "name": "Empire 54 Inch Blackburn Firebox",
     "slug": "emp-wb54fb0f",
@@ -1063,45 +647,6 @@
     "brand": "Outdoor",
     "imageUrl": "/products/wood-fireplaces/odl-odctgwd-36-1e2d1366.webp",
     "productUrl": "https://www.efireplacestore.com/odl-odctgwd-36.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA-24CN-ST",
-    "name": "Stone Age Manufacturing 24 Inch Contractor See-Through Fireplace Kit",
-    "slug": "sta-sa-24cn-st",
-    "price": 2719.99,
-    "salePrice": 2210.99,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa-24cn-st-579656f9.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa-24cn-st.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA24-NB",
-    "name": "Stone Age Manufacturing 24 Inch Standard Fireplace Kit without Firebrick",
-    "slug": "sta-sa24-nb",
-    "price": 3569.99,
-    "salePrice": 2897.83,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa24-nb-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa24-nb.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "VAL-FP18R",
-    "name": "Valcourt 42 Inch Dallaire II High Efficiency Wood Burning Fireplace",
-    "slug": "val-fp18r",
-    "price": 4879.99,
-    "salePrice": 3968.89,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp18r-de265a6c.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp18r.html",
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
@@ -1235,19 +780,6 @@
     ]
   },
   {
-    "sku": "FRK-01FR1242",
-    "name": "FireRock 42 Inch Arched Outdoor Masonry Fireplace",
-    "slug": "frk-01fr1242",
-    "price": 5379.99,
-    "salePrice": 4375.79,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1242-97fac313.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1242.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "MSL-MFP39",
     "name": "Mason-Lite 39 Inch Masonry Fireplace Firebox Kit",
     "slug": "msl-mfp39",
@@ -1256,19 +788,6 @@
     "brand": "Mason-Lite",
     "imageUrl": "/products/wood-fireplaces/msl-mfp39-465a245f.webp",
     "productUrl": "https://www.efireplacestore.com/msl-mfp39.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR1030",
-    "name": "FireRock 30 Inch California Conventional Masonry Fireplace",
-    "slug": "frk-01fr1030",
-    "price": 3619.99,
-    "salePrice": 2940.59,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1030-ce51eb29.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1030.html",
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
@@ -1319,19 +838,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "VAL-FP16",
-    "name": "Valcourt Saint Laurent Linear Wood Burning Fireplace",
-    "slug": "val-fp16",
-    "price": 8319.99,
-    "salePrice": 6762.59,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp16-c918652a.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp16.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "SUP-WCT6920WS",
     "name": "Superior WCT6920 EPA Certified Wood Burning Fireplace Firebox",
     "slug": "sup-wct6920ws",
@@ -1346,45 +852,6 @@
     "imageUrls": [
       "/products-upgraded/wood-fireplaces/sup-wct6920ws.webp"
     ]
-  },
-  {
-    "sku": "FRK-01FR1036",
-    "name": "FireRock 36 Inch California Conventional Masonry Fireplace",
-    "slug": "frk-01fr1036",
-    "price": 3969.99,
-    "salePrice": 3229.19,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1036-ce51eb29.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1036.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0336",
-    "name": "FireRock 36 Inch See-Through Vented Masonry Fireplace",
-    "slug": "frk-01fr0336",
-    "price": 4139.99,
-    "salePrice": 3364.89,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0336-dce21ad8.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0336.html",
-    "rating": 5,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0742",
-    "name": "FireRock 42 Inch Straight Outdoor Masonry Fireplace",
-    "slug": "frk-01fr0742",
-    "price": 4639.99,
-    "salePrice": 3772.63,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0742-3c49cf97.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0742.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "NPL-NZ8000",
@@ -1403,45 +870,6 @@
     ]
   },
   {
-    "sku": "STA-NA48",
-    "name": "Stone Age Manufacturing 48 Inch Zero Clearance Fireplace Kit",
-    "slug": "sta-na48",
-    "price": 4429.99,
-    "salePrice": 3596.99,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-na48-b8223cdf.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-na48.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0730",
-    "name": "FireRock 30 Inch Straight Outdoor Masonry Fireplace",
-    "slug": "frk-01fr0730",
-    "price": 3079.99,
-    "salePrice": 2501.72,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0730-3c49cf97.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0730.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR1236",
-    "name": "FireRock 36 Inch Arched Outdoor Masonry Fireplace",
-    "slug": "frk-01fr1236",
-    "price": 3749.99,
-    "salePrice": 3044.99,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr1236-97fac313.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr1236.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "SUP-WRE6042",
     "name": "Superior 42 Inch WRE6000 Wood Burning Mosaic Masonry Outdoor Fireplace Firebox",
     "slug": "sup-wre6042",
@@ -1458,32 +886,6 @@
     ]
   },
   {
-    "sku": "FRK-01FR0530",
-    "name": "FireRock 30 Inch Rumford Style Vented Masonry Fireplace",
-    "slug": "frk-01fr0530",
-    "price": 3699.99,
-    "salePrice": 3009.59,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0530-2ff2daa3.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0530.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA-48CN-ST",
-    "name": "Stone Age Manufacturing 48 Inch Contractor See-Through Fireplace Kit",
-    "slug": "sta-sa-48cn-st",
-    "price": 4049.99,
-    "salePrice": 3294.71,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa-48cn-st-579656f9.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa-48cn-st.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "SUP-WRE6050",
     "name": "Superior 50 Inch WRE6000 Wood Burning Mosaic Masonry Outdoor Fireplace Firebox",
     "slug": "sup-wre6050",
@@ -1498,45 +900,6 @@
     "imageUrls": [
       "/products-upgraded/wood-fireplaces/sup-wre6050.webp"
     ]
-  },
-  {
-    "sku": "DRO-DE00401",
-    "name": "Drolet Bora Outdoor Wood Burning Fireplace",
-    "slug": "dro-de00401",
-    "price": 1619.99,
-    "salePrice": 1312.49,
-    "brand": "Drolet",
-    "imageUrl": "/products/wood-fireplaces/dro-de00401-4ff7ced6.webp",
-    "productUrl": "https://www.efireplacestore.com/dro-de00401.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0342",
-    "name": "FireRock 42 Inch See-Through Vented Masonry Fireplace",
-    "slug": "frk-01fr0342",
-    "price": 5329.99,
-    "salePrice": 4328.99,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0342-dce21ad8.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0342.html",
-    "rating": 4,
-    "reviewCount": 1,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0872",
-    "name": "FireRock 72 Inch Linear Masonry Fireplace",
-    "slug": "frk-01fr0872",
-    "price": 9449.99,
-    "salePrice": 7682.99,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0872-eab13471.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0872.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "SUP-WCT4920WS",
@@ -1581,32 +944,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "STA-NA72",
-    "name": "Stone Age Manufacturing 72 Inch New Age Zero-Clearance Fireplace with Straight Lintel",
-    "slug": "sta-na72",
-    "price": 7569.99,
-    "salePrice": 6152.63,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-na72-4fec7a74.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-na72.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0072",
-    "name": "FireRock 72 Inch Conventional Oversized Masonry Fireplace",
-    "slug": "frk-01fr0072",
-    "price": 9809.99,
-    "salePrice": 7972.49,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0072-ce51eb29.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0072.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "VNT-VB00018",
     "name": "Ventis HE325 Zero Clearance Wood Burning Fireplace",
     "slug": "vnt-vb00018",
@@ -1620,32 +957,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "STA-SA24",
-    "name": "Stone Age Manufacturing 24 Inch Standard Fireplace Kit",
-    "slug": "sta-sa24",
-    "price": 4109.99,
-    "salePrice": 3337.39,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa24-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa24.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA48-NB",
-    "name": "Stone Age Manufacturing 48 Inch Standard Fireplace Kit without Firebrick",
-    "slug": "sta-sa48-nb",
-    "price": 5449.99,
-    "salePrice": 4430.87,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa48-nb-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa48-nb.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "MSL-MFP75",
     "name": "Mason Lite 75 Inch Masonry Fireplace Firebox Kit",
     "slug": "msl-mfp75",
@@ -1654,19 +965,6 @@
     "brand": "Mason",
     "imageUrl": "/products/wood-fireplaces/msl-mfp75-9b33a5b4.webp",
     "productUrl": "https://www.efireplacestore.com/msl-mfp75.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "FRK-01FR0030",
-    "name": "FireRock 30 Inch Conventional Masonry Fireplace",
-    "slug": "frk-01fr0030",
-    "price": 3509.99,
-    "salePrice": 2854.79,
-    "brand": "FireRock",
-    "imageUrl": "/products/wood-fireplaces/frk-01fr0030-fe3884e4.webp",
-    "productUrl": "https://www.efireplacestore.com/frk-01fr0030.html",
     "rating": 0,
     "reviewCount": 0,
     "isBestSeller": false
@@ -1686,19 +984,6 @@
     "imageUrls": [
       "/products-upgraded/wood-fireplaces/ems-wb30fp.webp"
     ]
-  },
-  {
-    "sku": "VAL-FP10RSK",
-    "name": "Valcourt Lafayette IIS Wood Burning Fireplace with Chimney",
-    "slug": "val-fp10rsk",
-    "price": 4219.99,
-    "salePrice": 3431.99,
-    "brand": "Valcourt",
-    "imageUrl": "/products/wood-fireplaces/val-fp10rsk-02158804.webp",
-    "productUrl": "https://www.efireplacestore.com/val-fp10rsk.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "EMS-WB43FP",
@@ -1763,97 +1048,6 @@
     "imageUrls": [
       "/products-upgraded/wood-fireplaces/sup-wre6036.webp"
     ]
-  },
-  {
-    "sku": "SDZ-FSN-748",
-    "name": "SunnyDaze 32 Inch Bronze-Look Woodburning Outdoor Fireplace with Log Storage",
-    "slug": "sdz-fsn-748",
-    "price": 269.99,
-    "salePrice": 215,
-    "brand": "SunnyDaze",
-    "imageUrl": "/products/wood-fireplaces/sdz-fsn-748-9d68d10d.webp",
-    "productUrl": "https://www.efireplacestore.com/sdz-fsn-748.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA48-ST",
-    "name": "Stone Age Manufacturing 48 Inch Standard See Through Fireplace Kit",
-    "slug": "sta-sa48-st",
-    "price": 6159.99,
-    "salePrice": 5010.71,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa48-st-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa48-st.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-NA42",
-    "name": "Stone Age Manufacturing 42 Inch Zero Clearance Fireplace Kit",
-    "slug": "sta-na42",
-    "price": 4029.99,
-    "salePrice": 3275.24,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-na42-b8223cdf.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-na42.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA36-NB",
-    "name": "Stone Age Manufacturing 36 Inch Standard Fireplace Kit without Firebrick",
-    "slug": "sta-sa36-nb",
-    "price": 4659.99,
-    "salePrice": 3786.74,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa36-nb-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa36-nb.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA24-ST",
-    "name": "Stone Age Manufacturing 24 Inch Standard See Through Fireplace Kit",
-    "slug": "sta-sa24-st",
-    "price": 4119.99,
-    "salePrice": 3352.35,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa24-st-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa24-st.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-NA60",
-    "name": "Stone Age Manufacturing 60 Inch New Age Zero-Clearance Fireplace with Straight Lintel",
-    "slug": "sta-na60",
-    "price": 6369.99,
-    "salePrice": 5174.99,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-na60-4fec7a74.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-na60.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "STA-SA36-ST",
-    "name": "Stone Age Manufacturing 36 Inch Standard See Through Fireplace Kit",
-    "slug": "sta-sa36-st",
-    "price": 5029.99,
-    "salePrice": 4091.99,
-    "brand": "Stone",
-    "imageUrl": "/products/wood-fireplaces/sta-sa36-st-467f47f1.webp",
-    "productUrl": "https://www.efireplacestore.com/sta-sa36-st.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "VNT-VB00017",

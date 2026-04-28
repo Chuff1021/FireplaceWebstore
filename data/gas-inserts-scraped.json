@@ -277,19 +277,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "SFL-ABBOT-30BL-DELUXE-NG",
-    "name": "Sierra Flame 30 Inch Abbot Deluxe Direct Vent Gas Fireplace Insert - Log Set",
-    "slug": "sfl-abbot-30bl-deluxe-ng",
-    "price": 3269.99,
-    "salePrice": 2659.49,
-    "brand": "Sierra",
-    "imageUrl": "/products/gas-inserts/sfl-abbot-30bl-deluxe-ng-a02dcc95.webp",
-    "productUrl": "https://www.efireplacestore.com/sfl-abbot-30bl-deluxe-ng.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "CUI-DVC28IN31N",
     "name": "Empire 34 Inch Innsbrook Direct Vent Gas Fireplace Insert - Millivolt Pilot",
     "slug": "cui-dvc28in31n",
@@ -399,19 +386,6 @@
     ]
   },
   {
-    "sku": "PTS-DVI-30M-01-32N",
-    "name": "Real Fyre 30 Inch mSeries Direct Vent Gas Fireplace Insert",
-    "slug": "pts-dvi-30m-01-32n",
-    "price": 3109.99,
-    "salePrice": 2524.5,
-    "brand": "Real",
-    "imageUrl": "/products/gas-inserts/pts-dvi-30m-01-32n-b0ec4ea2.webp",
-    "productUrl": "https://www.efireplacestore.com/pts-dvi-30m-01-32n.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "EMP-DVCT35CBN95N",
     "name": "Empire 35 Inch Rushmore Direct Vent Gas Fireplace Insert",
     "slug": "emp-dvct35cbn95n",
@@ -471,19 +445,6 @@
     "imageUrls": [
       "/products-upgraded/gas-inserts/npl-gdi3n.webp"
     ]
-  },
-  {
-    "sku": "SFL-ABBOT-30PG-DELUXE-NG",
-    "name": "Sierra Flame 30 Inch Abbot Deluxe Direct Vent Gas Fireplace Insert - Glass Media Set",
-    "slug": "sfl-abbot-30pg-deluxe-ng",
-    "price": 3849.99,
-    "salePrice": 3130.97,
-    "brand": "Sierra",
-    "imageUrl": "/products/gas-inserts/sfl-abbot-30pg-deluxe-ng-fa748741.webp",
-    "productUrl": "https://www.efireplacestore.com/sfl-abbot-30pg-deluxe-ng.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "EMP-DVCT30CBN95N",
