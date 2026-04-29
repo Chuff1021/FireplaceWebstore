@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Fireplace Showroom in Republic, MO',
+  description: "Visit Aaron's Fireplace Co. in Republic, MO for fireplace displays, hearth product guidance, replacement parts support, and local showroom help.",
+  path: "/showrooms",
+});
 
 export default function Page() {
   return (

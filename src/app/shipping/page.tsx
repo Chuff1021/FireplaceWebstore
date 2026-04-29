@@ -1,10 +1,12 @@
 import { defaultStoreConfig } from "@/lib/store-config";
+import { seoMetadata } from "@/lib/seo-metadata";
 import { Truck, Package, Clock, Phone } from "lucide-react";
 
-export const metadata = {
-  title: `Shipping Policy | ${defaultStoreConfig.storeName}`,
-  description: `Shipping and delivery information for ${defaultStoreConfig.storeName}`,
-};
+export const metadata = seoMetadata({
+  title: 'Fireplace Shipping & Delivery',
+  description: "Shipping and delivery information for fireplaces, inserts, stoves, mantels, accessories, and replacement parts from Aaron's Fireplace Co.",
+  path: "/shipping",
+});
 
 export default function ShippingPage() {
   return (

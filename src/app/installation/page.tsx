@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Fireplace Installation Planning',
+  description: "Plan a fireplace, insert, stove, venting, or remodel project with expert sizing and installation guidance from Aaron's Fireplace Co.",
+  path: "/installation",
+});
 
 export default function Page() {
   return (

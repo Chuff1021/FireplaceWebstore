@@ -1,10 +1,12 @@
 import { defaultStoreConfig } from "@/lib/store-config";
+import { seoMetadata } from "@/lib/seo-metadata";
 import { ChevronDown } from "lucide-react";
 
-export const metadata = {
-  title: `FAQ | ${defaultStoreConfig.storeName}`,
-  description: `Frequently asked questions about fireplaces, stoves, and our services at ${defaultStoreConfig.storeName}`,
-};
+export const metadata = seoMetadata({
+  title: 'Fireplace FAQ',
+  description: "Answers to common fireplace, stove, insert, installation, service, financing, and product questions from Aaron's Fireplace Co.",
+  path: "/faq",
+});
 
 const faqs = [
   {

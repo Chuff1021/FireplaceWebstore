@@ -5,7 +5,7 @@ import { ChevronRight, MapPin, Phone, Truck } from "lucide-react";
 
 import { StructuredData } from "@/components/seo/StructuredData";
 import { breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/site-jsonld";
-import { absoluteUrl } from "@/lib/site-url";
+import { absoluteUrl, SITE_URL } from "@/lib/site-url";
 import { defaultStoreConfig } from "@/lib/store-config";
 import { getLocalLandingPage, localLandingPages } from "@/lib/local-seo";
 
@@ -85,6 +85,25 @@ export default async function LocalLandingPage({ params }: RouteContext) {
           { name: "Local Fireplace Service Areas", url: "/showrooms" },
           { name: page.city, url: pageUrl },
         ])}
+      />
+      <StructuredData
+        id="local-service-jsonld"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": `${absoluteUrl(pageUrl)}#service`,
+          name: page.title,
+          description: page.description,
+          provider: { "@id": `${SITE_URL}/#localbusiness` },
+          areaServed: {
+            "@type": "City",
+            name: page.city,
+            addressRegion: page.state,
+            addressCountry: "US",
+          },
+          serviceType: "Fireplace sales, fireplace parts support, and hearth product guidance",
+          url: absoluteUrl(pageUrl),
+        }}
       />
 
       <div className="border-b border-[#e6dccb] bg-[#fffdf9]">

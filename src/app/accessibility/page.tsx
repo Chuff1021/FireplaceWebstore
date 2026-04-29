@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Accessibility',
+  description: "Accessibility information and support for using Aaron's Fireplace Co.'s website, product catalog, forms, and fireplace service pages.",
+  path: "/accessibility",
+});
 
 export default function Page() {
   return (

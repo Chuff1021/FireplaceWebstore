@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Returns & Exchanges',
+  description: "Return and exchange guidance for fireplace parts, hearth appliances, accessories, damaged shipments, and order issues from Aaron's Fireplace Co.",
+  path: "/returns",
+});
 
 export default function Page() {
   return (

@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Fireplace Financing Options',
+  description: 'Learn about fireplace project payment and quote options for appliances, inserts, stoves, venting, accessories, and installation planning.',
+  path: "/financing",
+});
 
 export default function Page() {
   return (

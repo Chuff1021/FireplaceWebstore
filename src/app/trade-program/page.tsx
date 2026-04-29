@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Fireplace Contractor Trade Program',
+  description: 'Contractor and builder support for fireplace bids, project quotes, house-plan takeoffs, hearth products, and trade ordering workflows.',
+  path: "/trade-program",
+});
 
 export default function Page() {
   return (

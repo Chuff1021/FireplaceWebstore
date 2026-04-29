@@ -98,6 +98,11 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
                   Sale Items
                 </Link>
               </li>
+              <li>
+                <Link href="/brand" className={footerLinkClass}>
+                  Shop All Brands
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -131,7 +136,10 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
             <h4 className={`${footerHeadingClass} mt-8`}>Services</h4>
             <ul className="space-y-2">
               <li><Link href="/showrooms" className={footerLinkClass}>Visit Our Showroom</Link></li>
+              <li><Link href="/local/fireplace-store-republic-mo" className={footerLinkClass}>Republic Fireplace Store</Link></li>
+              <li><Link href="/local/fireplace-store-springfield-mo" className={footerLinkClass}>Springfield Fireplace Store</Link></li>
               <li><Link href="/installation" className={footerLinkClass}>Professional Installation</Link></li>
+              <li><Link href="/local/fireplace-installation-springfield-mo" className={footerLinkClass}>Springfield Installation Help</Link></li>
               <li><Link href="/financing" className={footerLinkClass}>Financing Options</Link></li>
               <li><Link href="/trade-program" className={footerLinkClass}>Trade Program</Link></li>
             </ul>

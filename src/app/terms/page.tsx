@@ -1,9 +1,11 @@
 import { defaultStoreConfig } from "@/lib/store-config";
+import { seoMetadata } from "@/lib/seo-metadata";
 
-export const metadata = {
-  title: `Terms of Service | ${defaultStoreConfig.storeName}`,
-  description: `Terms and conditions for using ${defaultStoreConfig.storeName} website and services`,
-};
+export const metadata = seoMetadata({
+  title: 'Terms of Service',
+  description: "Terms and conditions for using Aaron's Fireplace Co.'s website, product catalog, order support, quote requests, and online services.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   const { address } = defaultStoreConfig;

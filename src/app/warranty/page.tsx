@@ -1,4 +1,11 @@
+import { seoMetadata } from "@/lib/seo-metadata";
 import Link from "next/link";
+
+export const metadata = seoMetadata({
+  title: 'Fireplace Warranty Support',
+  description: 'Warranty support guidance for fireplaces, inserts, stoves, parts, model numbers, serial numbers, installation details, and manufacturer claims.',
+  path: "/warranty",
+});
 
 export default function Page() {
   return (

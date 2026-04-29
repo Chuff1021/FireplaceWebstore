@@ -1,9 +1,11 @@
 import { defaultStoreConfig } from "@/lib/store-config";
+import { seoMetadata } from "@/lib/seo-metadata";
 
-export const metadata = {
-  title: `Privacy Policy | ${defaultStoreConfig.storeName}`,
-  description: `Privacy policy and data protection information for ${defaultStoreConfig.storeName}`,
-};
+export const metadata = seoMetadata({
+  title: 'Privacy Policy',
+  description: "Privacy policy for Aaron's Fireplace Co. covering customer information, website inquiries, orders, contact forms, and data protection.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   const { address } = defaultStoreConfig;

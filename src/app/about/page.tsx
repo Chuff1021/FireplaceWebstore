@@ -1,10 +1,12 @@
 import { defaultStoreConfig } from "@/lib/store-config";
+import { seoMetadata } from "@/lib/seo-metadata";
 import { MapPin, Phone, Mail, Clock, Award, Users, Shield, Heart } from "lucide-react";
 
-export const metadata = {
-  title: `About Us | ${defaultStoreConfig.storeName}`,
-  description: `Learn about ${defaultStoreConfig.storeName} - ${defaultStoreConfig.tagline}`,
-};
+export const metadata = seoMetadata({
+  title: "About Aaron's Fireplace Co.",
+  description: "Learn about Aaron's Fireplace Co., a Republic, MO hearth showroom helping customers shop fireplaces, stoves, inserts, parts, and service support.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   const { address } = defaultStoreConfig;
