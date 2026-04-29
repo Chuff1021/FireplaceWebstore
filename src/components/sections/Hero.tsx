@@ -95,14 +95,14 @@ export function Hero() {
               className="mx-auto h-auto w-full"
               priority
             />
-            <div className="mt-6 border-t border-white/10 pt-5">
+            <div className="mt-6 border-t border-white/10 pt-5 text-center">
               <Link
                 href="/design-tool"
-                className="inline-flex items-center justify-center bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
+                className="mx-auto inline-flex items-center justify-center bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
               >
                 Get Help Choosing a Fireplace
               </Link>
-              <p className="mt-4 text-sm leading-6 text-[#d9cbb9]">
+              <p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-[#d9cbb9]">
                 Click here to get expert help with choosing the right fireplace.
               </p>
             </div>
