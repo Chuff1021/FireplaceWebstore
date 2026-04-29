@@ -1,77 +1,10 @@
 import "server-only";
 
+import { readFile } from "fs/promises";
+import path from "path";
 import type { Product } from "@/lib/store-config";
 
-const accessoryProducts: Product[] = [
-  {
-    id: "accessory-pearl-shenandoah",
-    sku: "PEARL-SHENANDOAH",
-    name: "Pearl Mantels Shenandoah Wood Fireplace Mantel Shelf",
-    slug: "pearl-mantels-shenandoah-wood-fireplace-mantel-shelf",
-    description: "Rustic wood fireplace mantel shelf from Pearl Mantels. Available through Aaron's Fireplace Co. with sizing and finish guidance for your fireplace wall.",
-    shortDescription: "Rustic Pearl Mantels wood mantel shelf for fireplace surrounds.",
-    price: 0,
-    contactForPricing: true,
-    categoryId: "accessories",
-    subcategoryId: "mantels",
-    brand: "Pearl Mantels",
-    images: ["/categories/mantels.jpg"],
-    features: ["Mantel shelf", "Multiple sizes and finishes available", "Request quote for fit and availability"],
-    specifications: { Brand: "Pearl Mantels", Type: "Mantel Shelf" },
-    inStock: true,
-    stockQuantity: 10,
-    rating: 0,
-    reviewCount: 0,
-    isFeatured: true,
-    isNew: false,
-    isBestSeller: false,
-  },
-  {
-    id: "accessory-pearl-zachary",
-    sku: "PEARL-ZACHARY",
-    name: "Pearl Mantels Zachary Wood Fireplace Mantel Shelf",
-    slug: "pearl-mantels-zachary-wood-fireplace-mantel-shelf",
-    description: "Pearl Mantels Zachary mantel shelf for a clean fireplace surround finish. Contact Aaron's for available sizes, finish options, and install planning.",
-    shortDescription: "Clean-lined Pearl Mantels fireplace mantel shelf.",
-    price: 0,
-    contactForPricing: true,
-    categoryId: "accessories",
-    subcategoryId: "mantels",
-    brand: "Pearl Mantels",
-    images: ["/categories/mantels.jpg"],
-    features: ["Wood mantel shelf", "Classic profile", "Sizing support available"],
-    specifications: { Brand: "Pearl Mantels", Type: "Mantel Shelf" },
-    inStock: true,
-    stockQuantity: 10,
-    rating: 0,
-    reviewCount: 0,
-    isFeatured: true,
-    isNew: false,
-    isBestSeller: false,
-  },
-  {
-    id: "accessory-magra-hearth-pad",
-    sku: "MAGRA-HEARTH-PAD",
-    name: "Magra Hearth Fireplace Hearth Pad",
-    slug: "magra-hearth-fireplace-hearth-pad",
-    description: "Magra Hearth hearth protection for fireplace and stove projects. Aaron's can help confirm clearances, sizing, and the right hearth setup for your unit.",
-    shortDescription: "Magra Hearth hearth pad and fireplace floor protection.",
-    price: 0,
-    contactForPricing: true,
-    categoryId: "accessories",
-    subcategoryId: "mantels",
-    brand: "Magra Hearth",
-    images: ["/categories/mantels.jpg"],
-    features: ["Hearth protection", "Sizing and clearance planning", "Quote required"],
-    specifications: { Brand: "Magra Hearth", Type: "Hearth Pad" },
-    inStock: true,
-    stockQuantity: 10,
-    rating: 0,
-    reviewCount: 0,
-    isFeatured: true,
-    isNew: false,
-    isBestSeller: false,
-  },
+const remoteProducts: Product[] = [
   {
     id: "accessory-skytech-1001t-lcd",
     sku: "SKY-1001T-LCD-A",
@@ -96,7 +29,7 @@ const accessoryProducts: Product[] = [
     isBestSeller: false,
   },
   {
-    id: "accessory-skytech-3301p2",
+    id: "accessory-skytech-programmable-fireplace-remote-control",
     sku: "SKY-3301P2",
     name: "Skytech Programmable Fireplace Remote Control",
     slug: "skytech-programmable-fireplace-remote-control",
@@ -119,7 +52,7 @@ const accessoryProducts: Product[] = [
     isBestSeller: false,
   },
   {
-    id: "accessory-hht-rc200",
+    id: "accessory-heat-n-glo-heatilator-rc200-fireplace-remote",
     sku: "2166-320",
     name: "Heat N Glo / Heatilator RC200 Fireplace Remote",
     slug: "heat-n-glo-heatilator-rc200-fireplace-remote",
@@ -143,6 +76,24 @@ const accessoryProducts: Product[] = [
   },
 ];
 
+let cachedProductsPromise: Promise<Product[]> | null = null;
+
+async function loadMantelProducts(): Promise<Product[]> {
+  const filePath = path.join(process.cwd(), "data", "accessories-mantels.json");
+
+  try {
+    const jsonText = await readFile(filePath, "utf8");
+    const parsed = JSON.parse(jsonText);
+    return Array.isArray(parsed) ? (parsed as Product[]) : [];
+  } catch {
+    return [];
+  }
+}
+
 export async function loadAccessoryProducts(): Promise<Product[]> {
-  return accessoryProducts;
+  if (!cachedProductsPromise) {
+    cachedProductsPromise = loadMantelProducts().then((mantelProducts) => [...mantelProducts, ...remoteProducts]);
+  }
+
+  return cachedProductsPromise;
 }
