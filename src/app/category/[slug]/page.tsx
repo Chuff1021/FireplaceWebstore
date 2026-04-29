@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { ChevronRight } from "lucide-react";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { PartsCategoryExperience } from "@/components/parts/PartsCategoryExperience";
+import { PartsServerIntro } from "@/components/parts/PartsServerIntro";
 import { partsDepartmentSlugs } from "@/lib/parts-taxonomy";
 import { loadAllProducts } from "@/lib/all-products";
 import {
@@ -279,11 +280,17 @@ export default async function CategoryPage(
 
   const resolved = findCategoryBySlug(slug);
 
-  // Parts categories use a dedicated taxonomy-driven experience.
+  // Parts categories use a dedicated taxonomy-driven experience with SSR crawl content.
   if (isPartsCategorySlug(slug)) {
     const name = resolved?.name ?? "Fireplace Parts";
     const description =
       "Shop OEM and OEM-equivalent fireplace, wood stove, pellet stove, and gas appliance replacement parts with expert fitment support from Aaron's Fireplace Co.";
+    const allProducts = await loadAllProducts();
+    const partsProducts = allProducts.filter((product) =>
+      slug === "parts"
+        ? product.categoryId === "parts" || product.subcategoryId?.includes("parts")
+        : product.subcategoryId === slug || product.categoryId === slug,
+    );
     const breadcrumbItems = [
       { name: "Home", url: "/" },
       ...(resolved?.parent
@@ -300,12 +307,15 @@ export default async function CategoryPage(
             name: `${name} | ${defaultStoreConfig.storeName}`,
             description,
             url: `/category/${slug}`,
+            numberOfItems: partsProducts.length,
+            items: partsProducts,
           })}
         />
         <StructuredData
           id="parts-breadcrumb-jsonld"
           data={breadcrumbJsonLd(breadcrumbItems)}
         />
+        <PartsServerIntro slug={slug} products={partsProducts} />
         <Suspense
           fallback={
             <div className="mx-auto max-w-[1640px] px-4 py-12 text-center text-sm text-[#5b5d5b] md:px-5">
@@ -313,7 +323,7 @@ export default async function CategoryPage(
             </div>
           }
         >
-          <PartsCategoryExperience slug={slug} />
+          <PartsCategoryExperience slug={slug} showHero={false} />
         </Suspense>
       </>
     );

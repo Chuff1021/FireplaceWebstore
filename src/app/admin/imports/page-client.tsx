@@ -90,6 +90,7 @@ export default function AdminImportsClient() {
   }
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     void loadJobs();
   }, []);
 

@@ -77,14 +77,39 @@ function findTopCategoryFor(product: Product): ProductCategory | null {
   return null;
 }
 
+function truncateMeta(value: string): string {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  return normalized.length <= 160
+    ? normalized
+    : `${normalized.slice(0, 157).trimEnd()}...`;
+}
+
+function categoryNameFor(product: Product): string {
+  const category = findCategory(product.subcategoryId) ?? findCategory(product.categoryId);
+  return category?.name.toLowerCase() ?? "hearth product";
+}
+
 function metaDescriptionFor(product: Product): string {
-  if (product.shortDescription && product.shortDescription.trim().length > 0) {
-    return product.shortDescription.trim().slice(0, 160);
+  const categoryName = categoryNameFor(product);
+  const skuText = product.sku ? ` SKU ${product.sku}` : "";
+  const partType = product.specifications["Part Type"] || "replacement part";
+
+  if (product.categoryId === "parts" || product.subcategoryId?.includes("parts")) {
+    return truncateMeta(
+      `${product.brand} ${product.name}${skuText} ${partType} for fireplaces, stoves, and hearth appliances. Verify fitment with Aaron's Fireplace Co. before ordering.`,
+    );
   }
-  const description = (product.description || "").trim();
-  if (description.length === 0) return defaultStoreConfig.seo.metaDescription;
-  if (description.length <= 160) return description;
-  return `${description.slice(0, 157).trimEnd()}...`;
+
+  if (product.contactForPricing || product.price <= 0) {
+    return truncateMeta(
+      `${product.brand} ${product.name}${skuText} ${categoryName}. Contact Aaron's Fireplace Co. for pricing, availability, sizing, venting, and ordering support.`,
+    );
+  }
+
+  const price = product.salePrice ?? product.price;
+  return truncateMeta(
+    `${product.brand} ${product.name}${skuText} ${categoryName} from Aaron's Fireplace Co. Shop online for ${formatPrice(price)}, with expert sizing and order support.`,
+  );
 }
 
 export async function generateStaticParams(): Promise<RouteParams[]> {

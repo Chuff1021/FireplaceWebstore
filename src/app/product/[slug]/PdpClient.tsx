@@ -30,6 +30,7 @@ export function PdpGallery({ product }: GalleryProps) {
   const selectedProductImage = productImages[selectedImageIndex] ?? productImages[0];
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSelectedImageIndex(0);
   }, [product.id]);
 

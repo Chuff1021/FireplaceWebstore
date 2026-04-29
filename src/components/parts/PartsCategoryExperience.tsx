@@ -18,6 +18,7 @@ import { type Product } from "@/lib/store-config";
 
 type PartsCategoryExperienceProps = {
   slug: string;
+  showHero?: boolean;
 };
 
 type BrandLink = {
@@ -77,7 +78,7 @@ function matchesPartsQuery(product: Product, query: string) {
   return haystack.includes(query.toLowerCase());
 }
 
-export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) {
+export function PartsCategoryExperience({ slug, showHero = true }: PartsCategoryExperienceProps) {
   const searchParams = useSearchParams();
   const department = getPartsDepartmentBySlug(slug);
   const isLandingPage = slug === "parts";
@@ -174,6 +175,8 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
 
   return (
     <div className="min-h-screen bg-[#0b0b0a] text-[#211a15]">
+      {showHero && (
+        <>
       <div className="border-b border-[#ff7a18]/20 bg-[#11100e]">
         <div className="mx-auto max-w-[1480px] px-4 py-3 md:px-6">
           <nav className="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[#d8c7b2]">
@@ -206,6 +209,8 @@ export function PartsCategoryExperience({ slug }: PartsCategoryExperienceProps) 
           </p>
         </div>
       </section>
+        </>
+      )}
 
       <div className="mx-auto grid max-w-[1480px] gap-8 bg-[#f6efe5] px-4 py-8 md:px-6 xl:grid-cols-[290px_minmax(0,1fr)] xl:gap-10">
         <aside className="h-fit border border-[#ff7a18]/25 bg-[#11100e] text-white shadow-[0_24px_80px_rgba(0,0,0,0.22)]">

@@ -118,7 +118,7 @@ export default function DesignToolPage() {
             Find the right fireplace without guessing.
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#e6d8c4]">
-            Answer a few practical planning questions so Aaron's can narrow fuel type, fitment, style, budget, and next steps for expert follow-up.
+            Answer a few practical planning questions so Aaron&apos;s can narrow fuel type, fitment, style, budget, and next steps for expert follow-up.
           </p>
         </div>
       </section>
@@ -217,17 +217,17 @@ export default function DesignToolPage() {
                   </a>
                 )}
               </div>
-            <p className="mt-4 text-sm text-[#6c6256]">This opens your email app with the plan filled in so Aaron's Fireplace Co. can review the details and recommend the next step.</p>
+            <p className="mt-4 text-sm text-[#6c6256]">This opens your email app with the plan filled in so Aaron&apos;s Fireplace Co. can review the details and recommend the next step.</p>
           </>
         </div>
 
         <aside className="space-y-4">
           {[
-            { icon: Flame, title: "Practical planning", text: "This tool collects buying signals and fitment details Aaron's can actually act on." },
+            { icon: Flame, title: "Practical planning", text: "This tool collects buying signals and fitment details Aaron&apos;s can actually act on." },
             { icon: Camera, title: "Photos still help", text: "Room or model photos can be reviewed by an expert instead of pretending AI will solve everything." },
             { icon: Wrench, title: "Built for follow-up", text: "The end goal is a quote, part match, or shortlist — not a novelty demo." },
             { icon: Phone, title: "Expert-assisted", text: "Fireplace purchases are complex. This flow supports human trust instead of replacing it." },
-            { icon: Mail, title: "Easy follow-up", text: "Your answers turn into a clear email Aaron's can review before calling or replying." },
+            { icon: Mail, title: "Easy follow-up", text: "Your answers turn into a clear email Aaron&apos;s can review before calling or replying." },
             { icon: Zap, title: "Fast path", text: "A customer can answer the basics in under two minutes." },
           ].map(({ icon: Icon, title, text }) => (
             <div key={title} className="border border-[#e2d3c0] bg-white p-5">

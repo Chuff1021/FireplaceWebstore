@@ -85,7 +85,7 @@ export default function ServiceAppointmentPage() {
             Request a Fireplace or Stove Service Call
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#e6d8c4]">
-            Tell us what kind of unit you have, what is going on, and what date/time of day works best. We'll follow up to confirm the final appointment day and time.
+            Tell us what kind of unit you have, what is going on, and what date/time of day works best. We&apos;ll follow up to confirm the final appointment day and time.
           </p>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function ServiceAppointmentPage() {
               <div>
                 <h2 className="text-3xl font-black tracking-[-0.04em] text-[#1d1712]">Service details</h2>
                 <p className="mt-2 text-sm leading-6 text-[#6c6256]">
-                  Submit this form and Aaron's Fireplace Co. will receive it directly in our internal service queue. No email app required.
+                  Submit this form and Aaron&apos;s Fireplace Co. will receive it directly in our internal service queue. No email app required.
                 </p>
               </div>
 
@@ -168,10 +168,10 @@ export default function ServiceAppointmentPage() {
               </button>
               {submitState === "success" ? (
                 <p className="border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
-                  Request received. We'll review it and contact you to confirm the appointment.
+                  Request received. We&apos;ll review it and contact you to confirm the appointment.
                 </p>
               ) : (
-                <p className="text-sm text-[#6c6256]">Your request goes straight to Aaron's internal service dashboard so the team can follow up.</p>
+                <p className="text-sm text-[#6c6256]">Your request goes straight to Aaron&apos;s internal service dashboard so the team can follow up.</p>
               )}
               {submitState === "error" && <p className="text-sm font-semibold text-red-700">{errorMessage}</p>}
             </form>
@@ -182,7 +182,7 @@ export default function ServiceAppointmentPage() {
             { icon: Flame, title: "Gas", text: "Service requests for gas fireplaces, gas inserts, gas logs, and gas stoves." },
             { icon: Home, title: "Wood", text: "Wood stove and fireplace service requests, cleaning needs, inspections, and issue diagnosis." },
             { icon: Wrench, title: "Pellet", text: "Pellet stove cleaning, maintenance, and service call requests." },
-            { icon: CalendarDays, title: "Scheduling", text: "Choose your ideal date and time of day. We'll contact you to finalize the appointment." },
+            { icon: CalendarDays, title: "Scheduling", text: "Choose your ideal date and time of day. We&apos;ll contact you to finalize the appointment." },
             { icon: Clock, title: "Not live calendar yet", text: "This first version is built for lead capture. Later we can expose real available days and times." },
             { icon: Phone, title: "Need help now?", text: `Call ${defaultStoreConfig.phone} during business hours.` },
           ].map(({ icon: Icon, title, text }) => (
