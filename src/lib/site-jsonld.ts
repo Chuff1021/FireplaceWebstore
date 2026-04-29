@@ -1,5 +1,5 @@
-import { defaultStoreConfig } from "@/lib/store-config";
-import { SITE_URL } from "@/lib/site-url";
+import { defaultStoreConfig, type Product } from "@/lib/store-config";
+import { SITE_URL, absoluteUrl } from "@/lib/site-url";
 
 export function organizationJsonLd() {
   return {
@@ -100,5 +100,125 @@ export function websiteJsonLd() {
       },
       "query-input": "required name=search_term_string",
     },
+  };
+}
+
+export type BreadcrumbItem = { name: string; url: string };
+
+export function breadcrumbJsonLd(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.url),
+    })),
+  };
+}
+
+export function productJsonLd(product: Product) {
+  const productUrl = absoluteUrl(`/product/${product.slug}`);
+  const primaryImage = product.images?.[0]
+    ? absoluteUrl(product.images[0])
+    : `${SITE_URL}/logo.png`;
+  const allImages = (product.images ?? [])
+    .filter(Boolean)
+    .map((img) => absoluteUrl(img));
+
+  const data: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${productUrl}#product`,
+    name: product.name,
+    sku: product.sku,
+    mpn: product.sku,
+    description: product.description || product.shortDescription,
+    image: allImages.length > 0 ? allImages : [primaryImage],
+    url: productUrl,
+    brand: {
+      "@type": "Brand",
+      name: product.brand,
+    },
+  };
+
+  if (product.contactForPricing) {
+    data.offers = {
+      "@type": "Offer",
+      url: productUrl,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@id": `${SITE_URL}/#organization` },
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "USD",
+        valueAddedTaxIncluded: false,
+        description: "Contact for pricing",
+      },
+    };
+  } else {
+    const price =
+      typeof product.salePrice === "number" && product.salePrice > 0
+        ? product.salePrice
+        : product.price;
+    if (typeof price === "number" && price > 0) {
+      data.offers = {
+        "@type": "Offer",
+        url: productUrl,
+        priceCurrency: "USD",
+        price: price.toFixed(2),
+        availability: product.inStock
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@id": `${SITE_URL}/#organization` },
+      };
+    }
+  }
+
+  return data;
+}
+
+export function collectionPageJsonLd(opts: {
+  name: string;
+  description: string;
+  url: string;
+  numberOfItems?: number;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${absoluteUrl(opts.url)}#collection`,
+    name: opts.name,
+    description: opts.description,
+    url: absoluteUrl(opts.url),
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    ...(typeof opts.numberOfItems === "number"
+      ? {
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: opts.numberOfItems,
+          },
+        }
+      : {}),
+  };
+}
+
+export function brandJsonLd(opts: {
+  name: string;
+  slug: string;
+  description?: string;
+  logo?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Brand",
+    "@id": `${absoluteUrl(`/brand/${opts.slug}`)}#brand`,
+    name: opts.name,
+    url: absoluteUrl(`/brand/${opts.slug}`),
+    ...(opts.description ? { description: opts.description } : {}),
+    ...(opts.logo ? { logo: absoluteUrl(opts.logo) } : {}),
   };
 }
