@@ -1,4 +1,39 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+import { absoluteUrl } from "@/lib/site-url";
+import { defaultStoreConfig } from "@/lib/store-config";
+
+export const metadata: Metadata = {
+  title: "Fireplace Sale — Discounted Models in Stock",
+  description:
+    "Shop the latest fireplace, insert, and stove sale at Aaron's Fireplace Co. Discounted models, closeouts, and special offers — limited inventory, dealer-supported.",
+  alternates: { canonical: absoluteUrl("/sale") },
+  openGraph: {
+    type: "website",
+    title: "Fireplace Sale — Discounted Models in Stock | Aaron's Fireplace Co.",
+    description:
+      "Shop discounted fireplaces, inserts, and stoves at Aaron's Fireplace Co. Limited-quantity sale and closeout inventory.",
+    url: absoluteUrl("/sale"),
+    siteName: defaultStoreConfig.storeName,
+    locale: "en_US",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: defaultStoreConfig.storeName,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fireplace Sale — Discounted Models in Stock | Aaron's Fireplace Co.",
+    description:
+      "Shop discounted fireplaces, inserts, and stoves at Aaron's Fireplace Co. Limited-quantity sale and closeout inventory.",
+    images: ["/logo.png"],
+  },
+};
 
 export default function Page() {
   return (
