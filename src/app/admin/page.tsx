@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { requireAdminAuth } from "@/lib/admin-auth";
 import { db } from "@/db";
-import { products, categories } from "@/db/schema";
-import { count } from "drizzle-orm";
+import { products, categories, serviceRequests } from "@/db/schema";
+import { count, desc, eq } from "drizzle-orm";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 import Link from "next/link";
-import { Package, Tag, Plus, ArrowRight } from "lucide-react";
+import { CalendarDays, Package, Phone, Tag, Plus, ArrowRight } from "lucide-react";
 import { resolveProductImage } from "@/lib/product-images";
 
 export default async function AdminDashboardPage() {
@@ -13,12 +13,22 @@ export default async function AdminDashboardPage() {
 
   const [productCount] = await db.select({ count: count() }).from(products);
   const [categoryCount] = await db.select({ count: count() }).from(categories);
+  const [newServiceRequestCount] = await db
+    .select({ count: count() })
+    .from(serviceRequests)
+    .where(eq(serviceRequests.status, "new"));
 
   const recentProducts = await db
     .select()
     .from(products)
     .orderBy(products.createdAt)
     .limit(5);
+
+  const recentServiceRequests = await db
+    .select()
+    .from(serviceRequests)
+    .orderBy(desc(serviceRequests.createdAt))
+    .limit(6);
 
   return (
     <div className="flex min-h-screen bg-gray-950">
@@ -33,7 +43,7 @@ export default async function AdminDashboardPage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
               <div className="flex items-center justify-between mb-4">
                 <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center">
@@ -65,6 +75,17 @@ export default async function AdminDashboardPage() {
               <div className="text-3xl font-bold text-white">{categoryCount.count}</div>
               <div className="text-gray-400 text-sm mt-1">Categories</div>
             </div>
+
+            <div className="bg-gray-800 rounded-xl p-6 border border-orange-500/40">
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                  <CalendarDays className="w-5 h-5 text-orange-300" />
+                </div>
+                <span className="rounded-full bg-orange-500/15 px-2 py-1 text-xs font-bold text-orange-200">New</span>
+              </div>
+              <div className="text-3xl font-bold text-white">{newServiceRequestCount.count}</div>
+              <div className="text-gray-400 text-sm mt-1">New Service Requests</div>
+            </div>
           </div>
 
           {/* Quick Actions */}
@@ -86,6 +107,51 @@ export default async function AdminDashboardPage() {
                 <span className="font-medium">Add New Category</span>
               </Link>
             </div>
+          </div>
+
+          {/* Service Requests */}
+          <div className="bg-gray-800 rounded-xl border border-orange-500/30 mb-8">
+            <div className="flex items-center justify-between p-6 border-b border-gray-700">
+              <div>
+                <h2 className="text-lg font-semibold text-white">Service Requests</h2>
+                <p className="mt-1 text-sm text-gray-400">New appointment requests submitted from the website.</p>
+              </div>
+              <CalendarDays className="h-5 w-5 text-orange-300" />
+            </div>
+
+            {recentServiceRequests.length === 0 ? (
+              <div className="p-8 text-center">
+                <CalendarDays className="w-12 h-12 text-gray-600 mx-auto mb-3" />
+                <p className="text-gray-400">No service requests yet.</p>
+              </div>
+            ) : (
+              <div className="divide-y divide-gray-700">
+                {recentServiceRequests.map((request) => (
+                  <div key={request.id} className="grid gap-4 p-5 lg:grid-cols-[1fr_auto]">
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-white font-semibold">{request.name}</span>
+                        <span className="rounded-full bg-orange-500/15 px-2 py-1 text-xs font-bold uppercase tracking-wide text-orange-200">{request.status}</span>
+                      </div>
+                      <div className="mt-2 grid gap-1 text-sm text-gray-300 sm:grid-cols-2">
+                        <div><span className="text-gray-500">Appliance:</span> {request.applianceType}</div>
+                        <div><span className="text-gray-500">Service:</span> {request.serviceType}</div>
+                        <div><span className="text-gray-500">Requested:</span> {request.requestedDate} — {request.preferredTime}</div>
+                        <div><span className="text-gray-500">Address:</span> {request.address || "Not provided"}</div>
+                      </div>
+                      {request.notes && <p className="mt-3 text-sm leading-6 text-gray-400">{request.notes}</p>}
+                      {request.createdAt && <p className="mt-3 text-xs text-gray-500">Submitted {request.createdAt.toLocaleString()}</p>}
+                    </div>
+                    <div className="flex flex-col gap-2 lg:items-end">
+                      <a href={`tel:${request.phone}`} className="inline-flex items-center gap-2 rounded-lg bg-orange-600 px-4 py-2 text-sm font-bold text-white hover:bg-orange-500">
+                        <Phone className="h-4 w-4" /> {request.phone}
+                      </a>
+                      {request.email && <a href={`mailto:${request.email}`} className="text-sm text-orange-200 hover:text-orange-100">{request.email}</a>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Recent Products */}

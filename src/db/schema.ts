@@ -112,6 +112,22 @@ export const adminSessions = sqliteTable("admin_sessions", {
   createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
 });
 
+export const serviceRequests = sqliteTable("service_requests", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  name: text("name").notNull(),
+  phone: text("phone").notNull(),
+  email: text("email").notNull().default(""),
+  applianceType: text("appliance_type").notNull(),
+  serviceType: text("service_type").notNull(),
+  requestedDate: text("requested_date").notNull(),
+  preferredTime: text("preferred_time").notNull(),
+  address: text("address").notNull().default(""),
+  notes: text("notes").notNull().default(""),
+  status: text("status").notNull().default("new"),
+  createdAt: integer("created_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+  updatedAt: integer("updated_at", { mode: "timestamp" }).$defaultFn(() => new Date()),
+});
+
 export type Category = typeof categories.$inferSelect;
 export type NewCategory = typeof categories.$inferInsert;
 export type Product = typeof products.$inferSelect;
@@ -122,3 +138,5 @@ export type CatalogSource = typeof catalogSources.$inferSelect;
 export type LicenseRecord = typeof licenseRecords.$inferSelect;
 export type ImportJob = typeof importJobs.$inferSelect;
 export type ImportJobError = typeof importJobErrors.$inferSelect;
+export type ServiceRequest = typeof serviceRequests.$inferSelect;
+export type NewServiceRequest = typeof serviceRequests.$inferInsert;

@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Clock, Flame, Home, Mail, Phone, Wrench } from "lucide-react";
+import { CheckCircle2, CalendarDays, Clock, Flame, Home, Phone, Wrench } from "lucide-react";
 import { defaultStoreConfig } from "@/lib/store-config";
 
 type ServiceRequest = {
@@ -35,8 +35,11 @@ const timeWindows = ["Morning", "Midday", "Afternoon", "Any time that day"];
 
 export default function ServiceAppointmentPage() {
   const [request, setRequest] = useState<ServiceRequest>(initialRequest);
+  const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const update = (key: keyof ServiceRequest, value: string) => {
     setRequest((current) => ({ ...current, [key]: value }));
+    if (submitState !== "idle") setSubmitState("idle");
   };
 
   const canSubmit = Boolean(
@@ -48,7 +51,29 @@ export default function ServiceAppointmentPage() {
       request.preferredTime
   );
 
-  const mailtoHref = `mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent("Service appointment request")}&body=${encodeURIComponent(`Name: ${request.name}\nPhone: ${request.phone}\nEmail: ${request.email}\nService address: ${request.address}\nAppliance: ${request.applianceType}\nService type: ${request.serviceType}\nRequested date: ${request.requestedDate}\nPreferred time: ${request.preferredTime}\n\nNotes:\n${request.notes}`)}`;
+  async function submitRequest(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!canSubmit || submitState === "submitting") return;
+
+    setSubmitState("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/service-requests", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(request),
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      setSubmitState("success");
+      setRequest(initialRequest);
+    } catch {
+      setSubmitState("error");
+      setErrorMessage("Something went wrong. Please try again or call us directly.");
+    }
+  }
 
   return (
     <main className="min-h-screen bg-[#f7f1e8]">
@@ -67,11 +92,11 @@ export default function ServiceAppointmentPage() {
 
       <section className="mx-auto grid max-w-[1240px] gap-8 px-4 py-10 md:px-5 lg:grid-cols-[0.7fr_0.3fr]">
         <div className="border border-[#e2d3c0] bg-white p-6 shadow-[0_24px_80px_rgba(48,31,14,0.08)] md:p-8">
-          <form className="space-y-7">
+          <form className="space-y-7" onSubmit={submitRequest}>
               <div>
                 <h2 className="text-3xl font-black tracking-[-0.04em] text-[#1d1712]">Service details</h2>
                 <p className="mt-2 text-sm leading-6 text-[#6c6256]">
-                  This is a request form, not a live calendar yet. Your requested date and time window help us schedule faster when we call back.
+                  Submit this form and Aaron's Fireplace Co. will receive it directly in our internal service queue. No email app required.
                 </p>
               </div>
 
@@ -138,10 +163,17 @@ export default function ServiceAppointmentPage() {
                 <textarea className="min-h-32 w-full border border-[#d9c8b4] px-4 py-3 outline-none focus:border-[#ff7a18]" value={request.notes} onChange={(e) => update("notes", e.target.value)} placeholder="Brand/model if known, symptoms, error codes, cleaning needs, access notes, or anything else that helps us prepare." />
               </div>
 
-              <a href={canSubmit ? mailtoHref : undefined} aria-disabled={!canSubmit} className={`inline-flex w-full items-center justify-center gap-3 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] transition md:w-auto ${canSubmit ? "bg-[#ff7a18] text-black hover:bg-[#ff963f]" : "cursor-not-allowed bg-[#ff7a18]/40 text-black/50"}`}>
-                Email Service Request <Mail className="h-4 w-4" />
-              </a>
-              <p className="text-sm text-[#6c6256]">This opens your email app with the request filled in so Aaron's Fireplace Co. can follow up to confirm the final appointment.</p>
+              <button type="submit" disabled={!canSubmit || submitState === "submitting"} className={`inline-flex w-full items-center justify-center gap-3 px-7 py-4 text-sm font-black uppercase tracking-[0.14em] transition md:w-auto ${canSubmit && submitState !== "submitting" ? "bg-[#ff7a18] text-black hover:bg-[#ff963f]" : "cursor-not-allowed bg-[#ff7a18]/40 text-black/50"}`}>
+                {submitState === "submitting" ? "Submitting Request..." : "Request Service Appointment"} <CheckCircle2 className="h-4 w-4" />
+              </button>
+              {submitState === "success" ? (
+                <p className="border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-800">
+                  Request received. We'll review it and contact you to confirm the appointment.
+                </p>
+              ) : (
+                <p className="text-sm text-[#6c6256]">Your request goes straight to Aaron's internal service dashboard so the team can follow up.</p>
+              )}
+              {submitState === "error" && <p className="text-sm font-semibold text-red-700">{errorMessage}</p>}
             </form>
         </div>
 
