@@ -277,22 +277,48 @@ export default async function CategoryPage(
 ) {
   const { slug } = await params;
 
+  const resolved = findCategoryBySlug(slug);
+
   // Parts categories use a dedicated taxonomy-driven experience.
   if (isPartsCategorySlug(slug)) {
+    const name = resolved?.name ?? "Fireplace Parts";
+    const description =
+      "Shop OEM and OEM-equivalent fireplace, wood stove, pellet stove, and gas appliance replacement parts with expert fitment support from Aaron's Fireplace Co.";
+    const breadcrumbItems = [
+      { name: "Home", url: "/" },
+      ...(resolved?.parent
+        ? [{ name: resolved.parent.name, url: `/category/${resolved.parent.slug}` }]
+        : []),
+      { name, url: `/category/${slug}` },
+    ];
+
     return (
-      <Suspense
-        fallback={
-          <div className="mx-auto max-w-[1640px] px-4 py-12 text-center text-sm text-[#5b5d5b] md:px-5">
-            Loading parts catalog...
-          </div>
-        }
-      >
-        <PartsCategoryExperience slug={slug} />
-      </Suspense>
+      <>
+        <StructuredData
+          id="parts-collection-jsonld"
+          data={collectionPageJsonLd({
+            name: `${name} | ${defaultStoreConfig.storeName}`,
+            description,
+            url: `/category/${slug}`,
+          })}
+        />
+        <StructuredData
+          id="parts-breadcrumb-jsonld"
+          data={breadcrumbJsonLd(breadcrumbItems)}
+        />
+        <Suspense
+          fallback={
+            <div className="mx-auto max-w-[1640px] px-4 py-12 text-center text-sm text-[#5b5d5b] md:px-5">
+              Loading parts catalog...
+            </div>
+          }
+        >
+          <PartsCategoryExperience slug={slug} />
+        </Suspense>
+      </>
     );
   }
 
-  const resolved = findCategoryBySlug(slug);
   if (!resolved) {
     notFound();
   }
@@ -322,6 +348,7 @@ export default async function CategoryPage(
     description: buildMetaDescription(resolved, productCount),
     url: `/category/${slug}`,
     numberOfItems: productCount,
+    items: categoryProducts,
   });
   const breadcrumbData = breadcrumbJsonLd(breadcrumbItems);
 

@@ -143,39 +143,30 @@ export function productJsonLd(product: Product) {
     },
   };
 
-  if (product.contactForPricing) {
+  if (typeof product.reviewCount === "number" && product.reviewCount > 0 && typeof product.rating === "number" && product.rating > 0) {
+    data.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: product.rating,
+      reviewCount: product.reviewCount,
+    };
+  }
+
+  const price =
+    typeof product.salePrice === "number" && product.salePrice > 0
+      ? product.salePrice
+      : product.price;
+  if (!product.contactForPricing && typeof price === "number" && price > 0) {
     data.offers = {
       "@type": "Offer",
       url: productUrl,
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
+      price: price.toFixed(2),
+      availability: product.inStock
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
       itemCondition: "https://schema.org/NewCondition",
       seller: { "@id": `${SITE_URL}/#organization` },
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "USD",
-        valueAddedTaxIncluded: false,
-        description: "Contact for pricing",
-      },
     };
-  } else {
-    const price =
-      typeof product.salePrice === "number" && product.salePrice > 0
-        ? product.salePrice
-        : product.price;
-    if (typeof price === "number" && price > 0) {
-      data.offers = {
-        "@type": "Offer",
-        url: productUrl,
-        priceCurrency: "USD",
-        price: price.toFixed(2),
-        availability: product.inStock
-          ? "https://schema.org/InStock"
-          : "https://schema.org/OutOfStock",
-        itemCondition: "https://schema.org/NewCondition",
-        seller: { "@id": `${SITE_URL}/#organization` },
-      };
-    }
   }
 
   return data;
@@ -186,7 +177,15 @@ export function collectionPageJsonLd(opts: {
   description: string;
   url: string;
   numberOfItems?: number;
+  items?: Pick<Product, "name" | "slug">[];
 }) {
+  const itemListElement = (opts.items ?? []).slice(0, 24).map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    url: absoluteUrl(`/product/${item.slug}`),
+  }));
+
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -195,11 +194,14 @@ export function collectionPageJsonLd(opts: {
     description: opts.description,
     url: absoluteUrl(opts.url),
     isPartOf: { "@id": `${SITE_URL}/#website` },
-    ...(typeof opts.numberOfItems === "number"
+    ...(typeof opts.numberOfItems === "number" || itemListElement.length > 0
       ? {
           mainEntity: {
             "@type": "ItemList",
-            numberOfItems: opts.numberOfItems,
+            ...(typeof opts.numberOfItems === "number"
+              ? { numberOfItems: opts.numberOfItems }
+              : {}),
+            ...(itemListElement.length > 0 ? { itemListElement } : {}),
           },
         }
       : {}),

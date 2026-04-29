@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 import { ProductCard } from "@/components/ui/ProductCard";
 import { StructuredData } from "@/components/seo/StructuredData";
-import { brandJsonLd, breadcrumbJsonLd } from "@/lib/site-jsonld";
+import { brandJsonLd, breadcrumbJsonLd, collectionPageJsonLd } from "@/lib/site-jsonld";
 import {
   loadAllBrands,
   loadAllProducts,
@@ -192,10 +192,19 @@ export default async function BrandPage({
         })}
       />
       <StructuredData
+        id="brand-collection-jsonld"
+        data={collectionPageJsonLd({
+          name: `${brand.name} Fireplaces & Stoves | ${defaultStoreConfig.storeName}`,
+          description: blurb,
+          url: brandUrl,
+          numberOfItems: products.length,
+          items: products,
+        })}
+      />
+      <StructuredData
         id="breadcrumb-jsonld"
         data={breadcrumbJsonLd([
           { name: "Home", url: "/" },
-          { name: "Brands", url: "/brand" },
           { name: brand.name, url: brandUrl },
         ])}
       />

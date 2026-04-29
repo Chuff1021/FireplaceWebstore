@@ -53,16 +53,16 @@ export default async function sitemap({
   if (id === 0) {
     const brands = await loadAllBrands();
 
-    const categoryUrls: MetadataRoute.Sitemap = [];
+    const categoryUrlsByPath = new Map<string, MetadataRoute.Sitemap[number]>();
     for (const category of productCategories) {
-      categoryUrls.push({
+      categoryUrlsByPath.set(`/category/${category.slug}`, {
         url: `${SITE_URL}/category/${category.slug}`,
         lastModified: now,
         changeFrequency: "weekly",
         priority: 0.9,
       });
       for (const sub of category.subcategories ?? []) {
-        categoryUrls.push({
+        categoryUrlsByPath.set(`/category/${sub.slug}`, {
           url: `${SITE_URL}/category/${sub.slug}`,
           lastModified: now,
           changeFrequency: "weekly",
@@ -70,6 +70,7 @@ export default async function sitemap({
         });
       }
     }
+    const categoryUrls = Array.from(categoryUrlsByPath.values());
 
     const brandUrls: MetadataRoute.Sitemap = brands
       .filter((b) => b.count >= 3)

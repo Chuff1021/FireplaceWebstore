@@ -64,7 +64,7 @@ export function CartSlideout() {
                 <ShoppingBag className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                 <p className="text-gray-500 mb-4">Your cart is empty</p>
                 <Link
-                  href="/shop"
+                  href="/category/fireplaces"
                   className="inline-block px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
                   onClick={closeCart}
                 >

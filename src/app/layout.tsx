@@ -32,9 +32,6 @@ export const metadata: Metadata = {
   description: defaultStoreConfig.seo.metaDescription,
   keywords: defaultStoreConfig.seo.keywords.join(", "),
   applicationName: defaultStoreConfig.storeName,
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     siteName: defaultStoreConfig.storeName,
