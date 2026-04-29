@@ -1,5 +1,127 @@
 [
   {
+    "sku": "FPX-32-DVS-EG",
+    "name": "Fireplace Xtrordinair 32 DVS Ember-Glo Gas Insert",
+    "slug": "fireplace-xtrordinair-32-dvs-ember-glo-gas-insert",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "imageUrl": "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert.jpg",
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert-2.png",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert-3.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-32-dvs-ember-glo-gas-insert-5.jpg"
+    ],
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair gas insert availability, configuration options, and dealer pricing.",
+    "description": "Fireplace Xtrordinair 32 DVS Ember-Glo Gas Insert. Mid-sized gas fireplace insert with Ember-Glo accent lighting, up to 31,000 BTU input, and heating capacity up to 1,500 sq. ft. Contact Aaron's Fireplace Co. for sizing, venting, face/fireback options, availability, and dealer pricing.",
+    "productUrl": "https://www.fireplacex.com/product/new-32-dvs-deluxe-ember-glo/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "FPX-430-EG",
+    "name": "Fireplace Xtrordinair 430 Deluxe Ember-Glo Gas Insert",
+    "slug": "fireplace-xtrordinair-430-deluxe-ember-glo-gas-insert",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "imageUrl": "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-ember-glo-gas-insert.jpg",
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-ember-glo-gas-insert.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-ember-glo-gas-insert-3.png",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-ember-glo-gas-insert-4.jpg"
+    ],
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair gas insert availability, configuration options, and dealer pricing.",
+    "description": "Fireplace Xtrordinair 430 Deluxe Ember-Glo Gas Insert. Mid-sized deluxe gas fireplace insert with extended viewing area, Ember-Glo presentation, and up to 31,000 BTU input. Contact Aaron's Fireplace Co. for sizing, venting, face/fireback options, availability, and dealer pricing.",
+    "productUrl": "https://www.fireplacex.com/product/430-gsr-deluxe/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "FPX-430-MF",
+    "name": "Fireplace Xtrordinair 430 Deluxe Mod-Fyre Gas Insert",
+    "slug": "fireplace-xtrordinair-430-deluxe-mod-fyre-gas-insert",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "imageUrl": "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-mod-fyre-gas-insert.jpg",
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-mod-fyre-gas-insert.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-mod-fyre-gas-insert-3.png",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-430-deluxe-mod-fyre-gas-insert-4.jpg"
+    ],
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair gas insert availability, configuration options, and dealer pricing.",
+    "description": "Fireplace Xtrordinair 430 Deluxe Mod-Fyre Gas Insert. Mid-sized contemporary Mod-Fyre gas fireplace insert with extended viewing area and premium Fireplace Xtrordinair styling. Contact Aaron's Fireplace Co. for sizing, venting, face/fireback options, availability, and dealer pricing.",
+    "productUrl": "https://www.fireplacex.com/product/430-modfyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "FPX-34-DVL-EG",
+    "name": "Fireplace Xtrordinair 34 DVL Ember-Glo Gas Insert",
+    "slug": "fireplace-xtrordinair-34-dvl-ember-glo-gas-insert",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "imageUrl": "/products-upgraded/gas-inserts/fireplace-xtrordinair-34-dvl-ember-glo-gas-insert.jpg",
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-34-dvl-ember-glo-gas-insert.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-34-dvl-ember-glo-gas-insert-3.png",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-34-dvl-ember-glo-gas-insert-4.jpg"
+    ],
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair gas insert availability, configuration options, and dealer pricing.",
+    "description": "Fireplace Xtrordinair 34 DVL Ember-Glo Gas Insert. Large gas fireplace insert with Ember-Glo accent lighting, up to 40,000 BTU input, and heating capacity up to 2,000 sq. ft. Contact Aaron's Fireplace Co. for sizing, venting, face/fireback options, availability, and dealer pricing.",
+    "productUrl": "https://www.fireplacex.com/product/new-34-dvl-deluxe-ember-glo/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "FPX-616-EG",
+    "name": "Fireplace Xtrordinair 616 Deluxe Ember-Glo Gas Insert",
+    "slug": "fireplace-xtrordinair-616-deluxe-ember-glo-gas-insert",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "imageUrl": "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-ember-glo-gas-insert.jpg",
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-ember-glo-gas-insert.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-ember-glo-gas-insert-3.png",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-ember-glo-gas-insert-4.jpg"
+    ],
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair gas insert availability, configuration options, and dealer pricing.",
+    "description": "Fireplace Xtrordinair 616 Deluxe Ember-Glo Gas Insert. Large deluxe gas fireplace insert with expansive viewing area, Ember-Glo fire presentation, and premium face/fireback options. Contact Aaron's Fireplace Co. for sizing, venting, face/fireback options, availability, and dealer pricing.",
+    "productUrl": "https://www.fireplacex.com/product/616-gsr/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
+    "sku": "FPX-616-MF",
+    "name": "Fireplace Xtrordinair 616 Deluxe Mod-Fyre Gas Insert",
+    "slug": "fireplace-xtrordinair-616-deluxe-mod-fyre-gas-insert",
+    "price": 0,
+    "contactForPricing": true,
+    "brand": "Fireplace Xtrordinair",
+    "imageUrl": "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-mod-fyre-gas-insert.jpg",
+    "imageUrls": [
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-mod-fyre-gas-insert.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-mod-fyre-gas-insert-2.png",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-mod-fyre-gas-insert-3.jpg",
+      "/products-upgraded/gas-inserts/fireplace-xtrordinair-616-deluxe-mod-fyre-gas-insert-5.jpg"
+    ],
+    "shortDescription": "Contact Aaron's Fireplace Co. for current Fireplace Xtrordinair gas insert availability, configuration options, and dealer pricing.",
+    "description": "Fireplace Xtrordinair 616 Deluxe Mod-Fyre Gas Insert. Large contemporary Mod-Fyre gas fireplace insert with premium Fireplace Xtrordinair styling and high-output heating performance. Contact Aaron's Fireplace Co. for sizing, venting, face/fireback options, availability, and dealer pricing.",
+    "productUrl": "https://www.fireplacex.com/product/616-modfyre/",
+    "rating": 0,
+    "reviewCount": 0,
+    "isBestSeller": false
+  },
+  {
     "sku": "MAJ-RUBY30IN",
     "name": "Majestic 30 Inch Ruby Direct Vent Gas Fireplace Insert With Blower",
     "slug": "maj-ruby30in",
@@ -557,7 +679,7 @@
   },
   {
     "sku": "LOPI-EVERGREENNEXGENHYBRIDINSERT",
-    "name": "Lopi Evergreen Nex Gen Hybrid™ Insert",
+    "name": "Lopi Evergreen Nex Gen Hybrid\u2122 Insert",
     "slug": "lopi-evergreennexgenhybridinsert",
     "price": 0,
     "brand": "Lopi",
@@ -574,11 +696,11 @@
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Evergreen Nex Gen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Evergreen Nex Gen Hybrid\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
     "sku": "LOPI-ANSWERNEXGENHYBRIDINSERT",
-    "name": "Lopi Answer Nex Gen Hybrid™ Insert",
+    "name": "Lopi Answer Nex Gen Hybrid\u2122 Insert",
     "slug": "lopi-answernexgenhybridinsert",
     "price": 0,
     "brand": "Lopi",
@@ -595,11 +717,11 @@
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Answer Nex Gen Hybrid™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Answer Nex Gen Hybrid\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   },
   {
     "sku": "LOPI-ANSWERNEXGENFYREINSERT",
-    "name": "Lopi Answer Nex Gen Fyre™ Insert",
+    "name": "Lopi Answer Nex Gen Fyre\u2122 Insert",
     "slug": "lopi-answernexgenfyreinsert",
     "price": 0,
     "brand": "Lopi",
@@ -616,6 +738,6 @@
     ],
     "contactForPricing": true,
     "shortDescription": "Contact Aaron's Fireplace Co. for current Lopi availability, configuration options, and dealer pricing.",
-    "description": "Lopi Answer Nex Gen Fyre™ Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
+    "description": "Lopi Answer Nex Gen Fyre\u2122 Insert. Contact Aaron's Fireplace Co. for current availability, installation planning, configuration options, and dealer pricing."
   }
 ]
