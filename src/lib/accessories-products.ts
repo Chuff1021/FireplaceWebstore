@@ -23,7 +23,18 @@ export async function loadAccessoryProducts(): Promise<Product[]> {
     cachedProductsPromise = Promise.all([
       loadProductsFile("accessories-mantels.json"),
       loadProductsFile("accessories-remotes.json"),
-    ]).then(([mantelProducts, remoteProducts]) => [...mantelProducts, ...remoteProducts]);
+      loadProductsFile("accessories-doors-screens.json"),
+      loadProductsFile("accessories-screens.json"),
+      loadProductsFile("accessories-gas-logs.json"),
+      loadProductsFile("accessories-fire-media.json"),
+    ]).then(([mantelProducts, remoteProducts, doorProducts, screenProducts, gasLogProducts, fireMediaProducts]) => [
+      ...mantelProducts,
+      ...remoteProducts,
+      ...doorProducts,
+      ...screenProducts,
+      ...gasLogProducts,
+      ...fireMediaProducts,
+    ]);
   }
 
   return cachedProductsPromise;
