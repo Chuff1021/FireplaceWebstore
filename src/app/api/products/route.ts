@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sampleProducts } from "@/lib/store-config";
+import { loadAccessoryProducts } from "@/lib/accessories-products";
 import { loadElectricFireplaceProducts } from "@/lib/electric-fireplace-scraped";
 import { loadElectricInsertProducts } from "@/lib/electric-inserts-scraped";
 import { loadGasFireplaceProducts } from "@/lib/gas-fireplace-csv";
@@ -20,6 +21,7 @@ export async function GET(request: NextRequest) {
     const featured = searchParams.get("featured");
     const slug = searchParams.get("slug");
     const limit = parseInt(searchParams.get("limit") ?? "100");
+    const accessoryProducts = await loadAccessoryProducts();
     const electricProducts = await loadElectricFireplaceProducts();
     const electricInsertProducts = await loadElectricInsertProducts();
     const gasProducts = await loadGasFireplaceProducts();
@@ -49,6 +51,7 @@ export async function GET(request: NextRequest) {
     );
     const allProducts = [
       ...nonGasSampleProducts,
+      ...accessoryProducts,
       ...electricProducts,
       ...electricInsertProducts,
       ...gasProducts,

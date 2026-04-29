@@ -29,6 +29,11 @@ const MIRRORED_CATEGORY_SLUGS = new Set([
   "wood-stoves",
   "pellet-stoves",
   "gas-stoves",
+  "accessories",
+  "mantels",
+  "remotes-controls",
+  "doors-screens",
+  "logs-media",
 ]);
 const MIRRORED_PRODUCTS_PER_PAGE = 20;
 const FEATURED_FILTER_BRANDS = ["Lopi", "Fireplace Xtrordinair", "Fire Garden"];
