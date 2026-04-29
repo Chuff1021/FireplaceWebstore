@@ -1,27 +1,44 @@
-"use client";
-
-import { useParams } from "next/navigation";
+import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { notFound } from "next/navigation";
 import {
   ChevronRight,
   Star,
-  ShoppingCart,
   Truck,
   Shield,
   Phone,
-  Minus,
-  Plus,
-  Heart,
-  Share2,
   Check,
 } from "lucide-react";
-import { useCartStore } from "@/lib/cart-store";
-import { defaultStoreConfig, type Product } from "@/lib/store-config";
+
+import {
+  loadAllProducts,
+  loadProductBySlug,
+} from "@/lib/all-products";
+import {
+  defaultStoreConfig,
+  productCategories,
+  type Product,
+  type ProductCategory,
+} from "@/lib/store-config";
 import { ProductCard } from "@/components/ui/ProductCard";
-import { resolveProductImage, resolveProductImages } from "@/lib/product-images";
 import { AlternateVendors } from "@/components/parts/AlternateVendors";
+import { StructuredData } from "@/components/seo/StructuredData";
+import {
+  productJsonLd,
+  breadcrumbJsonLd,
+  type BreadcrumbItem,
+} from "@/lib/site-jsonld";
+import { absoluteUrl, SITE_URL } from "@/lib/site-url";
+
+import { PdpGallery, PdpBuyBox } from "./PdpClient";
+
+export const dynamicParams = true;
+export const revalidate = 3600;
+
+const PRERENDER_LIMIT = 500;
+
+type RouteParams = { slug: string };
+type RouteContext = { params: Promise<RouteParams> };
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -30,133 +47,189 @@ function formatPrice(price: number) {
   }).format(price);
 }
 
-export default function ProductPage() {
-  const params = useParams();
-  const slug = params.slug as string;
-  const [quantity, setQuantity] = useState(1);
-  const [remoteProduct, setRemoteProduct] = useState<Product | null>(null);
-  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
-  const [isLoadingRemoteProduct, setIsLoadingRemoteProduct] = useState(true);
-  const [activeTab, setActiveTab] = useState<"description" | "specs" | "reviews">(
-    "description"
-  );
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const { addItem, openCart } = useCartStore();
+function findCategory(id: string | undefined): ProductCategory | null {
+  if (!id) return null;
+  for (const top of productCategories) {
+    if (top.id === id || top.slug === id) return top;
+    for (const sub of top.subcategories ?? []) {
+      if (sub.id === id || sub.slug === id) return sub;
+    }
+  }
+  return null;
+}
 
-  const product = remoteProduct;
-  const productImages = resolveProductImages(product?.images?.[0], product?.images);
-  const selectedProductImage = productImages[selectedImageIndex] ?? productImages[0];
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadProduct() {
-      setIsLoadingRemoteProduct(true);
-      try {
-        const response = await fetch(`/api/products?slug=${encodeURIComponent(slug)}&limit=1`, {
-          cache: "no-store",
-        });
-        if (!response.ok) return;
-        const data = (await response.json()) as Product[];
-        if (!cancelled) {
-          const loadedProduct = data[0] ?? null;
-          setRemoteProduct(loadedProduct);
-
-          if (loadedProduct) {
-            const relatedResponse = await fetch(
-              `/api/products?category=${encodeURIComponent(
-                loadedProduct.subcategoryId ?? loadedProduct.categoryId
-              )}&limit=8`,
-              { cache: "no-store" }
-            );
-
-            if (relatedResponse.ok && !cancelled) {
-              const relatedData = (await relatedResponse.json()) as Product[];
-              let recommendations = relatedData.filter((item) => item.id !== loadedProduct.id);
-
-              if (loadedProduct.brand === "Fireplace Xtrordinair") {
-                const catalogResponse = await fetch("/api/products?limit=10000", { cache: "no-store" });
-                if (catalogResponse.ok && !cancelled) {
-                  const catalogData = (await catalogResponse.json()) as Product[];
-                  const featuredFireplaceRecommendations = [
-                    "fpx-42apex",
-                    "fpx-44elitenexgenhybrid",
-                  ]
-                    .map((recommendedSlug) => catalogData.find((item) => item.slug === recommendedSlug))
-                    .filter((item): item is Product => Boolean(item))
-                    .filter((item) => item.id !== loadedProduct.id);
-
-                  recommendations = Array.from(
-                    new Map(
-                      [...featuredFireplaceRecommendations, ...recommendations].map((item) => [item.id, item])
-                    ).values()
-                  );
-                }
-              }
-
-              setRelatedProducts(recommendations.slice(0, 4));
-            }
-          } else {
-            setRelatedProducts([]);
-          }
-        }
-      } catch {
-        // Leave the not found state in place if the API request fails.
-      } finally {
-        if (!cancelled) {
-          setIsLoadingRemoteProduct(false);
-        }
+function findTopCategoryFor(product: Product): ProductCategory | null {
+  for (const top of productCategories) {
+    if (top.id === product.categoryId || top.slug === product.categoryId) {
+      return top;
+    }
+    for (const sub of top.subcategories ?? []) {
+      if (
+        sub.id === product.categoryId ||
+        sub.slug === product.categoryId ||
+        sub.id === product.subcategoryId ||
+        sub.slug === product.subcategoryId
+      ) {
+        return top;
       }
     }
-
-    void loadProduct();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [slug]);
-
-  useEffect(() => {
-    setSelectedImageIndex(0);
-  }, [slug, product?.id]);
-
-  if (!product && isLoadingRemoteProduct) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center text-gray-600">
-        Loading product...
-      </div>
-    );
   }
+  return null;
+}
+
+function metaDescriptionFor(product: Product): string {
+  if (product.shortDescription && product.shortDescription.trim().length > 0) {
+    return product.shortDescription.trim().slice(0, 160);
+  }
+  const description = (product.description || "").trim();
+  if (description.length === 0) return defaultStoreConfig.seo.metaDescription;
+  if (description.length <= 160) return description;
+  return `${description.slice(0, 157).trimEnd()}...`;
+}
+
+export async function generateStaticParams(): Promise<RouteParams[]> {
+  try {
+    const products = await loadAllProducts();
+    const score = (p: Product) => {
+      let s = 0;
+      if (p.isFeatured) s += 100;
+      if (p.isBestSeller) s += 50;
+      if (p.isNew) s += 25;
+      return s;
+    };
+    return products
+      .slice()
+      .sort((a, b) => score(b) - score(a))
+      .slice(0, PRERENDER_LIMIT)
+      .map((p) => ({ slug: p.slug }));
+  } catch {
+    return [];
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: RouteContext): Promise<Metadata> {
+  const { slug } = await params;
+  const product = await loadProductBySlug(slug);
 
   if (!product) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">Product Not Found</h1>
-        <p className="text-gray-600 mb-8">
-          The product you&apos;re looking for doesn&apos;t exist or has been removed.
-        </p>
-        <Link
-          href="/"
-          className="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
-        >
-          Back to Home
-        </Link>
-      </div>
-    );
+    return {
+      title: "Product not found",
+      description:
+        "The product you're looking for is no longer available at Aaron's Fireplace Co.",
+      robots: { index: false, follow: true },
+    };
+  }
+
+  const titleBase = product.brand
+    ? `${product.brand} ${product.name}`
+    : product.name;
+  const description = metaDescriptionFor(product);
+  const canonical = absoluteUrl(`/product/${product.slug}`);
+  const primaryImage = product.images?.[0]
+    ? absoluteUrl(product.images[0])
+    : `${SITE_URL}/logo.png`;
+
+  return {
+    title: titleBase,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      type: "website",
+      siteName: defaultStoreConfig.storeName,
+      title: titleBase,
+      description,
+      url: canonical,
+      images: [
+        {
+          url: primaryImage,
+          alt: product.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titleBase,
+      description,
+      images: [primaryImage],
+    },
+  };
+}
+
+export default async function ProductPage({ params }: RouteContext) {
+  const { slug } = await params;
+  const products = await loadAllProducts();
+  const product = products.find((p) => p.slug === slug);
+
+  if (!product) {
+    notFound();
   }
 
   const isContactForPricing = product.contactForPricing || product.price <= 0;
-  const discount = !isContactForPricing && product.salePrice
-    ? Math.round(((product.price - product.salePrice) / product.price) * 100)
-    : 0;
+  const discount =
+    !isContactForPricing && product.salePrice
+      ? Math.round(((product.price - product.salePrice) / product.price) * 100)
+      : 0;
 
-  const handleAddToCart = () => {
-    addItem(product, quantity);
-    openCart();
-  };
+  const subcategory = findCategory(product.subcategoryId);
+  const topCategory =
+    findTopCategoryFor(product) ?? findCategory(product.categoryId);
+
+  // Related products: same subcategoryId first, fall back to categoryId.
+  // Exclude self, take 4. Apply existing FPX recommendation override.
+  const sameSub = product.subcategoryId
+    ? products.filter(
+        (p) => p.id !== product.id && p.subcategoryId === product.subcategoryId,
+      )
+    : [];
+  const sameCat = products.filter(
+    (p) => p.id !== product.id && p.categoryId === product.categoryId,
+  );
+
+  let relatedPool: Product[] = sameSub.length > 0 ? sameSub : sameCat;
+
+  if (product.brand === "Fireplace Xtrordinair") {
+    const featuredFireplaceRecommendations = ["fpx-42apex", "fpx-44elitenexgenhybrid"]
+      .map((s) => products.find((p) => p.slug === s))
+      .filter((p): p is Product => Boolean(p))
+      .filter((p) => p.id !== product.id);
+    relatedPool = Array.from(
+      new Map(
+        [...featuredFireplaceRecommendations, ...relatedPool].map((p) => [p.id, p]),
+      ).values(),
+    );
+  }
+
+  const relatedProducts = relatedPool.slice(0, 4);
+
+  // Build breadcrumb chain.
+  const breadcrumbItems: BreadcrumbItem[] = [{ name: "Home", url: "/" }];
+  if (topCategory) {
+    breadcrumbItems.push({
+      name: topCategory.name,
+      url: `/category/${topCategory.slug}`,
+    });
+  }
+  if (subcategory && subcategory.id !== topCategory?.id) {
+    breadcrumbItems.push({
+      name: subcategory.name,
+      url: `/category/${subcategory.slug}`,
+    });
+  }
+  breadcrumbItems.push({
+    name: product.name,
+    url: `/product/${product.slug}`,
+  });
 
   return (
     <div className="bg-white">
+      <StructuredData id="product-jsonld" data={productJsonLd(product)} />
+      <StructuredData
+        id="breadcrumb-jsonld"
+        data={breadcrumbJsonLd(breadcrumbItems)}
+      />
+
       {/* Breadcrumb */}
       <div className="border-b">
         <div className="max-w-7xl mx-auto px-4 py-3">
@@ -165,13 +238,28 @@ export default function ProductPage() {
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link
-              href={`/category/${product.categoryId}`}
-              className="hover:text-orange-600 capitalize"
-            >
-              {product.categoryId}
-            </Link>
-            <ChevronRight className="w-4 h-4" />
+            {topCategory ? (
+              <>
+                <Link
+                  href={`/category/${topCategory.slug}`}
+                  className="hover:text-orange-600"
+                >
+                  {topCategory.name}
+                </Link>
+                <ChevronRight className="w-4 h-4" />
+              </>
+            ) : null}
+            {subcategory && subcategory.id !== topCategory?.id ? (
+              <>
+                <Link
+                  href={`/category/${subcategory.slug}`}
+                  className="hover:text-orange-600"
+                >
+                  {subcategory.name}
+                </Link>
+                <ChevronRight className="w-4 h-4" />
+              </>
+            ) : null}
             <span className="text-gray-900 font-medium line-clamp-1">
               {product.name}
             </span>
@@ -182,61 +270,8 @@ export default function ProductPage() {
       {/* Product Detail */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Product Images */}
-          <div>
-            <div className="aspect-square bg-gradient-to-br from-gray-50 to-[#f2eee7] rounded-2xl relative overflow-hidden border border-[#eadfce]">
-              <Image
-                src={selectedProductImage}
-                alt={product.name}
-                fill
-                className="object-contain p-6"
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-
-              {/* Badges */}
-              <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
-                {!isContactForPricing && product.salePrice && (
-                  <span className="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded">
-                    {discount}% OFF
-                  </span>
-                )}
-                {product.isNew && (
-                  <span className="bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded">
-                    NEW
-                  </span>
-                )}
-                {product.isBestSeller && (
-                  <span className="bg-amber-500 text-white text-sm font-bold px-3 py-1 rounded">
-                    BEST SELLER
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Thumbnail Gallery */}
-            <div className="flex gap-3 mt-4">
-              {productImages.map((img, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setSelectedImageIndex(i)}
-                  className={`relative w-20 h-20 rounded-lg border-2 overflow-hidden bg-gray-100 transition ${
-                    i === selectedImageIndex ? "border-orange-600 ring-2 ring-orange-200" : "border-gray-200 hover:border-orange-300"
-                  }`}
-                  aria-label={`Show ${product.name} image ${i + 1}`}
-                >
-                  <Image
-                    src={img}
-                    alt={`${product.name} view ${i + 1}`}
-                    fill
-                    className="object-contain p-1"
-                    sizes="80px"
-                  />
-                </button>
-              ))}
-            </div>
-          </div>
+          {/* Product Images (interactive island) */}
+          <PdpGallery product={product} />
 
           {/* Product Info */}
           <div>
@@ -269,7 +304,9 @@ export default function ProductPage() {
             {/* Price */}
             <div className="flex items-baseline gap-3 mb-6">
               <span className="text-3xl font-bold text-gray-900">
-                {isContactForPricing ? "Contact for Pricing" : formatPrice(product.salePrice ?? product.price)}
+                {isContactForPricing
+                  ? "Contact for Pricing"
+                  : formatPrice(product.salePrice ?? product.price)}
               </span>
               {!isContactForPricing && product.salePrice && (
                 <>
@@ -278,6 +315,7 @@ export default function ProductPage() {
                   </span>
                   <span className="text-sm font-bold text-red-600 bg-red-50 px-2 py-1 rounded">
                     Save {formatPrice(product.price - product.salePrice)}
+                    {discount > 0 ? ` (${discount}% off)` : ""}
                   </span>
                 </>
               )}
@@ -305,62 +343,14 @@ export default function ProductPage() {
             <p className="text-sm text-gray-500 mb-2">SKU: {product.sku}</p>
 
             {product.categoryId === "parts" && product.sku ? (
-              <AlternateVendors sku={product.sku} currentVendor="stove-parts-unlimited" />
+              <AlternateVendors
+                sku={product.sku}
+                currentVendor="stove-parts-unlimited"
+              />
             ) : null}
 
-            {/* Quantity & Add to Cart */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              {!isContactForPricing && <div className="flex items-center border rounded-lg">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="p-3 hover:bg-gray-100 transition-colors"
-                  aria-label="Decrease quantity"
-                >
-                  <Minus className="w-4 h-4" />
-                </button>
-                <span className="w-12 text-center font-medium">{quantity}</span>
-                <button
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="p-3 hover:bg-gray-100 transition-colors"
-                  aria-label="Increase quantity"
-                >
-                  <Plus className="w-4 h-4" />
-                </button>
-              </div>}
-
-              {isContactForPricing ? (
-                <Link
-                  href={`/contact?product=${encodeURIComponent(product.sku)}`}
-                  className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  Contact for Pricing
-                </Link>
-              ) : (
-                <button
-                  onClick={handleAddToCart}
-                  disabled={!product.inStock}
-                  className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  Add to Cart
-                </button>
-              )}
-
-              <button
-                className="p-3 border rounded-lg hover:bg-gray-100 transition-colors"
-                aria-label="Add to wishlist"
-              >
-                <Heart className="w-5 h-5 text-gray-600" />
-              </button>
-
-              <button
-                className="p-3 border rounded-lg hover:bg-gray-100 transition-colors"
-                aria-label="Share product"
-              >
-                <Share2 className="w-5 h-5 text-gray-600" />
-              </button>
-            </div>
+            {/* Quantity & Add to Cart (interactive island) */}
+            <PdpBuyBox product={product} />
 
             {/* Trust Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
@@ -391,51 +381,40 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* Tabs */}
-        <div className="mt-16">
-          <div className="border-b">
-            <div className="flex gap-8">
-              {(
-                [
-                  { key: "description", label: "Description" },
-                  { key: "specs", label: "Specifications" },
-                  { key: "reviews", label: `Reviews (${product.reviewCount})` },
-                ] as const
-              ).map((tab) => (
-                <button
-                  key={tab.key}
-                  onClick={() => setActiveTab(tab.key)}
-                  className={`pb-4 font-medium transition-colors ${
-                    activeTab === tab.key
-                      ? "text-orange-600 border-b-2 border-orange-600"
-                      : "text-gray-500 hover:text-gray-700"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+        {/* Description, Specs, Reviews — rendered server-side as sections so
+            full content is available to crawlers. Anchored for in-page nav. */}
+        <div className="mt-16 space-y-12">
+          <section id="description">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Description</h2>
+            <div className="max-w-3xl">
+              <p className="text-gray-700 leading-relaxed mb-6 whitespace-pre-line">
+                {product.description}
+              </p>
+              {product.features && product.features.length > 0 ? (
+                <>
+                  <h3 className="font-bold text-gray-900 mb-4">Key Features</h3>
+                  <ul className="space-y-2">
+                    {product.features.map((feature, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 text-gray-700"
+                      >
+                        <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
             </div>
-          </div>
+          </section>
 
-          <div className="py-8">
-            {activeTab === "description" && (
-              <div className="max-w-3xl">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {product.description}
-                </p>
-                <h3 className="font-bold text-gray-900 mb-4">Key Features</h3>
-                <ul className="space-y-2">
-                  {product.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-gray-700">
-                      <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {activeTab === "specs" && (
+          {product.specifications &&
+          Object.keys(product.specifications).length > 0 ? (
+            <section id="specifications">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Specifications
+              </h2>
               <div className="max-w-2xl">
                 <table className="w-full">
                   <tbody>
@@ -450,14 +429,19 @@ export default function ProductPage() {
                           </td>
                           <td className="px-4 py-3 text-gray-700">{value}</td>
                         </tr>
-                      )
+                      ),
                     )}
                   </tbody>
                 </table>
               </div>
-            )}
+            </section>
+          ) : null}
 
-            {activeTab === "reviews" && (
+          {product.reviewCount > 0 ? (
+            <section id="reviews">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Reviews ({product.reviewCount})
+              </h2>
               <div className="max-w-3xl">
                 <div className="flex items-center gap-6 mb-8 p-6 bg-gray-50 rounded-xl">
                   <div className="text-center">
@@ -480,81 +464,10 @@ export default function ProductPage() {
                       {product.reviewCount} reviews
                     </p>
                   </div>
-                  <div className="flex-1">
-                    {[5, 4, 3, 2, 1].map((stars) => (
-                      <div key={stars} className="flex items-center gap-2">
-                        <span className="text-sm w-8">{stars}★</span>
-                        <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-amber-400 rounded-full"
-                            style={{
-                              width: `${
-                                stars === 5
-                                  ? 70
-                                  : stars === 4
-                                  ? 20
-                                  : stars === 3
-                                  ? 7
-                                  : stars === 2
-                                  ? 2
-                                  : 1
-                              }%`,
-                            }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Sample Reviews */}
-                <div className="space-y-6">
-                  {[
-                    {
-                      name: "John D.",
-                      rating: 5,
-                      date: "2 weeks ago",
-                      text: "Absolutely love this fireplace! The installation was straightforward and the heat output is amazing. Highly recommend.",
-                    },
-                    {
-                      name: "Sarah M.",
-                      rating: 4,
-                      date: "1 month ago",
-                      text: "Beautiful design and works great. Took off one star because the remote could be more responsive, but overall very happy with the purchase.",
-                    },
-                    {
-                      name: "Mike R.",
-                      rating: 5,
-                      date: "2 months ago",
-                      text: "Best fireplace I've ever owned. The flame presentation is incredibly realistic and it heats our entire living room efficiently.",
-                    },
-                  ].map((review, i) => (
-                    <div key={i} className="border-b pb-6">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="flex">
-                          {[...Array(5)].map((_, j) => (
-                            <Star
-                              key={j}
-                              className={`w-4 h-4 ${
-                                j < review.rating
-                                  ? "fill-amber-400 text-amber-400"
-                                  : "text-gray-300"
-                              }`}
-                            />
-                          ))}
-                        </div>
-                        <span className="font-medium text-gray-900">
-                          {review.name}
-                        </span>
-                        <span className="text-sm text-gray-500">{review.date}</span>
-                      </div>
-                      <p className="text-gray-700">{review.text}</p>
-                    </div>
-                  ))}
                 </div>
               </div>
-            )}
-          </div>
+            </section>
+          ) : null}
         </div>
 
         {/* Related Products */}
