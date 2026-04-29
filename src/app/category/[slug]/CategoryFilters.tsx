@@ -67,7 +67,7 @@ function getFuelType(product: Product) {
 function getProductHref(product: Product) {
   const isContactForPricing = product.contactForPricing || product.price <= 0;
   return isContactForPricing
-    ? `/contact?product=${encodeURIComponent(product.sku)}`
+    ? "/contact"
     : `/product/${product.slug}`;
 }
 
@@ -460,7 +460,7 @@ export function CategoryFilters({ slug, categoryName, products }: CategoryFilter
                     <div className="mt-3">
                       {isContactForPricing ? (
                         <Link
-                          href={`/contact?product=${encodeURIComponent(product.sku)}`}
+                          href={"/contact"}
                           className="inline-flex w-full items-center justify-center gap-2 border border-[#a54210] bg-[#a54210] px-4 py-3 text-sm font-bold uppercase tracking-[0.08em] text-white transition hover:bg-[#7f2f0b]"
                         >
                           Contact for Pricing

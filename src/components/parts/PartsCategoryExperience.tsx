@@ -262,6 +262,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                 <Link
                   key={partType}
                   href={buildFilterHref(isLandingPage ? "parts" : slug, activeBrand || undefined, partType)}
+                  rel="nofollow"
                   className={`rounded-full border px-3 py-1.5 text-xs font-medium ${
                     activePartType === partType
                       ? "border-[#ff7a18] bg-[#ff7a18] text-black shadow-[0_14px_34px_rgba(255,122,24,0.22)]"
@@ -390,6 +391,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                 <Link
                   key={brand.name}
                   href={brand.href}
+                  rel="nofollow"
                   className={`flex min-h-[84px] items-center gap-4 border px-4 py-4 transition ${
                     activeBrand === brand.name
                       ? "border-[#ff7a18] bg-[#ff7a18] text-black shadow-[0_14px_34px_rgba(255,122,24,0.22)]"
@@ -535,6 +537,7 @@ export function PartsCategoryExperience({ slug, showHero = true }: PartsCategory
                   <Link
                     key={brand}
                     href={buildFilterHref("parts", brand)}
+                    rel="nofollow"
                     className="flex min-h-[84px] items-center gap-4 border border-[#ded5c8] bg-[#fffdf9] px-4 py-4 transition hover:-translate-y-0.5 hover:border-[#ff7a18] hover:shadow-[0_18px_45px_rgba(255,122,24,0.12)]"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fff7ed] text-sm font-bold text-[#ff7a18]">

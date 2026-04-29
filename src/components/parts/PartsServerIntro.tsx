@@ -14,14 +14,6 @@ type PartsServerIntroProps = {
   products: Product[];
 };
 
-function buildFilterHref(slug: string, brand?: string, partType?: string) {
-  const params = new URLSearchParams();
-  if (brand) params.set("brand", brand);
-  if (partType) params.set("partType", partType);
-  const query = params.toString();
-  return query ? `/category/${slug}?${query}` : `/category/${slug}`;
-}
-
 export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
   const department = getPartsDepartmentBySlug(slug);
   const isLandingPage = slug === "parts";
@@ -90,7 +82,7 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff7a18]">Popular brands</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {brands.map((brand) => (
-                <Link key={brand} href={buildFilterHref(slug, brand)} className="rounded-full border border-[#ded5c8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{brand}</Link>
+                <Link key={brand} href={`/category/${slug}`} className="rounded-full border border-[#ded5c8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{brand}</Link>
               ))}
             </div>
           </div>
@@ -99,7 +91,7 @@ export function PartsServerIntro({ slug, products }: PartsServerIntroProps) {
             <p className="text-[11px] font-black uppercase tracking-[0.22em] text-[#ff7a18]">Common part types</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {partsPartTypes.map((partType) => (
-                <Link key={partType} href={buildFilterHref(slug, undefined, partType)} className="rounded-full border border-[#ded5c8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{partType}</Link>
+                <Link key={partType} href={`/category/${slug}`} className="rounded-full border border-[#ded5c8] px-3 py-1.5 text-xs font-bold text-[#4e4036] hover:border-[#a54210] hover:text-[#a54210]">{partType}</Link>
               ))}
             </div>
           </div>

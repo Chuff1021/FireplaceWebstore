@@ -146,7 +146,7 @@ export function PdpBuyBox({ product }: BuyBoxProps) {
 
       {isContactForPricing ? (
         <Link
-          href={`/contact?product=${encodeURIComponent(product.sku)}`}
+          href={"/contact"}
           className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors"
         >
           <Phone className="w-5 h-5" />

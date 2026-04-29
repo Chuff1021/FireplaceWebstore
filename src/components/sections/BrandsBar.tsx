@@ -4,25 +4,25 @@ import { ArrowRight, ShieldCheck } from "lucide-react";
 
 export function BrandsBar() {
   const brands = [
-    { name: "DuraVent", logo: "/brands/efs-featured/duravent.webp", featuredImage: true },
-    { name: "Superior", logo: "/brands/efs-featured/superior.webp", featuredImage: true },
-    { name: "Empire", logo: "/brands/efs-featured/empire.webp", featuredImage: true },
-    { name: "Majestic", logo: "/brands/efs-featured/majestic.webp", featuredImage: true },
-    { name: "Metal-Fab", logo: "/brands/efs-featured/metal-fab.webp", featuredImage: true },
-    { name: "Napoleon", logo: "/brands/efs-featured/napoleon.webp", featuredImage: true },
-    { name: "Pilgrim", logo: "/brands/efs-featured/pilgrim.webp", featuredImage: true },
-    { name: "Kingsman", logo: "/brands/efs-featured/kingsman.webp", featuredImage: true },
-    { name: "Real Fyre", logo: "/brands/efs-featured/rh-peterson.webp", featuredImage: true },
-    { name: "HPC", logo: "/brands/efs-featured/hearth-products-controls.webp", featuredImage: true },
-    { name: "Dagan", logo: "/brands/efs-featured/dagan.webp", featuredImage: true },
-    { name: "Monessen", logo: "/brands/efs-featured/monessen.webp", featuredImage: true },
-    { name: "Goods of the Woods", logo: "/brands/efs-featured/goods-of-the-woods.webp", featuredImage: true },
-    { name: "Hy-C Company", logo: "/brands/efs-featured/hy-c.webp", featuredImage: true },
-    { name: "AW Perkins", logo: "/brands/efs-featured/aw-perkins.webp", featuredImage: true },
-    { name: "MRCOOL", logo: "/brands/efs-featured/mr--cool.webp", featuredImage: true },
-    { name: "Ventis", logo: "/brands/efs-featured/ventis.webp", featuredImage: true },
-    { name: "Fireplace Xtrordinair", logo: "/brands/fireplacex.png", featuredImage: false },
-    { name: "Lopi", logo: "/brands/lopi.png", featuredImage: false },
+    { name: "DuraVent", slug: "duravent", logo: "/brands/efs-featured/duravent.webp", featuredImage: true },
+    { name: "Superior", slug: "superior", logo: "/brands/efs-featured/superior.webp", featuredImage: true },
+    { name: "Empire", slug: "empire", logo: "/brands/efs-featured/empire.webp", featuredImage: true },
+    { name: "Majestic", slug: "majestic", logo: "/brands/efs-featured/majestic.webp", featuredImage: true },
+    { name: "Metal-Fab", slug: "metal-fab", logo: "/brands/efs-featured/metal-fab.webp", featuredImage: true },
+    { name: "Napoleon", slug: "napoleon", logo: "/brands/efs-featured/napoleon.webp", featuredImage: true },
+    { name: "Pilgrim", slug: "pilgrim", logo: "/brands/efs-featured/pilgrim.webp", featuredImage: true },
+    { name: "Kingsman", slug: "kingsman", logo: "/brands/efs-featured/kingsman.webp", featuredImage: true },
+    { name: "Real Fyre", slug: "real-fyre", logo: "/brands/efs-featured/rh-peterson.webp", featuredImage: true },
+    { name: "HPC", slug: "hpc", logo: "/brands/efs-featured/hearth-products-controls.webp", featuredImage: true },
+    { name: "Dagan", slug: "dagan", logo: "/brands/efs-featured/dagan.webp", featuredImage: true },
+    { name: "Monessen", slug: "monessen", logo: "/brands/efs-featured/monessen.webp", featuredImage: true },
+    { name: "Goods of the Woods", slug: "goods-of-the-woods", logo: "/brands/efs-featured/goods-of-the-woods.webp", featuredImage: true },
+    { name: "Hy-C Company", slug: "hy-c-company", logo: "/brands/efs-featured/hy-c.webp", featuredImage: true },
+    { name: "AW Perkins", slug: "aw-perkins", logo: "/brands/efs-featured/aw-perkins.webp", featuredImage: true },
+    { name: "MRCOOL", slug: "mrcool", logo: "/brands/efs-featured/mr--cool.webp", featuredImage: true },
+    { name: "Ventis", slug: "ventis", logo: "/brands/efs-featured/ventis.webp", featuredImage: true },
+    { name: "Fireplace Xtrordinair", slug: "fireplace-xtrordinair", logo: "/brands/fireplacex.png", featuredImage: false },
+    { name: "Lopi", slug: "lopi", logo: "/brands/lopi.png", featuredImage: false },
   ];
 
   return (
@@ -49,7 +49,7 @@ export function BrandsBar() {
             {brands.map((brand) => (
               <Link
                 key={brand.name}
-                href={`/search?q=${encodeURIComponent(brand.name)}`}
+                href={`/brand/${brand.slug}`}
                 className="group relative flex h-[118px] items-center justify-center overflow-hidden rounded-2xl border border-white/12 bg-white/90 px-5 py-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ff7a18]/75 hover:bg-white hover:shadow-[0_18px_42px_rgba(255,122,24,0.24)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white via-transparent to-[#ff7a18]/8 opacity-0 transition group-hover:opacity-100" />
@@ -69,7 +69,7 @@ export function BrandsBar() {
 
         <div className="mt-8 flex justify-center">
           <Link
-            href="/search"
+            href="/brand"
             className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/[0.07] px-6 py-3 text-sm font-black uppercase tracking-[0.12em] text-white shadow-sm backdrop-blur-md transition hover:border-[#ff7a18] hover:bg-[#ff7a18] hover:text-black"
           >
             View All Brands <ArrowRight className="h-4 w-4" />

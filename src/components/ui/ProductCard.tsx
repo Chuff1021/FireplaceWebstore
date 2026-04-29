@@ -29,7 +29,7 @@ export function ProductCard({ product }: { product: Product }) {
     openCart();
   };
 
-  const cardHref = isContactForPricing ? `/contact?product=${encodeURIComponent(product.sku)}` : `/product/${product.slug}`;
+  const cardHref = isContactForPricing ? "/contact" : `/product/${product.slug}`;
 
   return (
     <Link

@@ -35,7 +35,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-[#f3e7d4] md:text-xl">
-            Shop fireplaces, inserts, stoves, and hard-to-find parts with expert guidance from a real fireplace company — not a generic big-box catalog.
+            Discover fireplaces for your home with expert guidance from a real fireplace company. Shop fireplaces, inserts, stoves, and hard-to-find parts — not a generic big-box catalog.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
