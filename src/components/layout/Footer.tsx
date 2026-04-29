@@ -5,6 +5,14 @@ import { defaultStoreConfig, productCategories } from "@/lib/store-config";
 
 const footerLinkClass = "text-sm leading-6 text-[#d8c7b2] transition hover:text-[#ffb36b]";
 const footerHeadingClass = "mb-4 text-xs font-black uppercase tracking-[0.22em] text-[#ff8a24]";
+const footerCategoryLabels: Record<string, string> = {
+  fireplaces: "Fireplace Categories",
+  inserts: "Insert Options",
+  stoves: "Stove Collection",
+  outdoor: "Outdoor Fire Features",
+  accessories: "Hearth Accessories",
+  parts: "Replacement Parts Catalog",
+};
 
 export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
   const currentYear = new Date().getFullYear();
@@ -89,7 +97,7 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
               {productCategories.map((category) => (
                 <li key={category.id}>
                   <Link href={`/category/${category.slug}`} className={footerLinkClass}>
-                    {category.name}
+                    {footerCategoryLabels[category.id] ?? category.name}
                   </Link>
                 </li>
               ))}
