@@ -84,7 +84,7 @@ export function FeaturedProducts() {
             </div>
             <Link
               href="/design-tool"
-              className="mt-5 inline-flex items-center justify-center gap-2 bg-[#ff7a18] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
+              className="mx-auto mt-5 flex w-fit items-center justify-center gap-2 bg-[#ff7a18] px-5 py-3 text-xs font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]"
             >
               Get Help Choosing <ArrowRight className="h-4 w-4" />
             </Link>
