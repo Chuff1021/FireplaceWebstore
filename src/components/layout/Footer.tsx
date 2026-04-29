@@ -138,7 +138,7 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
               <li><Link href="/showrooms" className={footerLinkClass}>Visit Our Showroom</Link></li>
               <li><Link href="/local/fireplace-store-republic-mo" className={footerLinkClass}>Republic Fireplace Store</Link></li>
               <li><Link href="/local/fireplace-store-springfield-mo" className={footerLinkClass}>Springfield Fireplace Store</Link></li>
-              <li><Link href="/installation" className={footerLinkClass}>Professional Installation</Link></li>
+              <li><Link href="/installation" className={footerLinkClass}>Installation Planning</Link></li>
               <li><Link href="/local/fireplace-installation-springfield-mo" className={footerLinkClass}>Springfield Installation Help</Link></li>
               <li><Link href="/financing" className={footerLinkClass}>Financing Options</Link></li>
               <li><Link href="/trade-program" className={footerLinkClass}>Trade Program</Link></li>
