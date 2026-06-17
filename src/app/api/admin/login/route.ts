@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/db";
-import { adminUsers } from "@/db/schema";
-import { eq } from "drizzle-orm";
-import { createAdminSession, ensureDefaultAdmin, verifyPassword } from "@/lib/admin-auth";
+import { createAdminSession, verifyAdminCredentials } from "@/lib/admin-auth";
 import { cookies } from "next/headers";
 
 export async function POST(request: NextRequest) {
@@ -13,29 +10,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Username and password required" }, { status: 400 });
     }
 
-    // Ensure default admin exists
-    await ensureDefaultAdmin();
-
-    // Find user
-    const users = await db
-      .select()
-      .from(adminUsers)
-      .where(eq(adminUsers.username, username))
-      .limit(1);
-
-    if (users.length === 0) {
-      return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
-    }
-
-    const user = users[0];
-    const valid = await verifyPassword(password, user.passwordHash);
+    const valid = await verifyAdminCredentials(username, password);
 
     if (!valid) {
       return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
     }
 
     // Create session
-    const token = await createAdminSession(user.id);
+    const token = await createAdminSession(1);
 
     // Set cookie
     const cookieStore = await cookies();

@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Flame, LayoutDashboard, Package, Tag, LogOut, ChevronRight, Settings, Database } from "lucide-react";
+import { Flame, Inbox, LayoutDashboard, Package, Tag, LogOut, ChevronRight, Settings, Database } from "lucide-react";
 import clsx from "clsx";
 
 const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
+  { href: "/admin/inbox", label: "Customer Inbox", icon: Inbox, exact: false },
   { href: "/admin/products", label: "Products", icon: Package, exact: false },
   { href: "/admin/categories", label: "Categories", icon: Tag, exact: false },
   { href: "/admin/imports", label: "Catalog Imports", icon: Database, exact: false },

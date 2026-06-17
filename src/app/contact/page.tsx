@@ -12,17 +12,42 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const { address } = defaultStoreConfig;
   const fullAddress = `${address.street}, ${address.city}, ${address.state} ${address.zip}`;
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`;
-  const emailHref = `mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent(formData.subject || "Website contact request")}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`)}`;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (submitState !== "idle") setSubmitState("idle");
   };
+
+  async function submitContact(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (submitState === "submitting") return;
+
+    setSubmitState("submitting");
+    try {
+      const response = await fetch("/api/customer-inbox", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "contact",
+          ...formData,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Contact request failed");
+
+      setSubmitState("success");
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch {
+      setSubmitState("error");
+    }
+  }
 
   return (
     <main className="bg-[#f6efe5]">
@@ -40,11 +65,9 @@ export default function ContactPage() {
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:px-6 lg:grid-cols-[1fr_0.82fr]">
         <div className="border border-[#ded5c8] bg-[#fffdf9] p-6 shadow-[0_24px_80px_rgba(32,20,10,0.10)] md:p-8">
           <h2 className="text-3xl font-black tracking-[-0.04em] text-[#1d1712]">Send us a message</h2>
-          <p className="mt-2 text-sm leading-6 text-[#6c6256]">
-            The button below opens your email app with the details filled in so you can send the request directly to Aaron&apos;s Fireplace Co.
-          </p>
+          <p className="mt-2 text-sm leading-6 text-[#6c6256]">Submit the form and it will go straight into Aaron&apos;s customer inbox.</p>
 
-          <form className="mt-7 space-y-6">
+          <form className="mt-7 space-y-6" onSubmit={submitContact}>
             <div className="grid gap-5 md:grid-cols-2">
               <div>
                 <label htmlFor="name" className="mb-1 block text-sm font-bold text-[#1d1712]">Full Name *</label>
@@ -79,9 +102,11 @@ export default function ContactPage() {
               <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Tell us what you need help with. Model numbers, photos you can send, measurements, and project details all help." />
             </div>
 
-            <a href={emailHref} className="inline-flex w-full items-center justify-center gap-3 bg-[#ff7a18] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f] md:w-auto">
-              <Send className="h-4 w-4" /> Email Aaron&apos;s Fireplace Co.
-            </a>
+            <button type="submit" disabled={submitState === "submitting"} className="inline-flex w-full items-center justify-center gap-3 bg-[#ff7a18] px-7 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f] disabled:cursor-not-allowed disabled:opacity-60 md:w-auto">
+              <Send className="h-4 w-4" /> {submitState === "submitting" ? "Sending..." : "Send Message"}
+            </button>
+            {submitState === "success" && <p className="text-sm font-semibold text-green-700">Message received. Aaron&apos;s will follow up soon.</p>}
+            {submitState === "error" && <p className="text-sm font-semibold text-red-700">Something went wrong. Please try again or call the store directly.</p>}
           </form>
         </div>
 

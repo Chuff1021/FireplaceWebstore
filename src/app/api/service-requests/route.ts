@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { db } from "@/db";
-import { serviceRequests } from "@/db/schema";
+import { createInboxItem, saveInboxItem } from "@/lib/customer-inbox";
 
 const requiredFields = ["name", "phone", "applianceType", "serviceType", "requestedDate", "preferredTime"] as const;
 
@@ -17,23 +16,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields", fields: missing }, { status: 400 });
     }
 
-    const [created] = await db
-      .insert(serviceRequests)
-      .values({
-        name: clean(payload.name),
-        phone: clean(payload.phone),
-        email: clean(payload.email),
+    const item = createInboxItem({
+      type: "service",
+      name: payload.name,
+      phone: payload.phone,
+      email: payload.email,
+      subject: `${clean(payload.serviceType)} - ${clean(payload.applianceType)}`,
+      message: clean(payload.notes),
+      metadata: {
         applianceType: clean(payload.applianceType),
         serviceType: clean(payload.serviceType),
         requestedDate: clean(payload.requestedDate),
         preferredTime: clean(payload.preferredTime),
         address: clean(payload.address),
-        notes: clean(payload.notes),
-        status: "new",
-      })
-      .returning({ id: serviceRequests.id });
+      },
+    });
 
-    return NextResponse.json({ ok: true, id: created?.id });
+    await saveInboxItem(item);
+    return NextResponse.json({ ok: true, id: item.id });
   } catch (error) {
     console.error("Failed to create service request", error);
     return NextResponse.json({ error: "Unable to submit service request" }, { status: 500 });

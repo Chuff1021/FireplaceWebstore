@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { type FormEvent, useState } from "react";
 import { ArrowLeft, Mail, Phone, ShieldAlert } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig } from "@/lib/store-config";
@@ -14,11 +15,60 @@ function formatPrice(price: number) {
 
 export default function CheckoutPage() {
   const { items, getSubtotal, getShipping, getTax, getTotal } = useCartStore();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+    notes: "",
+  });
+  const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const orderSummary = items
-    .map((item) => `${item.quantity} x ${item.product.name} (${item.product.sku ?? item.product.id})`)
-    .join("\n");
-  const mailtoHref = `mailto:${defaultStoreConfig.email}?subject=${encodeURIComponent("Online order / quote request")}&body=${encodeURIComponent(`Hello Aaron's Fireplace Co.,\n\nI would like help completing this order or quote request:\n\n${orderSummary}\n\nEstimated subtotal: ${formatPrice(getSubtotal())}\nEstimated shipping shown online: ${formatPrice(getShipping())}\nEstimated tax shown online: ${formatPrice(getTax())}\nEstimated total shown online: ${formatPrice(getTotal())}\n\nName:\nPhone:\nShipping address:\nQuestions / notes:\n`)}`;
+  const update = (key: keyof typeof formData, value: string) => {
+    setFormData((current) => ({ ...current, [key]: value }));
+    if (submitState !== "idle") setSubmitState("idle");
+  };
+
+  async function submitOrder(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (submitState === "submitting") return;
+
+    setSubmitState("submitting");
+    try {
+      const response = await fetch("/api/customer-inbox", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "order",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: "Online order request",
+          message: formData.notes,
+          total: getTotal(),
+          metadata: {
+            address: formData.address,
+            subtotal: formatPrice(getSubtotal()),
+            shipping: formatPrice(getShipping()),
+            tax: formatPrice(getTax()),
+          },
+          items: items.map((item) => ({
+            name: item.product.name,
+            sku: item.product.sku ?? item.product.id,
+            quantity: item.quantity,
+            price: (item.product.salePrice ?? item.product.price) * item.quantity,
+          })),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Order request failed");
+
+      setSubmitState("success");
+      setFormData({ name: "", email: "", phone: "", address: "", notes: "" });
+    } catch {
+      setSubmitState("error");
+    }
+  }
 
   if (items.length === 0) {
     return (
@@ -46,13 +96,37 @@ export default function CheckoutPage() {
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:px-6 lg:grid-cols-[1fr_0.42fr]">
-        <div className="border border-[#ded5c8] bg-white p-6 shadow-[0_24px_80px_rgba(32,20,10,0.10)] md:p-8">
+        <form onSubmit={submitOrder} className="border border-[#ded5c8] bg-white p-6 shadow-[0_24px_80px_rgba(32,20,10,0.10)] md:p-8">
           <div className="flex items-start gap-4 border border-[#ffd0a3] bg-[#fff7ed] p-5">
             <ShieldAlert className="mt-1 h-6 w-6 shrink-0 text-[#ff7a18]" />
             <div>
               <h2 className="text-2xl font-black tracking-[-0.04em] text-[#1d1712]">No payment information is collected here.</h2>
               <p className="mt-2 text-sm leading-6 text-[#6c6256]">This protects customers and keeps the live site honest while payment/order infrastructure is finished.</p>
             </div>
+          </div>
+
+          <h3 className="mt-8 text-xl font-black text-[#1d1712]">Your contact details</h3>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div>
+              <label className="mb-1 block text-sm font-bold text-[#1d1712]">Name *</label>
+              <input required value={formData.name} onChange={(e) => update("name", e.target.value)} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Full name" />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-bold text-[#1d1712]">Email *</label>
+              <input required type="email" value={formData.email} onChange={(e) => update("email", e.target.value)} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-bold text-[#1d1712]">Phone</label>
+              <input value={formData.phone} onChange={(e) => update("phone", e.target.value)} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Best callback number" />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-bold text-[#1d1712]">Shipping address</label>
+              <input value={formData.address} onChange={(e) => update("address", e.target.value)} className="w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Street, city, ZIP" />
+            </div>
+          </div>
+          <div className="mt-4">
+            <label className="mb-1 block text-sm font-bold text-[#1d1712]">Questions or notes</label>
+            <textarea value={formData.notes} onChange={(e) => update("notes", e.target.value)} className="min-h-28 w-full border border-[#d9c8b4] bg-white px-4 py-3 outline-none focus:border-[#ff7a18]" placeholder="Delivery needs, installation questions, preferred callback time, or anything else Aaron's should know." />
           </div>
 
           <h3 className="mt-8 text-xl font-black text-[#1d1712]">Cart items</h3>
@@ -69,14 +143,16 @@ export default function CheckoutPage() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={mailtoHref} className="inline-flex items-center justify-center gap-2 bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f]">
-              <Mail className="h-4 w-4" /> Email this cart
-            </a>
+            <button type="submit" disabled={submitState === "submitting"} className="inline-flex items-center justify-center gap-2 bg-[#ff7a18] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-black transition hover:bg-[#ff963f] disabled:cursor-not-allowed disabled:opacity-60">
+              <Mail className="h-4 w-4" /> {submitState === "submitting" ? "Sending..." : "Send Order Request"}
+            </button>
             <a href={`tel:${defaultStoreConfig.phone}`} className="inline-flex items-center justify-center gap-2 border border-[#1d1712] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-[#1d1712] transition hover:bg-[#1d1712] hover:text-white">
               <Phone className="h-4 w-4" /> Call {defaultStoreConfig.phone}
             </a>
           </div>
-        </div>
+          {submitState === "success" && <p className="mt-4 text-sm font-semibold text-green-700">Order request received. Aaron&apos;s will follow up to confirm details.</p>}
+          {submitState === "error" && <p className="mt-4 text-sm font-semibold text-red-700">Something went wrong. Please try again or call the store directly.</p>}
+        </form>
 
         <aside className="h-fit border border-[#ded5c8] bg-[#fffdf9] p-6 shadow-[0_24px_80px_rgba(32,20,10,0.08)]">
           <h2 className="text-xl font-black text-[#1d1712]">Estimated summary</h2>
