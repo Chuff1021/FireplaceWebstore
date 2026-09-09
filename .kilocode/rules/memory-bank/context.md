@@ -270,3 +270,15 @@ The template is branded for Aaron's Hearth and Home by editing `src/lib/store-co
   - `W565-0288-SER`
   - `W565-0276-SER`
   - `2159-007`
+# September 9, 2026: HearthOS Inbox Export (Local Only)
+
+Branch `codex/hearthos-inbox-connection` adds only a server-token-protected GET
+`/api/integrations/hearthos/inbox`, plus credential validation and its test.
+Reads private `customer-inbox/` blobs in complete 10-record pages. No public
+submission, payment, checkout, admin or storage write behavior changed.
+Matching CRM implementation: `/Users/fireplace/HearthOS-website-inbox`.
+Requires new `HEARTHOS_INBOX_EXPORT_SECRET`; no credential was created/configured,
+no live blobs read/written, and no deployment occurred. Typecheck/build/targeted
+lint and token test passed. Existing tracing warnings remain. Base `3aa2bd38`
+contains the existing customer inbox, ahead of website main `2378cdee`; verify
+the deployed source before activation, never revert to the older main baseline.
