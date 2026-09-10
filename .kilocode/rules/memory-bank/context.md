@@ -282,3 +282,11 @@ no live blobs read/written, and no deployment occurred. Typecheck/build/targeted
 lint and token test passed. Existing tracing warnings remain. Base `3aa2bd38`
 contains the existing customer inbox, ahead of website main `2378cdee`; verify
 the deployed source before activation, never revert to the older main baseline.
+
+## September 10, 2026: Remove free-shipping advertising
+
+Based on production commit `190bd7fd`, removed free-shipping promotions from the
+header, product badges, cart page, and cart drawer. Cart shipping amounts now
+use currency formatting instead of a FREE badge. Removed free local delivery
+claims from the shipping page. Existing shipping calculations remain unchanged
+pending the owner's direction on charges.

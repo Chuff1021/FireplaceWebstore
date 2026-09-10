@@ -8,7 +8,6 @@ import {
   ChevronRight,
   Star,
   ShoppingCart,
-  Truck,
   Shield,
   Phone,
   Minus,
@@ -363,16 +362,7 @@ export default function ProductPage() {
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
-              <div className="flex items-center gap-3">
-                <Truck className="w-8 h-8 text-orange-600" />
-                <div>
-                  <p className="font-medium text-sm text-gray-900">Free Shipping</p>
-                  <p className="text-xs text-gray-500">
-                    Orders over ${defaultStoreConfig.business.freeShipping.minimum}
-                  </p>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-xl">
               <div className="flex items-center gap-3">
                 <Shield className="w-8 h-8 text-orange-600" />
                 <div>

@@ -29,7 +29,7 @@ export default function ShippingPage() {
             <div className="bg-gray-50 rounded-xl p-6 text-center">
               <Truck className="h-10 w-10 text-red-700 mx-auto mb-3" />
               <h3 className="font-semibold text-gray-900 mb-1">Local Delivery</h3>
-              <p className="text-sm text-gray-600">Free within 30 miles</p>
+              <p className="text-sm text-gray-600">Contact us for delivery rates</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6 text-center">
               <Package className="h-10 w-10 text-red-700 mx-auto mb-3" />
@@ -54,7 +54,6 @@ export default function ShippingPage() {
                 This includes Springfield, Nixa, Ozark, Battlefield, and surrounding communities.
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
-                <li>Free delivery within 30 miles for orders over $1,000</li>
                 <li>Delivery fee of $50-$100 for orders under $1,000 or beyond 30 miles</li>
                 <li>Professional installation available for all delivered products</li>
                 <li>Scheduled delivery times to fit your schedule</li>

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { X, Plus, Minus, Trash2, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
-import { defaultStoreConfig } from "@/lib/store-config";
 
 export function CartSlideout() {
   const {
@@ -144,19 +143,6 @@ export function CartSlideout() {
           {/* Footer */}
           {items.length > 0 && (
             <div className="border-t p-4 space-y-4 bg-gray-50">
-              {/* Free Shipping Notice */}
-              {getSubtotal() < defaultStoreConfig.business.freeShipping.minimum && (
-                <div className="bg-orange-50 text-orange-800 text-sm p-3 rounded-lg">
-                  Add{" "}
-                  <span className="font-bold">
-                    {formatPrice(
-                      defaultStoreConfig.business.freeShipping.minimum - getSubtotal()
-                    )}
-                  </span>{" "}
-                  more for FREE shipping!
-                </div>
-              )}
-
               {/* Totals */}
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
@@ -166,11 +152,7 @@ export function CartSlideout() {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-medium">
-                    {getShipping() === 0 ? (
-                      <span className="text-green-600">FREE</span>
-                    ) : (
-                      formatPrice(getShipping())
-                    )}
+                    {formatPrice(getShipping())}
                   </span>
                 </div>
                 <div className="flex justify-between">

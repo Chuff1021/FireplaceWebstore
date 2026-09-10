@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
-import { defaultStoreConfig } from "@/lib/store-config";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -179,32 +178,13 @@ export default function CartPage() {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-medium">
-                    {getShipping() === 0 ? (
-                      <span className="text-green-600">FREE</span>
-                    ) : (
-                      formatPrice(getShipping())
-                    )}
+                    {formatPrice(getShipping())}
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Estimated Tax</span>
                   <span className="font-medium">{formatPrice(getTax())}</span>
                 </div>
-
-                {/* Free Shipping Progress */}
-                {getSubtotal() <
-                  defaultStoreConfig.business.freeShipping.minimum && (
-                  <div className="bg-orange-50 text-orange-800 text-sm p-3 rounded-lg mt-2">
-                    Add{" "}
-                    <span className="font-bold">
-                      {formatPrice(
-                        defaultStoreConfig.business.freeShipping.minimum -
-                          getSubtotal()
-                      )}
-                    </span>{" "}
-                    more for FREE shipping!
-                  </div>
-                )}
 
                 <div className="border-t pt-3 mt-3">
                   <div className="flex justify-between text-lg font-bold">
