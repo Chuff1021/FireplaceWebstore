@@ -35,7 +35,7 @@ Start with the hearth category that fits your project, including Fireplace Xtror
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          {productCategories.map((category, index) => (
+          {productCategories.map((category) => (
             <Link
               key={category.id}
               href={`/category/${category.slug}`}
@@ -52,9 +52,6 @@ Start with the hearth category that fits your project, including Fireplace Xtror
                   className="object-cover transition duration-500 group-hover:scale-105 group-hover:saturate-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1d120b]/55 via-transparent to-white/10" />
-                <div className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/70 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#a64212] shadow-sm backdrop-blur-md">
-                  0{index + 1}
-                </div>
               </div>
 
               <div className="relative flex min-h-[150px] flex-col px-5 py-5">

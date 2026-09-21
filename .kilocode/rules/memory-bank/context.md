@@ -290,3 +290,9 @@ header, product badges, cart page, and cart drawer. Cart shipping amounts now
 use currency formatting instead of a FREE badge. Removed free local delivery
 claims from the shipping page. Existing shipping calculations remain unchanged
 pending the owner's direction on charges.
+
+## September 21, 2026: Category photo overlays
+
+Removed the 01–06 numbered badges from the homepage Shop By Category photos.
+The category photos, labels, links, and card layout remain as before. Based on
+live production commit 2f149fa8, without the unfinished checkout bridge.
