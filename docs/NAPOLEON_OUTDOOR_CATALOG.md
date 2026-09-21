@@ -1,15 +1,13 @@
 # Napoleon outdoor collection — September 21, 2026
 
-Added 15 manufacturer-identified outdoor products: four Timberwolf wood fire pits
-(including the blue 50th Anniversary edition), ten gas tables / fire pits / burner
+Added 14 manufacturer-identified outdoor products: three Timberwolf wood fire pits,
+ten gas tables / fire pits / burner
 kits, and the Phantom Freestand electric patio heater. No grills, kitchens, or
 standalone furniture accessories were added. Existing outdoor products are retained.
 
 Fourteen prices are Napoleon’s published US MSRP, not temporary sale prices.
-The blue anniversary edition appears in Napoleon’s official US support catalog
-(updated September 18, 2026), but has no published US MSRP; it explicitly uses
-Contact for Pricing. Numeric zero is a catalog sentinel and is never displayed as
-free. All new items require availability confirmation, with no invented inventory
+The discontinued blue 50th Anniversary model (NWFPMTI-BL-C) was removed at the
+store owner’s request. All new items require availability confirmation, with no invented inventory
 quantities or reviews. The contact form carries the selected SKU into the inquiry.
 
 ## Sources
@@ -27,7 +25,6 @@ not used. No AI-generated product imagery is used.
 | NWFPMTI-PHM | $549.00 | [Napoleon](https://www.napoleon.com/en/us/grills/products/outdoor-heating/timberwolf-smokeless-fire-pits/timberwolf-smokeless-fire-pit-nwfpmti-phm) |
 | NWFPMTI-SS | $509.00 | [Napoleon](https://www.napoleon.com/en/us/grills/products/outdoor-heating/timberwolf-smokeless-fire-pits/timberwolf-smokeless-fire-pit-nwfpmti-ss) |
 | NWFPLTI-SS | $709.00 | [Napoleon](https://www.napoleon.com/en/us/grills/products/outdoor-heating/timberwolf-smokeless-fire-pits/timberwolf-smokeless-fire-pit-nwfplti-ss) |
-| NWFPMTI-BL-C | Contact for Pricing | [Napoleon](https://sites.salsify.com/7f15a6c7-dece-4721-ac9e-9fd4858ab82f/0a903af4-e810-4038-8e02-abddd690fdff/en-US/product/NWFPMTI-BL-C/50th-Anniversary-Edition-Timberwolf(r)-Smokeless-Fire-Pit-18-inch-Blue/) |
 | NEOFV80IH | $859.00 | [Napoleon](https://www.napoleon.com/en/us/grills/products/outdoor-heating/freestand-patio-heater-series/phantom-freestand-neofv80ih) |
 | GPFRCN72 | $2,999.00 | [Napoleon](https://www.napoleon.com/en/us/grills/products/outdoor-fire-tables/nexus-series/nexus-72-patioflame-table-gpfrcn72) |
 | GPFCCN36 | $1,769.00 | [Napoleon](https://www.napoleon.com/en/us/grills/products/outdoor-fire-tables/nexus-series/nexus-36-patioflame-table-gpfccn36) |

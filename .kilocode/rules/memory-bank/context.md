@@ -307,3 +307,10 @@ first on Outdoor Living. New stock is explicitly unconfirmed and uses product
 inquiries with SKU prefill. Added Patio Heaters category and fixed category reload
 on navigation. See docs/NAPOLEON_OUTDOOR_CATALOG.md and data/napoleon-outdoor.json
 for provenance. Built on production 37b5c601, excluding unfinished checkout work.
+
+### September 21, 2026 — discontinued blue Timberwolf removed
+
+Removed Napoleon NWFPMTI-BL-C (50th Anniversary blue Timberwolf) from the
+shared catalog and removed its photo at the owner’s request: it is no longer
+made. Removed the Outdoor Living anniversary-pricing copy. The featured
+collection now contains 14 Napoleon products, all with published U.S. MSRP.

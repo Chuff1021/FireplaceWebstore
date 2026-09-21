@@ -465,7 +465,7 @@ export default function CategoryPage() {
                   </h1>
                   <p className="mt-3 max-w-[900px] text-sm leading-6 text-[#5b5d5b]">
                     {slug === "outdoor"
-                      ? "Featured Napoleon wood fire pits, gas fire tables, burner kits, and electric patio heaters. Prices shown are Napoleon’s U.S. MSRP. Contact us for anniversary-edition pricing, or use the filters to browse more outdoor brands."
+                      ? "Featured Napoleon wood fire pits, gas fire tables, burner kits, and electric patio heaters. Prices shown are Napoleon’s U.S. MSRP. Use the filters to browse more outdoor brands."
                       : `Compare ${categoryName.toLowerCase()} by trusted brands, fuel type, install style, and project budget. Use the filters to narrow the catalog fast.`}
                   </p>
                 </div>
