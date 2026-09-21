@@ -1,16 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { defaultStoreConfig } from "@/lib/store-config";
 import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from "lucide-react";
 
 export default function ContactPage() {
+  return <Suspense fallback={<p className="p-8">Loading contact form...</p>}><ContactProductInquiry /></Suspense>;
+}
+
+function ContactProductInquiry() {
+  const productSku = useSearchParams().get("product")?.slice(0,100) ?? "";
+  return <ContactForm key={productSku} productSku={productSku} />;
+}
+
+function ContactForm({ productSku }: { productSku: string }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: "",
-    message: "",
+    subject: productSku ? "Product Inquiry" : "",
+    message: productSku ? `I’m interested in model ${productSku}. Please confirm availability and delivery timing.` : "",
   });
   const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
 

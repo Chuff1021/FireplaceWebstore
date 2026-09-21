@@ -182,6 +182,7 @@ export const productCategories: ProductCategory[] = [
     subcategories: [
       { id: "outdoor-fireplaces", name: "Outdoor Fireplaces", slug: "outdoor-fireplaces", description: "Fire Garden and outdoor gas fireplaces", image: "/products-upgraded/outdoor-fireplaces/fg-4024-linear-fireplace.webp" },
       { id: "fire-pits", name: "Fire Pits", slug: "fire-pits", description: "Fire pits, burners, and outdoor fire features", image: "/products-upgraded/outdoor-fireplaces/fg-36-firepit-burner.webp" },
+      { id: "patio-heaters", name: "Patio Heaters", slug: "patio-heaters", description: "Freestanding heaters for outdoor comfort", image: "/products/napoleon-outdoor/neofv80ih.jpg" },
     ],
   },
   {
@@ -224,6 +225,9 @@ export interface Product {
   shortDescription: string;
   price: number;
   salePrice?: number;
+  priceType?: "msrp";
+  availabilityStatus?: "confirm";
+  outdoorFeaturedOrder?: number;
   contactForPricing?: boolean;
   categoryId: string;
   subcategoryId?: string;

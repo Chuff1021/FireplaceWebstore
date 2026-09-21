@@ -58,7 +58,7 @@ export function ProductCard({ product }: { product: Product }) {
             </span>
           )}
         </div>
-        {!isContactForPricing && (
+        {!isContactForPricing && product.availabilityStatus !== "confirm" && (
           <button
             onClick={handleAddToCart}
             className="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:bg-[#ff7a18] hover:text-black"
@@ -98,7 +98,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="mt-auto pt-5">
           <div className="flex items-end justify-between gap-3 border-t border-[#eadfce] pt-4">
             <div>
-              <p className="text-[11px] uppercase tracking-[0.16em] text-[#8a8175]">{isContactForPricing ? "Dealer pricing" : "Starting at"}</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-[#8a8175]">{isContactForPricing ? "Dealer pricing" : product.priceType === "msrp" ? "MSRP" : "Starting at"}</p>
               <div className="flex items-baseline gap-2">
                 <span className={isContactForPricing ? "inline-flex items-center justify-center border border-[#a54210] bg-[#a54210] px-3 py-2 text-sm font-black uppercase tracking-[0.08em] text-white transition group-hover:bg-[#7f2f0b]" : "text-xl font-black text-[#1d1712]"}>{isContactForPricing ? "Contact for Pricing" : formatPrice(displayPrice)}</span>
                 {!isContactForPricing && product.salePrice && <span className="text-sm text-[#8a8175] line-through">{formatPrice(product.price)}</span>}

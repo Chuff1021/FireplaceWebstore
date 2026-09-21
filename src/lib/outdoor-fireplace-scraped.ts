@@ -2,6 +2,7 @@ import "server-only";
 
 import { loadScrapedCategoryProducts } from "@/lib/scraped-category-loader";
 import type { Product } from "@/lib/store-config";
+import { napoleonOutdoorProducts } from "@/lib/napoleon-outdoor-products";
 
 let cachedProductsPromise: Promise<Product[]> | null = null;
 
@@ -22,11 +23,11 @@ async function loadOutdoorFireplaceProductsInternal(): Promise<Product[]> {
     subcategoryId: "outdoor-fireplaces",
   });
 
-  return products.map((product) => ({
+  return [...napoleonOutdoorProducts, ...products.map((product) => ({
     ...product,
     categoryId: "outdoor",
     subcategoryId: getOutdoorSubcategory(product),
-  }));
+  }))];
 }
 
 export async function loadOutdoorFireplaceProducts(): Promise<Product[]> {

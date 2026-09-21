@@ -56,6 +56,10 @@ function getPriceBucket(price: number) {
 }
 
 function getFuelType(product: Product) {
+  const specifiedFuel = product.specifications["Fuel Type"]?.toLowerCase();
+  if (specifiedFuel?.startsWith("gas")) return "Gas";
+  if (specifiedFuel === "wood") return "Wood";
+  if (specifiedFuel === "electric") return "Electric";
   const source = `${product.name} ${product.categoryId} ${product.subcategoryId ?? ""}`.toLowerCase();
   if (source.includes("electric")) return "Electric";
   if (source.includes("pellet")) return "Pellet";
@@ -91,6 +95,9 @@ export default function CategoryPage() {
   const slug = params.slug as string;
   const isMirroredCategoryPage = MIRRORED_CATEGORY_SLUGS.has(slug);
   const isPartsCategoryPage = isPartsCategorySlug(slug);
+  const featuredFilterBrands = ["outdoor", "fire-pits", "patio-heaters"].includes(slug)
+    ? ["Napoleon", ...FEATURED_FILTER_BRANDS]
+    : FEATURED_FILTER_BRANDS;
 
   const [catalogProducts, setCatalogProducts] = useState<Product[]>([]);
   const [isLoadingProducts, setIsLoadingProducts] = useState(true);
@@ -112,6 +119,7 @@ export default function CategoryPage() {
 
     async function loadProducts() {
       setIsLoadingProducts(true);
+      setCatalogProducts([]);
       try {
         const response = await fetch(`/api/products?category=${encodeURIComponent(slug)}&limit=10000`, { cache: "no-store" });
         if (!response.ok) return;
@@ -134,7 +142,7 @@ export default function CategoryPage() {
     return () => {
       cancelled = true;
     };
-  }, [isPartsCategoryPage]);
+  }, [isPartsCategoryPage, slug]);
 
   useEffect(() => {
     setPage(1);
@@ -194,8 +202,8 @@ export default function CategoryPage() {
     return counts;
   }, {});
   const availableBrands = Object.keys(brandCounts).sort((a, b) => {
-    const featuredA = FEATURED_FILTER_BRANDS.indexOf(a);
-    const featuredB = FEATURED_FILTER_BRANDS.indexOf(b);
+    const featuredA = featuredFilterBrands.indexOf(a);
+    const featuredB = featuredFilterBrands.indexOf(b);
 
     if (featuredA !== -1 || featuredB !== -1) {
       if (featuredA === -1) return 1;
@@ -205,7 +213,7 @@ export default function CategoryPage() {
 
     return a.localeCompare(b);
   });
-  const featuredAvailableBrands = FEATURED_FILTER_BRANDS.filter((brand) => brandCounts[brand]);
+  const featuredAvailableBrands = featuredFilterBrands.filter((brand) => brandCounts[brand]);
   const availablePriceBuckets = [...new Set(categoryProducts.map((product) => getPriceBucket(product.salePrice ?? product.price)))];
   const fuelTypeCounts = categoryProducts.reduce<Record<string, number>>((counts, product) => {
     const fuelType = getFuelType(product);
@@ -236,6 +244,9 @@ export default function CategoryPage() {
         return a.name.localeCompare(b.name);
       default: {
         const priority = (product: Product) => {
+          if (["outdoor", "fire-pits", "patio-heaters"].includes(slug) && product.outdoorFeaturedOrder !== undefined) {
+            return -100 + product.outdoorFeaturedOrder;
+          }
           if (slug === "stoves" && product.brand === "Lopi" && product.subcategoryId === "wood-stoves") return 0;
           const featuredBrandIndex = FEATURED_FILTER_BRANDS.indexOf(product.brand);
           if (featuredBrandIndex !== -1) return 10 + featuredBrandIndex;
@@ -338,6 +349,7 @@ export default function CategoryPage() {
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#a54210]">{product.brand}</p>
                     <h2 className="mt-2 line-clamp-2 text-sm font-medium text-gray-900">{product.name}</h2>
                     <p className="mt-3 text-lg font-semibold text-[#a54210]">
+                      {product.priceType === "msrp" && <span className="mr-2 text-xs font-medium text-[#5b5d5b]">MSRP</span>}
                       {product.contactForPricing || product.price <= 0 ? "Contact for Pricing" : formatPagePrice(product.salePrice ?? product.price)}
                     </p>
                   </div>
@@ -452,7 +464,9 @@ export default function CategoryPage() {
                     {categoryName}
                   </h1>
                   <p className="mt-3 max-w-[900px] text-sm leading-6 text-[#5b5d5b]">
-                    {`Compare ${categoryName.toLowerCase()} by trusted brands, fuel type, install style, and project budget. Use the filters to narrow the catalog fast.`}
+                    {slug === "outdoor"
+                      ? "Featured Napoleon wood fire pits, gas fire tables, burner kits, and electric patio heaters. Prices shown are Napoleon’s U.S. MSRP. Contact us for anniversary-edition pricing, or use the filters to browse more outdoor brands."
+                      : `Compare ${categoryName.toLowerCase()} by trusted brands, fuel type, install style, and project budget. Use the filters to narrow the catalog fast.`}
                   </p>
                 </div>
                 {featuredAvailableBrands.length > 0 && (
@@ -599,7 +613,11 @@ export default function CategoryPage() {
 
                     return (
                       <article key={product.id} className="max-w-full">
-                        {product.isBestSeller && (
+                        {slug === "outdoor" && product.outdoorFeaturedOrder !== undefined ? (
+                          <div className="mb-2 w-fit bg-[#fff0e3] px-3 py-1 text-xs font-bold uppercase tracking-[0.1em] text-[#a54210]">
+                            Featured Napoleon
+                          </div>
+                        ) : product.isBestSeller && (
                           <div className="mb-2 ml-1 w-fit rounded-[12px] bg-[#e09623] px-4 py-1 text-xs font-bold uppercase tracking-[0.1em] text-[#fafafa]">
                             Best Seller
                           </div>
@@ -646,6 +664,7 @@ export default function CategoryPage() {
                             </Link>
                           ) : (
                             <span className="text-base font-bold leading-5 tracking-[0.29px] text-[#a54210] md:text-lg md:tracking-[0.32px]">
+                              {product.priceType === "msrp" && <span className="mr-2 text-xs font-medium text-[#5b5d5b]">MSRP</span>}
                               {formatPagePrice(livePrice)}
                             </span>
                           )}

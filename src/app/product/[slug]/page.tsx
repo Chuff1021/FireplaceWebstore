@@ -266,6 +266,7 @@ export default function ProductPage() {
             </div>
 
             {/* Price */}
+            {product.priceType === "msrp" && <p className="mb-2 text-sm font-semibold text-gray-500">Napoleon U.S. MSRP</p>}
             <div className="flex items-baseline gap-3 mb-6">
               <span className="text-3xl font-bold text-gray-900">
                 {isContactForPricing ? "Contact for Pricing" : formatPrice(product.salePrice ?? product.price)}
@@ -287,7 +288,9 @@ export default function ProductPage() {
 
             {/* Stock Status */}
             <div className="mb-6">
-              {product.inStock ? (
+              {product.availabilityStatus === "confirm" ? (
+                <span className="font-medium text-gray-600">Contact us to confirm availability and delivery timing.</span>
+              ) : product.inStock ? (
                 <div className="flex items-center gap-2 text-green-600">
                   <Check className="w-5 h-5" />
                   <span className="font-medium">In Stock</span>
@@ -309,7 +312,7 @@ export default function ProductPage() {
 
             {/* Quantity & Add to Cart */}
             <div className="flex flex-wrap gap-4 mb-8">
-              {!isContactForPricing && <div className="flex items-center border rounded-lg">
+              {!isContactForPricing && product.availabilityStatus !== "confirm" && <div className="flex items-center border rounded-lg">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="p-3 hover:bg-gray-100 transition-colors"
@@ -327,7 +330,15 @@ export default function ProductPage() {
                 </button>
               </div>}
 
-              {isContactForPricing ? (
+              {product.availabilityStatus === "confirm" ? (
+                <Link
+                  href={`/contact?product=${encodeURIComponent(product.sku)}`}
+                  className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors"
+                >
+                  <Phone className="w-5 h-5" />
+                  {isContactForPricing ? "Contact for Pricing" : "Contact to Order"}
+                </Link>
+              ) : isContactForPricing ? (
                 <Link
                   href={`/contact?product=${encodeURIComponent(product.sku)}`}
                   className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors"

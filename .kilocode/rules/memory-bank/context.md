@@ -296,3 +296,14 @@ pending the owner's direction on charges.
 Removed the 01–06 numbered badges from the homepage Shop By Category photos.
 The category photos, labels, links, and card layout remain as before. Based on
 live production commit 2f149fa8, without the unfinished checkout bridge.
+
+## September 21, 2026: Featured Napoleon outdoor collection
+
+Added 15 official Napoleon outdoor listings (four wood fire pits, ten gas fire
+tables / pits / burner kits, one electric patio heater) with local official photos.
+Fourteen use published US MSRP; blue 50th Anniversary NWFPMTI-BL-C has no public
+US price and displays Contact for Pricing. Featured sorting places the collection
+first on Outdoor Living. New stock is explicitly unconfirmed and uses product
+inquiries with SKU prefill. Added Patio Heaters category and fixed category reload
+on navigation. See docs/NAPOLEON_OUTDOOR_CATALOG.md and data/napoleon-outdoor.json
+for provenance. Built on production 37b5c601, excluding unfinished checkout work.
