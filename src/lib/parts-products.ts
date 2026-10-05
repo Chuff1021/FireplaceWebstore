@@ -4,6 +4,7 @@ import { readdir, readFile } from "fs/promises";
 import path from "path";
 import { DEFAULT_PRODUCT_IMAGE } from "@/lib/product-images";
 import { type Product } from "@/lib/store-config";
+import { normalizePartsBrand } from "@/lib/parts-catalog";
 
 type ImportedPartRecord = {
   sku?: string;
@@ -42,14 +43,6 @@ function toSlug(input: string) {
     .replace(/^-+|-+$/g, "");
 }
 
-function normalizeBrandLabel(value: string) {
-  return value
-    .replace(/\b(Pellet|Wood|Coal|Gas|Electric|Outdoor|Fireplace|Stove)\s+Parts\b/gi, "")
-    .replace(/\bParts\b/gi, "")
-    .replace(/\s{2,}/g, " ")
-    .trim();
-}
-
 function toShortDescription(input: string) {
   if (input.length <= 160) {
     return input;
@@ -58,7 +51,18 @@ function toShortDescription(input: string) {
   return `${input.slice(0, 157).trimEnd()}...`;
 }
 
-export async function loadImportedPartsProducts(): Promise<Product[]> {
+// These bundled files change on deployment, so warm requests can reuse the catalog.
+let catalogPromise: Promise<Product[]> | undefined;
+
+export function loadImportedPartsProducts(): Promise<Product[]> {
+  catalogPromise ??= readImportedPartsProducts().catch(error => {
+    catalogPromise = undefined;
+    throw error;
+  });
+  return catalogPromise;
+}
+
+async function readImportedPartsProducts(): Promise<Product[]> {
   const partsDir = path.join(process.cwd(), "data", "parts");
 
   let fileNames: string[] = [];
@@ -104,9 +108,12 @@ export async function loadImportedPartsProducts(): Promise<Product[]> {
         record.compareAtPrice > livePrice
           ? record.compareAtPrice
           : livePrice;
-      const brand =
-        normalizeBrandLabel((record.breadcrumbBrand || "").trim()) ||
-        (record.brand || "Parts").trim();
+      // A few supplier breadcrumbs contain the product title instead of a brand.
+      // Do not turn those titles or SKU strings into manufacturer filter options.
+      const brandLabel = [record.breadcrumbBrand, record.brand].find(value =>
+        value?.trim() && value.trim() !== name && !/[()]/.test(value)
+      );
+      const brand = normalizePartsBrand(brandLabel || "Other Parts");
 
       if (!name || !slug || livePrice <= 0) {
         continue;

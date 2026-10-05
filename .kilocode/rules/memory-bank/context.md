@@ -314,3 +314,26 @@ Removed Napoleon NWFPMTI-BL-C (50th Anniversary blue Timberwolf) from the
 shared catalog and removed its photo at the owner’s request: it is no longer
 made. Removed the Outdoor Living anniversary-pricing copy. The featured
 collection now contains 14 Napoleon products, all with published U.S. MSRP.
+
+### October 5, 2026 — mobile scrolling and parts navigation
+
+Rebuilt parts browsing around `/api/parts`: server-side manufacturer, department,
+part type, keyword/SKU search, sorting, counts, and pagination. The phone receives
+20 parts and compact facets per page instead of the entire 27 MB parts catalog.
+Bundled source records are reused on warm server requests. Manufacturer labels
+now merge fuel/department suffixes (including Harman Wood & Coal, Newmac Wood &
+Oil, and gas-log-set paths); malformed product-title breadcrumbs no longer appear
+as manufacturers. Filter choices/counts come from the imported catalog.
+
+The parts page places search and native labeled filters directly above compact
+mobile results. Brand changes clear the previous part-type filter, requests are
+cancelled when filters change, results/error/loading states are distinct, and
+pagination exposes the full catalog. Filters and search remain in the URL for
+sharing and back navigation. Header search stays in the parts catalog when the
+customer is browsing parts. Inventory and checkout behavior are unchanged.
+
+The mobile header now has collapsible category groups and a menu constrained to
+the dynamic viewport with internal scrolling; opening search closes the menu.
+The logo flexes to fit narrow screens. Removed forced global smooth scrolling.
+Validation includes TypeScript, ESLint, catalog regression tests, real imported
+manufacturer/department counts, and phone-browser flow checks.

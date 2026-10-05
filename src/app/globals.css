@@ -18,9 +18,9 @@
   background: #a1a1a1;
 }
 
-/* Smooth scrolling */
+/* Keep phone scrolling native and leave anchors clear of the sticky header. */
 html {
-  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 /* Line clamp utility */

@@ -3,14 +3,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Search, ShoppingCart, Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig, productCategories } from "@/lib/store-config";
+import { partsDepartmentSlugs } from "@/lib/parts-taxonomy";
 
 export function Header({ logoUrl }: { logoUrl?: string }) {
+  const pathname = usePathname();
+  const categorySlug = pathname.split("/")[2];
+  const searchAction = pathname.startsWith("/category/") && (categorySlug === "parts" || partsDepartmentSlugs.has(categorySlug)) ? pathname : "/search";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [expandedMobileCategory, setExpandedMobileCategory] = useState<string | null>(null);
   const { getItemCount, toggleCart } = useCartStore();
   const addressLine = `${defaultStoreConfig.address.street}, ${defaultStoreConfig.address.city}, ${defaultStoreConfig.address.state} ${defaultStoreConfig.address.zip}`;
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressLine)}`;
@@ -38,13 +44,15 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
           <div className="flex h-20 items-center justify-between gap-4 md:h-24">
             <button
               className="p-2 text-white transition hover:text-[#ffb36b] lg:hidden"
-              onClick={() => setIsMenuOpen((current) => !current)}
+              onClick={() => { setIsMenuOpen(current => !current); setIsSearchOpen(false); }}
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
-            <Link href="/" className="flex w-[180px] shrink-0 items-center self-stretch py-2 xl:w-[220px]">
+            <Link href="/" className="flex min-w-0 flex-1 items-center justify-center self-stretch py-2 lg:w-[180px] lg:flex-none lg:justify-start xl:w-[220px]">
               <Image
                 src={logoUrl ?? defaultStoreConfig.logo}
                 alt={defaultStoreConfig.storeName}
@@ -56,7 +64,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
             </Link>
 
             <div className="hidden min-w-[360px] flex-1 lg:block xl:pl-4">
-              <form action="/search" method="GET" className="mx-auto w-full max-w-[980px]">
+              <form action={searchAction} method="GET" className="mx-auto w-full max-w-[980px]">
                 <div className="flex h-12 items-center border border-[#ff7a18]/45 bg-[#fffaf2] shadow-inner shadow-black/10">
                   <input
                     type="text"
@@ -116,11 +124,12 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               </button>
             </div>
 
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex shrink-0 items-center gap-2 lg:hidden">
               <button
                 className="p-2"
-                onClick={() => setIsSearchOpen((current) => !current)}
+                onClick={() => { setIsSearchOpen(current => !current); setIsMenuOpen(false); }}
                 aria-label="Search"
+                aria-expanded={isSearchOpen}
               >
                 <Search className="h-5 w-5 text-white" />
               </button>
@@ -141,12 +150,12 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
 
           {isSearchOpen && (
             <div className="border-t border-black/10 py-3 lg:hidden">
-              <form action="/search" method="GET" className="flex h-11 items-center border border-[#bdbdbd] bg-white">
+              <form action={searchAction} method="GET" className="flex h-11 items-center border border-[#bdbdbd] bg-white">
                 <input
                   type="text"
                   name="q"
                   placeholder="Search by brand, model, or keyword"
-                  className="h-full min-w-0 flex-1 px-4 text-sm text-[#424242] outline-none"
+                  className="h-full min-w-0 flex-1 px-4 text-base text-[#424242] outline-none"
                   autoFocus
                 />
                 <button
@@ -209,8 +218,8 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         </div>
 
         {isMenuOpen && (
-          <div className="border-t border-black/10 bg-white lg:hidden">
-            <nav className="space-y-2 px-4 py-4">
+          <div id="mobile-navigation" className="absolute left-0 right-0 top-full max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-y-contain border-t border-black/10 bg-white shadow-xl md:max-h-[calc(100dvh-6rem)] lg:hidden">
+            <nav aria-label="Mobile navigation" className="space-y-2 px-4 py-4">
               <Link
                 href="/contractor-portal"
                 className="block py-2 text-sm font-bold text-[#a54210]"
@@ -220,20 +229,27 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
               </Link>
               {productCategories.map((category) => (
                 <div key={category.id}>
-                  <Link
-                    href={`/category/${category.slug}`}
-                    className="block py-2 text-sm font-medium text-[#212121]"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {category.name}
-                  </Link>
-                  {category.subcategories && (
-                    <div className="pl-4">
+                  <div className="flex items-center justify-between">
+                    <Link
+                      href={`/category/${category.slug}`}
+                      className="flex min-h-11 flex-1 items-center text-base font-semibold text-[#212121]"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                    {category.subcategories && <button type="button" className="flex h-11 w-11 items-center justify-center"
+                      aria-label={`Show ${category.name} categories`} aria-expanded={expandedMobileCategory === category.id} aria-controls={`mobile-${category.id}`}
+                      onClick={() => setExpandedMobileCategory(current => current === category.id ? null : category.id)}>
+                      <ChevronDown className={`h-5 w-5 transition-transform ${expandedMobileCategory === category.id ? "rotate-180" : ""}`} />
+                    </button>}
+                  </div>
+                  {category.subcategories && expandedMobileCategory === category.id && (
+                    <div id={`mobile-${category.id}`} className="pl-4">
                       {category.subcategories.map((subcategory) => (
                         <Link
                           key={subcategory.id}
                           href={`/category/${subcategory.slug}`}
-                          className="block py-1.5 text-sm text-[#5b5d5b]"
+                          className="flex min-h-11 items-center text-sm text-[#5b5d5b]"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {subcategory.name}
