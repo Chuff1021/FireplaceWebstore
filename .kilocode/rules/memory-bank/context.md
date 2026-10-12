@@ -337,3 +337,12 @@ the dynamic viewport with internal scrolling; opening search closes the menu.
 The logo flexes to fit narrow screens. Removed forced global smooth scrolling.
 Validation includes TypeScript, ESLint, catalog regression tests, real imported
 manufacturer/department counts, and phone-browser flow checks.
+
+### October 12, 2026 — MA-212400 stock and shipping lead time
+
+At the owner's request, marked Buck 21 Complete Door Assembly MA-212400 out of
+stock with quantity zero and the availability message “Out of Stock — 4 weeks
+until ready to ship.” Added optional imported shipping lead-time metadata so the
+message appears beside stock status on the product page and in parts results.
+The product's Add to Cart button is disabled while out of stock. Other source
+records, prices, and catalog navigation are unchanged.

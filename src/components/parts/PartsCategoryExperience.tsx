@@ -196,6 +196,9 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
                     <p className="text-xs font-semibold text-[#a54210]">{product.brand}</p>
                     <h3 className="mt-1 break-words text-sm font-bold leading-5 sm:text-base">{product.name}</h3>
                     <p className="mt-2 break-all text-xs text-[#6f6255]">Part #: {product.sku}</p>
+                    {!product.inStock && product.specifications["Shipping Lead Time"] && (
+                      <p className="mt-2 text-xs font-semibold text-red-700">Out of Stock · {product.specifications["Shipping Lead Time"]}</p>
+                    )}
                     <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
                       <span className="text-lg font-black">{priceFormatter.format(product.salePrice ?? product.price)}</span>
                       <span className="text-sm font-semibold text-[#a54210]">View part →</span>

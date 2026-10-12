@@ -19,6 +19,7 @@ type ImportedPartRecord = {
   salePrice?: number;
   compareAtPrice?: number;
   availability?: string;
+  shippingLeadTime?: string;
   inStock?: boolean;
   stock?: number | null;
   imageUrl?: string;
@@ -144,6 +145,7 @@ async function readImportedPartsProducts(): Promise<Product[]> {
           Department: (record.department || "Parts").trim(),
           "Part Type": (record.partType || "N/A").trim(),
           Availability: (record.availability || "N/A").trim(),
+          ...(record.shippingLeadTime ? { "Shipping Lead Time": record.shippingLeadTime.trim() } : {}),
         },
         inStock: Boolean(record.inStock),
         stockQuantity:

@@ -299,7 +299,12 @@ export default function ProductPage() {
                   </span>
                 </div>
               ) : (
-                <span className="text-red-600 font-medium">Out of Stock</span>
+                <div>
+                  <span className="text-red-600 font-medium">Out of Stock</span>
+                  {product.specifications["Shipping Lead Time"] && (
+                    <p className="mt-2 text-sm text-gray-600">{product.specifications["Shipping Lead Time"]}</p>
+                  )}
+                </div>
               )}
             </div>
 
