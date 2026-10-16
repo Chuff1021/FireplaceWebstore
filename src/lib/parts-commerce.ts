@@ -50,7 +50,10 @@ export async function hearthCommerce(
   });
   const result = await response.json();
   if (!response.ok)
-    throw new Error(result.error || "Checkout is temporarily unavailable.");
+    throw Object.assign(
+      new Error(result.error || "Checkout is temporarily unavailable."),
+      { status: response.status, processingUnknown: result.processingUnknown },
+    );
   return result;
 }
 let cached: { expires: number; items: Map<string, LivePart> } | undefined;

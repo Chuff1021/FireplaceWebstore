@@ -67,7 +67,10 @@ async function checkout(input: unknown) {
   });
   const data = await response.json();
   if (!response.ok)
-    throw new Error(data.error || "Checkout is temporarily unavailable.");
+    throw Object.assign(
+      new Error(data.error || "Checkout is temporarily unavailable."),
+      { status: response.status, processingUnknown: data.processingUnknown },
+    );
   return data;
 }
 function CardPayment({
@@ -263,8 +266,11 @@ export default function CheckoutPage() {
             "This payment was not approved or is canceled. Get a new quote to try again.",
           );
         }
-      } catch {
-        /* An uncertain authorization stays visible for reconciliation. */
+      } catch (error) {
+        if ((error as { status?: number }).status === 404) {
+          sessionStorage.removeItem("parts-order");
+          setPendingOrder("");
+        }
       }
     };
     void poll();

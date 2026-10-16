@@ -19,6 +19,7 @@ export async function POST(request: Request) {
   let session: string = jar.get("parts-checkout")?.value || "";
   if (!session || !/^[a-f0-9]{64}$/.test(session))
     session = randomBytes(32).toString("hex");
+  let authorizationRequested = false;
   try {
     const raw = await request.text();
     if (raw.length > 24000) throw new Error("Checkout request too large.");
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
       session = String(input.token);
       delete input.token;
     }
+    authorizationRequested = input.action === "authorize";
     const result = await hearthCommerce("POST", { ...input, session });
     const response = NextResponse.json(result, {
       headers: { "Cache-Control": "private, no-store" },
@@ -72,9 +74,16 @@ export async function POST(request: Request) {
     });
     return response;
   } catch (e) {
+    const failure = e as { status?: number; processingUnknown?: boolean };
     const response = NextResponse.json(
-      { error: e instanceof Error ? e.message : "Checkout unavailable." },
-      { status: 503, headers: { "Cache-Control": "private, no-store" } },
+      {
+        error: e instanceof Error ? e.message : "Checkout unavailable.",
+        processingUnknown: failure.processingUnknown ?? authorizationRequested,
+      },
+      {
+        status: failure.status || 503,
+        headers: { "Cache-Control": "private, no-store" },
+      },
     );
     response.cookies.set("parts-checkout", session, {
       httpOnly: true,
