@@ -61,6 +61,7 @@ export function ProductCard({ product }: { product: Product }) {
         {!isContactForPricing && product.availabilityStatus !== "confirm" && (
           <button
             onClick={handleAddToCart}
+            disabled={product.categoryId === "parts" && product.partsAvailability === "out_of_stock"}
             className="absolute bottom-3 right-3 flex h-11 w-11 items-center justify-center rounded-full bg-black text-white shadow-lg transition hover:bg-[#ff7a18] hover:text-black"
             aria-label="Add to cart"
           >
@@ -84,7 +85,9 @@ export function ProductCard({ product }: { product: Product }) {
               <Ruler className="h-3.5 w-3.5 text-[#a54210]" /> {product.specifications.Width}
             </span>
           )}
-          {product.inStock ? (
+          {product.categoryId === "parts" ? (
+            <span className="text-xs font-semibold text-[#6c6256]">{{ available: "Available", special_order: "Special order", out_of_stock: "Out of stock", unverified: "Availability to confirm" }[product.partsAvailability || "unverified"]}</span>
+          ) : product.inStock ? (
             <span className="border border-green-200 bg-green-50 px-2 py-1.5 font-semibold text-green-700">
               In stock
             </span>

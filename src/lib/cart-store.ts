@@ -28,11 +28,7 @@ interface CartStore {
   getTotal: () => number;
 }
 
-// Tax rate (can be made configurable per store)
-const TAX_RATE = 0.08;
-const FREE_SHIPPING_THRESHOLD = 499;
-const FLAT_RATE_SHIPPING = 49.99;
-
+// Shipping and tax are quoted by the server after the destination is supplied.
 export const useCartStore = create<CartStore>()(
   persist(
     (set, get) => ({
@@ -42,13 +38,13 @@ export const useCartStore = create<CartStore>()(
       addItem: (product, quantity = 1) => {
         set((state) => {
           const existingItem = state.items.find(
-            (item) => item.product.id === product.id
+            (item) => (item.product.sourceKey && product.sourceKey ? item.product.sourceKey === product.sourceKey : item.product.sku === product.sku && item.product.categoryId === product.categoryId)
           );
           
           if (existingItem) {
             return {
               items: state.items.map((item) =>
-                item.product.id === product.id
+                (item.product.sourceKey && product.sourceKey ? item.product.sourceKey === product.sourceKey : item.product.sku === product.sku && item.product.categoryId === product.categoryId)
                   ? { ...item, quantity: item.quantity + quantity }
                   : item
               ),
@@ -97,25 +93,20 @@ export const useCartStore = create<CartStore>()(
         }, 0);
       },
       
-      getShipping: () => {
-        const subtotal = get().getSubtotal();
-        if (subtotal >= FREE_SHIPPING_THRESHOLD || subtotal === 0) {
-          return 0;
-        }
-        return FLAT_RATE_SHIPPING;
-      },
-      
-      getTax: () => {
-        const subtotal = get().getSubtotal();
-        return subtotal * TAX_RATE;
-      },
-      
+      getShipping: () => 0,
+      getTax: () => 0,
+
       getTotal: () => {
         return get().getSubtotal() + get().getShipping() + get().getTax();
       },
     }),
     {
       name: "fireplace-cart",
+      version: 1,
+      migrate: (persisted: unknown) => {
+        const state = persisted as { items?: CartItem[] };
+        return { items: (state.items || []).filter(item => Number.isInteger(item.quantity) && item.quantity > 0 && item.quantity <= 100) };
+      },
     }
   )
 );
