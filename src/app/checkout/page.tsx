@@ -254,6 +254,7 @@ export default function CheckoutPage() {
   useEffect(() => {
     const id = pendingOrder || sessionStorage.getItem("parts-order");
     if (!id) return;
+    if (!pendingOrder) setPendingOrder(id);
     let active = true;
     const poll = async () => {
       try {
