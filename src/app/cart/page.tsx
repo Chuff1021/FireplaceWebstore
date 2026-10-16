@@ -207,7 +207,7 @@ export default function CartPage() {
                   <span>💳 Visa</span>
                   <span>💳 MC</span>
                   <span>💳 Amex</span>
-                  
+
                 </div>
               </div>
             </div>
