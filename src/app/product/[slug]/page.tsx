@@ -20,7 +20,6 @@ import { useCartStore } from "@/lib/cart-store";
 import { defaultStoreConfig, type Product } from "@/lib/store-config";
 import { ProductCard } from "@/components/ui/ProductCard";
 import { resolveProductImage, resolveProductImages } from "@/lib/product-images";
-import { AlternateVendors } from "@/components/parts/AlternateVendors";
 
 function formatPrice(price: number) {
   return new Intl.NumberFormat("en-US", {
@@ -60,6 +59,9 @@ export default function ProductPage() {
         if (!cancelled) {
           const loadedProduct = data[0] ?? null;
           setRemoteProduct(loadedProduct);
+          if(loadedProduct?.categoryId === "parts" && loadedProduct.sourceKey) {
+            void fetch("/api/checkout", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({action:"interest",items:[{key:loadedProduct.sourceKey,quantity:1}]})}).catch(()=>{});
+          }
 
           if (loadedProduct) {
             const relatedResponse = await fetch(
@@ -288,7 +290,14 @@ export default function ProductPage() {
 
             {/* Stock Status */}
             <div className="mb-6">
-              {product.availabilityStatus === "confirm" ? (
+              {product.categoryId === "parts" ? (
+                <div className="space-y-2">
+                  <p className="font-medium">{{ available: "Available", special_order: "Special order", out_of_stock: "Out of stock", unverified: "Availability needs confirmation" }[product.partsAvailability || "unverified"]}
+                    {product.publishedStockQuantity != null && product.partsAvailability === "available" ? ` · ${product.publishedStockQuantity} available at last check` : ""}</p>
+                  <p className="text-sm text-gray-600">{product.specifications.Availability}</p>
+                  {product.availabilityCheckedAt && <p className="text-xs text-gray-500">Availability checked {new Date(product.availabilityCheckedAt).toLocaleString()}. Supplier stock is confirmed again at checkout.</p>}
+                </div>
+              ) : product.availabilityStatus === "confirm" ? (
                 <span className="font-medium text-gray-600">Contact us to confirm availability and delivery timing.</span>
               ) : product.inStock ? (
                 <div className="flex items-center gap-2 text-green-600">
@@ -310,10 +319,6 @@ export default function ProductPage() {
 
             {/* SKU */}
             <p className="text-sm text-gray-500 mb-2">SKU: {product.sku}</p>
-
-            {product.categoryId === "parts" && product.sku ? (
-              <AlternateVendors sku={product.sku} currentVendor="stove-parts-unlimited" />
-            ) : null}
 
             {/* Quantity & Add to Cart */}
             <div className="flex flex-wrap gap-4 mb-8">
@@ -354,11 +359,11 @@ export default function ProductPage() {
               ) : (
                 <button
                   onClick={handleAddToCart}
-                  disabled={!product.inStock}
+                  disabled={product.categoryId === "parts" ? product.partsAvailability === "out_of_stock" : !product.inStock}
                   className="flex-1 flex items-center justify-center gap-2 px-8 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
                 >
                   <ShoppingCart className="w-5 h-5" />
-                  Add to Cart
+                  {product.categoryId === "parts" && !product.canPurchase ? "Add to quote request" : "Add to Cart"}
                 </button>
               )}
 

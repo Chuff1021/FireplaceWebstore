@@ -346,3 +346,7 @@ until ready to ship.” Added optional imported shipping lead-time metadata so t
 message appears beside stock status on the product page and in parts results.
 The product's Add to Cart button is disabled while out of stock. Other source
 records, prices, and catalog navigation are unchanged.
+
+## October 16, 2026 — Parts stock and checkout
+
+Parts use canonical supplier product IDs and live, signed HearthOS inventory overlays with freshness/unknown-quantity labels. Removed alternate-vendor claims and hardcoded shipping/free-shipping thresholds/8% tax totals. Checkout now supports server quotes, Square tokenized authorization, online email quote fallback and owner-issued checkout links. Legacy carts resolve by unique SKU. MA-212400 remains blocked unless the explicit database override is changed. Payment activation is gated in HearthOS; see that repository's `docs/PARTS_COMMERCE.md`. Android Chrome and iPhone Safari checkout layout verified with no horizontal overflow.

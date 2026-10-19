@@ -18,9 +18,6 @@ export default function CartPage() {
     updateQuantity,
     clearCart,
     getSubtotal,
-    getShipping,
-    getTax,
-    getTotal,
   } = useCartStore();
 
   if (items.length === 0) {
@@ -178,19 +175,19 @@ export default function CartPage() {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-medium">
-                    {formatPrice(getShipping())}
+                    Calculated at checkout
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Estimated Tax</span>
-                  <span className="font-medium">{formatPrice(getTax())}</span>
+                  <span className="text-gray-600">Tax</span>
+                  <span className="font-medium">Calculated at checkout</span>
                 </div>
 
                 <div className="border-t pt-3 mt-3">
                   <div className="flex justify-between text-lg font-bold">
-                    <span>Total</span>
+                    <span>Items subtotal</span>
                     <span className="text-orange-600">
-                      {formatPrice(getTotal())}
+                      {formatPrice(getSubtotal())}
                     </span>
                   </div>
                 </div>
@@ -205,12 +202,12 @@ export default function CartPage() {
 
               {/* Payment Methods */}
               <div className="mt-6 text-center">
-                <p className="text-xs text-gray-500 mb-2">Secure Payment</p>
+                <p className="text-xs text-gray-500 mb-2">Card authorization through Square</p>
                 <div className="flex justify-center gap-2 text-gray-400 text-sm">
                   <span>💳 Visa</span>
                   <span>💳 MC</span>
                   <span>💳 Amex</span>
-                  <span>🅿️ PayPal</span>
+
                 </div>
               </div>
             </div>
