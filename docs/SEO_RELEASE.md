@@ -34,3 +34,12 @@
 6. Continue source review before adding more model mappings or supersession chains. Unknown matches stay unknown. The model-reference review date is separate from the scanner’s current availability check.
 
 SEO is ongoing: the code and first content release can be shipped now; rankings, new customer reviews, links and future source evidence cannot be marked complete in advance. No #1 position or traffic lift is guaranteed.
+
+## Published release
+
+- Storefront production: `https://fireplace-webstore-96mnh5cmy-chuff1021s-projects.vercel.app`, deployment `dpl_64ixYmEzRAGHk9FNmAiYn3N6moou`, runtime commit `29f3350c`, promoted to `https://aaronsfireplaceco.com` October 30, 2026.
+- HearthOS production: `https://hearth-awy1a39ky-chuff1021s-projects.vercel.app`, deployment `dpl_6iRG9q3y2Tbto3ydf831gnuMaHCF`, runtime commit `33d90b7`, promoted to `https://hearth-os.vercel.app`.
+- The staged and public storefront both passed `scripts/verify-seo.mjs`: 32,449 unique sitemap URLs. Public browser confirmed twelve manufacturer departments, correct canonical, no horizontal overflow and no console errors on the new directory.
+- Phone-size checks at 390px and 360px verified manufacturer changes, completed page-two navigation/canonical/results, MA-212400's four-week stock message, worksheet contact prefill and arithmetic ($85 repair / $1,600 replacement / $1,515 difference using test inputs). No customer form was submitted.
+- Error-level runtime log scans for both new deployments were empty during verification. These are bounded release checks, not a claim that long-term field performance or search rankings have already been measured.
+- Existing draft PRs were updated and pushed; no PR merge was required to promote the tested deployments. Google Search Console remains a prefilled setup awaiting owner-account confirmation.
