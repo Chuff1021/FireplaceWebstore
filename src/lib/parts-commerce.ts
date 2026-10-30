@@ -19,6 +19,8 @@ export async function hearthCommerce(
   method: "GET" | "POST",
   payload?: unknown,
   after?: string,
+  keys?: string[],
+  query?: { slug?: string; discovered?: boolean },
 ) {
   const origin = process.env.HEARTHOS_COMMERCE_ORIGIN,
     secret = process.env.HEARTHOS_WEBSITE_ORDER_SECRET;
@@ -30,6 +32,9 @@ export async function hearthCommerce(
   if (url.protocol !== "https:" || url.username || url.password)
     throw new Error("Checkout configuration needs review.");
   if (after) url.searchParams.set("after", after);
+  if (keys) url.searchParams.set("keys", keys.join(","));
+  if (query?.slug) url.searchParams.set("slug", query.slug);
+  if (query?.discovered) url.searchParams.set("discovered", "true");
   const body = payload === undefined ? "" : JSON.stringify(payload),
     timestamp = String(Date.now()),
     path = url.pathname + url.search;
@@ -87,4 +92,45 @@ export async function liveParts(): Promise<Map<string, LivePart>> {
   } finally {
     pending = undefined;
   }
+}
+
+// Do not download every supplier offer to render a single SKU or one results page.
+export async function livePartsByKeys(keys: string[]): Promise<Map<string, LivePart>> {
+  const unique = [...new Set(keys.filter(Boolean))];
+  if (!unique.length || !process.env.HEARTHOS_COMMERCE_ORIGIN) return new Map();
+  const result = new Map<string, LivePart>();
+  try {
+    await Promise.all(Array.from({ length: Math.ceil(unique.length / 48) }, async (_, i) => {
+      const batch = unique.slice(i * 48, (i + 1) * 48);
+      const data = await hearthCommerce("GET", undefined, undefined, batch);
+      if (!Array.isArray(data.items)) throw new Error("Parts catalog unavailable");
+      for (const item of data.items as LivePart[]) if (batch.includes(item.key)) result.set(item.key, item);
+    }));
+  } catch { return new Map(); } // fail closed to unverified; preserve the owner override
+  return result;
+}
+
+let discovered: { expires: number; items: LivePart[] } | undefined;
+let discovering: Promise<LivePart[]> | undefined;
+export async function discoveredParts(): Promise<LivePart[]> {
+  if (!process.env.HEARTHOS_COMMERCE_ORIGIN) return [];
+  if (discovered && discovered.expires > Date.now()) return discovered.items;
+  discovering ??= (async () => {
+    const items: LivePart[] = []; let after = "";
+    for (let page = 0; page < 100; page++) {
+      const data = await hearthCommerce("GET", undefined, after, undefined, { discovered: true });
+      if (!Array.isArray(data.items)) throw new Error("Discovered parts unavailable");
+      items.push(...data.items.filter((p: LivePart) => p.catalog));
+      if (!data.next) { discovered = { expires: Date.now() + 60000, items }; return items; }
+      if (data.next === after) throw new Error("Catalog pagination stalled");
+      after = data.next;
+    }
+    throw new Error("Discovered catalog exceeds page limit");
+  })();
+  try { return await discovering; } catch { return []; } finally { discovering = undefined; }
+}
+export async function livePartBySlug(slug: string): Promise<LivePart | null> {
+  if (!process.env.HEARTHOS_COMMERCE_ORIGIN || !/^[a-z0-9-]{1,220}$/.test(slug)) return null;
+  const data = await hearthCommerce("GET", undefined, undefined, undefined, { slug });
+  return data.items?.[0] || null;
 }

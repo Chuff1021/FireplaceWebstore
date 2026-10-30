@@ -1,4 +1,5 @@
 "use client";
+import { landingAttribution } from "./landing-session";
 import type { CartItem } from "./cart-store";
 
 let memoryId = "";
@@ -31,7 +32,7 @@ export function recordCartActivity(
   items: CartItem[],
   extra: { contact?: { name: string; email: string; phone: string }; intent?: "checkout" | "callback" | "quote"; notes?: string } = {},
 ) {
-  const payload = { action: "cart_activity", journeyId: cartJourneyId(), event, items: cartSnapshot(items), ...extra };
+  const payload = { action: "cart_activity", journeyId: cartJourneyId(), event, items: cartSnapshot(items), attribution: landingAttribution(), ...extra };
   // Establish the first cookie before the next event or contact-field edit.
   const result = queue.catch(() => {}).then(async () => {
     for (let attempt = 0; attempt < 2; attempt++) {

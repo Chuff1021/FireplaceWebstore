@@ -39,6 +39,7 @@ export default function PrivacyPage() {
               <li>Order history and preferences</li>
               <li>Communications with our team</li>
               <li>Information provided through contact forms or inquiries</li>
+              <li>The public page where a visit began and a general traffic category (such as organic search or direct), linked to cart activity for understanding which pages lead to inquiries. Full referring URLs, search queries and advertising identifiers are not retained in this cart report.</li>
               <li>Contact details completed at checkout and the items in your cart, including when checkout is not completed</li>
             </ul>
           </div>

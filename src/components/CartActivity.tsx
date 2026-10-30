@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useCartStore } from "@/lib/cart-store";
+import { captureLanding } from "@/lib/landing-session";
 import { recordCartActivity, resetCartJourney } from "@/lib/cart-activity";
 
 export function CartActivity() {
@@ -9,6 +10,7 @@ export function CartActivity() {
   // agree, including header badges and the initial checkout/cart content.
   useEffect(() => { void useCartStore.persist.rehydrate(); }, []);
   const pathname = usePathname();
+  useEffect(() => { captureLanding(); }, [pathname]);
   const items = useCartStore((s) => s.items);
   const isOpen = useCartStore((s) => s.isOpen);
   const seen = useRef(false);

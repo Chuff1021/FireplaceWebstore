@@ -58,24 +58,22 @@ function toShortDescription(input: string) {
 let catalogPromise: Promise<Product[]> | undefined;
 
 export async function loadImportedPartsProducts(): Promise<Product[]> {
-  catalogPromise ??= readImportedPartsProducts().catch(error => {
-    catalogPromise = undefined;
-    throw error;
-  });
-  const [base, live] = await Promise.all([catalogPromise, liveParts()]);
-  const uniqueBase = [...new Map(base.map(product => [product.id, product])).values()];
+  const [uniqueBase, live] = await Promise.all([loadBasePartsProducts(), liveParts()]);
   const known = new Set(uniqueBase.map(product => product.sourceKey));
-  const added: Product[] = [...live.values()].filter(part => part.catalog && !known.has(part.key)).map(part => {
-    const c = part.catalog!, name = String(c.name || part.sku), brand = normalizePartsBrand(String(c.brand || "Other Parts"));
-    return { id: `part-spu-${part.sourceId}`, sourceKey: part.key, sku: part.sku, slug: String(c.slug || toSlug(part.sku)), name,
-      description: String(c.description || name), shortDescription: toShortDescription(String(c.description || name)), price: (part.priceCents || 0) / 100,
-      categoryId: "parts", subcategoryId: departmentMap[String(c.department)] || "parts", brand,
-      images: c.imageUrl ? [String(c.imageUrl)] : [DEFAULT_PRODUCT_IMAGE], features: [],
-      specifications: { SKU: part.sku, Brand: brand, Department: String(c.department || "Parts"), "Part Type": String(c.partType || "N/A") },
-      inStock: false, stockQuantity: 0, rating: 0, reviewCount: 0, isFeatured: false, isNew: true, isBestSeller: false,
-    };
-  });
-  return uniqueBase.concat(added).map(product => {
+  const added = [...live.values()].filter(part => part.catalog && !known.has(part.key)).map(partFromLive);
+  return applyPartsOffers(uniqueBase.concat(added), live);
+}
+
+// Static identity/catalog data is indexed once per worker. Availability stays separate.
+export async function loadBasePartsProducts(): Promise<Product[]> {
+  catalogPromise ??= readImportedPartsProducts().then(products =>
+    [...new Map(products.map(product => [product.id, product])).values()]
+  ).catch(error => { catalogPromise = undefined; throw error; });
+  return catalogPromise;
+}
+
+export function applyPartsOffers(products: Product[], live: Map<string, import("@/lib/parts-commerce").LivePart>): Product[] {
+  return products.map(product => {
     const current = live.get(product.sourceKey || "");
     const override = product.sku === "MA-212400" && !current;
     const status = override ? "out_of_stock" : current?.status || "unverified";
@@ -191,3 +189,14 @@ async function readImportedPartsProducts(): Promise<Product[]> {
 
   return products;
 }
+
+export function partFromLive(part: import("@/lib/parts-commerce").LivePart): Product {
+    const c = part.catalog!, name = String(c.name || part.sku), brand = normalizePartsBrand(String(c.brand || "Other Parts"));
+    return { id: `part-spu-${part.sourceId}`, sourceKey: part.key, sku: part.sku, slug: String(c.slug || toSlug(part.sku)), name,
+      description: String(c.description || name), shortDescription: toShortDescription(String(c.description || name)), price: (part.priceCents || 0) / 100,
+      categoryId: "parts", subcategoryId: departmentMap[String(c.department)] || "parts", brand,
+      images: c.imageUrl ? [String(c.imageUrl)] : [DEFAULT_PRODUCT_IMAGE], features: [],
+      specifications: { SKU: part.sku, Brand: brand, Department: String(c.department || "Parts"), "Part Type": String(c.partType || "N/A") },
+      inStock: false, stockQuantity: 0, rating: 0, reviewCount: 0, isFeatured: false, isNew: true, isBestSeller: false,
+    };
+ }
