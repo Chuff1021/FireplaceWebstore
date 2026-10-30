@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Script from "next/script";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useEffectEvent, useRef, useState } from "react";
 import { useCartStore } from "@/lib/cart-store";
+import { cartJourneyId, recordCartActivity } from "@/lib/cart-activity";
 
 type Address = {
   name: string;
@@ -192,6 +193,7 @@ function CardPayment({
         Payment is captured after we confirm your supplier order.
       </p>
       <div id="square-card" className="min-h-24" />
+      <p className="my-4 text-sm">To complete payment by phone, call <a href="tel:+14177329775" onClick={() => { void recordCartActivity("call", useCartStore.getState().items).catch(() => {}); }} className="font-bold text-orange-700 underline">417-732-9775</a>.</p>
       {error && (
         <p role="alert" className="my-3 text-red-700">
           {error}
@@ -229,6 +231,9 @@ export default function CheckoutPage() {
     [busy, setBusy] = useState(false),
     [error, setError] = useState("");
   const [pendingOrder, setPendingOrder] = useState("");
+  const [contactStatus, setContactStatus] = useState("");
+  const savedContact = useRef("");
+  const contactSaveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const [success, setSuccess] = useState(""),
     [requestSent, setRequestSent] = useState(false),
     [notes, setNotes] = useState("");
@@ -300,6 +305,33 @@ export default function CheckoutPage() {
     setAddress((a) => ({ ...a, [key]: value }));
     setQuote(null);
     setError("");
+    if (["name", "email", "phone"].includes(key)) setContactStatus("");
+  }
+  const saveCompletedContact = useEffectEvent(() => { void saveContact(); });
+  useEffect(() => {
+    contactSaveTimer.current = setTimeout(() => saveCompletedContact(), 1200);
+    return () => clearTimeout(contactSaveTimer.current);
+  }, [address.name, address.email, address.phone]);
+  async function saveContact(intent: "checkout" | "callback" | "quote" = "checkout", required = false) {
+    clearTimeout(contactSaveTimer.current);
+    if (!items.length || success) return false;
+    const contact = { name: address.name.trim(), email: address.email.trim(), phone: address.phone.trim() };
+    const hasContact = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email) || contact.phone.replace(/\D/g, "").length >= 10;
+    if (!contact.name || !hasContact) {
+      if (required) setContactStatus("Enter your name and a valid email or phone number so we can follow up.");
+      return false;
+    }
+    const details = JSON.stringify({ contact, intent, notes, address, cartFingerprint });
+    if (savedContact.current === details) return true;
+    try {
+      await recordCartActivity("contact", items, { contact, intent, notes: [notes, address.street ? `Ship to: ${address.street} ${address.street2}, ${address.city}, ${address.state} ${address.zip}` : ""].filter(Boolean).join("\n") });
+      savedContact.current = details;
+      setContactStatus("Your contact details and cart are saved with Aaron’s. No payment has been collected.");
+      return true;
+    } catch {
+      setContactStatus("Your details could not be saved. Please try again or call 417-732-9775.");
+      return false;
+    }
   }
   async function getQuote(shippingId?: string) {
     if (busy || pendingOrder) return;
@@ -307,8 +339,11 @@ export default function CheckoutPage() {
     setError("");
     setQuote(null);
     try {
+      if (!(await saveContact("checkout", true)))
+        throw new Error("We couldn’t save your contact details. Please try again or call 417-732-9775 to complete your order.");
       const r = await checkout({
         action: "quote",
+        journeyId: cartJourneyId(),
         items: items.map((i) => ({
           key: i.product.sourceKey || i.product.sku,
           sku: i.product.sku,
@@ -335,40 +370,9 @@ export default function CheckoutPage() {
     setBusy(true);
     setError("");
     try {
-      if (!address.name.trim() || !address.email.includes("@"))
-        throw new Error("Enter your name and email for the quote.");
-      const r = await fetch("/api/customer-inbox", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: "order",
-          name: address.name,
-          email: address.email,
-          phone: address.phone,
-          subject: "Parts shipping and checkout quote requested",
-          message: notes,
-          metadata: {
-            address: [
-              address.street,
-              address.street2,
-              `${address.city}, ${address.state} ${address.zip}`,
-              address.country,
-            ]
-              .filter(Boolean)
-              .join("\n"),
-            paymentStatus: "Not collected — quote requested",
-            shipping: "To confirm",
-            tax: "To confirm",
-          },
-          items: items.map((i) => ({
-            name: i.product.name,
-            sku: i.product.sku,
-            quantity: i.quantity,
-            price: (i.product.salePrice ?? i.product.price) * i.quantity,
-          })),
-        }),
-      });
-      if (!r.ok)
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(address.email.trim()))
+        throw new Error("Enter your email for an email quote, or use ‘Save details & request a call’ for phone follow-up.");
+      if (!(await saveContact("quote", true)))
         throw new Error(
           "Your quote request could not be saved. Please try again.",
         );
@@ -390,6 +394,7 @@ export default function CheckoutPage() {
             ? `Order ${success.slice(0, 8).toUpperCase()}. Your card has a temporary hold. We’ll email confirmation after arranging your supplier order.`
             : "We’ll confirm availability and shipping and email your checkout details. No payment has been collected."}
         </p>
+        <p className="mt-5">To complete your order by phone, call <a href="tel:+14177329775" className="font-bold text-orange-700 underline">417-732-9775</a>.</p>
         <Link
           href="/category/parts"
           className="mt-8 inline-block text-orange-700 underline"
@@ -425,6 +430,11 @@ export default function CheckoutPage() {
         </p>
         <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_360px]">
           <section className="min-w-0 rounded-lg border bg-white p-5 md:p-8">
+            <section className="mb-7 rounded-lg border border-orange-200 bg-orange-50 p-5" aria-label="Complete your order by phone">
+              <h2 className="text-xl font-bold">Call to complete your order</h2>
+              <p className="mt-2 text-sm">We’ll confirm availability, shipping and your final total, then help you complete payment.</p>
+              <a href="tel:+14177329775" onClick={() => { void saveContact(); void recordCartActivity("call", items).catch(() => {}); }} className="mt-4 inline-block rounded bg-orange-700 px-5 py-3 text-xl font-bold text-white">417-732-9775</a>
+            </section>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -432,6 +442,9 @@ export default function CheckoutPage() {
               }}
             >
               <h2 className="mb-5 text-xl font-bold">Contact and shipping</h2>
+              <p id="checkout-contact-notice" className="mb-5 text-sm text-gray-600">
+                As you complete your contact details below, we save them with your cart so Aaron’s can call or email to help finish this order, even if you leave checkout. No payment is collected by saving your details. <Link href="/privacy" className="underline">Privacy policy</Link>
+              </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {(
                   [
@@ -456,6 +469,8 @@ export default function CheckoutPage() {
                       type={type}
                       value={address[key]}
                       onChange={(e) => change(key, e.target.value)}
+                      onBlur={() => { if (["name", "email", "phone"].includes(key)) void saveContact(); }}
+                      aria-describedby={["name", "email", "phone"].includes(key) ? "checkout-contact-notice" : undefined}
                       autoComplete={
                         {
                           name: "name",
@@ -488,6 +503,8 @@ export default function CheckoutPage() {
                   </select>
                 </label>
               </div>
+              <button type="button" disabled={busy || Boolean(pendingOrder)} onClick={() => void saveContact("callback", true)} className="mt-4 rounded border border-orange-700 px-4 py-3 font-semibold text-orange-800 disabled:opacity-50">Save details & request a call</button>
+              {contactStatus && <p role="status" className="mt-3 text-sm">{contactStatus}</p>}
               <p className="mt-3 text-sm text-gray-500">
                 Online shipping serves the contiguous United States. Other
                 destinations and special orders can be quoted by email.

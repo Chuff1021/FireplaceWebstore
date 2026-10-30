@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     if (raw.length > 24000) throw new Error("Checkout request too large.");
     const input = JSON.parse(raw);
     if (
-      !["quote", "authorize", "status", "redeem", "interest"].includes(
+      !["quote", "authorize", "status", "redeem", "interest", "cart_activity"].includes(
         input.action,
       )
     )

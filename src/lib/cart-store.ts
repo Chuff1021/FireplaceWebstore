@@ -102,6 +102,7 @@ export const useCartStore = create<CartStore>()(
     }),
     {
       name: "fireplace-cart",
+      skipHydration: true,
       version: 1,
       migrate: (persisted: unknown) => {
         const state = persisted as { items?: CartItem[] };

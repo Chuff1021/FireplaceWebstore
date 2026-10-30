@@ -350,3 +350,8 @@ records, prices, and catalog navigation are unchanged.
 ## October 16, 2026 — Parts stock and checkout
 
 Parts use canonical supplier product IDs and live, signed HearthOS inventory overlays with freshness/unknown-quantity labels. Removed alternate-vendor claims and hardcoded shipping/free-shipping thresholds/8% tax totals. Checkout now supports server quotes, Square tokenized authorization, online email quote fallback and owner-issued checkout links. Legacy carts resolve by unique SKU. MA-212400 remains blocked unless the explicit database override is changed. Payment activation is gated in HearthOS; see that repository's `docs/PARTS_COMMERCE.md`. Android Chrome and iPhone Safari checkout layout verified with no horizontal overflow.
+
+
+## October 30, 2026 — Cart follow-up and phone checkout
+
+Checkout now prominently offers 417-732-9775, including at secure payment, and an explicit callback request. A visible notice and updated privacy policy explain saving completed name/email/phone with the cart for order help. Valid contact details save on blur or after a short pause, before shipping/payment; quote requests use the same durable HearthOS inbox path. Cart/checkout visits and phone clicks are sent through the signed server bridge, with visible-page heartbeats and best-effort exit activity. Cart IDs rotate after 30 minutes idle; cookie loss safely creates a fresh ID rather than reclaiming another session. Persisted carts hydrate after the first render to avoid server/browser mismatches. Android Chromium and iPhone WebKit verified contact persistence even when payment is gated, stable inbox deduplication and mobile layout. No past abandonment data can be reconstructed; tracking starts with deployment.

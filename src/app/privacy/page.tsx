@@ -26,7 +26,7 @@ export default function PrivacyPage() {
       {/* Content */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <p className="text-gray-500 text-sm">Last updated: February 2024</p>
+          <p className="text-gray-500 text-sm">Last updated: October 30, 2026</p>
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
@@ -39,6 +39,7 @@ export default function PrivacyPage() {
               <li>Order history and preferences</li>
               <li>Communications with our team</li>
               <li>Information provided through contact forms or inquiries</li>
+              <li>Contact details completed at checkout and the items in your cart, including when checkout is not completed</li>
             </ul>
           </div>
 
@@ -49,6 +50,7 @@ export default function PrivacyPage() {
               <li>Process and fulfill your orders</li>
               <li>Communicate with you about your orders, products, and services</li>
               <li>Provide customer support and technical assistance</li>
+              <li>Call or email you about completing an unfinished checkout or a requested shipping quote</li>
               <li>Send promotional emails (with your consent)</li>
               <li>Improve our website and services</li>
               <li>Comply with legal obligations</li>
@@ -89,6 +91,7 @@ export default function PrivacyPage() {
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
               <li>Remember your preferences and cart contents</li>
               <li>Understand how you use our website</li>
+              <li>Measure cart visits, checkout visits, phone-button clicks, and inactive carts using a browser session identifier</li>
               <li>Improve our website performance and content</li>
             </ul>
             <p className="text-gray-600 mt-4">
