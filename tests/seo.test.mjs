@@ -4,10 +4,11 @@ import test from 'node:test';
 import { jsonLd, pageMetadata, productSchema, isSearchEligibleProduct } from '../src/lib/seo.ts';
 import { classifyLanding } from '../src/lib/traffic-attribution.ts';
 
-test('DS Stoves products stay excluded from the appliance catalog sources', () => {
-  for (const fileName of ['wood-stoves-scraped.json', 'gas-stoves-scraped.json']) {
+test('owner-removed appliance brands stay excluded from the appliance catalog sources', () => {
+  for (const fileName of ['wood-stoves-scraped.json', 'gas-stoves-scraped.json', 'wood-inserts-scraped.json']) {
     const products = JSON.parse(readFileSync(new URL(`../data/${fileName}`, import.meta.url), 'utf8'));
     assert.equal(products.some((product) => product.brand?.toLowerCase() === 'ds stoves'), false);
+    assert.equal(products.some((product) => product.name?.toLowerCase().startsWith('england stove works ')), false);
   }
 });
 

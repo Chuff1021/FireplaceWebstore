@@ -382,3 +382,12 @@ Published from commit `c751efea` through production deployment
 former product URLs return 404 and that the wood-stoves category, gas-stoves
 category, product API responses and sitemap contain no DS Stoves references.
 The post-release error log scan was empty.
+
+## November 16, 2026 — England Stove Works appliance removal
+
+Removed all eleven England Stove Works complete-appliance listings at the
+owner's request: nine wood/camp stoves and two wood fireplace inserts. Removed
+their source catalog records and the two image-upgrade index entries. Expanded
+the appliance-source regression test to prevent England Stove Works listings
+from returning. Englander replacement parts remain in the parts catalog for
+owners of existing stoves; this change does not remove or alter parts inventory.
