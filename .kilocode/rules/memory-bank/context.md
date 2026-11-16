@@ -391,3 +391,9 @@ their source catalog records and the two image-upgrade index entries. Expanded
 the appliance-source regression test to prevent England Stove Works listings
 from returning. Englander replacement parts remain in the parts catalog for
 owners of existing stoves; this change does not remove or alter parts inventory.
+
+Published from commit `6d174e3b` through production deployment
+`dpl_GPMuEu18gtSzshFVMiMokT7CCwHo`. Staged and live checks confirmed all eleven
+former appliance URLs return 404 and that the wood-stoves category, wood-inserts
+category, matching product API responses and sitemap contain no removed England
+Stove Works appliance references. The post-release error log scan was empty.
