@@ -367,3 +367,12 @@ Catalog identity caches and bounded signed live offer reads avoid downloading al
 Private cart reporting now includes coarse source and landing path through HearthOS, and new contact forms carry the same safe context. No full URL queries/referrers, ad IDs or customer data are sent to generic analytics. Inventory, tax, dealer shipping and payment activation gates were preserved. See `docs/SEO_RELEASE.md`, `docs/SEO_MODEL_REVIEW.md` and `docs/SEO_GROWTH_WORKLIST.md` for evidence, verification, account setup and ongoing content work. Search Console/GBP access has not been verified; original project media, reviews and qualified service evidence remain inputs rather than fabricated content.
 
 SEO release published October 30: storefront runtime `29f3350c`, deployment `dpl_64ixYmEzRAGHk9FNmAiYn3N6moou` (`fireplace-webstore-96mnh5cmy-chuff1021s-projects.vercel.app`) promoted to aaronsfireplaceco.com. Staged and public HTTP checks passed with 32,449 unique canonical sitemap URLs. Public directory browser check confirmed twelve brand departments, correct canonical, no overflow/console errors; phone-size checks verified manufacturer switching, pagination, stock message, worksheet prefill and cost arithmetic. Error-level log scans were empty in the verification window. Search Console setup is prefilled in Chrome, awaiting explicit ownership-account confirmation; it has not been connected. Original job media, actual reviews, qualified fitment expansion and earned links are ongoing evidence work, not fabricated completed outcomes.
+
+## November 16, 2026 — DS Stoves catalog removal
+
+Removed all nine DS Stoves appliance listings at the owner's request: seven
+wood/cookstoves and two gas stoves. The source catalog records and image-upgrade
+index entries were removed, so the products no longer resolve through appliance
+search, category pages, the product API, direct product routes or the sitemap.
+A regression test requires both appliance source files to remain free of the
+DS Stoves brand. Parts catalog records were not changed.

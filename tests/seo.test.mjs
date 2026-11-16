@@ -1,7 +1,15 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { jsonLd, pageMetadata, productSchema, isSearchEligibleProduct } from '../src/lib/seo.ts';
 import { classifyLanding } from '../src/lib/traffic-attribution.ts';
+
+test('DS Stoves products stay excluded from the appliance catalog sources', () => {
+  for (const fileName of ['wood-stoves-scraped.json', 'gas-stoves-scraped.json']) {
+    const products = JSON.parse(readFileSync(new URL(`../data/${fileName}`, import.meta.url), 'utf8'));
+    assert.equal(products.some((product) => product.brand?.toLowerCase() === 'ds stoves'), false);
+  }
+});
 
 test('product schema does not invent stock, reviews, offers or manufacturer identifiers', () => {
   const product = { slug: 'part', name: 'Part', sku: 'ABC', brand: 'Brand', description: 'A part', images: ['/part.jpg'], price: 50, categoryId: 'parts', partsAvailability: 'unverified', canPurchase: false };
