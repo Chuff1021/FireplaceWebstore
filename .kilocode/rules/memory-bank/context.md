@@ -376,3 +376,9 @@ index entries were removed, so the products no longer resolve through appliance
 search, category pages, the product API, direct product routes or the sitemap.
 A regression test requires both appliance source files to remain free of the
 DS Stoves brand. Parts catalog records were not changed.
+
+Published from commit `c751efea` through production deployment
+`dpl_Cd76sc5Fmdq8bnb1Kr7nb8MbK5GL`. Staged and live checks confirmed all nine
+former product URLs return 404 and that the wood-stoves category, gas-stoves
+category, product API responses and sitemap contain no DS Stoves references.
+The post-release error log scan was empty.
