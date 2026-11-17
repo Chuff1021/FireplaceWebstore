@@ -1,4 +1,5 @@
 import "server-only";
+import { liveParts } from "@/lib/parts-commerce";
 
 import { readdir, readFile } from "fs/promises";
 import path from "path";
@@ -7,6 +8,7 @@ import { type Product } from "@/lib/store-config";
 import { normalizePartsBrand } from "@/lib/parts-catalog";
 
 type ImportedPartRecord = {
+  productId?: string;
   sku?: string;
   slug?: string;
   name?: string;
@@ -55,12 +57,37 @@ function toShortDescription(input: string) {
 // These bundled files change on deployment, so warm requests can reuse the catalog.
 let catalogPromise: Promise<Product[]> | undefined;
 
-export function loadImportedPartsProducts(): Promise<Product[]> {
-  catalogPromise ??= readImportedPartsProducts().catch(error => {
-    catalogPromise = undefined;
-    throw error;
-  });
+export async function loadImportedPartsProducts(): Promise<Product[]> {
+  const [uniqueBase, live] = await Promise.all([loadBasePartsProducts(), liveParts()]);
+  const known = new Set(uniqueBase.map(product => product.sourceKey));
+  const added = [...live.values()].filter(part => part.catalog && !known.has(part.key)).map(partFromLive);
+  return applyPartsOffers(uniqueBase.concat(added), live);
+}
+
+// Static identity/catalog data is indexed once per worker. Availability stays separate.
+export async function loadBasePartsProducts(): Promise<Product[]> {
+  catalogPromise ??= readImportedPartsProducts().then(products =>
+    [...new Map(products.map(product => [product.id, product])).values()]
+  ).catch(error => { catalogPromise = undefined; throw error; });
   return catalogPromise;
+}
+
+export function applyPartsOffers(products: Product[], live: Map<string, import("@/lib/parts-commerce").LivePart>): Product[] {
+  return products.map(product => {
+    const current = live.get(product.sourceKey || "");
+    const override = product.sku === "MA-212400" && !current;
+    const status = override ? "out_of_stock" : current?.status || "unverified";
+    const availability = override ? "Out of stock. 4 weeks until ready to ship" : current?.availability || "Availability needs confirmation";
+    const price = current?.priceCents !== undefined ? current.priceCents / 100 : product.salePrice ?? product.price;
+    const list = current ? (current.listCents ? current.listCents / 100 : price) : product.price;
+    return { ...product, price: list, salePrice: list > price ? price : undefined,
+      partsAvailability: status, availabilityCheckedAt: current?.checkedAt || undefined,
+      publishedStockQuantity: current?.quantity ?? null, canPurchase: !override && Boolean(current?.canPurchase),
+      inStock: status === "available", stockQuantity: current?.quantity ?? 0,
+      features: product.features.filter(f => !f.startsWith("Availability:")).concat(`Availability: ${availability}`),
+      specifications: { ...Object.fromEntries(Object.entries(product.specifications).filter(([key]) => !current || key !== "Shipping Lead Time")), Availability: availability },
+    };
+  });
 }
 
 async function readImportedPartsProducts(): Promise<Product[]> {
@@ -123,7 +150,8 @@ async function readImportedPartsProducts(): Promise<Product[]> {
       index += 1;
 
       products.push({
-        id: `part-${index}`,
+        id: record.productId ? `part-spu-${record.productId}` : `part-${index}`,
+        sourceKey: record.productId ? `spu:${record.productId}` : undefined,
         sku: sku || slug,
         name,
         slug,
@@ -161,3 +189,14 @@ async function readImportedPartsProducts(): Promise<Product[]> {
 
   return products;
 }
+
+export function partFromLive(part: import("@/lib/parts-commerce").LivePart): Product {
+    const c = part.catalog!, name = String(c.name || part.sku), brand = normalizePartsBrand(String(c.brand || "Other Parts"));
+    return { id: `part-spu-${part.sourceId}`, sourceKey: part.key, sku: part.sku, slug: String(c.slug || toSlug(part.sku)), name,
+      description: String(c.description || name), shortDescription: toShortDescription(String(c.description || name)), price: (part.priceCents || 0) / 100,
+      categoryId: "parts", subcategoryId: departmentMap[String(c.department)] || "parts", brand,
+      images: c.imageUrl ? [String(c.imageUrl)] : [DEFAULT_PRODUCT_IMAGE], features: [],
+      specifications: { SKU: part.sku, Brand: brand, Department: String(c.department || "Parts"), "Part Type": String(c.partType || "N/A") },
+      inStock: false, stockQuantity: 0, rating: 0, reviewCount: 0, isFeatured: false, isNew: true, isBestSeller: false,
+    };
+ }

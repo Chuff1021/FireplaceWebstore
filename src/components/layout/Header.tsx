@@ -27,7 +27,7 @@ export function Header({ logoUrl }: { logoUrl?: string }) {
         <div className="mx-auto flex max-w-[1640px] items-center justify-between px-5 py-2 text-[13px]">
           <div className="flex items-center divide-x divide-white/20">
             {[
-              "110% Low Price Guaranteed",
+              "Nationwide Parts & Product Sales",
               "Expert Sales Support",
             ].map((message) => (
               <span key={message} className="px-7 first:pl-0 last:pr-0">

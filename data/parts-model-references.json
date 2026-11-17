@@ -1,0 +1,819 @@
+[
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "P38",
+    "slug": "p38",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:724",
+        "sku": "1-10-08518",
+        "slug": "1-10-08518",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-and-p43-hopper-lid-1-10-08518-p/1-10-08518.htm",
+        "sourceTitle": "Harman P38 and P43 Hopper Lid (1-10-08518)",
+        "sourceCheckedAt": "2026-10-30T20:17:41.515Z",
+        "sourceDescriptionHash": "f4e9fc8759534c0e808e8bdc15d92efd32f0a4c3052041a9e703177f949c28e3",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:15384",
+        "sku": "2-00-773828-2P",
+        "slug": "2-00-773828-2p",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-p43-rear-right-cover-2-00-773828-2p-p/2-00-773828-2p.htm",
+        "sourceTitle": "Harman P38 & P43 Rear Right Cover (2-00-773828-2P)",
+        "sourceCheckedAt": "2026-10-30T20:17:43.293Z",
+        "sourceDescriptionHash": "e8126718e2990a68bd66ec58eeea2cf1b775688eb63a87d782fe1dc3878d9c1d",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:15383",
+        "sku": "2-00-773828-1P",
+        "slug": "2-00-773828-1p",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-p43-rear-left-cover-2-00-773828-1p-p/2-00-773828-1p.htm",
+        "sourceTitle": "Harman P38 & P43 Rear Left Cover (2-00-773828-1P)",
+        "sourceCheckedAt": "2026-10-30T20:17:44.870Z",
+        "sourceDescriptionHash": "121fddf2e4f44c5eaece8a03d14b812d2ab0a7561dfc2418d4786a74d65f0392",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "P43",
+    "slug": "p43",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:724",
+        "sku": "1-10-08518",
+        "slug": "1-10-08518",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-and-p43-hopper-lid-1-10-08518-p/1-10-08518.htm",
+        "sourceTitle": "Harman P38 and P43 Hopper Lid (1-10-08518)",
+        "sourceCheckedAt": "2026-10-30T20:17:41.515Z",
+        "sourceDescriptionHash": "f4e9fc8759534c0e808e8bdc15d92efd32f0a4c3052041a9e703177f949c28e3",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:15384",
+        "sku": "2-00-773828-2P",
+        "slug": "2-00-773828-2p",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-p43-rear-right-cover-2-00-773828-2p-p/2-00-773828-2p.htm",
+        "sourceTitle": "Harman P38 & P43 Rear Right Cover (2-00-773828-2P)",
+        "sourceCheckedAt": "2026-10-30T20:17:43.293Z",
+        "sourceDescriptionHash": "e8126718e2990a68bd66ec58eeea2cf1b775688eb63a87d782fe1dc3878d9c1d",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:15383",
+        "sku": "2-00-773828-1P",
+        "slug": "2-00-773828-1p",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-p43-rear-left-cover-2-00-773828-1p-p/2-00-773828-1p.htm",
+        "sourceTitle": "Harman P38 & P43 Rear Left Cover (2-00-773828-1P)",
+        "sourceCheckedAt": "2026-10-30T20:17:44.870Z",
+        "sourceDescriptionHash": "121fddf2e4f44c5eaece8a03d14b812d2ab0a7561dfc2418d4786a74d65f0392",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "P61",
+    "slug": "p61",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:15325",
+        "sku": "1-10-05803",
+        "slug": "1-10-05803",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p61-p61a-hopper-assembly-1-10-05803-p/1-10-05803.htm",
+        "sourceTitle": "Harman P61 & P61A Hopper Assembly (1-10-05803)",
+        "sourceCheckedAt": "2026-10-30T20:17:46.644Z",
+        "sourceDescriptionHash": "805e5456e74d8560ba3ed7527dbe30db9a0abfc692ddad9b36f7c43b57717d1b",
+        "notes": "For P61A, the supplier limits this assembly to serial numbers after 008085092. The listed assembly includes the extension-switch kit, hopper knob and 48-inch hopper switch. Compare the full assembly contents before ordering."
+      },
+      {
+        "key": "spu:15336",
+        "sku": "1-10-08649",
+        "slug": "1-10-08649",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p38-p61-circuit-board-plate-1-10-08649-p/1-10-08649.htm",
+        "sourceTitle": "Harman P38 & P61 Circuit Board Plate (1-10-08649)",
+        "sourceCheckedAt": "2026-10-30T20:17:48.257Z",
+        "sourceDescriptionHash": "a653db0df528d09d2b62697f51798cd81b3b61549a037ff7dc663d2fc39df15d",
+        "notes": "This is the circuit-board mounting plate; the control board is not included."
+      },
+      {
+        "key": "spu:36136",
+        "sku": "1-10-09684A",
+        "slug": "1-10-09684a",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p61-p61a-feeder-assembly-1-10-09684a-p/1-10-09684a.htm",
+        "sourceTitle": "Harman P61 & P61A Feeder Assembly (1-10-09684A)",
+        "sourceCheckedAt": "2026-10-30T20:17:49.952Z",
+        "sourceDescriptionHash": "33138ed99cc7e41fba0f3634fc41554c3a63e64e474649a8b10b52e7e8634b2a",
+        "notes": "Supplier limits P61 use to after serial 008085055 and P61A use to after serial 008085803. Confirm the complete appliance serial number."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "P61A",
+    "slug": "p61a",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:15325",
+        "sku": "1-10-05803",
+        "slug": "1-10-05803",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p61-p61a-hopper-assembly-1-10-05803-p/1-10-05803.htm",
+        "sourceTitle": "Harman P61 & P61A Hopper Assembly (1-10-05803)",
+        "sourceCheckedAt": "2026-10-30T20:17:46.644Z",
+        "sourceDescriptionHash": "805e5456e74d8560ba3ed7527dbe30db9a0abfc692ddad9b36f7c43b57717d1b",
+        "notes": "For P61A, the supplier limits this assembly to serial numbers after 008085092. The listed assembly includes the extension-switch kit, hopper knob and 48-inch hopper switch. Compare the full assembly contents before ordering."
+      },
+      {
+        "key": "spu:15352",
+        "sku": "1-10-677188W",
+        "slug": "1-10-677188w",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p61a-ul-feeder-pusher-arm-1-10-677188w-p/1-10-677188w.htm",
+        "sourceTitle": "Harman P61A UL Feeder Pusher Arm (1-10-677188W)",
+        "sourceCheckedAt": "2026-10-30T20:17:51.565Z",
+        "sourceDescriptionHash": "711b3912948a4d6c70c9635187f5a87a914cacfbe71d8b7b090e2b303cc4a629",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:42304",
+        "sku": "1-00-06492",
+        "slug": "1-00-06492",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p61a-heat-shield-kit-black-1-00-06492-p/1-00-06492.htm",
+        "sourceTitle": "Harman P61A Heat Shield Kit - Black (1-00-06492)",
+        "sourceCheckedAt": "2026-10-30T20:17:53.234Z",
+        "sourceDescriptionHash": "af7bb8b9f0365e06fed28a85b4b36854fa3967f46b391cdca5b3f5ca1df0342d",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "P68",
+    "slug": "p68",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:23700",
+        "sku": "2-00-06707L",
+        "slug": "2-00-06707l",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p35i-p68-load-door-hinge-2-00-06707l-p/2-00-06707l.htm",
+        "sourceTitle": "Harman P35i & P68 Load Door Hinge (2-00-06707L)",
+        "sourceCheckedAt": "2026-10-30T20:17:55.520Z",
+        "sourceDescriptionHash": "f1adc8f33aae9a7caa310bd11ef484269f5ac18e4038c66f6f58870a46168020",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:15439",
+        "sku": "1-10-00688",
+        "slug": "1-10-00688",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p68-hopper-assembly-1-10-00688-p/1-10-00688.htm",
+        "sourceTitle": "Harman P68 Hopper Assembly (1-10-00688)",
+        "sourceCheckedAt": "2026-10-30T20:17:57.638Z",
+        "sourceDescriptionHash": "07de004be18c81aca5514daf1a7584a01ca103fb76e7f386d0e227e10df8981b",
+        "notes": "Supplier limits this P68 hopper assembly to units after serial 008280309."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "P35i",
+    "slug": "p35i",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:23700",
+        "sku": "2-00-06707L",
+        "slug": "2-00-06707l",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p35i-p68-load-door-hinge-2-00-06707l-p/2-00-06707l.htm",
+        "sourceTitle": "Harman P35i & P68 Load Door Hinge (2-00-06707L)",
+        "sourceCheckedAt": "2026-10-30T20:17:55.520Z",
+        "sourceDescriptionHash": "f1adc8f33aae9a7caa310bd11ef484269f5ac18e4038c66f6f58870a46168020",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:15687",
+        "sku": "1-00-774310",
+        "slug": "1-00-774310",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-p35i-control-door-hinge-set-1-00-774310-p/1-00-774310.htm",
+        "sourceTitle": "Harman P35i Control Door & Hinge Set (1-00-774310)",
+        "sourceCheckedAt": "2026-10-30T20:17:59.277Z",
+        "sourceDescriptionHash": "2ee66433f9e32fe8a1f15373eaa927bbc66050db11c68fde75ae22f45a556d84",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "Accentra FS",
+    "slug": "accentra-fs",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:3072",
+        "sku": "3-40-247100",
+        "slug": "3-40-247100",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-accentra-fs-and-xxv-hopper-lid-glass-3-40-247100-p/3-40-247100.htm",
+        "sourceTitle": "Harman Accentra FS and XXV Hopper Lid Glass (3-40-247100)",
+        "sourceCheckedAt": "2026-10-30T20:18:01.061Z",
+        "sourceDescriptionHash": "741605de081b149d27c7235ea6e8303051df1e2a9b92afdca412abe19a1af135",
+        "notes": "Supplier gives the hopper-lid glass dimensions as 16 by 8 inches. Confirm the appliance application and actual component before ordering."
+      },
+      {
+        "key": "spu:619",
+        "sku": "1-00-247234",
+        "slug": "1-00-247234",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-accentra-fs-combustion-blower-inlet-reduction-ring-1-00-247234-p/1-00-247234.htm",
+        "sourceTitle": "Harman Accentra FS Combustion Blower Inlet Reduction Ring (1-00-247234)",
+        "sourceCheckedAt": "2026-10-30T20:18:02.717Z",
+        "sourceDescriptionHash": "63869f78cbcfc2784decfb34875b6718634eb2be01c86e562e882ce13f672fff",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Harman",
+    "brandSlug": "harman",
+    "model": "XXV",
+    "slug": "xxv",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:3072",
+        "sku": "3-40-247100",
+        "slug": "3-40-247100",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-accentra-fs-and-xxv-hopper-lid-glass-3-40-247100-p/3-40-247100.htm",
+        "sourceTitle": "Harman Accentra FS and XXV Hopper Lid Glass (3-40-247100)",
+        "sourceCheckedAt": "2026-10-30T20:18:01.061Z",
+        "sourceDescriptionHash": "741605de081b149d27c7235ea6e8303051df1e2a9b92afdca412abe19a1af135",
+        "notes": "Supplier gives the hopper-lid glass dimensions as 16 by 8 inches. Confirm the appliance application and actual component before ordering."
+      },
+      {
+        "key": "spu:655",
+        "sku": "1-00-71611",
+        "slug": "1-00-71611",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-xxv-xxv-tc-ash-door-gasket-30-1-00-71611-p/1-00-71611.htm",
+        "sourceTitle": "Harman XXV & XXV-TC Ash Door Gasket - 30' (1-00-71611)",
+        "sourceCheckedAt": "2026-10-30T20:18:06.220Z",
+        "sourceDescriptionHash": "b977b368c5b8e6bcf2dd14c84000c62394090d01b81c563951d92b65f8b04bd8",
+        "notes": "The source describes a self-adhesive gasket supplied as a 30-foot length. Confirm the required length and package."
+      },
+      {
+        "key": "spu:16840",
+        "sku": "2-00-677096B",
+        "slug": "2-00-677096b",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/harman-xxv-xxv-tc-ash-door-stop-2-00-677096b-p/2-00-677096b.htm",
+        "sourceTitle": "Harman XXV & XXV-TC Ash Door Stop (2-00-677096B)",
+        "sourceCheckedAt": "2026-10-30T20:18:07.907Z",
+        "sourceDescriptionHash": "99f4c7f5c29d2ab0521c929a5598579858381e3c6c9a21a10929a8e2da90aee9",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "NPS40-1",
+    "slug": "nps40-1",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:24486",
+        "sku": "W010-1668",
+        "slug": "w010-1668",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps40-1-nps45-pedestal-side-door-assembly-w010-1668-p/w010-1668.htm",
+        "sourceTitle": "Napoleon NPS40-1 & NPS45 Pedestal Side Door Assembly (W010-1668)",
+        "sourceCheckedAt": "2026-10-30T20:18:09.700Z",
+        "sourceDescriptionHash": "4f805b819c26897d3205d54e34e450950da07e39253ad659841e2a439e355384",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:24479",
+        "sku": "W010-1529",
+        "slug": "w010-1529",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps40-1-nps45-hopper-door-assembly-w010-1529-p/w010-1529.htm",
+        "sourceTitle": "Napoleon NPS40-1 & NPS45 Hopper Door Assembly (W010-1529)",
+        "sourceCheckedAt": "2026-10-30T20:18:11.381Z",
+        "sourceDescriptionHash": "50208019a95013ffef043c44928c34489fd4f3d1dac36bf6239171d48208e3f2",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:24485",
+        "sku": "W010-1667",
+        "slug": "w010-1667",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps40-1-nps45-ash-pan-w010-1667-p/w010-1667.htm",
+        "sourceTitle": "Napoleon NPS40-1 & NPS45 Ash Pan (W010-1667)",
+        "sourceCheckedAt": "2026-10-30T20:18:13.074Z",
+        "sourceDescriptionHash": "dd54f0e965c17dc663ae623aca60098ede2ad43ced91d2fba05bb5a498a5713d",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "NPI40-1",
+    "slug": "npi40-1",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:14280",
+        "sku": "W390-0012",
+        "slug": "w390-0012",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-npi40-1-nps40-1-control-panel-latch-w390-0012-p/w390-0012.htm",
+        "sourceTitle": "Napoleon NPI40-1 & NPS40-1 Control Panel Latch (W390-0012)",
+        "sourceCheckedAt": "2026-10-30T20:18:14.712Z",
+        "sourceDescriptionHash": "c337c7d06f0380b0f3b269672cc654f6a912ee040b3ad5ee59db593f1e338b0d",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:14281",
+        "sku": "W720-0089",
+        "slug": "w720-0089",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-npi40-1-nps40-1-igniter-housing-w720-0089-p/w720-0089.htm",
+        "sourceTitle": "Napoleon NPI40-1 & NPS40-1 Igniter Housing (W720-0089)",
+        "sourceCheckedAt": "2026-10-30T20:18:16.488Z",
+        "sourceDescriptionHash": "9cf0b486134adb75d21d81e314f615082469aaa81b4bbdd66ea5b86e3373c5e6",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:14275",
+        "sku": "W475-0485",
+        "slug": "w475-0485",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-npi40-1-nps40-1-outer-panel-left-w475-0485-p/w475-0485.htm",
+        "sourceTitle": "Napoleon NPI40-1 & NPS40-1 Outer Panel - Left (W475-0485)",
+        "sourceCheckedAt": "2026-10-30T20:18:18.157Z",
+        "sourceDescriptionHash": "7c5358c1829309cf3b68ba545cbf280deecc5a5cd828f51587dde3b24e30324d",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "NPS45",
+    "slug": "nps45",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:24486",
+        "sku": "W010-1668",
+        "slug": "w010-1668",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps40-1-nps45-pedestal-side-door-assembly-w010-1668-p/w010-1668.htm",
+        "sourceTitle": "Napoleon NPS40-1 & NPS45 Pedestal Side Door Assembly (W010-1668)",
+        "sourceCheckedAt": "2026-10-30T20:18:09.700Z",
+        "sourceDescriptionHash": "4f805b819c26897d3205d54e34e450950da07e39253ad659841e2a439e355384",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:13429",
+        "sku": "W385-0425",
+        "slug": "w385-0425",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps45-npi45-control-panel-decal-w385-0425-p/w385-0425.htm",
+        "sourceTitle": "Napoleon NPS45 & NPI45 Control Panel Decal (W385-0425)",
+        "sourceCheckedAt": "2026-10-30T20:18:19.880Z",
+        "sourceDescriptionHash": "9ab5042e8cb5da7a6295e2a16d5d0815ce4d88d3d8da278f67a4516b68f63e3a",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:25812",
+        "sku": "W475-0609",
+        "slug": "w475-0609",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps45-outer-right-panel-side-w475-0609-p/w475-0609.htm",
+        "sourceTitle": "Napoleon NPS45 Outer Right Panel - Side (W475-0609)",
+        "sourceCheckedAt": "2026-10-30T20:18:21.561Z",
+        "sourceDescriptionHash": "77fcd136c1d32e683a4943f4086983d792c607d26ab76bb5df1144ad59f5c70b",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "NPI45",
+    "slug": "npi45",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:13429",
+        "sku": "W385-0425",
+        "slug": "w385-0425",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nps45-npi45-control-panel-decal-w385-0425-p/w385-0425.htm",
+        "sourceTitle": "Napoleon NPS45 & NPI45 Control Panel Decal (W385-0425)",
+        "sourceCheckedAt": "2026-10-30T20:18:19.880Z",
+        "sourceDescriptionHash": "9ab5042e8cb5da7a6295e2a16d5d0815ce4d88d3d8da278f67a4516b68f63e3a",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:26703",
+        "sku": "W263-0091-SER",
+        "slug": "w263-0091-ser",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-npi45-left-side-flashing-w263-0091-ser-p/w263-0091-ser.htm",
+        "sourceTitle": "Napoleon NPI45 Left Side Flashing (W263-0091-SER)",
+        "sourceCheckedAt": "2026-10-30T20:18:23.214Z",
+        "sourceDescriptionHash": "6650f0d03b63a0aa2d1765db0b17fa6373045d19e359599d86f837b407f3de4b",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:25110",
+        "sku": "W020-0398",
+        "slug": "w020-0398",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-npi45-hardware-kit-w020-0398-p/w020-0398.htm",
+        "sourceTitle": "Napoleon NPI45 Hardware Kit (W020-0398)",
+        "sourceCheckedAt": "2026-10-30T20:18:24.974Z",
+        "sourceDescriptionHash": "6fc05db4495f71b9654e2a40019140b1a3966f50bc0a7ec2b99f706c48418b14",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "GI3600N",
+    "slug": "gi3600n",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:9703",
+        "sku": "GI-910K",
+        "slug": "gi-910k",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-gi3600n-gdi-30n-6-flashing-bevelled-gi-910k-p/gi-910k.htm",
+        "sourceTitle": "Napoleon GI3600N & GDI-30N 6\" Flashing - Bevelled (GI-910K)",
+        "sourceCheckedAt": "2026-10-30T20:18:28.323Z",
+        "sourceDescriptionHash": "d89be723fb9e729f01330c8b381835b05a544c2ea7d5ca9ba222d1be6de65119",
+        "notes": "Source identifies a 6-inch beveled flashing with a textured black finish, for openings below 27 inches high by 42 inches wide. Confirm the installation and trim application."
+      },
+      {
+        "key": "spu:9688",
+        "sku": "GI-1LAB",
+        "slug": "gi-1lab",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-gdi-30n-gi3600n-upper-lower-louvres-black-gi-1lab-p/gi-1lab.htm",
+        "sourceTitle": "Napoleon GDI-30N & GI3600N Upper & Lower Louvres - Black (GI-1LAB)",
+        "sourceCheckedAt": "2026-10-30T20:18:30.022Z",
+        "sourceDescriptionHash": "f97f86a118cfb55b7fd4361a60990cf941b8ad626a47b8012b622bba9610f6fc",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "GDI-30N",
+    "slug": "gdi-30n",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:9693",
+        "sku": "GI-30K",
+        "slug": "gi-30k",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-gdi-30n-gdi30g-4-sided-black-surround-gi-30k-p/gi-30k.htm",
+        "sourceTitle": "Napoleon GDI-30N & GDI30G 4 Sided Black Surround (GI-30K)",
+        "sourceCheckedAt": "2026-10-30T20:18:31.901Z",
+        "sourceDescriptionHash": "45458a8597e6a00dd5011a19b6bae773367c75968797be932c1a604b054e1ff0",
+        "notes": "Supplier describes a black four-sided surround covering a 25-inch-high by 42-inch-wide opening. Surround dimensions do not establish appliance-body fit."
+      },
+      {
+        "key": "spu:11748",
+        "sku": "PRP30",
+        "slug": "prp30",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-gdi-30n-reflective-radiant-panels-prp30-p/prp30.htm",
+        "sourceTitle": "Napoleon GDI-30N Reflective Radiant Panels (PRP30)",
+        "sourceCheckedAt": "2026-10-30T20:18:33.613Z",
+        "sourceDescriptionHash": "193b3c39fb71d3e0884a44906c3e117dfd1321b2dcbb446b26f061d971a4b683",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "LHD62",
+    "slug": "lhd62",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:9621",
+        "sku": "GD849KT",
+        "slug": "gd849kt",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-lhd62-linear-series-decorative-fluted-brick-panels-gd849kt-p/gd849kt.htm",
+        "sourceTitle": "Napoleon LHD62 Linear Series Decorative Fluted Brick Panels (GD849KT)",
+        "sourceCheckedAt": "2026-10-30T20:18:35.360Z",
+        "sourceDescriptionHash": "c9109e7920002086f8598cde956d2445258e9d842be1a9a5e5521b7fa992198f",
+        "notes": "The source identifies California Sun decorative fluted panels for LHD62 natural-gas or propane configurations. Check the finish and complete panel package."
+      },
+      {
+        "key": "spu:10662",
+        "sku": "LPS62SS",
+        "slug": "lps62ss",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-lhd62-premium-4-sided-surround-stainless-steel-lps62ss-p/lps62ss.htm",
+        "sourceTitle": "Napoleon LHD62 Premium 4 Sided Surround - Stainless Steel (LPS62SS)",
+        "sourceCheckedAt": "2026-10-30T20:18:37.044Z",
+        "sourceDescriptionHash": "e78efa8a0e30401528f037dc3bbca92bd00085348ac351880c55f3331757d1bc",
+        "notes": "Supplier identifies a brushed stainless four-sided surround and safety screen for LHD62, covering a 70-inch-wide by 22-inch-high opening. Confirm the exact configuration."
+      },
+      {
+        "key": "spu:24683",
+        "sku": "W750-0272",
+        "slug": "w750-0272",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-lhd62-light-wiring-harness-w750-0272-p/w750-0272.htm",
+        "sourceTitle": "Napoleon LHD62 Light Wiring Harness (W750-0272)",
+        "sourceCheckedAt": "2026-10-30T20:18:38.855Z",
+        "sourceDescriptionHash": "a3f4de8e4ba476e8dbb9b71221c66eb17effc7eb3fda5f91a1dc3fbd90069cc3",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "NZ3000",
+    "slug": "nz3000",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:13740",
+        "sku": "W715-0735W",
+        "slug": "w715-0735w",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nz3000-arched-wrought-iron-faceplate-w715-0735w-p/w715-0735w.htm",
+        "sourceTitle": "Napoleon NZ3000 Arched Wrought Iron Faceplate (W715-0735W)",
+        "sourceCheckedAt": "2026-10-30T20:18:40.654Z",
+        "sourceDescriptionHash": "90f8691f680a7dc28664aa7478f0c780559d0dcb6b97d502385663e6e67c3afd",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:10844",
+        "sku": "NZ620-KT",
+        "slug": "nz620-kt",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nz6000-nz3000-outside-combustion-air-extension-kit-nz620-kt-p/nz620-kt.htm",
+        "sourceTitle": "Napoleon NZ6000 & NZ3000 Outside Combustion Air Extension Kit (NZ620-KT)",
+        "sourceCheckedAt": "2026-10-30T20:18:43.070Z",
+        "sourceDescriptionHash": "28a2ef555c7875b3121ebed6fdfed05a4cc4a7aa1c5e2e8b6aabd99aa678030e",
+        "notes": "The source includes a coupler and hardware in the outside-air extension kit. Confirm the complete kit and approved appliance installation."
+      },
+      {
+        "key": "spu:9933",
+        "sku": "H336-BC",
+        "slug": "h336-bc",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nz3000-arched-cast-iron-double-doors-w-copper-inlay-h336-bc-p/h336-bc.htm",
+        "sourceTitle": "Napoleon NZ3000 Arched Cast Iron Double Doors W / Copper Inlay (H336-BC)",
+        "sourceCheckedAt": "2026-10-30T20:18:44.800Z",
+        "sourceDescriptionHash": "0e817dcb4cd0bead294ffca1b7451d9e61595aa9f5109f5708a148a9c8c49acc",
+        "notes": "Source identifies cast double doors with copper inlay for the NZ3000 arched-faceplate application. Confirm the faceplate and door combination."
+      }
+    ]
+  },
+  {
+    "brand": "Napoleon",
+    "brandSlug": "napoleon",
+    "model": "NZ6000",
+    "slug": "nz6000",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:13402",
+        "sku": "W330-0035",
+        "slug": "w330-0035",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nz6000-gss42-male-door-hinge-w330-0035-p/w330-0035.htm",
+        "sourceTitle": "Napoleon NZ6000 & GSS42 Male Door Hinge (W330-0035)",
+        "sourceCheckedAt": "2026-10-30T20:18:46.507Z",
+        "sourceDescriptionHash": "67f499448f5152bbb1da672103887470c5b3607a3fafb2b829a4667945e1d258",
+        "notes": "Supplier says the current hinge package does not include a washer. Confirm the instructions and package before ordering."
+      },
+      {
+        "key": "spu:13410",
+        "sku": "W335-0043",
+        "slug": "w335-0043",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nz6000-combustion-dilution-outside-hood-w335-0043-p/w335-0043.htm",
+        "sourceTitle": "Napoleon NZ6000 Combustion/Dilution Outside Hood (W335-0043)",
+        "sourceCheckedAt": "2026-10-30T20:18:48.332Z",
+        "sourceDescriptionHash": "f3ceaa0d27d77fe6578b3cfebbd374411ba0e4820f3113cc912977d5ce2ebb11",
+        "notes": "Sold one hood per package; the source lists two pieces for a complete NZ6000 replacement. Confirm how many pieces your project requires."
+      },
+      {
+        "key": "spu:10844",
+        "sku": "NZ620-KT",
+        "slug": "nz620-kt",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/napoleon-nz6000-nz3000-outside-combustion-air-extension-kit-nz620-kt-p/nz620-kt.htm",
+        "sourceTitle": "Napoleon NZ6000 & NZ3000 Outside Combustion Air Extension Kit (NZ620-KT)",
+        "sourceCheckedAt": "2026-10-30T20:18:43.070Z",
+        "sourceDescriptionHash": "28a2ef555c7875b3121ebed6fdfed05a4cc4a7aa1c5e2e8b6aabd99aa678030e",
+        "notes": "The source includes a coupler and hardware in the outside-air extension kit. Confirm the complete kit and approved appliance installation."
+      }
+    ]
+  },
+  {
+    "brand": "Quadra-Fire",
+    "brandSlug": "quadra-fire",
+    "model": "CB1200I",
+    "slug": "cb1200i",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:18649",
+        "sku": "812-4310",
+        "slug": "812-4310",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-cb1200i-side-curtain-left-812-4310-p/812-4310.htm",
+        "sourceTitle": "Quadra-Fire CB1200I Side Curtain - Left (812-4310)",
+        "sourceCheckedAt": "2026-10-30T20:18:50.459Z",
+        "sourceDescriptionHash": "109f668e54cc38bd14e7a625728b7fd0057fbe039fb51b54944ddd7509b89f37",
+        "notes": "For CB1200I, the source lists 2019 to present. It separately names CB1200 Insert (1999–2009) and CB1200MI-MBK (2009–2019); those model references are not interchangeable assumptions."
+      },
+      {
+        "key": "spu:31160",
+        "sku": "510-5220",
+        "slug": "510-5220",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-cb1200i-large-panel-trim-assembly-nickel-510-5220-p/510-5220.htm",
+        "sourceTitle": "Quadra-Fire CB1200I Large Panel Trim Assembly - Nickel (510-5220)",
+        "sourceCheckedAt": "2026-10-30T20:18:52.216Z",
+        "sourceDescriptionHash": "e87de8a2318b3c28991ec03c1896f5f8d03a663d19956ba5d45da0899e383587",
+        "notes": "Source lists CB1200I (2019 to present) and CB1200I-C, with separate legacy insert references. Confirm production version and the nickel trim package."
+      }
+    ]
+  },
+  {
+    "brand": "Quadra-Fire",
+    "brandSlug": "quadra-fire",
+    "model": "Discovery-II-C",
+    "slug": "discovery-ii-c",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:23147",
+        "sku": "SRV7033-097",
+        "slug": "srv7033-097",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-discovery-ii-c-component-pack-assembly-srv7033-097-p/srv7033-097.htm",
+        "sourceTitle": "Quadra-Fire Discovery-II-C Component Pack Assembly (SRV7033-097)",
+        "sourceCheckedAt": "2026-10-30T20:18:59.511Z",
+        "sourceDescriptionHash": "fc319d8a3d56424ca4363a442d701ec9bb3266a482932bcb19c8bdbb1eaf8822",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:23148",
+        "sku": "SRV7033-327",
+        "slug": "srv7033-327",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-discovery-ii-c-rear-pedestal-cover-srv7033-327-p/srv7033-327.htm",
+        "sourceTitle": "Quadra-Fire Discovery-II-C Rear Pedestal Cover (SRV7033-327)",
+        "sourceCheckedAt": "2026-10-30T20:19:01.103Z",
+        "sourceDescriptionHash": "e9e0e5f1eae4036546a202e81660d94d0ddc5e1c097864b1a1dff5cc1a4562e8",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Quadra-Fire",
+    "brandSlug": "quadra-fire",
+    "model": "DISCOVERY-III",
+    "slug": "discovery-iii",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:16823",
+        "sku": "SRV7037-025",
+        "slug": "srv7037-025",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-discovery-iii-pedestal-assembly-srv7037-025-p/srv7037-025.htm",
+        "sourceTitle": "Quadra-Fire DISCOVERY-III Pedestal Assembly (SRV7037-025)",
+        "sourceCheckedAt": "2026-10-30T20:19:02.938Z",
+        "sourceDescriptionHash": "528c8fce4b76658fcd3beaa83c0aba178ad350377b779af32185ee5792b286c4",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:43152",
+        "sku": "SRV7037-152",
+        "slug": "srv7037-152",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-discovery-iii-pedestal-cover-rear-srv7037-152-p/srv7037-152.htm",
+        "sourceTitle": "Quadra-Fire Discovery-III Pedestal Cover - Rear (SRV7037-152)",
+        "sourceCheckedAt": "2026-10-30T20:19:04.613Z",
+        "sourceDescriptionHash": "0789c7abbf0d8c7b86db3fc6d351d9f27eca0fd83811786651302d0e62c8e491",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:43154",
+        "sku": "SRV7037-029",
+        "slug": "srv7037-029",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-discovery-iii-pedestal-base-srv7037-029-p/srv7037-029.htm",
+        "sourceTitle": "Quadra-Fire Discovery-III Pedestal Base (SRV7037-029)",
+        "sourceCheckedAt": "2026-10-30T20:19:06.176Z",
+        "sourceDescriptionHash": "34590b71a84c0bf4c0a44075f9ead04d7ded52a9d2cbf6862ceed8016a923a8a",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      }
+    ]
+  },
+  {
+    "brand": "Quadra-Fire",
+    "brandSlug": "quadra-fire",
+    "model": "4300 ACT",
+    "slug": "4300-act",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:39684",
+        "sku": "2364A",
+        "slug": "2364a",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-4300-act-baffle-board-2364a-p/2364a.htm",
+        "sourceTitle": "Quadra-Fire 4300 ACT Baffle Board (2364A)",
+        "sourceCheckedAt": "2026-10-30T20:19:08.173Z",
+        "sourceDescriptionHash": "2b3a71aa35c42b2e51a15b9bee81aa36ff6980ddf6ac3a4515e7c78848a1f0c2",
+        "notes": "Aftermarket baffle for 4300 Millennium ACT and 4300 ACT Step Top. Source dimensions are 16 by 15¼ by ½ inches. Do not extend this application to every 4300 revision."
+      },
+      {
+        "key": "spu:7468",
+        "sku": "831-1970",
+        "slug": "831-1970",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-4300-act-complete-brick-assembly-831-1970-p/831-1970.htm",
+        "sourceTitle": "Quadra-Fire 4300 ACT Complete Brick Assembly (831-1970)",
+        "sourceCheckedAt": "2026-10-30T20:19:09.826Z",
+        "sourceDescriptionHash": "05ec0ca8cf653717afe00c124fc21ade19b195f50f94060ef806e5e4257fd08f",
+        "notes": "Supplier specifically lists 4300 ACT Millennium. It is a complete pre-cut firebrick assembly; confirm included pieces."
+      }
+    ]
+  },
+  {
+    "brand": "Quadra-Fire",
+    "brandSlug": "quadra-fire",
+    "model": "7100 FP",
+    "slug": "7100-fp",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:18703",
+        "sku": "433-5730",
+        "slug": "433-5730",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-7100-fp-upgrade-kit-433-5730-p/433-5730.htm",
+        "sourceTitle": "Quadra-Fire 7100 FP Upgrade Kit (433-5730)",
+        "sourceCheckedAt": "2026-10-30T20:19:15.632Z",
+        "sourceDescriptionHash": "ca669ba5b1dfc0e31df6b3fa7b2638a34bcde059b06d8ca37b3d520caad81a2c",
+        "notes": "Supplier limits the 7100 FP fan/timer kit to serial numbers before 1577579."
+      },
+      {
+        "key": "spu:18207",
+        "sku": "SRV433-6090",
+        "slug": "srv433-6090",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-7100-fp-firebrick-srv433-6090-p/srv433-6090.htm",
+        "sourceTitle": "Quadra-Fire 7100 FP Firebrick (SRV433-6090)",
+        "sourceCheckedAt": "2026-10-30T20:19:17.302Z",
+        "sourceDescriptionHash": "3af7531e2e47cf3955fadfac3bbb35b83e25c46164c4f282a6d0ae516402988e",
+        "notes": "Source identifies a 7100 FP brick measuring 6¼ by 4¼ by 1¼ inches. Confirm quantity and location in the appliance diagram."
+      },
+      {
+        "key": "spu:22962",
+        "sku": "ASK-7100",
+        "slug": "ask-7100",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/quadra-fire-7100fp-air-shutoff-kit-pre-serial-1575932-ask-7100-p/ask-7100.htm",
+        "sourceTitle": "Quadra-Fire 7100FP Air Shutoff Kit - Pre Serial # 1575932 (ASK-7100)",
+        "sourceCheckedAt": "2026-10-30T20:19:19.237Z",
+        "sourceDescriptionHash": "1e85a85d63974ca5408508661df7ee7d46745138eb13d1ae113f5ee7d70138b3",
+        "notes": "Supplier limits this 7100FP air-shutoff kit to serial numbers before 1575932."
+      }
+    ]
+  },
+  {
+    "brand": "Buck",
+    "brandSlug": "buck",
+    "model": "21",
+    "slug": "21",
+    "status": "supplier_model_reference",
+    "parts": [
+      {
+        "key": "spu:10673",
+        "sku": "MA-21YBAR",
+        "slug": "ma-21ybar",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/buck-21-townsend-y-bar-top-brick-holder-ma-21ybar-p/ma-21ybar.htm",
+        "sourceTitle": "Buck 21 & Townsend Y-Bar Top Brick Holder (MA-21YBAR)",
+        "sourceCheckedAt": "2026-10-30T20:19:20.975Z",
+        "sourceDescriptionHash": "aaf02b09237c6318195938f2047e91ab4e60e90e3dc677d588758dccbeb0f037",
+        "notes": "Supplier names this model in its application information. Confirm the complete model, serial or revision limits and package contents against your appliance documentation."
+      },
+      {
+        "key": "spu:39940",
+        "sku": "2676A",
+        "slug": "2676a",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/aftermarket-buck-21-261-baffle-2676a-p/2676a.htm",
+        "sourceTitle": "Aftermarket Buck 21 & 261 Baffle (2676A)",
+        "sourceCheckedAt": "2026-10-30T20:19:22.630Z",
+        "sourceDescriptionHash": "cfa9d41a0135d5e96697a68c9f39c795495ad7bc0f6b5ae89780133706ae64bd",
+        "notes": "Aftermarket baffle sold individually. Source lists one piece for Buck 21 and two for Buck 261, at 19 by 9½ by ½ inches per piece. Confirm the quantity for your model."
+      },
+      {
+        "key": "spu:44164",
+        "sku": "MA-212400",
+        "slug": "ma-212400",
+        "sourceUrl": "https://www.stove-parts-unlimited.com/buck-21-complete-door-assembly-ma-212400-p/ma-212400.htm",
+        "sourceTitle": "Buck 21 Complete Door Assembly (MA-212400)",
+        "sourceCheckedAt": "2026-10-30T20:19:24.226Z",
+        "sourceDescriptionHash": "5f543fbcce13ad885cc5bc89239533832336a44b0652e9c37130e3abbf509426",
+        "notes": "This is a model application reference only. Read the product page for current availability and any owner-set stock or shipping lead-time message before ordering."
+      }
+    ]
+  }
+]

@@ -227,6 +227,11 @@ export interface Product {
   salePrice?: number;
   priceType?: "msrp";
   availabilityStatus?: "confirm";
+  sourceKey?: string;
+  partsAvailability?: "available" | "special_order" | "out_of_stock" | "unverified";
+  publishedStockQuantity?: number | null;
+  availabilityCheckedAt?: string;
+  canPurchase?: boolean;
   outdoorFeaturedOrder?: number;
   contactForPricing?: boolean;
   categoryId: string;

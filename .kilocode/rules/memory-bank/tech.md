@@ -141,3 +141,8 @@ bun typecheck      # Run TypeScript type checking
 - None required for base template
 - Add as needed for features
 - Use `.env.local` for local development
+
+
+### Cart follow-up (October 2026)
+
+`CartActivity` restores persisted Zustand carts after hydration and records first-party cart events. `src/lib/cart-activity.ts` serializes requests and handles expired-cookie recovery; `/api/checkout` proxies `cart_activity` using the existing HearthOS HMAC credentials. Contact data is stored in HearthOS PostgreSQL and Website Inbox, never in browser storage or a public analytics feed. No new analytics dependency or subscription.

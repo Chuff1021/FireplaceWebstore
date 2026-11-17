@@ -13,19 +13,6 @@
     "isBestSeller": true
   },
   {
-    "sku": "ESW-ESW0006",
-    "name": "England Stove Works Blue Ridge 150-I Wood Burning Fireplace Insert",
-    "slug": "esw-esw0006",
-    "price": 2219.99,
-    "salePrice": 1801.79,
-    "brand": "England",
-    "imageUrl": "/products/wood-inserts/esw-esw0006-98da4c6e.webp",
-    "productUrl": "https://www.efireplacestore.com/esw-esw0006.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "BSC-FP21I",
     "name": "Buck Stove Model 21 Wood Burning Fireplace Insert",
     "slug": "bsc-fp21i",
@@ -108,19 +95,6 @@
     "imageUrls": [
       "/products-upgraded/wood-inserts/ems-wb23in.webp"
     ]
-  },
-  {
-    "sku": "ESW-ESW0009",
-    "name": "England Stove Works Blue Ridge 300-I Wood Burning Fireplace Insert",
-    "slug": "esw-esw0009",
-    "price": 2559.99,
-    "salePrice": 2082.59,
-    "brand": "England",
-    "imageUrl": "/products/wood-inserts/esw-esw0009-af5d2de4.webp",
-    "productUrl": "https://www.efireplacestore.com/esw-esw0009.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
   },
   {
     "sku": "VNT-VB00021",

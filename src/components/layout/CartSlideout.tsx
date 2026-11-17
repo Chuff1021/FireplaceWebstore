@@ -12,9 +12,6 @@ export function CartSlideout() {
     removeItem,
     updateQuantity,
     getSubtotal,
-    getShipping,
-    getTax,
-    getTotal,
   } = useCartStore();
 
   const formatPrice = (price: number) => {
@@ -152,16 +149,16 @@ export function CartSlideout() {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Shipping</span>
                   <span className="font-medium">
-                    {formatPrice(getShipping())}
+                    Calculated at checkout
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Estimated Tax</span>
-                  <span className="font-medium">{formatPrice(getTax())}</span>
+                  <span className="text-gray-600">Tax</span>
+                  <span className="font-medium">Calculated at checkout</span>
                 </div>
                 <div className="flex justify-between text-lg font-bold pt-2 border-t">
-                  <span>Total</span>
-                  <span className="text-orange-600">{formatPrice(getTotal())}</span>
+                  <span>Items subtotal</span>
+                  <span className="text-orange-600">{formatPrice(getSubtotal())}</span>
                 </div>
               </div>
 
