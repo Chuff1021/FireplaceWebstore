@@ -405,3 +405,10 @@ eight pellet stoves and one pellet fireplace insert. Removed their source catalo
 records and image-upgrade index entries, and expanded the appliance-source
 regression test so the listings cannot return unnoticed. Replacement parts, if
 present in the separate parts catalog, remain available for existing appliances.
+
+Published from commit `34797de5` through production deployment
+`dpl_HK8ehHezYq7kgjKHX2hC6vPG3uHS`. Staged and live checks confirmed all nine
+former appliance URLs return 404 and that the pellet-stoves category,
+pellet-inserts category, matching product API responses and sitemap contain no
+removed ComfortBilt appliance references. The post-release error log scan was
+empty.
