@@ -5,10 +5,11 @@ import { jsonLd, pageMetadata, productSchema, isSearchEligibleProduct } from '..
 import { classifyLanding } from '../src/lib/traffic-attribution.ts';
 
 test('owner-removed appliance brands stay excluded from the appliance catalog sources', () => {
-  for (const fileName of ['wood-stoves-scraped.json', 'gas-stoves-scraped.json', 'wood-inserts-scraped.json']) {
+  for (const fileName of ['wood-stoves-scraped.json', 'gas-stoves-scraped.json', 'wood-inserts-scraped.json', 'pellet-stoves-scraped.json', 'pellet-inserts-scraped.json']) {
     const products = JSON.parse(readFileSync(new URL(`../data/${fileName}`, import.meta.url), 'utf8'));
     assert.equal(products.some((product) => product.brand?.toLowerCase() === 'ds stoves'), false);
     assert.equal(products.some((product) => product.name?.toLowerCase().startsWith('england stove works ')), false);
+    assert.equal(products.some((product) => product.name?.toLowerCase().startsWith('comfortbilt pellet stoves ')), false);
   }
 });
 

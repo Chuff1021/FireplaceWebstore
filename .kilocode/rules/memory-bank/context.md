@@ -397,3 +397,11 @@ Published from commit `6d174e3b` through production deployment
 former appliance URLs return 404 and that the wood-stoves category, wood-inserts
 category, matching product API responses and sitemap contain no removed England
 Stove Works appliance references. The post-release error log scan was empty.
+
+## November 23, 2026 — ComfortBilt appliance removal
+
+Removed all nine ComfortBilt complete-appliance listings at the owner's request:
+eight pellet stoves and one pellet fireplace insert. Removed their source catalog
+records and image-upgrade index entries, and expanded the appliance-source
+regression test so the listings cannot return unnoticed. Replacement parts, if
+present in the separate parts catalog, remain available for existing appliances.
