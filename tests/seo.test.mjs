@@ -26,6 +26,24 @@ test('pellet appliance categories contain only Lopi and the current Quadra-Fire 
   assert.equal(inserts.every((product) => allowedBrands.has(product.brand)), true);
 });
 
+test('wood stove and insert listings contain only the six approved brands', () => {
+  const approvedBrands = ['Buck Stove', 'Empire Stove', 'IronStrike', 'Lopi', 'Quadra-Fire', 'Vermont Castings'];
+  const readCategory = (slug) => JSON.parse(readFileSync(new URL(`../data/${slug}-scraped.json`, import.meta.url), 'utf8'));
+  const stoves = readCategory('wood-stoves');
+  const inserts = readCategory('wood-inserts');
+  const gasInserts = readCategory('gas-inserts');
+
+  for (const category of [stoves, inserts]) {
+    assert.deepEqual([...new Set(category.map((product) => product.brand))].sort(), approvedBrands);
+    assert.equal(new Set(category.map((product) => product.slug)).size, category.length);
+  }
+  const lopiWoodSlugs = new Set(inserts.filter((product) => product.brand === 'Lopi').map((product) => product.slug));
+  for (const slug of ['lopi-evergreennexgenhybridinsert', 'lopi-answernexgenhybridinsert', 'lopi-answernexgenfyreinsert']) {
+    assert.ok(lopiWoodSlugs.has(slug), slug);
+  }
+  assert.ok(gasInserts.every((product) => !lopiWoodSlugs.has(product.slug)));
+});
+
 test('product schema does not invent stock, reviews, offers or manufacturer identifiers', () => {
   const product = { slug: 'part', name: 'Part', sku: 'ABC', brand: 'Brand', description: 'A part', images: ['/part.jpg'], price: 50, categoryId: 'parts', partsAvailability: 'unverified', canPurchase: false };
   const data = productSchema(product);

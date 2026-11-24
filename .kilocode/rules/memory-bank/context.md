@@ -438,3 +438,16 @@ stoves (five Quadra-Fire and one Lopi), four pellet inserts (three Quadra-Fire
 and one Lopi), working optimized manufacturer images, all ten retained/new
 product pages, the category initial HTML and sitemap. All fifteen former
 pellet-appliance URLs return 404. The post-release error log scan was empty.
+
+## November 24, 2026 — Wood stove and insert brand list
+
+Both wood appliance categories now carry Lopi, Quadra-Fire, Vermont Castings,
+IronStrike, Buck Stove and Empire Stove. Removed 43 wood stove and seven wood
+insert listings from other brands and cleaned the wood insert image index.
+Added current Quadra-Fire and Vermont Castings stoves and inserts from their
+Forge & Flame catalogs with manufacturer photos and starting prices. New
+models require confirmation before ordering. Moved three Lopi wood inserts
+from the gas category while preserving their product URLs and added four Lopi
+Flush Wood configurations using existing manufacturer photos. Category totals
+are 31 wood stoves and 21 wood inserts. The parts and pellet catalogs were
+unchanged.
