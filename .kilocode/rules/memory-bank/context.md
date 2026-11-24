@@ -412,3 +412,22 @@ former appliance URLs return 404 and that the pellet-stoves category,
 pellet-inserts category, matching product API responses and sitemap contain no
 removed ComfortBilt appliance references. The post-release error log scan was
 empty.
+
+## November 24, 2026 — Lopi and Quadra-Fire pellet catalog
+
+Replaced the complete pellet-appliance catalog so the pellet-stoves and
+pellet-inserts categories contain only Lopi and Quadra-Fire. Preserved the two
+existing Lopi appliances and added the eight current Quadra-Fire pellet
+appliances shown by the manufacturer: five freestanding stoves and three
+fireplace inserts. Removed the other fifteen pellet-appliance records and their
+image-upgrade index entries. Replacement parts remain unchanged.
+
+Quadra-Fire listings use current official photos, manufacturer starting prices,
+product specifications and source links reviewed November 24, 2026. Because
+dealer availability and installed configuration are not verified automatically,
+the listings require the customer to contact Aaron's to confirm availability and
+delivery timing; they do not make an in-stock or authorized-dealer claim. A
+regression test restricts both pellet appliance categories to Lopi and
+Quadra-Fire and checks the expected product counts. See
+`docs/QUADRA_FIRE_PELLET_CATALOG.md` for the reviewed catalog source and model
+list.

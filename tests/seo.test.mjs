@@ -13,6 +13,19 @@ test('owner-removed appliance brands stay excluded from the appliance catalog so
   }
 });
 
+test('pellet appliance categories contain only Lopi and the current Quadra-Fire lineup', () => {
+  const stoves = JSON.parse(readFileSync(new URL('../data/pellet-stoves-scraped.json', import.meta.url), 'utf8'));
+  const inserts = JSON.parse(readFileSync(new URL('../data/pellet-inserts-scraped.json', import.meta.url), 'utf8'));
+  const allowedBrands = new Set(['Lopi', 'Quadra-Fire']);
+
+  assert.equal(stoves.length, 6);
+  assert.equal(inserts.length, 4);
+  assert.equal(stoves.filter((product) => product.brand === 'Quadra-Fire').length, 5);
+  assert.equal(inserts.filter((product) => product.brand === 'Quadra-Fire').length, 3);
+  assert.equal(stoves.every((product) => allowedBrands.has(product.brand)), true);
+  assert.equal(inserts.every((product) => allowedBrands.has(product.brand)), true);
+});
+
 test('product schema does not invent stock, reviews, offers or manufacturer identifiers', () => {
   const product = { slug: 'part', name: 'Part', sku: 'ABC', brand: 'Brand', description: 'A part', images: ['/part.jpg'], price: 50, categoryId: 'parts', partsAvailability: 'unverified', canPurchase: false };
   const data = productSchema(product);
