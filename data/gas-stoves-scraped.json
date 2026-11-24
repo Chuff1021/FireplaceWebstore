@@ -52,32 +52,6 @@
     "isBestSeller": false
   },
   {
-    "sku": "DSS-DS40S-IP",
-    "name": "DS Stoves 28 Inch Dawn Series Direct Vent Gas Heating Stove - Intermittent Pilot",
-    "slug": "dss-ds40s-ip",
-    "price": 5619.99,
-    "salePrice": 4565,
-    "brand": "DS Stoves",
-    "imageUrl": "/products/gas-stoves/dss-ds40s-ip-445c2c1a.webp",
-    "productUrl": "https://www.efireplacestore.com/dss-ds40s-ip.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
-    "sku": "DSS-DS40S-SP",
-    "name": "DS Stoves 28 Inch Dawn Series Direct Vent Gas Heating Stove - Millivolt Pilot",
-    "slug": "dss-ds40s-sp",
-    "price": 4669.99,
-    "salePrice": 3795,
-    "brand": "DS Stoves",
-    "imageUrl": "/products/gas-stoves/dss-ds40s-sp-445c2c1a.webp",
-    "productUrl": "https://www.efireplacestore.com/dss-ds40s-sp.html",
-    "rating": 0,
-    "reviewCount": 0,
-    "isBestSeller": false
-  },
-  {
     "sku": "EMP-DVP20CC70BN",
     "name": "Empire 22 Inch Cast Iron Direct Vent Gas Heating Stove - Intermittent Pilot",
     "slug": "emp-dvp20cc70bn",

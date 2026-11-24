@@ -17,9 +17,14 @@ type ScrapedRecord = {
   reviewCount?: number;
   isBestSeller?: boolean;
   contactForPricing?: boolean;
+  availabilityStatus?: "confirm";
+  inStock?: boolean;
+  stockQuantity?: number;
   description?: string;
   shortDescription?: string;
   imageUrls?: string[];
+  features?: string[];
+  specifications?: Record<string, string>;
 };
 
 type LoadScrapedCategoryProductsOptions = {
@@ -106,14 +111,28 @@ export async function loadScrapedCategoryProducts(
       subcategoryId: options.subcategoryId,
       brand: (record.brand || name.split(" ")[0] || "Fireplace").trim(),
       images: record.imageUrls?.length ? record.imageUrls : record.imageUrl ? [record.imageUrl] : sampleProducts[0]?.images ?? [],
-      features: record.productUrl ? [`Product page: ${record.productUrl}`] : [],
+      availabilityStatus: record.availabilityStatus === "confirm" ? "confirm" : undefined,
+      features: record.features?.length
+        ? record.features.map(stripHtml).filter(Boolean)
+        : record.productUrl
+          ? [`Product page: ${record.productUrl}`]
+          : [],
       specifications: {
         Model: (record.sku || slug).trim(),
         Brand: (record.brand || name.split(" ")[0] || "Fireplace").trim(),
         "Product URL": record.productUrl || "N/A",
+        ...Object.fromEntries(
+          Object.entries(record.specifications ?? {}).map(([key, value]) => [
+            stripHtml(key),
+            stripHtml(value),
+          ])
+        ),
       },
-      inStock: true,
-      stockQuantity: 25,
+      inStock: typeof record.inStock === "boolean" ? record.inStock : true,
+      stockQuantity:
+        typeof record.stockQuantity === "number" && Number.isFinite(record.stockQuantity)
+          ? Math.max(0, record.stockQuantity)
+          : 25,
       rating:
         typeof record.rating === "number" && Number.isFinite(record.rating) ? record.rating : 0,
       reviewCount:

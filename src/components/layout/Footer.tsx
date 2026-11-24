@@ -106,6 +106,9 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
             <ul className="space-y-2">
               {[
                 ["About Us", "/about"],
+                ["Parts by Manufacturer", "/parts"],
+                ["Fireplace & Parts Guides", "/guides"],
+                ["Insert Planning Worksheet", "/tools/insert-planner"],
                 ["Contact Us", "/contact"],
                 ["Shipping Information", "/shipping"],
                 ["Returns & Exchanges", "/returns"],
@@ -160,7 +163,7 @@ export function Footer({ lightLogoUrl }: { lightLogoUrl?: string }) {
             <Link href="/terms" className="transition hover:text-[#ffb36b]">Terms of Service</Link>
             <Link href="/accessibility" className="transition hover:text-[#ffb36b]">Accessibility</Link>
           </div>
-          <span>Made in USA</span>
+          <span>Based in Republic, Missouri</span>
         </div>
       </div>
     </footer>

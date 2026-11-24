@@ -35,10 +35,10 @@ function PartsSearchForm({ initialQuery, onSearch }: { initialQuery: string; onS
   );
 }
 
-export function PartsCategoryExperience({ slug }: { slug: string }) {
+export function PartsCategoryExperience({ slug, initialCatalog, initialKey, fixedBrand = "", basePath }: { slug: string; initialCatalog: PartsCatalogResponse; initialKey: string; fixedBrand?: string; basePath?: string }) {
   const searchParams = useSearchParams();
   const department = getPartsDepartmentBySlug(slug);
-  const activeBrand = searchParams.get("brand") || "";
+  const activeBrand = searchParams.get("brand") || fixedBrand;
   const activePartType = searchParams.get("partType") || "";
   const activeQuery = searchParams.get("q") || "";
   const sort = searchParams.get("sort") || "name";
@@ -49,11 +49,12 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
   if (activeQuery) apiParams.set("q", activeQuery);
   const requestKey = apiParams.toString();
   const resultsRef = useRef<HTMLElement>(null);
-  const [catalog, setCatalog] = useState<{ key: string; data: PartsCatalogResponse } | null>(null);
+  const [catalog, setCatalog] = useState<{ key: string; data: PartsCatalogResponse } | null>({ key: initialKey, data: initialCatalog });
   const [failure, setFailure] = useState<{ key: string; message: string } | null>(null);
   const [retry, setRetry] = useState(0);
 
   useEffect(() => {
+    if (requestKey === initialKey && retry === 0) return;
     const controller = new AbortController();
     async function loadParts() {
       try {
@@ -72,7 +73,7 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
     }
     void loadParts();
     return () => controller.abort();
-  }, [requestKey, retry]);
+  }, [requestKey, retry, initialKey]);
 
   function updateFilters(changes: Record<string, string>, nextSlug = slug) {
     const params = new URLSearchParams(window.location.search);
@@ -80,16 +81,19 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
     for (const [field, value] of Object.entries(changes)) {
       if (value) params.set(field, value); else params.delete(field);
     }
-    const query = params.toString();
-    const href = `/category/${nextSlug}${query ? `?${query}` : ""}`;
+    const path = nextSlug === slug && (!changes.brand || changes.brand === fixedBrand) && fixedBrand && changes.brand !== "" ? basePath : `/category/${nextSlug}`;
+    if (fixedBrand && path !== basePath && !params.has("brand") && changes.brand !== "") params.set("brand", fixedBrand);
+    const finalQuery = params.toString();
+    const href = `${path}${finalQuery ? `?${finalQuery}` : ""}`;
     // Query filters only need the parts API, not a second page-navigation request.
-    if (nextSlug === slug) window.history.pushState(null, "", href);
+    if (nextSlug === slug && path === (basePath || `/category/${slug}`)) window.history.pushState(null, "", href);
     else window.location.assign(href);
   }
 
-  function changePage(page: number) {
-    updateFilters({ page: String(page) });
-    resultsRef.current?.scrollIntoView({ block: "start", behavior: "instant" });
+  function pageHref(page: number) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (page > 1) params.set("page", String(page)); else params.delete("page");
+    return `${basePath || `/category/${slug}`}${params.size ? `?${params}` : ""}`;
   }
 
   if (slug !== "parts" && !department) return null;
@@ -102,6 +106,7 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
   const departmentCounts = new Map(available?.departments.map(item => [item.name, item.count]));
   const quickBrands = featuredPartsBrands.filter(brand => brands.some(item => item.name === brand)).slice(0, 6);
   const hasFilters = Boolean(activeBrand || activePartType || activeQuery);
+  const Heading = fixedBrand ? "h2" : "h1";
   const firstResult = data && data.total > 0 ? (data.page - 1) * data.pageSize + 1 : 0;
   const lastResult = data ? Math.min(data.page * data.pageSize, data.total) : 0;
 
@@ -113,7 +118,7 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
           {department && <><Link href="/category/parts">Parts</Link><ChevronRight className="h-4 w-4" aria-hidden="true" /></>}
           <span>{department?.name || "Parts Department"}</span>
         </nav>
-        <h1 className="text-3xl font-black tracking-tight md:text-4xl">{department?.name || "Find replacement parts"}</h1>
+        <Heading className="text-3xl font-black tracking-tight md:text-4xl">{fixedBrand ? `Search ${fixedBrand} parts` : department?.name || "Find replacement parts"}</Heading>
         <p className="mt-2 max-w-3xl text-sm leading-6 text-[#6f6255]">Search by part number or choose your manufacturer. Check your appliance model to confirm the right fit.</p>
 
         <section aria-label="Search and filter parts" className="mt-5 rounded-xl border border-[#ded5c8] bg-[#fffdf9] p-4 md:p-6">
@@ -148,8 +153,8 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
           {!activeBrand && quickBrands.length > 0 && (
             <div className="mt-4 flex flex-wrap items-center gap-2" aria-label="Popular manufacturers">
               <span className="text-sm text-[#6f6255]">Popular:</span>
-              {quickBrands.map(brand => <button key={brand} type="button" onClick={() => updateFilters({ brand, partType: "" })}
-                className="min-h-11 rounded-lg border border-[#d7cab8] px-3 text-sm font-semibold hover:border-[#a54210] hover:text-[#a54210]">{brand}</button>)}
+              {quickBrands.map(brand => <Link key={brand} href={`/category/${slug}?brand=${encodeURIComponent(brand)}`}
+                className="min-h-11 rounded-lg border border-[#d7cab8] px-3 text-sm font-semibold hover:border-[#a54210] hover:text-[#a54210]">{brand}</Link>)}
             </div>
           )}
           {hasFilters && (
@@ -208,11 +213,12 @@ export function PartsCategoryExperience({ slug }: { slug: string }) {
               ))}
             </div>}
           {data && data.totalPages > 1 && <nav aria-label="Parts pages" className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <button type="button" disabled={data.page === 1} onClick={() => changePage(data.page - 1)} className="flex min-h-12 items-center gap-1 rounded-lg border border-[#d7cab8] bg-white px-3 font-semibold disabled:opacity-40"><ChevronLeft className="h-4 w-4" aria-hidden="true" />Previous</button>
+            <Link href={pageHref(Math.max(1, data.page - 1))} aria-disabled={data.page === 1} className="flex min-h-12 items-center gap-1 rounded-lg border border-[#d7cab8] bg-white px-3 font-semibold disabled:opacity-40"><ChevronLeft className="h-4 w-4" aria-hidden="true" />Previous</Link>
             <span className="text-sm">Page {data.page.toLocaleString()} of {data.totalPages.toLocaleString()}</span>
-            <button type="button" disabled={data.page >= data.totalPages} onClick={() => changePage(data.page + 1)} className="flex min-h-12 items-center gap-1 rounded-lg border border-[#d7cab8] bg-white px-3 font-semibold disabled:opacity-40">Next<ChevronRight className="h-4 w-4" aria-hidden="true" /></button>
+            <Link href={pageHref(Math.min(data.totalPages, data.page + 1))} aria-disabled={data.page >= data.totalPages} className="flex min-h-12 items-center gap-1 rounded-lg border border-[#d7cab8] bg-white px-3 font-semibold disabled:opacity-40">Next<ChevronRight className="h-4 w-4" aria-hidden="true" /></Link>
           </nav>}
         </section>
+        <div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold text-[#a54210] underline"><Link href="/parts">Shop by manufacturer</Link><Link href="/guides/find-fireplace-model-number">Find your model number</Link></div>
         <p className="mt-8 text-sm leading-6 text-[#6f6255]">Not sure which part fits? <Link href="/contact" className="font-semibold text-[#a54210] underline">Contact us with the model and serial number.</Link></p>
       </div>
     </div>

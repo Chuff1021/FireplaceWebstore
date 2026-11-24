@@ -2,6 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { landingAttribution } from "@/lib/landing-session";
 import { defaultStoreConfig } from "@/lib/store-config";
 import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from "lucide-react";
 
@@ -10,17 +11,19 @@ export default function ContactPage() {
 }
 
 function ContactProductInquiry() {
-  const productSku = useSearchParams().get("product")?.slice(0,100) ?? "";
-  return <ContactForm key={productSku} productSku={productSku} />;
+  const searchParams = useSearchParams();
+  const productSku = searchParams.get("product")?.slice(0,100) ?? "";
+  const initialMessage = searchParams.get("message")?.slice(0, 2000) ?? "";
+  return <ContactForm key={`${productSku}:${initialMessage}`} productSku={productSku} initialMessage={initialMessage} />;
 }
 
-function ContactForm({ productSku }: { productSku: string }) {
+function ContactForm({ productSku, initialMessage }: { productSku: string; initialMessage: string }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: productSku ? "Product Inquiry" : "",
-    message: productSku ? `I’m interested in model ${productSku}. Please confirm availability and delivery timing.` : "",
+    subject: productSku || initialMessage ? "Product Inquiry" : "",
+    message: initialMessage || (productSku ? `I’m interested in model ${productSku}. Please confirm availability and delivery timing.` : ""),
   });
   const [submitState, setSubmitState] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -47,6 +50,7 @@ function ContactForm({ productSku }: { productSku: string }) {
         body: JSON.stringify({
           type: "contact",
           ...formData,
+          metadata: { trafficChannel: landingAttribution().channel, landingPage: landingAttribution().landingPath },
         }),
       });
 

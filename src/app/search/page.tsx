@@ -17,7 +17,7 @@ function SearchResults() {
   useEffect(() => {
     let active = true;
 
-    fetch("/api/products?limit=10000")
+    fetch(`/api/products?q=${encodeURIComponent(queryParam)}&limit=100`)
       .then((response) => (response.ok ? response.json() : []))
       .then((products: Product[]) => {
         if (active) setAllProducts(Array.isArray(products) ? products : []);
@@ -29,21 +29,13 @@ function SearchResults() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [queryParam]);
 
   const results = useMemo<{ products: Product[]; categories: ProductCategory[] }>(() => {
     const q = queryParam.toLowerCase().trim();
     if (!q) return { products: [], categories: [] };
 
-    const matchingProducts = allProducts.filter(
-      (product) =>
-        product.name.toLowerCase().includes(q) ||
-        product.description.toLowerCase().includes(q) ||
-        product.categoryId.toLowerCase().includes(q) ||
-        product.subcategoryId?.toLowerCase().includes(q) ||
-        product.brand.toLowerCase().includes(q) ||
-        product.sku.toLowerCase().includes(q)
-    );
+    const matchingProducts = allProducts; // Server search also handles punctuation-normalized part numbers.
 
     const matchingCategories = productCategories.filter(
       (category) =>
