@@ -431,3 +431,10 @@ regression test restricts both pellet appliance categories to Lopi and
 Quadra-Fire and checks the expected product counts. See
 `docs/QUADRA_FIRE_PELLET_CATALOG.md` for the reviewed catalog source and model
 list.
+
+Published from commit `d9b213d6` through production deployment
+`dpl_3iJeJcBXnpLypciQnp67Cy42sfrQ`. Staged and live checks confirmed six pellet
+stoves (five Quadra-Fire and one Lopi), four pellet inserts (three Quadra-Fire
+and one Lopi), working optimized manufacturer images, all ten retained/new
+product pages, the category initial HTML and sitemap. All fifteen former
+pellet-appliance URLs return 404. The post-release error log scan was empty.
