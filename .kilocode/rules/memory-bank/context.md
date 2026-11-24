@@ -451,3 +451,9 @@ from the gas category while preserving their product URLs and added four Lopi
 Flush Wood configurations using existing manufacturer photos. Category totals
 are 31 wood stoves and 21 wood inserts. The parts and pellet catalogs were
 unchanged.
+
+Published from commit `995a5329` through production deployment
+`dpl_7zikJPJmcNf73jHU5eJX2Ge65H9X`. Live checks verified the six brands in
+each category, the three relocated Lopi product pages, all 15 optimized
+Forge & Flame photos, and the 52 current wood appliance URLs in the sitemap.
+All 50 removed product URLs return 404 and were removed from the sitemap.
